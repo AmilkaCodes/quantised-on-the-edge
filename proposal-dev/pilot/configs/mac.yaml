@@ -1,0 +1,49 @@
+# Pilot configuration — MacBook Pro (Apple Silicon / Metal). See ../../pilot-protocol.md
+# Per-device config: pi5.yaml / jetson.yaml are siblings. Only `device`, `ngl` (+ maybe `server_bin`)
+# differ between them; the model list, quant ladder, and ./local/ paths are identical (portable).
+# Results + provenance land in ../results/<device>/  (tracked CSVs; never clobbers other machines).
+
+device: "mac"                        # ← identifies this machine's results/provenance
+
+# ---- Reproducibility: pin these and record them in RESULTS.md ----
+llama_cpp_tag: "TODO-bXXXX"          # exact llama.cpp release tag; IDENTICAL on all devices
+# All machine-local heavy artifacts live under ./local/ (gitignored — built/downloaded per device).
+server_bin: "./local/llama.cpp/build/bin/llama-server"   # TODO: confirm path after building
+
+# ---- Server / decoding ----
+host: "127.0.0.1"
+port: 8080
+n_ctx: 4096
+seed: 0
+temperature: 0.0                     # greedy → deterministic pass@1
+max_tokens: 768
+manage_server: true                  # true = script launches/kills llama-server per config
+                                     # false = point at an already-running server (set server_pid via --server-pid for memory)
+server_ready_timeout_s: 120
+
+# ---- Task ----
+dataset: "humaneval"                 # evalplus HumanEval+ (base + extra tests)
+
+# ---- Models × quant ladder ----
+# ngl: GPU layers to offload. Mac(Metal)/Jetson(CUDA) → 999 (all). Pi 5 (CPU) → 0.
+models:
+  - name: "qwen2.5-coder-1.5b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"   # TODO: dir holding the quant files
+    ngl: 999
+    quants:
+      - {label: "F16",    file: "qwen2.5-coder-1.5b-instruct-f16.gguf"}
+      - {label: "Q8_0",   file: "qwen2.5-coder-1.5b-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "qwen2.5-coder-1.5b-instruct-Q2_K.gguf"}
+
+  - name: "phi-3-mini-4k-instruct"
+    gguf_dir: "./local/models/phi-3-mini-4k-instruct"        # TODO
+    ngl: 999
+    quants:
+      # NB: F16 (~7.6 GB) is Mac-only later; it will NOT fit the 8 GB Pi/Jetson (a finding, not a bug).
+      - {label: "F16",    file: "Phi-3-mini-4k-instruct-f16.gguf"}
+      - {label: "Q8_0",   file: "Phi-3-mini-4k-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "Phi-3-mini-4k-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "Phi-3-mini-4k-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "Phi-3-mini-4k-instruct-Q2_K.gguf"}

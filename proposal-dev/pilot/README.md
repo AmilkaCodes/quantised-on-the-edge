@@ -11,13 +11,13 @@ Design rationale + go/no-go criteria: [`../pilot-protocol.md`](../pilot-protocol
 ## Folder layout
 ```
 pilot/
-├── run_pilot.py, configs.yaml, requirements.txt   ← tracked (syncs to every device)
+├── run_pilot.py, configs/mac.yaml, requirements.txt   ← tracked (syncs to every device)
 ├── README.md, SETUP-mac.md, RESULTS.md            ← tracked
 ├── local/          ← GITIGNORED, per-machine: local/llama.cpp (built here) · local/models (GGUFs) · local/.venv
 └── results/        ← run outputs: *.csv tracked (recorded numbers sync back) · *.jsonl gitignored
 ```
 Everything heavy and machine-specific lives in **`local/`** (never synced — each device builds/downloads its own).
-The `configs.yaml` paths already point into `local/`.
+The `configs/mac.yaml` paths already point into `local/`.
 
 ---
 
@@ -30,7 +30,7 @@ The `configs.yaml` paths already point into `local/`.
 ```bash
 git clone https://github.com/ggml-org/llama.cpp
 cd llama.cpp
-git checkout <TAG>          # e.g. a release tag like b3xxx — RECORD THIS in RESULTS.md + configs.yaml
+git checkout <TAG>          # e.g. a release tag like b3xxx — RECORD THIS in RESULTS.md + configs/mac.yaml
 ```
 Build per device:
 - **MacBook (Metal, Apple Silicon)** — Metal is on by default:
@@ -45,11 +45,11 @@ Build per device:
   ```bash
   cmake -B build && cmake --build build --config Release -j
   ```
-`llama-server` lands at `build/bin/llama-server`. Put that path in `configs.yaml → server_bin`.
+`llama-server` lands at `build/bin/llama-server`. Put that path in `configs/mac.yaml → server_bin`.
 
 ## 2. Get the GGUF model files
 Download the quant ladder (F16, Q8_0, Q4_K_M, Q3_K_M, Q2_K) for each model from a reputable uploader
-(Qwen / Microsoft official, or bartowski). Put them in the `gguf_dir` you set in `configs.yaml`, with the
+(Qwen / Microsoft official, or bartowski). Put them in the `gguf_dir` you set in `configs/mac.yaml`, with the
 file names matching the config. **Record the exact source + revision** in RESULTS.md (reproducibility).
 - Qwen2.5-Coder-1.5B-Instruct-GGUF
 - Phi-3-mini-4k-instruct-GGUF
@@ -65,28 +65,28 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 4. Fill in configs.yaml
+## 4. Fill in configs/mac.yaml
 Set `llama_cpp_tag`, `server_bin`, each model's `gguf_dir`, and confirm the quant `file` names.
 `ngl: 999` on the Mac (offload all layers to Metal); later `ngl: 0` on the Pi.
 
 ## 5. Smoke-test the pipeline (do this FIRST)
 ```bash
-python run_pilot.py --config configs.yaml --smoke --only qwen2.5-coder-1.5b-instruct:Q4_K_M
+python run_pilot.py --config configs/mac.yaml --smoke --only qwen2.5-coder-1.5b-instruct:Q4_K_M
 ```
 This runs **2 problems** end-to-end (server → generate → sanitise → evaluate → CSV). Confirm:
 - the server loads and `/health` returns 200,
 - generations come back and `parses=True` for most,
 - EvalPlus prints a `pass@1` line,
-- a CSV row is written under `results/`.
+- a CSV row is written under `results/mac/`.
 If `parse=False` everywhere or pass@1 is 0/near-0 on the smoke run, it's almost certainly a
 **chat-template or code-extraction bug**, not a floor effect — fix before the full run.
 
 ## 6. Full run
 ```bash
-python run_pilot.py --config configs.yaml
+python run_pilot.py --config configs/mac.yaml
 ```
 2 models × 5 quants = 10 configs × 164 problems. Roughly half a day of compute on the Mac.
-Output: `results/pilot_results_<timestamp>.csv` + per-config `samples_*.jsonl`.
+Output: `results/mac/pilot_results_<timestamp>.csv` + per-config `samples_*.jsonl`.
 
 Handy flags:
 - `--only <model>:<quant>` — run a single cell (e.g. re-run one that looked off).

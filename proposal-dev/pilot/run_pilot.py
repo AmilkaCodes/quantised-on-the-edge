@@ -6,20 +6,20 @@ Drives a (model x quant) matrix against a local `llama-server` (OpenAI-compatibl
 generates HumanEval+ solutions, scores them with EvalPlus (sandboxed), and records
 pass@1 (base + plus), a parse-rate ladder, and Mac-side latency/memory into a CSV.
 
-The SAME script runs on Mac / Pi / Jetson — only configs.yaml (ngl, paths) changes.
+The SAME script runs on Mac / Pi / Jetson — only configs/mac.yaml (ngl, paths) changes.
 
 ⚠️ NOT executed by its author — validate with `--smoke` (2 problems) FIRST. The first real
    run is expected to be a debugging pass (fix template/extraction issues before trusting numbers).
 ⚠️ EvalPlus executes model-generated code during scoring — run in a throwaway venv/container.
 
 Usage:
-    python run_pilot.py --config configs.yaml                 # full matrix
-    python run_pilot.py --config configs.yaml --smoke         # 2 problems, sanity-check the pipeline
-    python run_pilot.py --config configs.yaml --only qwen2.5-coder-1.5b-instruct:Q4_K_M
-    python run_pilot.py --config configs.yaml --no-manage-server --server-pid 12345
+    python run_pilot.py --config configs/mac.yaml                 # full matrix
+    python run_pilot.py --config configs/mac.yaml --smoke         # 2 problems, sanity-check the pipeline
+    python run_pilot.py --config configs/mac.yaml --only qwen2.5-coder-1.5b-instruct:Q4_K_M
+    python run_pilot.py --config configs/mac.yaml --no-manage-server --server-pid 12345
 """
 from __future__ import annotations
-import argparse, ast, csv, json, os, re, signal, subprocess, sys, threading, time
+import argparse, ast, csv, json, os, platform, re, signal, subprocess, sys, threading, time
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -43,8 +43,7 @@ try:
 except Exception:
     evalplus_sanitize = None
 
-OUT = Path(__file__).parent / "results"
-OUT.mkdir(exist_ok=True)
+RESULTS_ROOT = Path(__file__).parent / "results"   # per-device subdir chosen at runtime
 
 INSTRUCTION = (
     "Please provide a self-contained Python solution that completes the following function. "
@@ -222,7 +221,7 @@ def score_with_evalplus(samples_path: Path) -> tuple[float | None, float | None]
 # ----------------------------- main -----------------------------
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--config", default="configs.yaml")
+    ap.add_argument("--config", default="configs/mac.yaml")
     ap.add_argument("--smoke", action="store_true", help="run only 2 problems to validate the pipeline")
     ap.add_argument("--only", help="restrict to one 'model:quant' (e.g. phi-3-mini-4k-instruct:Q4_K_M)")
     ap.add_argument("--no-manage-server", dest="manage", action="store_false", default=None)
@@ -233,16 +232,34 @@ def main():
     if args.manage is not None:
         cfg["manage_server"] = args.manage
 
+    # Per-device isolation: results + provenance live under results/<device>/ so machines
+    # never clobber each other's files. `device` comes from the per-device config.
+    device = str(cfg.get("device", "unknown"))
+    out = RESULTS_ROOT / device
+    out.mkdir(parents=True, exist_ok=True)
+
     problems = dict(get_human_eval_plus())
     if args.smoke:
         problems = dict(list(problems.items())[:2])
-    print(f"Loaded {len(problems)} HumanEval+ problems{' (SMOKE)' if args.smoke else ''}")
+    print(f"Loaded {len(problems)} HumanEval+ problems{' (SMOKE)' if args.smoke else ''} | device={device}")
+
+    # Provenance manifest — every recorded run is self-describing (reproducibility).
+    vm = psutil.virtual_memory()
+    manifest = {
+        "device": device, "timestamp": utcstamp(),
+        "os": platform.platform(), "processor": platform.processor() or platform.machine(),
+        "cpu_count": os.cpu_count(), "ram_gb": round(vm.total / (1024**3), 1),
+        "python": platform.python_version(), "llama_cpp_tag": cfg.get("llama_cpp_tag"),
+        "config_file": str(args.config), "smoke": args.smoke,
+    }
+    (out / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    print(f"  manifest: {manifest['os']} | {manifest['cpu_count']} cores | {manifest['ram_gb']}GB")
 
     base_url = f"http://{cfg['host']}:{cfg['port']}/v1"
     client = OpenAI(base_url=base_url, api_key="sk-noauth")
 
-    results_csv = OUT / f"pilot_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-    fields = ["timestamp", "model", "quant", "n", "parse_rate", "pass@1_base", "pass@1_plus",
+    results_csv = out / f"pilot_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    fields = ["timestamp", "device", "model", "quant", "n", "parse_rate", "pass@1_base", "pass@1_plus",
               "mean_ttft_ms", "mean_tok_s", "peak_rss_mb", "llama_cpp_tag", "smoke"]
     with results_csv.open("w", newline="") as f:
         csv.DictWriter(f, fieldnames=fields).writeheader()
@@ -272,7 +289,7 @@ def main():
                 if server:
                     stop_server(server); server = None  # free memory before scoring
 
-                samples_path = OUT / f"samples_{model['name']}_{quant['label']}{'_smoke' if args.smoke else ''}.jsonl"
+                samples_path = out / f"samples_{model['name']}_{quant['label']}{'_smoke' if args.smoke else ''}.jsonl"
                 with samples_path.open("w") as sf:
                     for s in samples:
                         sf.write(json.dumps(s) + "\n")
@@ -280,7 +297,7 @@ def main():
                 base, plus = score_with_evalplus(samples_path)
 
                 row = {
-                    "timestamp": utcstamp(), "model": model["name"], "quant": quant["label"],
+                    "timestamp": utcstamp(), "device": device, "model": model["name"], "quant": quant["label"],
                     "n": len(problems), "parse_rate": stats["parse_rate"],
                     "pass@1_base": base, "pass@1_plus": plus,
                     "mean_ttft_ms": stats["mean_ttft_ms"], "mean_tok_s": stats["mean_tok_s"],

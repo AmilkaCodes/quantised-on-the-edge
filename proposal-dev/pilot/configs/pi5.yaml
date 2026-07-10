@@ -1,0 +1,42 @@
+# Pilot configuration — Raspberry Pi 5 (ARM CPU, no accelerator). See ../../pilot-protocol.md
+# CPU-only tier. Quality is hardware-independent (measured on the Mac), so on the Pi you mainly
+# record LATENCY + PEAK MEMORY on a small prompt set (use --smoke or --only). ngl: 0 (no GPU).
+# NB: Phi-3-mini F16 (~7.6 GB) will NOT fit the 8 GB Pi — expect its F16 server to fail to load;
+#     run only the quants that fit, or trim the ladder here.
+
+device: "pi5"
+
+llama_cpp_tag: "TODO-bXXXX"          # SAME tag built on the Mac/Jetson (identical inference stack)
+server_bin: "./local/llama.cpp/build/bin/llama-server"
+
+host: "127.0.0.1"
+port: 8080
+n_ctx: 4096
+seed: 0
+temperature: 0.0
+max_tokens: 768
+manage_server: true
+server_ready_timeout_s: 300          # CPU load is slower — allow longer
+
+dataset: "humaneval"
+
+models:
+  - name: "qwen2.5-coder-1.5b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"
+    ngl: 0                            # CPU-only
+    quants:
+      - {label: "F16",    file: "qwen2.5-coder-1.5b-instruct-f16.gguf"}
+      - {label: "Q8_0",   file: "qwen2.5-coder-1.5b-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "qwen2.5-coder-1.5b-instruct-Q2_K.gguf"}
+
+  - name: "phi-3-mini-4k-instruct"
+    gguf_dir: "./local/models/phi-3-mini-4k-instruct"
+    ngl: 0
+    quants:
+      # F16 omitted — won't fit 8 GB (it's a finding: this device *requires* quantization to run Phi-3).
+      - {label: "Q8_0",   file: "Phi-3-mini-4k-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "Phi-3-mini-4k-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "Phi-3-mini-4k-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "Phi-3-mini-4k-instruct-Q2_K.gguf"}

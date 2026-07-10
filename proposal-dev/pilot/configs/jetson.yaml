@@ -1,0 +1,40 @@
+# Pilot configuration — NVIDIA Jetson Orin Nano (edge GPU, CUDA). See ../../pilot-protocol.md
+# Accelerated tier. Build llama.cpp with GGML_CUDA=ON (see SETUP / README). ngl: 999 (offload all).
+# NB: Phi-3-mini F16 (~7.6 GB) likely won't fit the 8 GB board — run the quants that fit.
+
+device: "jetson"
+
+llama_cpp_tag: "TODO-bXXXX"          # SAME tag built on the Mac/Pi (identical inference stack)
+server_bin: "./local/llama.cpp/build/bin/llama-server"
+
+host: "127.0.0.1"
+port: 8080
+n_ctx: 4096
+seed: 0
+temperature: 0.0
+max_tokens: 768
+manage_server: true
+server_ready_timeout_s: 180
+
+dataset: "humaneval"
+
+models:
+  - name: "qwen2.5-coder-1.5b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"
+    ngl: 999                          # offload all layers to the GPU
+    quants:
+      - {label: "F16",    file: "qwen2.5-coder-1.5b-instruct-f16.gguf"}
+      - {label: "Q8_0",   file: "qwen2.5-coder-1.5b-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "qwen2.5-coder-1.5b-instruct-Q2_K.gguf"}
+
+  - name: "phi-3-mini-4k-instruct"
+    gguf_dir: "./local/models/phi-3-mini-4k-instruct"
+    ngl: 999
+    quants:
+      # F16 omitted — likely won't fit 8 GB alongside CUDA context; run the quants.
+      - {label: "Q8_0",   file: "Phi-3-mini-4k-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "Phi-3-mini-4k-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "Phi-3-mini-4k-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "Phi-3-mini-4k-instruct-Q2_K.gguf"}
