@@ -8,6 +8,17 @@ Design rationale + go/no-go criteria: [`../pilot-protocol.md`](../pilot-protocol
 > run to be a debugging pass (fix chat-template / code-extraction issues before trusting numbers — the protocol's AMBER clause).
 > ⚠️ **EvalPlus executes model-generated code** during scoring. Use a **throwaway venv** (ideally a container/VM).
 
+## Folder layout
+```
+pilot/
+├── run_pilot.py, configs.yaml, requirements.txt   ← tracked (syncs to every device)
+├── README.md, SETUP-mac.md, RESULTS.md            ← tracked
+├── local/          ← GITIGNORED, per-machine: local/llama.cpp (built here) · local/models (GGUFs) · local/.venv
+└── results/        ← run outputs: *.csv tracked (recorded numbers sync back) · *.jsonl gitignored
+```
+Everything heavy and machine-specific lives in **`local/`** (never synced — each device builds/downloads its own).
+The `configs.yaml` paths already point into `local/`.
+
 ---
 
 ## 0. Prerequisites
