@@ -1,0 +1,7 @@
+# Pilot harness dependencies (Python 3.10+ recommended)
+# Install into a THROWAWAY venv — evalplus executes model-generated code during scoring.
+openai>=1.30          # OpenAI-compatible client, pointed at llama-server
+evalplus>=0.3.0       # HumanEval+ dataset + sandboxed scoring (pin exact version in RESULTS.md)
+psutil>=5.9           # cross-platform process RSS sampling (peak memory)
+pyyaml>=6.0           # config
+requests>=2.31        # health check
