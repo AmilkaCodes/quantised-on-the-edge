@@ -1,0 +1,12 @@
+{
+  "device": "mac",
+  "timestamp": "2026-07-10T20:02:20Z",
+  "os": "macOS-26.5.2-arm64-arm-64bit",
+  "processor": "arm",
+  "cpu_count": 14,
+  "ram_gb": 36.0,
+  "python": "3.12.13",
+  "llama_cpp_tag": "b9951",
+  "config_file": "[local path redacted]/phi_only.yaml",
+  "smoke": false
+}

@@ -6,9 +6,9 @@
 device: "mac"                        # ← identifies this machine's results/provenance
 
 # ---- Reproducibility: pin these and record them in RESULTS.md ----
-llama_cpp_tag: "TODO-bXXXX"          # exact llama.cpp release tag; IDENTICAL on all devices
+llama_cpp_tag: "b9951"               # exact llama.cpp release tag (commit 082b326); IDENTICAL on all devices
 # All machine-local heavy artifacts live under ./local/ (gitignored — built/downloaded per device).
-server_bin: "./local/llama.cpp/build/bin/llama-server"   # TODO: confirm path after building
+server_bin: "./local/llama.cpp/build/bin/llama-server"   # symlink → ~/pilot-work/llama.cpp (Metal build)
 
 # ---- Server / decoding ----
 host: "127.0.0.1"
@@ -28,10 +28,10 @@ dataset: "humaneval"                 # evalplus HumanEval+ (base + extra tests)
 # ngl: GPU layers to offload. Mac(Metal)/Jetson(CUDA) → 999 (all). Pi 5 (CPU) → 0.
 models:
   - name: "qwen2.5-coder-1.5b-instruct"
-    gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"   # TODO: dir holding the quant files
+    gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"   # symlink → ~/pilot-work/models
     ngl: 999
     quants:
-      - {label: "F16",    file: "qwen2.5-coder-1.5b-instruct-f16.gguf"}
+      - {label: "F16",    file: "Qwen2.5-Coder-1.5B-Instruct-f16.gguf"}   # uploader's casing (downloaded); quants below are locally-made (lowercase)
       - {label: "Q8_0",   file: "qwen2.5-coder-1.5b-instruct-Q8_0.gguf"}
       - {label: "Q4_K_M", file: "qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf"}
       - {label: "Q3_K_M", file: "qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf"}

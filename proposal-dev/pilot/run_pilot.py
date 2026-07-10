@@ -84,10 +84,10 @@ class RSSSampler(threading.Thread):
         self.proc = psutil.Process(pid)
         self.interval = interval
         self.peak = 0
-        self._stop = threading.Event()
+        self._stopped = threading.Event()   # NB: don't name this `_stop` — it shadows Thread._stop()
 
     def run(self):
-        while not self._stop.is_set():
+        while not self._stopped.is_set():
             try:
                 rss = self.proc.memory_info().rss
                 # include child processes (llama-server may spawn workers)
@@ -99,20 +99,35 @@ class RSSSampler(threading.Thread):
                 self.peak = max(self.peak, rss)
             except psutil.Error:
                 break
-            self._stop.wait(self.interval)
+            self._stopped.wait(self.interval)
 
     def stop(self):
-        self._stop.set()
+        self._stopped.set()
 
     @property
     def peak_mb(self) -> float:
         return round(self.peak / (1024 * 1024), 1)
 
 
+def port_in_use(host: str, port: int) -> bool:
+    """True if something is already listening on host:port (e.g. a stale/orphan server)."""
+    import socket
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.settimeout(0.5)
+        return s.connect_ex((host, int(port))) == 0
+
+
 def launch_server(cfg, model, quant) -> subprocess.Popen:
     gguf = Path(model["gguf_dir"]) / quant["file"]
     if not gguf.exists():
         sys.exit(f"GGUF not found: {gguf}")
+    # Guard: if the port is already taken, our new server can't bind and would die silently,
+    # while wait_ready() sees the STALE server's /health=200 → every cell gets served the WRONG
+    # model (a false flat curve). Refuse to run until the port is free.
+    if port_in_use(cfg["host"], cfg["port"]):
+        sys.exit(f"Port {cfg['port']} is already in use — a stale llama-server is likely still "
+                 f"running and would silently serve the WRONG model. Kill it first:\n"
+                 f"    lsof -ti tcp:{cfg['port']} | xargs kill")
     cmd = [
         cfg["server_bin"], "-m", str(gguf),
         "-c", str(cfg["n_ctx"]), "-ngl", str(model["ngl"]),
@@ -125,10 +140,15 @@ def launch_server(cfg, model, quant) -> subprocess.Popen:
                             start_new_session=True)
 
 
-def wait_ready(cfg) -> None:
+def wait_ready(cfg, proc: subprocess.Popen | None = None) -> None:
     url = f"http://{cfg['host']}:{cfg['port']}/health"
     deadline = time.time() + cfg["server_ready_timeout_s"]
     while time.time() < deadline:
+        # If OUR launched server has already exited, a /health=200 can only be some OTHER
+        # process — do not trust it (that was the orphan-server mis-serving bug).
+        if proc is not None and proc.poll() is not None:
+            raise RuntimeError(f"llama-server exited early (code {proc.returncode}) before becoming "
+                               f"healthy — refusing to generate against another process on the port.")
         try:
             if requests.get(url, timeout=2).status_code == 200:
                 return
@@ -206,9 +226,12 @@ def score_with_evalplus(samples_path: Path) -> tuple[float | None, float | None]
     sanitized = samples_path.with_name(samples_path.stem + "-sanitized.jsonl")
     target = sanitized if sanitized.exists() else samples_path
     # 2) evaluate — parse pass@1 from stdout (robust across filename conventions)
+    # EVALPLUS_MAX_MEMORY_BYTES=-1 → EvalPlus skips resource.setrlimit(), which raises
+    # "current limit exceeds maximum limit" (EINVAL) for RLIMIT_AS/RLIMIT_DATA on macOS.
+    eval_env = {**os.environ, "EVALPLUS_MAX_MEMORY_BYTES": "-1"}
     proc = subprocess.run(
         [sys.executable, "-m", "evalplus.evaluate", "--dataset", "humaneval", "--samples", str(target)],
-        capture_output=True, text=True,
+        capture_output=True, text=True, env=eval_env,
     )
     out = proc.stdout + "\n" + proc.stderr
     print(out)
@@ -274,7 +297,7 @@ def main():
             try:
                 if cfg["manage_server"]:
                     server = launch_server(cfg, model, quant)
-                    wait_ready(cfg)
+                    wait_ready(cfg, server)
                     sampler = RSSSampler(server.pid)
                 elif args.server_pid:
                     sampler = RSSSampler(args.server_pid)
