@@ -59,8 +59,8 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
 5. **M.2 HAT+** on top
 6. **Layer Case — top layer** closing the stack
 
-- [ ] **To confirm:** was the 512GB Steam Deck NVMe fitted into the HAT+ before closing? (Not
-      mentioned in dictation — if not, it needs the top layer off once more.)
+- [x] ~~To confirm: SSD fitted before closing?~~ → **confirmed 2026-08-27: 512GB Deck NVMe
+      installed in the HAT+ during assembly.**
 - [ ] Assembly photos — take before/if reopening (methods-appendix + thermal-debug value).
 
 ## 2026-08-27 — Setup planning (pre-boot decisions)
@@ -72,22 +72,22 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
   Imager, with SSH key, hostname (`pi5.local`) and user preconfigured. The kit's pre-flashed card
   boots the desktop OS — wrong environment for measurement (RAM overhead vs the peak-memory DV).
   The reflash is a **documented setup step** (versions + Imager settings recorded in
-  `irp/setup/pi5.md`), preserving the replication story: base = Starter Kit card, reflashed to a
+  `irp/setup/pi5/pi5.md`), preserving the replication story: base = Starter Kit card, reflashed to a
   named OS Lite image.
 - Jetson: headless first-boot config over USB-C serial console (no DP adapter needed).
 - Network: both boards wired into the owned **gigabit switch**; SSH from the MacBook (control
   machine). Long runs inside `tmux`. Harness cloned from git on each device; results pushed back
   per device (`results/<device>/` + provenance manifest, per pilot structure).
-- Setup recorded as it happens in `irp/setup/pi5.md` and `irp/setup/jetson.md` (commands as run,
+- Setup recorded as it happens in `irp/setup/pi5/pi5.md` and `irp/setup/jetson/jetson.md` (commands as run,
   versions, deviations).
 
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
 - [ ] Confirm exact delivery date from courier email (~25 Aug)
-- [x] ~~Save the invoice into the repo~~ → done: `irp/PiHut_Invoice_Personal_Info_Redacted.pdf`
+- [x] ~~Save the invoice into the repo~~ → done: `irp/setup/pi5/PiHut_Invoice_Personal_Info_Redacted.pdf`
       (personal info redacted before committing — correct instinct for a public-ish repo)
 - [ ] Confirm SSD fitted in the HAT+; take assembly photos
 - [ ] Jetson order — funds expected end of August (kit + SanDisk Ultra 64GB microSD +
       Integral 500GB NVMe 2280, per procurement decisions of 2026-08-24)
-- [ ] Pi first boot: reflash to OS Lite (documented) → headless SSH → `irp/setup/pi5.md`
+- [ ] Pi first boot: reflash to OS Lite (documented) → headless SSH → `irp/setup/pi5/pi5.md`
