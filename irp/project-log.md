@@ -85,8 +85,8 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
 - [ ] Confirm exact delivery date from courier email (~25 Aug)
-- [ ] **Save the invoice PDF/email into `irp/admin/`** (dictated as "added to the IRP" but not
-      found in the module-11 folder — re-add so it lives in the repo)
+- [x] ~~Save the invoice into the repo~~ → done: `irp/PiHut_Invoice_Personal_Info_Redacted.pdf`
+      (personal info redacted before committing — correct instinct for a public-ish repo)
 - [ ] Confirm SSD fitted in the HAT+; take assembly photos
 - [ ] Jetson order — funds expected end of August (kit + SanDisk Ultra 64GB microSD +
       Integral 500GB NVMe 2280, per procurement decisions of 2026-08-24)
