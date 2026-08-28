@@ -81,6 +81,21 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
 - Setup recorded as it happens in `irp/setup/pi5/pi5.md` and `irp/setup/jetson/jetson.md` (commands as run,
   versions, deviations).
 
+## 2026-08-28 — Jetson USB installer prepared (WP1: setup)
+
+JetPack **7.2.1** first-boot prep on the Orin Nano Super (method changed since planning: JetPack 7.2
+dropped SD-card images → the **Jetson ISO / USB-installer** flow). As-run detail in
+`irp/setup/jetson/jetson.md`:
+
+- **Firmware gate passed:** on-device UEFI = `36.4.7-gcid-42132812` (JetPack 6.x-gen, > 36.0) → ready
+  for the 7.2.1 ISO path; no 6.x update needed.
+- **Installer USB made + verified:** ISO `jetsoninstaller-r39.2.1-...-arm64.iso` (self-sha256
+  `f31cf35…`; NVIDIA publishes no ISO hash), balenaEtcher 2.1.6 → **GRUB boot confirmed** on the
+  devkit. DisplayPort monitor obtained → install runs monitor-attached (not headless serial).
+- **Install deferred to 2026-08-29:** BSP goes **straight onto the Integral 500GB NVMe** (arrives
+  tomorrow) — no microSD-first + clone (JetPack writes to the chosen target, and `rpi-clone` is
+  Pi-only: Jetson boots via module UEFI/QSPI).
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
@@ -97,3 +112,5 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
       Integral 500GB NVMe 2280 still in transit. Prices/invoice to record (see
       `irp/setup/jetson/jetson.md`). Setup proceeds from microSD — SSD not blocking.
 - [ ] Pi first boot: reflash to OS Lite (documented) → headless SSH → `irp/setup/pi5/pi5.md`
+- [ ] Jetson install (2026-08-29 when NVMe lands): boot USB → capsule update (`Y`) → BSP → NVMe →
+      first-boot setup → MAXN SUPER → llama.cpp/CUDA build spike (`irp/setup/jetson/jetson.md` Ph2–5)
