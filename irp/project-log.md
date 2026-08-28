@@ -88,7 +88,8 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
 - [x] ~~Save the invoice into the repo~~ → **REVERSED 2026-08-28: no invoices in the repo.**
       Both invoice PDFs turned out to carry name/address in the extractable text layer (the Pi
       one's black-box "redaction" was a graphics overlay — text intact underneath). Removed from
-      tracking + gitignored; originals kept local-only. All evidential facts (supplier, items,
+      tracking + gitignored; local copies deleted 2026-08-28 (originals remain in email). All
+      evidential facts (supplier, items,
       prices, dates) are transcribed in the setup logs, which is what the IRP report cites.
       _Lesson for the log: verify PDF redaction by text extraction, not by appearance._
 - [ ] Confirm SSD fitted in the HAT+; take assembly photos
