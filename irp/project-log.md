@@ -88,6 +88,7 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
 - [x] ~~Save the invoice into the repo~~ → done: `irp/setup/pi5/PiHut_Invoice_Personal_Info_Redacted.pdf`
       (personal info redacted before committing — correct instinct for a public-ish repo)
 - [ ] Confirm SSD fitted in the HAT+; take assembly photos
-- [ ] Jetson order — funds expected end of August (kit + SanDisk Ultra 64GB microSD +
-      Integral 500GB NVMe 2280, per procurement decisions of 2026-08-24)
+- [x] ~~Jetson order~~ → **ordered; kit + SanDisk Ultra 64GB microSD ARRIVED 2026-08-28**;
+      Integral 500GB NVMe 2280 still in transit. Prices/invoice to record (see
+      `irp/setup/jetson/jetson.md`). Setup proceeds from microSD — SSD not blocking.
 - [ ] Pi first boot: reflash to OS Lite (documented) → headless SSH → `irp/setup/pi5/pi5.md`
