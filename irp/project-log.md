@@ -85,8 +85,12 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
 - [ ] Confirm exact delivery date from courier email (~25 Aug)
-- [x] ~~Save the invoice into the repo~~ → done: `irp/setup/pi5/PiHut_Invoice_Personal_Info_Redacted.pdf`
-      (personal info redacted before committing — correct instinct for a public-ish repo)
+- [x] ~~Save the invoice into the repo~~ → **REVERSED 2026-08-28: no invoices in the repo.**
+      Both invoice PDFs turned out to carry name/address in the extractable text layer (the Pi
+      one's black-box "redaction" was a graphics overlay — text intact underneath). Removed from
+      tracking + gitignored; originals kept local-only. All evidential facts (supplier, items,
+      prices, dates) are transcribed in the setup logs, which is what the IRP report cites.
+      _Lesson for the log: verify PDF redaction by text extraction, not by appearance._
 - [ ] Confirm SSD fitted in the HAT+; take assembly photos
 - [x] ~~Jetson order~~ → **ordered; kit + SanDisk Ultra 64GB microSD ARRIVED 2026-08-28**;
       Integral 500GB NVMe 2280 still in transit. Prices/invoice to record (see
