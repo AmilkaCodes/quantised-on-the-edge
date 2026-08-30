@@ -109,6 +109,42 @@ class RSSSampler(threading.Thread):
         return round(self.peak / (1024 * 1024), 1)
 
 
+class PowerSampler(threading.Thread):
+    """Sample board power via `tegrastats` VDD_IN (mW) in the background; report mean watts.
+    Jetson-only: on the Pi/Mac `tegrastats` doesn't exist, so this self-disables (mean_w=None)."""
+    def __init__(self, interval_ms: int = 500):
+        super().__init__(daemon=True)
+        self.interval_ms = interval_ms
+        self._stopped = threading.Event()
+        self.samples_mw: list[int] = []
+        self.proc = None
+
+    def run(self):
+        try:
+            self.proc = subprocess.Popen(["tegrastats", "--interval", str(self.interval_ms)],
+                                         stdout=subprocess.PIPE, text=True)
+        except (FileNotFoundError, OSError):
+            return  # not a Jetson (no tegrastats) → no power data
+        for line in self.proc.stdout:
+            if self._stopped.is_set():
+                break
+            m = re.search(r"VDD_IN (\d+)mW", line)   # instantaneous board input power
+            if m:
+                self.samples_mw.append(int(m.group(1)))
+
+    def stop(self):
+        self._stopped.set()
+        if self.proc:
+            try:
+                self.proc.terminate()
+            except Exception:
+                pass
+
+    @property
+    def mean_w(self) -> float | None:
+        return round(sum(self.samples_mw) / len(self.samples_mw) / 1000, 2) if self.samples_mw else None
+
+
 def port_in_use(host: str, port: int) -> bool:
     """True if something is already listening on host:port (e.g. a stale/orphan server)."""
     import socket
@@ -214,6 +250,8 @@ def generate(client: OpenAI, model_label: str, problems: dict, cfg) -> tuple[lis
         "mean_ttft_ms": round(sum(ttfts) / len(ttfts), 1) if ttfts else None,
         "mean_tok_s": round(sum(tok_rates) / len(tok_rates), 1) if tok_rates else None,
         "parse_rate": round(sum(parses(s["solution"]) for s in samples) / len(samples), 3) if samples else 0.0,
+        "ttfts": ttfts,          # raw per-prompt (ms) — for perf-axis mean±std aggregation
+        "tok_rates": tok_rates,  # raw per-prompt (tok/s)
     }
     return samples, stats
 
@@ -241,6 +279,67 @@ def score_with_evalplus(samples_path: Path) -> tuple[float | None, float | None]
     return base, plus
 
 
+def _mean_std(xs) -> tuple[float | None, float | None]:
+    import statistics
+    xs = [x for x in xs if x is not None]
+    if not xs:
+        return (None, None)
+    m = round(statistics.mean(xs), 1)
+    s = round(statistics.pstdev(xs), 1) if len(xs) > 1 else 0.0
+    return (m, s)
+
+
+def run_perf(cfg, client, problems, out, device, args) -> None:
+    """Performance axis: for each (model x quant), run N prompts x K repeats against a warm
+    server, measuring tok/s + TTFT (mean±std over all N*K generations), peak RSS, and — on the
+    Jetson — mean board power. NO evalplus scoring (quality is the Mac's job, hardware-independent)."""
+    perf_csv = out / f"perf_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    fields = ["timestamp", "device", "model", "quant", "n_prompts", "repeats",
+              "mean_tok_s", "std_tok_s", "mean_ttft_ms", "std_ttft_ms",
+              "peak_rss_mb", "mean_power_w", "llama_cpp_tag"]
+    with perf_csv.open("w", newline="") as f:
+        csv.DictWriter(f, fieldnames=fields).writeheader()
+
+    for model in cfg["models"]:
+        for quant in model["quants"]:
+            tag = f"{model['name']}:{quant['label']}"
+            if args.only and args.only != tag:
+                continue
+            print(f"\n=== PERF {tag}  (N={len(problems)} x {args.perf_repeats} repeats) ===")
+            server = rss = pw = None
+            try:
+                server = launch_server(cfg, model, quant)
+                wait_ready(cfg, server)
+                rss = RSSSampler(server.pid); rss.start()
+                pw = PowerSampler(); pw.start()          # no-op off-Jetson
+                all_tok, all_ttft = [], []
+                for r in range(args.perf_repeats):
+                    _, stats = generate(client, quant["label"], problems, cfg)
+                    all_tok += stats.get("tok_rates", [])
+                    all_ttft += stats.get("ttfts", [])
+                rss.stop(); rss.join()
+                pw.stop(); pw.join()
+                peak = rss.peak_mb
+                power = pw.mean_w
+                mtok, stok = _mean_std(all_tok)
+                mttft, sttft = _mean_std(all_ttft)
+                row = {"timestamp": utcstamp(), "device": device, "model": model["name"],
+                       "quant": quant["label"], "n_prompts": len(problems), "repeats": args.perf_repeats,
+                       "mean_tok_s": mtok, "std_tok_s": stok, "mean_ttft_ms": mttft, "std_ttft_ms": sttft,
+                       "peak_rss_mb": peak, "mean_power_w": power, "llama_cpp_tag": cfg.get("llama_cpp_tag")}
+                with perf_csv.open("a", newline="") as f:
+                    csv.DictWriter(f, fieldnames=fields).writerow(row)
+                print(f"    -> tok/s {mtok}±{stok} | ttft {mttft}±{sttft}ms | peak {peak}MB "
+                      f"| power {power}W  (n={len(all_tok)})")
+            finally:
+                if rss and rss.is_alive(): rss.stop()
+                if pw and pw.is_alive(): pw.stop()
+                if server: stop_server(server)
+
+    print(f"\nDone (perf). Results: {perf_csv}")
+    print("Perf axis = latency/memory/power only (no pass@1 — that's the Mac quality axis).")
+
+
 # ----------------------------- main -----------------------------
 def main():
     ap = argparse.ArgumentParser()
@@ -249,6 +348,10 @@ def main():
     ap.add_argument("--only", help="restrict to one 'model:quant' (e.g. phi-3-mini-4k-instruct:Q4_K_M)")
     ap.add_argument("--no-manage-server", dest="manage", action="store_false", default=None)
     ap.add_argument("--server-pid", type=int, help="PID of an already-running server (for memory sampling)")
+    ap.add_argument("--perf", action="store_true",
+                    help="performance axis: latency/memory/power on a small prompt set, N repeats, NO scoring")
+    ap.add_argument("--perf-n", type=int, default=10, help="perf: number of prompts (default 10)")
+    ap.add_argument("--perf-repeats", type=int, default=3, help="perf: repeats per cell (default 3)")
     args = ap.parse_args()
 
     cfg = yaml.safe_load(Path(args.config).read_text())
@@ -264,7 +367,10 @@ def main():
     problems = dict(get_human_eval_plus())
     if args.smoke:
         problems = dict(list(problems.items())[:2])
-    print(f"Loaded {len(problems)} HumanEval+ problems{' (SMOKE)' if args.smoke else ''} | device={device}")
+    elif args.perf:
+        problems = dict(list(problems.items())[:args.perf_n])
+    mode = ' (SMOKE)' if args.smoke else (f' (PERF {len(problems)}x{args.perf_repeats})' if args.perf else '')
+    print(f"Loaded {len(problems)} HumanEval+ problems{mode} | device={device}")
 
     # Provenance manifest — every recorded run is self-describing (reproducibility).
     vm = psutil.virtual_memory()
@@ -280,6 +386,10 @@ def main():
 
     base_url = f"http://{cfg['host']}:{cfg['port']}/v1"
     client = OpenAI(base_url=base_url, api_key="sk-noauth")
+
+    if args.perf:
+        run_perf(cfg, client, problems, out, device, args)
+        return
 
     results_csv = out / f"pilot_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
     fields = ["timestamp", "device", "model", "quant", "n", "parse_rate", "pass@1_base", "pass@1_plus",
