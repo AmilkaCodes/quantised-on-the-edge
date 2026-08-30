@@ -96,6 +96,39 @@ dropped SD-card images → the **Jetson ISO / USB-installer** flow). As-run deta
   tomorrow) — no microSD-first + clone (JetPack writes to the chosen target, and `rpi-clone` is
   Pi-only: Jetson boots via module UEFI/QSPI).
 
+## 2026-08-30 — Network pinned static + Mac perf-axis review
+
+**Static IPs in place** (router reservations): **pi5 = 192.168.0.210**, **jetson (viperjet) =
+192.168.0.212** — closes the "DHCP drift" caveat on both devices. **Verification to run** (tick
+when done, record in each device's setup log):
+- [ ] pi5: reboot (or lease renew) → confirm still `.210` (`hostname -I`); `ssh pi5` alias still
+      connects key-only
+- [ ] jetson: reboot → confirm still `.212`; `ssh viperjet` alias still connects key-only
+- [ ] Note in both setup logs: addressing = router DHCP reservation (not device-side static
+      config) — one line each so the method is reproducible
+
+**Review of the Mac perf axis + device state (flags from review, 2026-08-30):**
+- [ ] **Phi-3 Q2_K anomaly — rerun that cell before the Mac perf axis is treated final.** Peak
+      RSS 5,672MB at Q2_K > Q4_K_M (5,033MB) > expectations, and TTFT 134ms ≈ 2× every other
+      rung; Qwen declines monotonically, Phi-3 breaks pattern at exactly one rung. Real
+      (dequant buffers) vs artifact (RSS spike during load) — one rerun decides.
+- [ ] **TTFT warm-up exclusion — make the harness provably match the pre-registered words.**
+      Rows show TTFT std > mean (e.g. 38.1±54.7ms) = a cold first generation inflating spread.
+      Drop the first generation per server start (or record median TTFT alongside mean).
+- [x] **Q3_K_M throughput dip REPRODUCED on both models with error bars** (Qwen 146<163,
+      Phi 77<85 tok/s) — independent confirmation of the "runtime effect, not a model effect"
+      claim in the proposal's Figure 1 caption. PowerSampler self-disable verified (power field
+      empty on Mac, as designed).
+- [ ] **Jetson SSH hardening to pi5 parity:** `PasswordAuthentication no` in sshd_config
+      (key login already confirmed working).
+- [ ] **Provenance mapping note in jetson.md:** hostname `viperjet` ↔ manifest `device=jetson`
+      (one device, two labels — state it once).
+- [ ] **jetson.md tidy (Mac-side):** remove the stale duplicate Phase-5 checkboxes below the
+      2026-08-30 session block.
+- [ ] Remaining device opens: Jetson swap check (`nvzramconfig`, mirrors pi5 zram watch-item);
+      `sudo nvme list` for the Integral's identity; power/thermal under sustained load + confirm
+      the bundled DC supply holds MAXN_SUPER; stage Phi-3 quants; verify kit box contents blank.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
@@ -114,3 +147,4 @@ dropped SD-card images → the **Jetson ISO / USB-installer** flow). As-run deta
 - [ ] Pi first boot: reflash to OS Lite (documented) → headless SSH → `irp/setup/pi5/pi5.md`
 - [ ] Jetson install (2026-08-29 when NVMe lands): boot USB → capsule update (`Y`) → BSP → NVMe →
       first-boot setup → MAXN SUPER → llama.cpp/CUDA build spike (`irp/setup/jetson/jetson.md` Ph2–5)
+
