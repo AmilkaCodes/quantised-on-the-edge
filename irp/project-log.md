@@ -14,6 +14,9 @@ breadcrumb stub + university admin docs only.
 **Log discipline:** dated entries, what happened when, commands/versions where relevant,
 mistakes included. This feeds the IRP methods chapter and the reproducibility claim.
 
+**Decision register:** consolidated methodological/engineering decisions + justifications (tagged
+literature / results / pragmatic) live in **`irp/decisions.md`** — the primary methods-chapter feed.
+
 ---
 
 ## 2026-08-24 — Raspberry Pi order placed (WP1: procurement)
