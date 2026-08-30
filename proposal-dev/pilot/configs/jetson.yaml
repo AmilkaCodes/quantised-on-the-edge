@@ -4,7 +4,7 @@
 
 device: "jetson"
 
-llama_cpp_tag: "TODO-bXXXX"          # SAME tag built on the Mac/Pi (identical inference stack)
+llama_cpp_tag: "b9951"               # SAME tag built on the Mac/Pi (identical inference stack)
 server_bin: "./local/llama.cpp/build/bin/llama-server"
 
 host: "127.0.0.1"
@@ -23,7 +23,7 @@ models:
     gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"
     ngl: 999                          # offload all layers to the GPU
     quants:
-      - {label: "F16",    file: "qwen2.5-coder-1.5b-instruct-f16.gguf"}
+      - {label: "F16",    file: "Qwen2.5-Coder-1.5B-Instruct-f16.gguf"}   # uploader's casing (matches the Mac-staged file)
       - {label: "Q8_0",   file: "qwen2.5-coder-1.5b-instruct-Q8_0.gguf"}
       - {label: "Q4_K_M", file: "qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf"}
       - {label: "Q3_K_M", file: "qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf"}
