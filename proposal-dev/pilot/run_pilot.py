@@ -289,13 +289,20 @@ def _mean_std(xs) -> tuple[float | None, float | None]:
     return (m, s)
 
 
+def _median(xs) -> float | None:
+    import statistics
+    xs = [x for x in xs if x is not None]
+    return round(statistics.median(xs), 1) if xs else None
+
+
 def run_perf(cfg, client, problems, out, device, args) -> None:
     """Performance axis: for each (model x quant), run N prompts x K repeats against a warm
     server, measuring tok/s + TTFT (mean±std over all N*K generations), peak RSS, and — on the
     Jetson — mean board power. NO evalplus scoring (quality is the Mac's job, hardware-independent)."""
     perf_csv = out / f"perf_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
     fields = ["timestamp", "device", "model", "quant", "n_prompts", "repeats",
-              "mean_tok_s", "std_tok_s", "mean_ttft_ms", "std_ttft_ms",
+              "mean_tok_s", "std_tok_s", "median_tok_s",
+              "mean_ttft_ms", "std_ttft_ms", "median_ttft_ms",
               "peak_rss_mb", "mean_power_w", "llama_cpp_tag"]
     with perf_csv.open("w", newline="") as f:
         csv.DictWriter(f, fieldnames=fields).writeheader()
@@ -312,6 +319,12 @@ def run_perf(cfg, client, problems, out, device, args) -> None:
                 wait_ready(cfg, server)
                 rss = RSSSampler(server.pid); rss.start()
                 pw = PowerSampler(); pw.start()          # no-op off-Jetson
+                # Warm-up: one DISCARDED generation so the cold first-token (model just loaded) does
+                # not inflate the recorded TTFT. Pre-registered latency is warm latency; the harness
+                # must provably exclude the cold start. (Also record median below, robust to outliers.)
+                if problems:
+                    print("      [warm-up] discarded generation to prime the server ...")
+                    generate(client, quant["label"], dict(list(problems.items())[:1]), cfg)
                 all_tok, all_ttft = [], []
                 for r in range(args.perf_repeats):
                     _, stats = generate(client, quant["label"], problems, cfg)
@@ -325,12 +338,13 @@ def run_perf(cfg, client, problems, out, device, args) -> None:
                 mttft, sttft = _mean_std(all_ttft)
                 row = {"timestamp": utcstamp(), "device": device, "model": model["name"],
                        "quant": quant["label"], "n_prompts": len(problems), "repeats": args.perf_repeats,
-                       "mean_tok_s": mtok, "std_tok_s": stok, "mean_ttft_ms": mttft, "std_ttft_ms": sttft,
+                       "mean_tok_s": mtok, "std_tok_s": stok, "median_tok_s": _median(all_tok),
+                       "mean_ttft_ms": mttft, "std_ttft_ms": sttft, "median_ttft_ms": _median(all_ttft),
                        "peak_rss_mb": peak, "mean_power_w": power, "llama_cpp_tag": cfg.get("llama_cpp_tag")}
                 with perf_csv.open("a", newline="") as f:
                     csv.DictWriter(f, fieldnames=fields).writerow(row)
-                print(f"    -> tok/s {mtok}±{stok} | ttft {mttft}±{sttft}ms | peak {peak}MB "
-                      f"| power {power}W  (n={len(all_tok)})")
+                print(f"    -> tok/s {mtok}±{stok} (med {_median(all_tok)}) | ttft {mttft}±{sttft}ms "
+                      f"(med {_median(all_ttft)}) | peak {peak}MB | power {power}W  (n={len(all_tok)})")
             finally:
                 if rss and rss.is_alive(): rss.stop()
                 if pw and pw.is_alive(): pw.stop()
