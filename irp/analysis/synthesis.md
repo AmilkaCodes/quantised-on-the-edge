@@ -87,6 +87,16 @@ Q4_K_M (40 tok/s) or Q2_K (32) is strictly better than Q3 (18.6); Q3's only adva
 memory headroom than Q4) is not worth the ~2× throughput loss. This is a deployment rule that falls
 straight out of the cross-tier data and would be invisible in any single-device study.
 
+**The energy axis confirms the trap from a third angle (fig5, RESULTS §9).** Energy-per-token has **two
+shapes**: on the **Pi (CPU) it falls monotonically** (Qwen 1.63 → 0.53 J/tok — quantise as far as quality
+allows, it is a pure efficiency win), but on the **Jetson (GPU) it is non-monotone** — Q4 is the optimum
+(0.45 J/tok) and **Q3_K_M is penalised *up* to 0.61 J/tok even though it draws the fewest watts (11.3 W)**,
+because it is also the slowest. So the Q3 dip is an **energy trap, not an energy saving** — the raw-watts
+reading (which flags Q3 as "lowest power") reverses once you divide by throughput. That the penalty appears
+on the GPU tier and is absent on the CPU tier is the same GPU-kernel signature seen in throughput, now
+independently corroborated in J/token. _(Boundary caveat: absolute J/token is not comparable across the two
+power routes; the within-tier shape is — D13/D23.)_
+
 ## 6. What this feeds into the IRP
 
 - **RQ1 (how far can we quantise before collapse):** per-model thresholds, §2 — grounded in paired

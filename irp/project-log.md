@@ -158,6 +158,22 @@ both committed). All artefacts under `irp/analysis/`.
 **Decision-register update:** all A-phase choices already covered by D1–D22 (no new decisions — analysis
 applied existing methodology). Figures/synthesis are outputs, not decisions.
 
+## 2026-08-31 (later) — Energy axis completed: Pi PMIC + Mac powermetrics (corrects a false claim)
+
+Triggered by the question "is there no cost-per-token on the Pi/Mac?" — checking it exposed an **error in
+our own record**: D13/setup logs claimed the Pi had no software power sensor. **Wrong.**
+- **Pi 5 power IS software-readable** via `vcgencmd pmic_read_adc` (Σ per-rail V×I, PMIC-downstream).
+  Verified live (≈2.4 W idle). Instrumented in the harness (`PowerSampler` PMIC backend, polled);
+  **full Pi power sweep run** 2026-08-31 (9 cells, N=10×3). Record corrected (D13 revised, **D23** added).
+- **Mac** `powermetrics` backend added too (SoC domains, needs root; parser validated against a real
+  block). Mac *sweep* deferred until the Mac is idle (D14) — code + auth path ready.
+- **J/token computed** (Jetson + Pi; RESULTS §9 table + `fig5_energy.png`). **⭐ Finding:** two-shaped
+  energy curve — **Pi CPU monotone** (Qwen 1.63→0.53 J/tok, pure efficiency win), **Jetson GPU
+  non-monotone** with **Q3_K_M an energy *trap*** (0.61 J/tok despite fewest watts — it's slowest). The
+  raw-watts "Q3 = lowest power" reading reverses in J/token; corroborates the GPU-kernel signature from a
+  third angle. Boundary caveat carried everywhere (absolute cross-tier J/token not comparable; per-tier
+  shape is).
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)

@@ -121,4 +121,33 @@ fig.suptitle("Peak memory vs quantisation, by tier  (Mac real-RSS caveat; Phi-3 
 fig.tight_layout(rect=(0, 0, 1, 0.96)); fig.savefig(f"{OUT}/fig4_memory.png", dpi=200, bbox_inches="tight")
 plt.close(fig)
 
+# ============ FIG 5 — energy-per-token per edge tier (small multiples) ============
+# J/token = mean_power_w / median_tok_s. Edge tiers only (Jetson VDD_IN, Pi 5 PMIC); Mac deferred.
+# Boundary caveat: the two power routes measure at different points → compare the WITHIN-tier shape
+# along the ladder, NOT absolute levels across tiers.
+ETIER = [("jetson", "Jetson (CUDA)", ORANGE), ("pi5", "Pi 5 (CPU)", AQUA)]
+def jpt(dev, mk):
+    pw = series(dev, mk, "mean_power_w"); tk = series(dev, mk, "median_tok_s")
+    return [pw[i] / tk[i] if not np.isnan(pw[i]) and not np.isnan(tk[i]) and tk[i] > 0 else np.nan
+            for i in range(len(QUANTS))]
+fig, axes = plt.subplots(1, 2, figsize=(11, 4.8), sharey=True)
+for ax, (mk, mlabel) in zip(axes, MODELS.items()):
+    for dev, dlabel, col in ETIER:
+        ax.plot(X, jpt(dev, mk), "-o", color=col, lw=2, ms=6, label=dlabel, zorder=3)
+    ax.set_xticks(X); ax.set_xticklabels(QUANTS); ax.set_title(mlabel, fontsize=11, loc="left")
+    ax.set_xlabel("Quantisation")
+# mark the Q3_K_M GPU energy trap on the Jetson (Qwen panel, where it is starkest)
+qy = jpt("jetson", "qwen2.5-coder-1.5b-instruct")
+axes[0].annotate("Q3 GPU energy trap\n(fewest W, worst J/tok)", (3, qy[3]), color=ORANGE, fontsize=8.5,
+                 xytext=(-8, 28), textcoords="offset points", ha="center",
+                 arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1.2))
+axes[0].set_ylabel("Energy per token (J/token) — lower is better")
+axes[0].legend(loc="upper right", fontsize=9)
+fig.suptitle("Energy-per-token vs quantisation, edge tiers  (Pi CPU monotone; Jetson GPU penalised at Q3_K_M; Mac deferred)",
+             fontsize=11, x=0.01, ha="left")
+fig.text(0.01, 0.005, "Different power boundaries (Jetson board VDD_IN vs Pi PMIC rail-sum) — compare the "
+         "shape within a tier, not absolute levels across tiers.", fontsize=7.5, color=INK2, ha="left")
+fig.tight_layout(rect=(0, 0.03, 1, 0.96)); fig.savefig(f"{OUT}/fig5_energy.png", dpi=200, bbox_inches="tight")
+plt.close(fig)
+
 print("wrote:", ", ".join(sorted(os.listdir(OUT))))
