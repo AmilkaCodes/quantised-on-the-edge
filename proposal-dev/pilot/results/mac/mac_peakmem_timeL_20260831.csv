@@ -1,0 +1,11 @@
+model,quant,max_rss_mb_timeL
+qwen2.5-coder-1.5b,F16,3162.3
+qwen2.5-coder-1.5b,Q8_0,1761.8
+qwen2.5-coder-1.5b,Q4_K_M,1137.6
+qwen2.5-coder-1.5b,Q3_K_M,985.8
+qwen2.5-coder-1.5b,Q2_K,847.1
+phi-3-mini,F16,8458.5
+phi-3-mini,Q8_0,5407.8
+phi-3-mini,Q4_K_M,3845.2
+phi-3-mini,Q3_K_M,3440.3
+phi-3-mini,Q2_K,3011.3

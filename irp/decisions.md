@@ -109,6 +109,19 @@ the first Mac perf run was **invalidated because the Mac was in use** and re-run
 Pre-registered "peak memory within RAM **without swap**" (pi5 zram / Jetson swap watch-items). Both
 confirmed swap-free post-reboot, so swap cannot mask memory overflow. Re-verify at measurement time.
 
+**D21 — Mac peak memory validated via `/usr/bin/time -l`; the perf RSSSampler figures stand.** **[RESULTS]**
+Ran a post-load `/usr/bin/time -l` peak-RSS pass per Mac cell (B1, 2026-08-31). It showed the perf-run
+`peak_rss` is **not** under-counted (post-load footprints are monotonic and slightly *below* the perf RSS,
+which also captures generation-time KV growth). The feared mmap/Metal under-count was a **cold-2-problem-smoke
+artifact only**. Correction to the earlier assumption. Residual caveat: Mac uses different memory accounting
+than Pi/Jetson, so cross-tier memory is compared Pi-vs-Jetson. (Method note: a generation-based version hung —
+dropped the gen; and Mac measurements must run `caffeinate` + lid-open, per D14, after a fold silently slept a run.)
+
+**D22 — Phi-3 Q2_K memory/TTFT anomaly is a generation-time effect; mechanism left open.** **[RESULTS]**
+B1+B2 (2026-08-31): Q2_K's static footprint is smallest+monotonic; the anomaly appears only during generation.
+A single-prompt probe did **not** confirm the "degenerate rambling" hypothesis (Q2 output was *shorter* than Q3),
+so it's intermittent/prompt-dependent — **not overclaimed**; flagged for per-prompt instrumentation as future work.
+
 ## 5. Hardware / infrastructure
 
 **D16 — Boot both edge devices from NVMe.** **[PRAGMATIC]**
