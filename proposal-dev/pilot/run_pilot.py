@@ -113,10 +113,13 @@ class PowerSampler(threading.Thread):
     """Sample board power in the background; report mean watts. Auto-selects a backend:
       - Jetson: `tegrastats` VDD_IN (mW) — whole-board DC input power (streamed).
       - Pi 5:   `vcgencmd pmic_read_adc` — Σ per-rail V×I (polled), i.e. power DOWNSTREAM of the PMIC.
-      - Mac / unknown: no software route → self-disables (mean_w=None).
-    IMPORTANT: the two backends measure at DIFFERENT boundaries (board-input vs PMIC-rail-sum), so
-    ABSOLUTE watts are NOT directly comparable across tiers; the WITHIN-tier trend along the quant
-    ladder (and the derived J/token shape) is. `.backend` records which route was used."""
+      - Mac:    `powermetrics` (needs root) — SoC power domains (CPU+GPU+ANE, mW); GPU dominates on Metal.
+      - unknown: no software route → self-disables (mean_w=None).
+    IMPORTANT: the three backends measure at DIFFERENT boundaries (board-input vs PMIC-rail-sum vs
+    SoC-domains), so ABSOLUTE watts are NOT directly comparable across tiers; the WITHIN-tier trend along
+    the quant ladder (and the derived J/token shape) is. `.backend` records which route was used.
+    The Mac route needs root: run the sweep with a NOPASSWD sudoers entry for powermetrics, or as root
+    (`sudo -n powermetrics` is tried, then plain `powermetrics` when already euid 0)."""
     def __init__(self, interval_ms: int = 500):
         super().__init__(daemon=True)
         self.interval_ms = interval_ms
@@ -150,8 +153,42 @@ class PowerSampler(threading.Thread):
                     self.samples_mw.append(mw)
                 self._stopped.wait(self.interval_ms / 1000)
             return
-        # Backend 3 — Mac / unknown: no software power route.
+        # Backend 3 — Mac: powermetrics (SoC power domains; needs root). Prefer `sudo -n` (works with a
+        # NOPASSWD sudoers entry), else run directly when already root. Sums CPU+GPU+ANE per sample block
+        # (uses the "Combined Power" line when powermetrics prints one).
+        if sys.platform == "darwin":
+            base = ["powermetrics", "--samplers", "cpu_power", "-i", str(self.interval_ms)]
+            cmd = base if os.geteuid() == 0 else ["sudo", "-n"] + base
+            try:
+                self.proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                             stderr=subprocess.DEVNULL, text=True)
+                self.backend = "powermetrics/SoC"
+            except (FileNotFoundError, OSError):
+                self.proc = None
+            if self.proc:
+                cur: dict[str, float] = {}
+                for line in self.proc.stdout:
+                    if self._stopped.is_set():
+                        break
+                    if line.startswith("*** Sampled"):          # block delimiter → flush previous block
+                        if cur:
+                            self.samples_mw.append(self._mac_block_mw(cur)); cur = {}
+                        continue
+                    m = re.search(r"(CPU|GPU|ANE|Combined) Power[^:]*:\s*([\d.]+)\s*mW", line)
+                    if m:
+                        cur[m.group(1)] = float(m.group(2))
+                if cur:
+                    self.samples_mw.append(self._mac_block_mw(cur))
+                return
+        # Backend 4 — unknown / no software power route.
         self.backend = None
+
+    @staticmethod
+    def _mac_block_mw(cur: dict) -> int:
+        """One powermetrics sample block → total SoC mW: the 'Combined' line if present, else CPU+GPU+ANE."""
+        if "Combined" in cur:
+            return int(cur["Combined"])
+        return int(cur.get("CPU", 0) + cur.get("GPU", 0) + cur.get("ANE", 0))
 
     @staticmethod
     def _pi_pmic_mw() -> "int | None":
@@ -341,9 +378,9 @@ def _median(xs) -> float | None:
 
 def run_perf(cfg, client, problems, out, device, args) -> None:
     """Performance axis: for each (model x quant), run N prompts x K repeats against a warm
-    server, measuring tok/s + TTFT (mean±std over all N*K generations), peak RSS, and mean power
-    where a software route exists (Jetson tegrastats VDD_IN; Pi 5 vcgencmd PMIC rail-sum; Mac none).
-    NO evalplus scoring (quality is the Mac's job, hardware-independent)."""
+    server, measuring tok/s + TTFT (mean±std over all N*K generations), peak RSS, and mean power via
+    the per-tier software route (Jetson tegrastats VDD_IN; Pi 5 vcgencmd PMIC rail-sum; Mac powermetrics
+    SoC domains, needs root). NO evalplus scoring (quality is the Mac's job, hardware-independent)."""
     perf_csv = out / f"perf_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
     fields = ["timestamp", "device", "model", "quant", "n_prompts", "repeats",
               "mean_tok_s", "std_tok_s", "median_tok_s",
