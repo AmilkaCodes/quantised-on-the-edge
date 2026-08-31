@@ -91,13 +91,17 @@ c49f3a2.)
 Quality is hardware-independent (measured once on the Mac, D4); re-scoring per device is redundant and
 infeasible on the Pi's CPU (hours). Perf mode records latency/memory/power only.
 
-**D13 — Power captured on the Jetson only (tegrastats `VDD_IN`); Pi/Mac power = future work.**
-**[PRAGMATIC]+[LIT]**
+**D13 — Software power capture: Jetson (tegrastats `VDD_IN`) + Pi 5 (PMIC rail-sum); Mac deferred.**
+**[PRAGMATIC]+[LIT]** _(REVISED 2026-08-31 — see D23; the original "the Pi has no software power sensor"
+was **wrong**.)_
 Completes the **performance–energy–quality triad** (adopted from Shi & Ding 2025; power also measured
-by Nguyen & Nguyen 2025) *where it's measurable in software*. The Jetson exposes `VDD_IN`; the Pi has
-no software power sensor and the Mac needs `powermetrics`/sudo with a different measurement boundary —
-so a rigorous cross-tier energy comparison needs one common external meter (stated as future work,
-not faked).
+by Nguyen & Nguyen 2025) *where it's measurable in software*. The Jetson exposes whole-board `VDD_IN`;
+the **Pi 5 exposes per-rail V/I via `vcgencmd pmic_read_adc`** (Σ V×I = board power downstream of the
+PMIC — instrumented, D23); the Mac needs `powermetrics`/sudo with a different (SoC-domain) boundary and
+is deferred. **Boundary caveat:** the routes measure at different points, so *absolute* cross-tier
+watts/J-per-token are **not** directly comparable — the *within-tier* trend along the quant ladder is,
+and a fair *absolute* cross-tier comparison still needs one common external meter (future work). What
+changed vs the original D13: the Pi energy story is now **real data**, not future work.
 
 **D14 — Measurement machine must be otherwise-idle.** **[LIT]+[RESULTS]**
 "Control background load" is a named internal-validity confound (Week-4). The Pi/Jetson are dedicated
@@ -121,6 +125,19 @@ dropped the gen; and Mac measurements must run `caffeinate` + lid-open, per D14,
 B1+B2 (2026-08-31): Q2_K's static footprint is smallest+monotonic; the anomaly appears only during generation.
 A single-prompt probe did **not** confirm the "degenerate rambling" hypothesis (Q2 output was *shorter* than Q3),
 so it's intermittent/prompt-dependent — **not overclaimed**; flagged for per-prompt instrumentation as future work.
+
+**D23 — Pi 5 power instrumented in software via the PMIC (`vcgencmd pmic_read_adc`); corrects D13.**
+**[RESULTS]**
+Verified live 2026-08-31: the Pi 5's PMIC reports per-rail current and voltage for every rail; summing
+V×I over the rails that report both (excluding monitor-only rails EXT5V/BATT) gives board power
+**downstream of the PMIC** — idle ≈ 2.4 W, under Qwen-Q4 CPU load ≈ 6.9 W. The harness `PowerSampler`
+now auto-selects a backend — Jetson `tegrastats`/VDD_IN (streamed), Pi 5 PMIC rail-sum (polled), Mac
+none — so `mean_power_w` and the derived **J/token** are captured on both edge tiers. This **corrects
+D13's earlier false claim** that the Pi had no software power route (it does; the claim was made without
+checking). Energy-per-token is derived in analysis as `mean_power_w ÷ median_tok_s`; the CSV schema is
+unchanged (the `device` column disambiguates the measurement boundary). Comparability caveat as in D13:
+absolute cross-tier J/token is not apples-to-apples (different boundaries), but the per-tier quant-ladder
+shape is valid — and it flips the raw-watts reading of the GPU Q3 dip (fewest watts, but *worst* J/token).
 
 ## 5. Hardware / infrastructure
 

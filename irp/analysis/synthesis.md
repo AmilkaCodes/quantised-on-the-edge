@@ -100,7 +100,11 @@ straight out of the cross-tier data and would be invisible in any single-device 
 
 ### Honest limits (carry verbatim into the write-up)
 - Single task/dataset (HumanEval+, n=164); MBPP+ / a second task = future work.
-- Cross-tier **energy** is Jetson-only; a common external meter is needed for a fair triad (D13).
+- **Energy** is software-captured on both edge tiers (Jetson VDD_IN + Pi 5 PMIC rail-sum; Mac deferred —
+  corrected 2026-08-31, D13/D23). The routes use different measurement boundaries, so *absolute*
+  cross-tier J/token is not apples-to-apples (a common external meter is future work); the *per-tier*
+  J/token trend across the ladder is valid — and it reverses the raw-watts reading of the GPU Q3 dip
+  (fewest watts, worst J/token).
 - Cross-tier **memory** is cleanest **Pi-vs-Jetson** (identical instrumentation); Mac uses a different
   accounting path (D21).
 - The Phi-3 Q2_K generation-time memory/TTFT spike is intermittent and **not** mechanistically pinned

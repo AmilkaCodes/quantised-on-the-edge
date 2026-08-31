@@ -110,27 +110,71 @@ class RSSSampler(threading.Thread):
 
 
 class PowerSampler(threading.Thread):
-    """Sample board power via `tegrastats` VDD_IN (mW) in the background; report mean watts.
-    Jetson-only: on the Pi/Mac `tegrastats` doesn't exist, so this self-disables (mean_w=None)."""
+    """Sample board power in the background; report mean watts. Auto-selects a backend:
+      - Jetson: `tegrastats` VDD_IN (mW) — whole-board DC input power (streamed).
+      - Pi 5:   `vcgencmd pmic_read_adc` — Σ per-rail V×I (polled), i.e. power DOWNSTREAM of the PMIC.
+      - Mac / unknown: no software route → self-disables (mean_w=None).
+    IMPORTANT: the two backends measure at DIFFERENT boundaries (board-input vs PMIC-rail-sum), so
+    ABSOLUTE watts are NOT directly comparable across tiers; the WITHIN-tier trend along the quant
+    ladder (and the derived J/token shape) is. `.backend` records which route was used."""
     def __init__(self, interval_ms: int = 500):
         super().__init__(daemon=True)
         self.interval_ms = interval_ms
         self._stopped = threading.Event()
         self.samples_mw: list[int] = []
         self.proc = None
+        self.backend: str | None = None
 
     def run(self):
+        # Backend 1 — Jetson: stream tegrastats VDD_IN (instantaneous board input power).
         try:
             self.proc = subprocess.Popen(["tegrastats", "--interval", str(self.interval_ms)],
                                          stdout=subprocess.PIPE, text=True)
+            self.backend = "tegrastats/VDD_IN"
         except (FileNotFoundError, OSError):
-            return  # not a Jetson (no tegrastats) → no power data
-        for line in self.proc.stdout:
-            if self._stopped.is_set():
-                break
-            m = re.search(r"VDD_IN (\d+)mW", line)   # instantaneous board input power
-            if m:
-                self.samples_mw.append(int(m.group(1)))
+            self.proc = None
+        if self.proc:
+            for line in self.proc.stdout:
+                if self._stopped.is_set():
+                    break
+                m = re.search(r"VDD_IN (\d+)mW", line)
+                if m:
+                    self.samples_mw.append(int(m.group(1)))
+            return
+        # Backend 2 — Pi 5: poll the PMIC (sum of rail V×I). One probe to detect, then loop.
+        if self._pi_pmic_mw() is not None:
+            self.backend = "pmic/rail-sum"
+            while not self._stopped.is_set():
+                mw = self._pi_pmic_mw()
+                if mw is not None:
+                    self.samples_mw.append(mw)
+                self._stopped.wait(self.interval_ms / 1000)
+            return
+        # Backend 3 — Mac / unknown: no software power route.
+        self.backend = None
+
+    @staticmethod
+    def _pi_pmic_mw() -> "int | None":
+        """Total power (mW) = Σ over PMIC rails of V×I, parsed from `vcgencmd pmic_read_adc`.
+        Sums only rails reporting BOTH a current and a voltage (excludes monitor-only rails such
+        as EXT5V/BATT) → this is PMIC-downstream power, NOT the USB-C wall input (boundary caveat)."""
+        try:
+            out = subprocess.run(["vcgencmd", "pmic_read_adc"],
+                                 capture_output=True, text=True, timeout=5).stdout
+        except (FileNotFoundError, OSError, subprocess.SubprocessError):
+            return None
+        amps, volts = {}, {}
+        for line in out.splitlines():
+            ma = re.search(r"(\S+)_A current\(\d+\)=([\d.]+)A", line)
+            if ma:
+                amps[ma.group(1)] = float(ma.group(2))
+            mv = re.search(r"(\S+)_V volt\(\d+\)=([\d.]+)V", line)
+            if mv:
+                volts[mv.group(1)] = float(mv.group(2))
+        rails = [k for k in amps if k in volts]
+        if not rails:
+            return None
+        return int(round(sum(volts[k] * amps[k] for k in rails) * 1000))
 
     def stop(self):
         self._stopped.set()
@@ -297,8 +341,9 @@ def _median(xs) -> float | None:
 
 def run_perf(cfg, client, problems, out, device, args) -> None:
     """Performance axis: for each (model x quant), run N prompts x K repeats against a warm
-    server, measuring tok/s + TTFT (mean±std over all N*K generations), peak RSS, and — on the
-    Jetson — mean board power. NO evalplus scoring (quality is the Mac's job, hardware-independent)."""
+    server, measuring tok/s + TTFT (mean±std over all N*K generations), peak RSS, and mean power
+    where a software route exists (Jetson tegrastats VDD_IN; Pi 5 vcgencmd PMIC rail-sum; Mac none).
+    NO evalplus scoring (quality is the Mac's job, hardware-independent)."""
     perf_csv = out / f"perf_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
     fields = ["timestamp", "device", "model", "quant", "n_prompts", "repeats",
               "mean_tok_s", "std_tok_s", "median_tok_s",
@@ -343,8 +388,10 @@ def run_perf(cfg, client, problems, out, device, args) -> None:
                        "peak_rss_mb": peak, "mean_power_w": power, "llama_cpp_tag": cfg.get("llama_cpp_tag")}
                 with perf_csv.open("a", newline="") as f:
                     csv.DictWriter(f, fieldnames=fields).writerow(row)
+                jpt = round(power / _median(all_tok), 3) if power and _median(all_tok) else None
                 print(f"    -> tok/s {mtok}±{stok} (med {_median(all_tok)}) | ttft {mttft}±{sttft}ms "
-                      f"(med {_median(all_ttft)}) | peak {peak}MB | power {power}W  (n={len(all_tok)})")
+                      f"(med {_median(all_ttft)}) | peak {peak}MB | power {power}W [{pw.backend}] "
+                      f"| ~{jpt} J/tok  (n={len(all_tok)})")
             finally:
                 if rss and rss.is_alive(): rss.stop()
                 if pw and pw.is_alive(): pw.stop()
