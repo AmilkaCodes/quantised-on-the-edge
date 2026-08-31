@@ -1,0 +1,10 @@
+timestamp,device,model,quant,n_prompts,repeats,mean_tok_s,std_tok_s,median_tok_s,mean_ttft_ms,std_ttft_ms,median_ttft_ms,peak_rss_mb,mean_power_w,llama_cpp_tag
+2026-08-30T22:30:57Z,pi5,qwen2.5-coder-1.5b-instruct,F16,10,3,3.9,0.0,3.9,947.4,1044.3,273.3,3230.8,,b9951
+2026-08-30T22:42:22Z,pi5,qwen2.5-coder-1.5b-instruct,Q8_0,10,3,6.7,0.1,6.7,861.6,1083.0,160.5,3399.5,,b9951
+2026-08-30T22:47:48Z,pi5,qwen2.5-coder-1.5b-instruct,Q4_K_M,10,3,11.0,0.1,11.0,586.0,748.7,101.0,2137.4,,b9951
+2026-08-30T22:54:26Z,pi5,qwen2.5-coder-1.5b-instruct,Q3_K_M,10,3,12.8,0.1,12.8,1104.0,1566.2,88.9,1499.8,,b9951
+2026-08-30T23:01:14Z,pi5,qwen2.5-coder-1.5b-instruct,Q2_K,10,3,14.8,0.3,14.9,1536.6,1935.4,79.0,1125.2,,b9951
+2026-08-30T23:19:26Z,pi5,phi-3-mini-4k-instruct,Q8_0,10,3,2.8,0.0,2.8,3035.4,4044.3,421.0,10047.8,,b9951
+2026-08-30T23:39:02Z,pi5,phi-3-mini-4k-instruct,Q4_K_M,10,3,4.5,0.1,4.5,1967.5,2579.8,309.8,7210.0,,b9951
+2026-08-31T00:00:44Z,pi5,phi-3-mini-4k-instruct,Q3_K_M,10,3,5.4,0.2,5.5,3803.7,4401.8,272.7,6200.4,,b9951
+2026-08-31T00:48:25Z,pi5,phi-3-mini-4k-instruct,Q2_K,10,3,6.1,0.4,5.8,9154.3,6444.9,11726.1,6132.2,,b9951
