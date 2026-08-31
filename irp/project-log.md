@@ -132,6 +132,34 @@ when done, record in each device's setup log):
       `sudo nvme list` for the Integral's identity; power/thermal under sustained load + confirm
       the bundled DC supply holds MAXN_SUPER; stage Phi-3 quants; verify kit box contents blank.
 
+## 2026-08-31 — Track A analysis: stats, figures, two-axis synthesis
+
+Completed the analysis pass on the finished two-axis dataset (quality axis §1–6 + performance axis §9,
+both committed). All artefacts under `irp/analysis/`.
+
+- [x] **A#1 — collapse-threshold statistics** (`collapse-threshold.md` + `collapse_stats.py`). Paired
+      tests on per-problem HumanEval+ pass/fail (same 164 problems at each rung; greedy+seed-0 →
+      deterministic): **Cochran's Q** (omnibus, both models reject H₀) + **McNemar exact** (F16 vs each
+      rung, locates the threshold). Result: **model-dependent collapse** — Qwen safe through Q3
+      (collapse at Q2, p=1.2×10⁻⁷), Phi breaks already at Q4 (p=0.007). RQ1 answered with significance,
+      not eyeballed curves.
+- [x] **B (data-completeness tidy-ups) — done first, per instruction, documented with impact.** B1 Mac
+      peak-RSS validated via `/usr/bin/time -l` (earlier under-count worry was a cold-smoke artifact;
+      perf numbers stand → D21). B2 Phi-3 Q2_K anomaly localised to *generation time*; "rambling"
+      hypothesis **not** confirmed → D22. Both recorded in `decisions.md` + RESULTS §9.
+- [x] **A#4 — figures** (`figures/fig1–4.png` + reproducible `make_figs.py`). Built to the dataviz
+      procedure (validated categorical palette, one-axis, direct labels, colorblind-safe); all four
+      eyeballed for collisions/geometry before commit. Collapse curves / three-tier throughput (Q3 GPU
+      dip) / quality–speed trade-off / peak memory (8 GB edge line).
+- [x] **A#3 — two-axis synthesis** (`synthesis.md`). Combines the axes into a **deployment envelope**
+      with two named handoff triggers: **memory-forced** (Phi-3 F16 >8 GB won't fit the edge at all;
+      only Q8 is both quality-safe *and* edge-fitting) and **throughput-forced** (SLO-dependent; Pi CPU
+      decode misses interactive targets the Jetson/Mac meet). Headline recommendation the data supports:
+      *specialise the model, quantise to the knee, size the tier to the SLO.* Maps cleanly onto RQ1–RQ3.
+
+**Decision-register update:** all A-phase choices already covered by D1–D22 (no new decisions — analysis
+applied existing methodology). Figures/synthesis are outputs, not decisions.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
