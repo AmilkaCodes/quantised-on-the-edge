@@ -165,8 +165,10 @@ our own record**: D13/setup logs claimed the Pi had no software power sensor. **
 - **Pi 5 power IS software-readable** via `vcgencmd pmic_read_adc` (Σ per-rail V×I, PMIC-downstream).
   Verified live (≈2.4 W idle). Instrumented in the harness (`PowerSampler` PMIC backend, polled);
   **full Pi power sweep run** 2026-08-31 (9 cells, N=10×3). Record corrected (D13 revised, **D23** added).
-- **Mac** `powermetrics` backend added too (SoC domains, needs root; parser validated against a real
-  block). Mac *sweep* deferred until the Mac is idle (D14) — code + auth path ready.
+- **Mac** `powermetrics` backend added (SoC domains, CPU+GPU+ANE); **sweep DONE 2026-08-31** on an idle
+  Mac under `caffeinate` (lid open), enabled by a scoped NOPASSWD sudoers rule for `/usr/bin/powermetrics`.
+  ⭐ Mac (Metal) **reproduces the Q3_K_M energy trap** → confirmed on a **second GPU backend** (Jetson
+  CUDA + Mac Metal), absent on the Pi CPU. Energy now captured on **all three tiers** (D13 revised again).
 - **J/token computed** (Jetson + Pi; RESULTS §9 table + `fig5_energy.png`). **⭐ Finding:** two-shaped
   energy curve — **Pi CPU monotone** (Qwen 1.63→0.53 J/tok, pure efficiency win), **Jetson GPU
   non-monotone** with **Q3_K_M an energy *trap*** (0.61 J/tok despite fewest watts — it's slowest). The

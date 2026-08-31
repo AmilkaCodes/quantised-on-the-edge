@@ -91,17 +91,19 @@ c49f3a2.)
 Quality is hardware-independent (measured once on the Mac, D4); re-scoring per device is redundant and
 infeasible on the Pi's CPU (hours). Perf mode records latency/memory/power only.
 
-**D13 — Software power capture: Jetson (tegrastats `VDD_IN`) + Pi 5 (PMIC rail-sum); Mac deferred.**
-**[PRAGMATIC]+[LIT]** _(REVISED 2026-08-31 — see D23; the original "the Pi has no software power sensor"
-was **wrong**.)_
+**D13 — Software power capture on ALL THREE tiers: Jetson (`VDD_IN`), Pi 5 (PMIC rail-sum), Mac
+(`powermetrics`).** **[PRAGMATIC]+[LIT]** _(REVISED 2026-08-31 — see D23; the original "the Pi has no
+software power sensor / Mac deferred" was **wrong/superseded**.)_
 Completes the **performance–energy–quality triad** (adopted from Shi & Ding 2025; power also measured
-by Nguyen & Nguyen 2025) *where it's measurable in software*. The Jetson exposes whole-board `VDD_IN`;
-the **Pi 5 exposes per-rail V/I via `vcgencmd pmic_read_adc`** (Σ V×I = board power downstream of the
-PMIC — instrumented, D23); the Mac needs `powermetrics`/sudo with a different (SoC-domain) boundary and
-is deferred. **Boundary caveat:** the routes measure at different points, so *absolute* cross-tier
-watts/J-per-token are **not** directly comparable — the *within-tier* trend along the quant ladder is,
-and a fair *absolute* cross-tier comparison still needs one common external meter (future work). What
-changed vs the original D13: the Pi energy story is now **real data**, not future work.
+by Nguyen & Nguyen 2025). The Jetson exposes whole-board `VDD_IN`; the **Pi 5 exposes per-rail V/I via
+`vcgencmd pmic_read_adc`** (Σ V×I = power downstream of the PMIC — D23); the **Mac exposes SoC-domain
+power via `powermetrics`** (CPU+GPU+ANE; captured 2026-08-31 via a scoped NOPASSWD sudoers rule for
+`/usr/bin/powermetrics` so the harness can sample it without an interactive prompt). All three swept with
+J/token derived. **Boundary caveat:** the three routes measure at different points (board-input vs
+PMIC-rail-sum vs SoC-domains), so *absolute* cross-tier watts/J-per-token are **not** directly comparable
+— the *within-tier* trend along the quant ladder is, and a fair *absolute* cross-tier comparison would
+need one common external meter (the only remaining energy future-work). What changed vs the original D13:
+the Pi and Mac energy stories are now **real data**, not future work.
 
 **D14 — Measurement machine must be otherwise-idle.** **[LIT]+[RESULTS]**
 "Control background load" is a named internal-validity confound (Week-4). The Pi/Jetson are dedicated
