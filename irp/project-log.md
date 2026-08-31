@@ -102,13 +102,11 @@ dropped SD-card images → the **Jetson ISO / USB-installer** flow). As-run deta
 ## 2026-08-30 — Network pinned static + Mac perf-axis review
 
 **Static IPs in place** (router reservations): **pi5 = 192.168.0.210**, **jetson (viperjet) =
-192.168.0.212** — closes the "DHCP drift" caveat on both devices. **Verification to run** (tick
-when done, record in each device's setup log):
-- [ ] pi5: reboot (or lease renew) → confirm still `.210` (`hostname -I`); `ssh pi5` alias still
-      connects key-only
-- [ ] jetson: reboot → confirm still `.212`; `ssh viperjet` alias still connects key-only
-- [ ] Note in both setup logs: addressing = router DHCP reservation (not device-side static
-      config) — one line each so the method is reproducible
+192.168.0.212** — closes the "DHCP drift" caveat on both devices. **Verification (done 2026-08-31,
+recorded in each device's setup log):**
+- [x] pi5: still `.210` post-reboot (`hostname -I` = 192.168.0.210, uptime 19h); `ssh pi5` connects key-only ✓
+- [x] jetson: still `.212` post-reboot (`hostname -I` = 192.168.0.212); `ssh viperjet`/`ssh jetson` connect key-only ✓
+- [x] Both setup logs note addressing = router DHCP reservation (not device-side static config) — reproducible from the router
 
 **Review of the Mac perf axis + device state (flags from review, 2026-08-30):**
 - [ ] **Phi-3 Q2_K anomaly — rerun that cell before the Mac perf axis is treated final.** Peak
