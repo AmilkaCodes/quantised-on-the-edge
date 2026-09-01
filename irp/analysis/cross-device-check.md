@@ -42,18 +42,42 @@ not). This is consistent with the observed pattern: most problems identical, a m
   is: **outputs mostly agree but are not identical across backends, and per-problem correctness can flip.**
 - **The quality axis (measured on the Mac) is internally valid** and consistent (deterministic on its own
   backend), but it is a **proxy** for the Pi/Jetson, **not an exact predictor** of their per-problem pass@1.
-- **The collapse finding is expected robust**: it is driven by *quantization* (a 20–40 pp effect), which
-  dwarfs the backend numerical noise; and divergences flip in **both** directions (some tiers win a problem,
-  some lose it), so aggregate pass@1 should be close across tiers even though individual problems differ.
-  But **per-tier quality *equivalence* cannot be asserted** — confirming it would need full per-device
-  quality runs (2×5×164 on each tier), which is infeasible on the Pi/Jetson (the reason quality is Mac-only).
+- **The collapse finding is robust, and now quantified so**: it is driven by *quantization* (a 20–40 pp
+  effect) which dwarfs the backend noise. The K=50 scoring (below) confirms **aggregate pass@1 spans only
+  ~2 pp across tiers** (0.76–0.78) even though 24% of individual outputs differ — divergence rarely flips
+  correctness (1/12). So the Mac axis is a **good aggregate proxy** (per-tier pass@1 tier-invariant to ~1
+  problem); full per-device quality runs (2×5×164 each) remain infeasible on Pi/Jetson, but this bounds
+  what they would have shown.
 - **RQ3 reframed:** the *quality collapse threshold* (a property of model×quant) is measured once and is
   robust to the small cross-backend noise; what shifts per tier is performance/energy. But the earlier
   wording "outputs are byte-identical / quality is exactly hardware-independent" is **too strong** and is
   corrected to "quality is *approximately* hardware-independent — dominated by quantization, with a small,
   measured backend-numerics effect that can flip individual problems."
 
-## Not yet quantified (optional follow-up)
-The 8-problem sample establishes *that* divergence and correctness-flips occur; it does **not** quantify the
-aggregate rate or the net effect on pass@1. A larger spot-check (e.g. K=50 per tier, scored with EvalPlus)
-would bound the per-tier pass@1 spread — worth doing if the write-up needs a number on it. Flagged, not run.
+## Quantified at K=50 (2026-09-01)
+
+Extended to the **first 50 HumanEval+ problems** on all three tiers (same rung/model/tag/GGUF). Scored
+**in-process against the canonical oracle** (`score_xdev_direct.py`) — EvalPlus's parallel exec sandbox
+proved unreliable here (Bitdefender throttles its many short-lived exec subprocesses → mass spurious
+timeouts; identical code scored differently, so those numbers are discarded). The in-process scorer passes
+a **noise gate**: all 38 identical-solution problems score identically across tiers (0 anomalies), so its
+per-tier differences are real, not scoring noise.
+
+| metric | value |
+|---|---|
+| output **identical** across all three tiers | **38/50 (76%)** |
+| output **differs** on ≥1 tier | **12/50 (24%)** |
+| pairwise identical: Mac↔Jetson / Mac↔Pi / Jetson↔Pi | 45/50 · 40/50 · 39/50 |
+| **correctness flips** among the 12 divergent problems | **1/12** (HumanEval/5: Jetson pass, Mac + Pi fail) |
+| **per-tier pass@1** over the same 50 (canonical oracle, base+plus) | **Mac 0.760 · Jetson 0.780 · Pi 0.760** |
+
+**The number that matters:** outputs diverge often (24%), but divergence **rarely changes correctness**
+(1 of 12), so **aggregate pass@1 spans just 2 pp across the three tiers (0.76–0.78 — a one-problem gap).**
+So the design's "measure quality once on the Mac" is a **good aggregate proxy** — per-tier pass@1 is
+tier-invariant to within ~1 problem on this sample — **while the per-problem premise ("outputs match") is
+false.** Both statements are true and both belong in the write-up: the headline collapse result is safe;
+the byte-identity claim is not.
+
+_(Caveat: the in-process oracle mirrors EvalPlus's canonical-vs-candidate check on base+plus inputs but is
+not the EvalPlus CLI; it is used only for this cross-device delta, where EvalPlus was unreliable. The main
+quality axis §1–6 remains EvalPlus-scored on the Mac.)_

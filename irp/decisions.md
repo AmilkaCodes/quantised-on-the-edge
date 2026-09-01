@@ -173,8 +173,12 @@ registered "outputs match" does *not* hold; per-problem pass@1 is backend-depend
 *collapse threshold* (quantization, 20–40 pp) dwarfs this backend noise and is treated robust, but the
 Mac quality axis is a **proxy** for the edge tiers, not an exact predictor — D4 caveated accordingly.
 Confirming per-tier quality *equivalence* would need full per-device quality runs (infeasible → limitation).
-Not yet quantified at scale (8-problem sample); a K≈50 scored spot-check would bound the per-tier pass@1
-spread (optional, `cross-device-check.md` §"Not yet quantified").
+**Quantified 2026-09-01 at K=50** (`score_xdev_direct.py`, in-process canonical oracle — EvalPlus's CLI
+sandbox was unreliable here, Bitdefender throttling its exec subprocesses; noise-gated: 38/38 identical
+solutions scored identically): **24% of outputs differ across tiers, but only 1/12 divergent problems
+flips correctness, so aggregate pass@1 spans just ~2 pp (Mac 0.760 · Jetson 0.780 · Pi 0.760).** Net: the
+Mac axis is a **good aggregate proxy** (tier-invariant to ~1 problem) even though the per-problem "outputs
+match" premise is false — both statements go in the write-up.
 
 ## 5. Hardware / infrastructure
 
