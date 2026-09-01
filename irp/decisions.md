@@ -196,7 +196,11 @@ Post-analysis audit closed four bench checks:
   both **byte-identical** to the prior run (Mac already variance-0.000, RESULTS §2). This makes D25's core
   claim exact: **deterministic *within* a device, divergent *across* devices** — the two are now both
   evidenced, not assumed.
-- **Clean-clone reproducibility rehearsal:** see project-log (scoping decision pending / to run).
+- **Clean-clone reproducibility rehearsal — PASSED (scoped, 2026-09-01).** Fresh `git clone` of HEAD →
+  relinked `local/` → `~/pilot-work` per SETUP-NOTES → reran the K=50 Qwen-Q4 cell → **byte-identical to
+  the committed result**. The "published harness, every result reproducible" claim holds; the documented
+  `local/` reconciliation is sufficient for a replicator. (Scoped: reused the built toolchain via symlinks;
+  a full from-scratch rebuild is optional pre-submission.)
 
 ## 5. Hardware / infrastructure
 

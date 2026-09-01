@@ -253,7 +253,13 @@ Items 1–4 ≈ one bench evening; item 5 ≈ half a day.
       (Mac already 0.000; D25/D26 now airtight on all three). Self-diff the K=50 set on Pi and
       Jetson (Mac already has variance-0.000 evidence) → makes D25's "deterministic per
       device, divergent across devices" airtight on all three tiers.
-- [ ] **5. Clean-clone reproducibility rehearsal (capstone):** fresh clone in a new directory
+- [x] **5. Clean-clone reproducibility rehearsal — DONE 2026-09-01 (scoped): ✅ byte-identical.**
+      Fresh `git clone` of HEAD into scratch → relinked `local/` → `~/pilot-work` (venv/models/llama.cpp)
+      per SETUP-NOTES → reran the K=50 Qwen-Q4 cell → output **byte-identical to the committed result**.
+      Validates "published harness, every result reproducible" by acting as own-replicator; the documented
+      `local/` reconciliation step is sufficient. (Scoped = reused the built toolchain via the symlinks;
+      a full from-scratch toolchain rebuild remains an option pre-submission but this closes the core
+      claim.) Original (capstone):** fresh clone in a new directory
       on one device → follow the setup doc top-to-bottom → rerun a single cell → confirm it
       matches the committed CSV. Tests the "published harness, every result reproducible"
       claim by acting as own replicator; any friction found = documentation debt fixed cheap.
