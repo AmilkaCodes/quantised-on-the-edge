@@ -109,26 +109,22 @@ recorded in each device's setup log):**
 - [x] Both setup logs note addressing = router DHCP reservation (not device-side static config) — reproducible from the router
 
 **Review of the Mac perf axis + device state (flags from review, 2026-08-30):**
-- [ ] **Phi-3 Q2_K anomaly — rerun that cell before the Mac perf axis is treated final.** Peak
-      RSS 5,672MB at Q2_K > Q4_K_M (5,033MB) > expectations, and TTFT 134ms ≈ 2× every other
-      rung; Qwen declines monotonically, Phi-3 breaks pattern at exactly one rung. Real
-      (dequant buffers) vs artifact (RSS spike during load) — one rerun decides.
-- [ ] **TTFT warm-up exclusion — make the harness provably match the pre-registered words.**
-      Rows show TTFT std > mean (e.g. 38.1±54.7ms) = a cold first generation inflating spread.
-      Drop the first generation per server start (or record median TTFT alongside mean).
+- [x] ~~Phi-3 Q2_K anomaly — rerun before Mac perf axis final~~ → **done 2026-08-31 (B1/B2):
+      localised to generation time; static footprint smallest+monotonic; "rambling" hypothesis
+      not confirmed → flagged, not overclaimed (D22).**
+- [x] ~~TTFT warm-up exclusion~~ → **done 2026-08-31: harness discards 1 warm-up generation per
+      cell + records median TTFT (c49f3a2, D11); Mac axis re-run idle with fixed harness.**
 - [x] **Q3_K_M throughput dip REPRODUCED on both models with error bars** (Qwen 146<163,
       Phi 77<85 tok/s) — independent confirmation of the "runtime effect, not a model effect"
       claim in the proposal's Figure 1 caption. PowerSampler self-disable verified (power field
       empty on Mac, as designed).
-- [ ] **Jetson SSH hardening to pi5 parity:** `PasswordAuthentication no` in sshd_config
-      (key login already confirmed working).
-- [ ] **Provenance mapping note in jetson.md:** hostname `viperjet` ↔ manifest `device=jetson`
-      (one device, two labels — state it once).
-- [ ] **jetson.md tidy (Mac-side):** remove the stale duplicate Phase-5 checkboxes below the
-      2026-08-30 session block.
-- [ ] Remaining device opens: Jetson swap check (`nvzramconfig`, mirrors pi5 zram watch-item);
-      `sudo nvme list` for the Integral's identity; power/thermal under sustained load + confirm
-      the bundled DC supply holds MAXN_SUPER; stage Phi-3 quants; verify kit box contents blank.
+- [x] ~~Jetson SSH hardening~~ → **done 2026-08-31: key-only, password auth disabled (aae2c0f).**
+- [x] ~~Provenance mapping note~~ → **done: viperjet ↔ device=jetson noted in jetson.md (f9aa4f0).**
+- [x] ~~jetson.md tidy~~ → **done (f9aa4f0).**
+- [x] ~~Remaining device opens~~ → **closed 2026-08-31 (336c6e1, e414344, 8c5f6ac): NVMe identity
+      recorded, both devices swap-clean (0B, D15), Phi-3 staged + full Jetson perf axis run, kit
+      box contents verified.** Still open: **sustained-load power/thermal + `jetson_clocks`
+      decision** (robustness characterisation, not an RQ input — synthesis §7).
 
 ## 2026-08-31 — Track A analysis: stats, figures, two-axis synthesis
 
@@ -176,6 +172,38 @@ our own record**: D13/setup logs claimed the Pi had no software power sensor. **
   third angle. Boundary caveat carried everywhere (absolute cross-tier J/token not comparable; per-tier
   shape is).
 
+## 2026-09-01 — Pre-registration alignment review (analysis vs proposal commitments)
+
+Review of the completed analysis against the proposal's pre-registered commitments found **four
+alignment gaps** — the science is done, but it must demonstrably be the science the proposal said
+it would do. Pre-registration is the methodology's selling point; a marker reading both documents
+will check. **To execute ASAP:**
+
+- [ ] **A. Apply the pre-registered 5pp margin explicitly.** The proposal pre-registered
+      "quality-acceptable if pass@1 stays within five percentage points of the model's F16
+      baseline." The analysis currently defines "quality-safe" by McNemar significance instead.
+      The verdicts almost certainly agree (Qwen Q3 −3.7pp = within margin ✓; Phi Q4 ~−11pp =
+      outside ✓), but the registered criterion must be applied **explicitly and reported
+      alongside** the tests — otherwise it looks silently swapped post hoc.
+- [ ] **B. Add the bootstrap CIs.** The proposal (incl. the statistical-power addition) promised
+      "bootstrap 95% confidence intervals accompany each pass@1 … margin verdicts are therefore
+      reported with their intervals." None exist in `irp/analysis/` yet. ~20 lines in
+      `collapse_stats.py`; a written commitment.
+- [ ] **C. Run + document the cross-device spot-check.** Synthesis asserts outputs are
+      "byte-identical across tiers" citing RESULTS §2 — but §2 is Mac-only re-run determinism.
+      The proposal pre-registered "a cross-device spot-check confirms outputs match." Run it for
+      real (one rung, a handful of problems, diff Mac/Pi/Jetson outputs) and record it —
+      ~an hour, and it converts RQ3's central premise from assumption to evidence.
+- [ ] **D. Gate the deployment envelope on the pre-registered SLO, not an "illustrative" one.**
+      Registered floors exist: **8–10 tok/s sustained + TTFT 1–2 s (Nielsen)**. Apply them as the
+      primary gate (Pi/Qwen-Q4 at 11 tok/s squeaks past; Pi/Phi-Q8 at 2.8 fails; Jetson/Q3 at
+      18.6 passes but is dominated) — then generalise. Completes RQ3's "good enough" map exactly
+      as the proposal defined it.
+
+_Also from the same review: log hygiene (tick the completed 08-30 checkboxes + stale Pending
+items — done below), and the standing note that the biggest remaining risk is supervision timing,
+not tech: get the supervisor's eyes on the design-as-executed + decision register early._
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
@@ -191,7 +219,9 @@ our own record**: D13/setup logs claimed the Pi had no software power sensor. **
 - [x] ~~Jetson order~~ → **ordered; kit + SanDisk Ultra 64GB microSD ARRIVED 2026-08-28**;
       Integral 500GB NVMe 2280 still in transit. Prices/invoice to record (see
       `irp/setup/jetson/jetson.md`). Setup proceeds from microSD — SSD not blocking.
-- [ ] Pi first boot: reflash to OS Lite (documented) → headless SSH → `irp/setup/pi5/pi5.md`
-- [ ] Jetson install (2026-08-29 when NVMe lands): boot USB → capsule update (`Y`) → BSP → NVMe →
-      first-boot setup → MAXN SUPER → llama.cpp/CUDA build spike (`irp/setup/jetson/jetson.md` Ph2–5)
+- [x] ~~Pi first boot~~ → **done 2026-08-28: OS Lite headless, NVMe boot migration, fully logged
+      in `irp/setup/pi5/pi5.md` (zero blanks).**
+- [x] ~~Jetson install~~ → **done 2026-08-29/30: JetPack 7.2.1 on NVMe (attended attempt 3, D19),
+      MAXN_SUPER, CUDA 13.2, llama.cpp b9951, smoke GREEN with GPU offload confirmed
+      (`irp/setup/jetson/jetson.md` Ph2–5).**
 
