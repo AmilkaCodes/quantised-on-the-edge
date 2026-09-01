@@ -64,7 +64,11 @@ Assembled as-built, bottom to top (dictated 2026-08-27):
 
 - [x] ~~To confirm: SSD fitted before closing?~~ → **confirmed 2026-08-27: 512GB Deck NVMe
       installed in the HAT+ during assembly.**
-- [ ] Assembly photos — take before/if reopening (methods-appendix + thermal-debug value).
+- [x] ~~Assembly photos~~ → **WAIVED 2026-09-01, reasoned:** reproducibility is carried by the
+      written record (part list + stack order + officially-documented fitment), and the
+      thermal-debug value lapses once the sustained-load check proves the cooler works by
+      measurement. Not worth reopening a working machine. Optional: one exterior "apparatus"
+      shot of the closed stack for the dissertation, if the phone's ever nearby.
 
 ## 2026-08-27 — Setup planning (pre-boot decisions)
 
