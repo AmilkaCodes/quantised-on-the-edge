@@ -182,6 +182,22 @@ match" premise is false. _(Method note: EvalPlus first appeared to mass-fail; th
 `*_eval_results.json` cache reuse**, not Bitdefender as I first thought — clearing stale results makes it
 reliable; the in-process oracle was an independent cross-check.)_
 
+**D26 — Verification sweep (2026-09-01): provenance, thermal, and edge-tier determinism all confirmed.**
+**[RESULTS]**
+Post-analysis audit closed four bench checks:
+- **Provenance manifest gap fixed.** The harness omitted JetPack + power mode (promised in jetson.md Ph4).
+  `accel_provenance()` now stamps `l4t_release` + `nvpmodel` (Jetson) / throttle+temp (Pi) into every
+  manifest; verified live (R39.2.1, MAXN_SUPER). 08-30/31 runs retro-confirmed MAXN_SUPER (honest note, no
+  faked manifest). `jetson_clocks` recorded OFF for all runs.
+- **No thermal throttling during measurement.** Sustained-load checks: **Jetson** peak junction 65.4 °C,
+  VDD_IN ≈18 W, no throttle/cap events (`tegrastats`); **Pi 5** peak 71.4 °C, `get_throttled`=0x0 before &
+  after (`vcgencmd`). Both cooled below their throttle points → latency cells not thermally corrupted.
+- **⭐ Within-device determinism now airtight on ALL THREE tiers.** Re-ran the K=50 set on Pi and Jetson;
+  both **byte-identical** to the prior run (Mac already variance-0.000, RESULTS §2). This makes D25's core
+  claim exact: **deterministic *within* a device, divergent *across* devices** — the two are now both
+  evidenced, not assumed.
+- **Clean-clone reproducibility rehearsal:** see project-log (scoping decision pending / to run).
+
 ## 5. Hardware / infrastructure
 
 **D16 — Boot both edge devices from NVMe.** **[PRAGMATIC]**

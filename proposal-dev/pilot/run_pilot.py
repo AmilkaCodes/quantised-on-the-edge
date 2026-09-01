@@ -438,6 +438,30 @@ def run_perf(cfg, client, problems, out, device, args) -> None:
     print("Perf axis = latency/memory/power only (no pass@1 — that's the Mac quality axis).")
 
 
+def accel_provenance() -> dict:
+    """Best-effort accelerator/thermal provenance for the manifest (reproducibility): Jetson JetPack/L4T
+    release + power mode + jetson_clocks state; Pi PMIC throttle flags. Empty on the Mac. All best-effort
+    (missing tools/permission -> field omitted); never fails the run."""
+    info = {}
+    try:
+        rel = Path("/etc/nv_tegra_release")
+        if rel.exists():
+            info["l4t_release"] = rel.read_text().strip().splitlines()[0]
+    except Exception:
+        pass
+    for key, cmd in [("nvpmodel", ["nvpmodel", "-q"]),
+                     ("jetson_clocks", ["jetson_clocks", "--show"]),
+                     ("pi_throttled", ["vcgencmd", "get_throttled"]),
+                     ("pi_temp", ["vcgencmd", "measure_temp"])]:
+        try:
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+            if r.returncode == 0 and r.stdout.strip():
+                info[key] = " | ".join(r.stdout.strip().splitlines())[:300]
+        except (FileNotFoundError, OSError, subprocess.SubprocessError):
+            pass
+    return info
+
+
 # ----------------------------- main -----------------------------
 def main():
     ap = argparse.ArgumentParser()
@@ -478,6 +502,7 @@ def main():
         "cpu_count": os.cpu_count(), "ram_gb": round(vm.total / (1024**3), 1),
         "python": platform.python_version(), "llama_cpp_tag": cfg.get("llama_cpp_tag"),
         "config_file": str(args.config), "smoke": args.smoke,
+        "accelerator": accel_provenance(),   # JetPack/power-mode (Jetson) · throttle/temp (Pi) · {} (Mac)
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2))
     print(f"  manifest: {manifest['os']} | {manifest['cpu_count']} cores | {manifest['ram_gb']}GB")

@@ -233,20 +233,24 @@ not tech: get the supervisor's eyes on the design-as-executed + decision registe
 Post A–D audit sweep: what remains before the dataset is fully closed and writing starts.
 Items 1–4 ≈ one bench evening; item 5 ≈ half a day.
 
-- [ ] **1. Manifest gap (found 2026-09-01): JetPack version + power mode not stamped.** D13 +
+- [x] **1. Manifest gap — FIXED 2026-09-01** (`accel_provenance()` stamps l4t_release + nvpmodel;
+      verified R39.2.1 + MAXN_SUPER; 08-30/31 retro-confirmed; D26). JetPack version + power mode not stamped.** D13 +
       jetson.md Phase 4 promise "provenance manifest fields per run: JetPack version + power
       mode"; `results/jetson/manifest.json` has neither. Fix: harness stamps
       `/etc/nv_tegra_release`, `nvpmodel -q` output, and `jetson_clocks` state for all future
       runs; dated addendum note that the 08-30/31 runs were at MAXN_SUPER per the setup log
       (honest retro-annotation, not a regenerated manifest).
-- [ ] **2. Pi thermal under sustained load** (pi5.md build-out, still open — validity guard for
+- [x] **2. Pi thermal — DONE 2026-09-01: peak 71.4 °C, get_throttled=0x0 before & after → no throttling**
+      (pi5.md; D26). Under sustained load** (pi5.md build-out, still open — validity guard for
       the CPU latency cells). Rerun one heavy cell (Phi Q8), watch `vcgencmd measure_temp`,
       then `get_throttled` = 0x0 after the run (sticky flags reset at boot, so it must be
       checked in-session) → licenses "no thermal throttling occurred during measurement".
-- [ ] **3. Jetson sustained-load twin:** `tegrastats` during a long cell — throttle/power-cap
+- [x] **3. Jetson sustained-load — DONE 2026-09-01: peak junction 65.4 °C, VDD_IN ≈18 W, no throttle/cap
+      events; jetson_clocks OFF recorded** (jetson.md Ph4; D26). `tegrastats` during a long cell — throttle/power-cap
       events, DC-supply-holds-MAXN_SUPER confirmation, and the `jetson_clocks` decision
       (record whether used per run). The one open device item from synthesis §7.
-- [ ] **4. Within-device determinism on the edge tiers:** self-diff the K=50 set on Pi and
+- [x] **4. Edge determinism — DONE 2026-09-01: K=50 re-run byte-identical on BOTH Pi and Jetson**
+      (Mac already 0.000; D25/D26 now airtight on all three). Self-diff the K=50 set on Pi and
       Jetson (Mac already has variance-0.000 evidence) → makes D25's "deterministic per
       device, divergent across devices" airtight on all three tiers.
 - [ ] **5. Clean-clone reproducibility rehearsal (capstone):** fresh clone in a new directory
