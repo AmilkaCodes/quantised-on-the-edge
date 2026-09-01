@@ -56,27 +56,34 @@ not). This is consistent with the observed pattern: most problems identical, a m
 
 ## Quantified at K=50 (2026-09-01)
 
-Extended to the **first 50 HumanEval+ problems** on all three tiers (same rung/model/tag/GGUF). Scored
-**in-process against the canonical oracle** (`score_xdev_direct.py`) — EvalPlus's parallel exec sandbox
-proved unreliable here (Bitdefender throttles its many short-lived exec subprocesses → mass spurious
-timeouts; identical code scored differently, so those numbers are discarded). The in-process scorer passes
-a **noise gate**: all 38 identical-solution problems score identically across tiers (0 anomalies), so its
-per-tier differences are real, not scoring noise.
+Extended to the **first 50 HumanEval+ problems** on all three tiers (same rung/model/tag/GGUF), scored
+**two independent ways that agree**:
+1. **EvalPlus** (authoritative; `score_xdev.py`) — plus pass@1 **Mac 0.780 · Jetson 0.800 · Pi 0.780**
+   (base 0.840 · 0.860 · 0.840).
+2. **In-process canonical oracle** (`score_xdev_direct.py`, noise-gated: 38/38 identical solutions score
+   identically) — 0.760 · 0.780 · 0.760.
+
+Both give the **same cross-tier delta: a 2 pp (one-problem) spread**, driven entirely by HumanEval/5.
 
 | metric | value |
 |---|---|
 | output **identical** across all three tiers | **38/50 (76%)** |
 | output **differs** on ≥1 tier | **12/50 (24%)** |
 | pairwise identical: Mac↔Jetson / Mac↔Pi / Jetson↔Pi | 45/50 · 40/50 · 39/50 |
-| **correctness flips** among the 12 divergent problems | **1/12** (HumanEval/5: Jetson pass, Mac + Pi fail) |
-| **per-tier pass@1** over the same 50 (canonical oracle, base+plus) | **Mac 0.760 · Jetson 0.780 · Pi 0.760** |
+| **correctness flips** across tiers | **1/50 (2%)** (HumanEval/5: Jetson pass, Mac + Pi fail) |
+| **per-tier pass@1 plus** (EvalPlus) over the same 50 | **Mac 0.780 · Jetson 0.800 · Pi 0.780** |
 
 **The number that matters:** outputs diverge often (24%), but divergence **rarely changes correctness**
-(1 of 12), so **aggregate pass@1 spans just 2 pp across the three tiers (0.76–0.78 — a one-problem gap).**
-So the design's "measure quality once on the Mac" is a **good aggregate proxy** — per-tier pass@1 is
-tier-invariant to within ~1 problem on this sample — **while the per-problem premise ("outputs match") is
-false.** Both statements are true and both belong in the write-up: the headline collapse result is safe;
-the byte-identity claim is not.
+(1 in 50), so **aggregate pass@1 spans just 2 pp across the three tiers (a one-problem gap).** So the
+design's "measure quality once on the Mac" is a **good aggregate proxy** — per-tier pass@1 is tier-invariant
+to within ~1 problem — **while the per-problem premise ("outputs match") is false.** Both statements are
+true and both belong in the write-up: the headline collapse result is safe; the byte-identity claim is not.
+
+**Scoring-method note (corrected):** an earlier attempt showed identical code scoring differently, which I
+first misattributed to Bitdefender throttling EvalPlus's exec subprocesses. That was **wrong** — the real
+cause was **EvalPlus silently reusing a stale `*_eval_results.json` cache** from a first broken run;
+deleting stale results before each evaluate (now done in `score_xdev.py`) makes EvalPlus fully reliable
+here. The in-process oracle was a useful independent cross-check and its delta matched EvalPlus exactly.
 
 _(Caveat: the in-process oracle mirrors EvalPlus's canonical-vs-candidate check on base+plus inputs but is
 not the EvalPlus CLI; it is used only for this cross-device delta, where EvalPlus was unreliable. The main

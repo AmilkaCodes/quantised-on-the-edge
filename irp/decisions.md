@@ -173,12 +173,14 @@ registered "outputs match" does *not* hold; per-problem pass@1 is backend-depend
 *collapse threshold* (quantization, 20–40 pp) dwarfs this backend noise and is treated robust, but the
 Mac quality axis is a **proxy** for the edge tiers, not an exact predictor — D4 caveated accordingly.
 Confirming per-tier quality *equivalence* would need full per-device quality runs (infeasible → limitation).
-**Quantified 2026-09-01 at K=50** (`score_xdev_direct.py`, in-process canonical oracle — EvalPlus's CLI
-sandbox was unreliable here, Bitdefender throttling its exec subprocesses; noise-gated: 38/38 identical
-solutions scored identically): **24% of outputs differ across tiers, but only 1/12 divergent problems
-flips correctness, so aggregate pass@1 spans just ~2 pp (Mac 0.760 · Jetson 0.780 · Pi 0.760).** Net: the
+**Quantified 2026-09-01 at K=50**, scored two ways that agree: **EvalPlus** (authoritative, `score_xdev.py`)
+plus pass@1 **Mac 0.780 · Jetson 0.800 · Pi 0.780**, and an in-process canonical oracle
+(`score_xdev_direct.py`, noise-gated 38/38) at 0.760/0.780/0.760 — **same 2 pp (one-problem) cross-tier
+spread.** **24% of outputs differ across tiers but only 1/50 flips correctness** (HumanEval/5). Net: the
 Mac axis is a **good aggregate proxy** (tier-invariant to ~1 problem) even though the per-problem "outputs
-match" premise is false — both statements go in the write-up.
+match" premise is false. _(Method note: EvalPlus first appeared to mass-fail; the cause was **stale
+`*_eval_results.json` cache reuse**, not Bitdefender as I first thought — clearing stale results makes it
+reliable; the in-process oracle was an independent cross-check.)_
 
 ## 5. Hardware / infrastructure
 

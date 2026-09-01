@@ -27,6 +27,10 @@ def score(dev):
                    check=False, capture_output=True)
     san = jsonl.with_name(jsonl.stem + "-sanitized.jsonl")
     target = san if san.exists() else jsonl
+    # EvalPlus REUSES an existing *_eval_results.json (cache/resume) — delete stale ones so we
+    # always score fresh (a broken earlier run must not persist).
+    for stale in glob.glob(str(ROOT / dev / "xdev_*eval_results.json")):
+        os.remove(stale)
     subprocess.run([sys.executable, "-m", "evalplus.evaluate", "--dataset", "humaneval",
                     "--samples", str(target)], check=False, capture_output=True, env=ENV)
     er = target.with_name(target.stem + "_eval_results.json")

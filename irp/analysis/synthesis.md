@@ -15,8 +15,9 @@ The two axes **separate cleanly**, and that separation is itself the primary fin
   byte-identical**, however: the pre-registered cross-device spot-check (`cross-device-check.md`) found
   backend floating-point differences (Metal/CUDA/CPU) change greedy decoding on a minority of problems and
   can **flip individual pass/fail** (e.g. HumanEval/5: Jetson passes, Mac + Pi fail). Quantified at K=50
-  (`cross-device-check.md`): **24% of outputs differ but only 1/12 flips correctness, so aggregate pass@1
-  spans just ~2 pp across tiers (0.76–0.78)**. So the *collapse threshold* — a 20–40 pp quantization effect
+  (`cross-device-check.md`, EvalPlus + an in-process oracle agreeing): **24% of outputs differ but only 1/50
+  flips correctness, so aggregate pass@1 spans just ~2 pp across tiers (Mac 0.78 · Jetson 0.80 · Pi 0.78)**.
+  So the *collapse threshold* — a 20–40 pp quantization effect
   that dwarfs this backend noise — is robust and treated as hardware-independent (RQ3: **no meaningful
   shift**), and the Mac quality axis is a **good aggregate proxy** (tier-invariant to ~1 problem) — though
   exact per-tier pass@1 is not byte-for-byte identical.
