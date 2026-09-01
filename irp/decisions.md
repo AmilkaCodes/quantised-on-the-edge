@@ -34,11 +34,17 @@ F16 base.
 
 ## 2. Two-axes measurement design
 
-**D4 — Quality measured ONCE (Mac, hardware-independent); performance measured PER device.** **[LIT]**
-pass@1 with greedy+seed-0 is deterministic and hardware-independent, so it is measured once; latency,
-throughput and memory are hardware-dependent and measured per tier (candidate-topic Week-4 feed-through
-(3); Williams's design≠method licenses realising a causal question through software instrumentation).
-Confirmed empirically: determinism variance = 0.000 (RESULTS.md §2).
+**D4 — Quality measured ONCE (Mac); performance measured PER device.** **[LIT]** _(caveat added
+2026-09-01 — see D25 / `cross-device-check.md`: quality is *approximately*, not exactly, hardware-
+independent.)_
+pass@1 with greedy+seed-0 is **deterministic within a device** (variance = 0.000, RESULTS §2), so it is
+measured once on the Mac; latency, throughput and memory are hardware-dependent and measured per tier
+(candidate-topic Week-4 feed-through (3); Williams's design≠method licenses realising a causal question
+through software instrumentation). **Caveat (D25):** the pre-registered cross-device spot-check showed
+outputs are **not byte-identical across backends** (Metal/CUDA/CPU FP differences flip greedy decoding on
+a minority of problems, occasionally flipping pass/fail), so the Mac quality axis is a **validated proxy**
+for the edge tiers, not an exact per-problem predictor. The *collapse threshold* (a large quantization
+effect) is robust to this small backend noise; exact per-tier pass@1 equivalence is not claimed.
 
 **D5 — Keep all three tiers: Pi (CPU), Jetson (edge-GPU), Mac (consumer-GPU/Metal).** **[LIT]**
 The strong contrast is **CPU-only vs accelerated**, which separates the quantization effect from the
@@ -154,6 +160,21 @@ quality axis, where the real uncertainty is the 164-problem *sample* → paired 
 and not here. Where a statistic *is* noise-dominated (cold-start TTFT, std > mean) the **median** is used
 for exactly that reason (D11). The **J/token** figures inherit this: derived from median tok/s × mean
 power, reported as point values with the ladder *shape* (not absolute cross-tier levels) as the claim.
+
+**D25 — Cross-device spot-check RUN; it FALSIFIED "outputs match across tiers" — claim softened, not
+dropped.** **[RESULTS]**
+The proposal pre-registered a cross-device spot-check to confirm the Mac-only quality axis transfers to
+the other tiers. Run 2026-09-01 (`cross-device-check.md`; `cross_device_check.py`): Qwen Q4_K_M, first 8
+HumanEval+, identical GGUF + b9951, only the backend differing. **Result: 3/8 problems produced different
+code across tiers, and correctness flipped** — HumanEval/5: Jetson passes, Mac + Pi fail (differently).
+Mechanism: temp-0 greedy = argmax; Metal/CUDA/CPU do FP reductions in different orders → occasional
+different early token → whole generation diverges. **This is a genuine finding, honestly recorded:** the
+registered "outputs match" does *not* hold; per-problem pass@1 is backend-dependent. Impact: the
+*collapse threshold* (quantization, 20–40 pp) dwarfs this backend noise and is treated robust, but the
+Mac quality axis is a **proxy** for the edge tiers, not an exact predictor — D4 caveated accordingly.
+Confirming per-tier quality *equivalence* would need full per-device quality runs (infeasible → limitation).
+Not yet quantified at scale (8-problem sample); a K≈50 scored spot-check would bound the per-tier pass@1
+spread (optional, `cross-device-check.md` §"Not yet quantified").
 
 ## 5. Hardware / infrastructure
 

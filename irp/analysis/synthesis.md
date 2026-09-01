@@ -10,11 +10,16 @@ tier). Figures: `figures/fig1–4`. Decisions/justification: `../decisions.md` D
 
 The two axes **separate cleanly**, and that separation is itself the primary finding:
 
-- **Quality is a property of (model × quant) alone.** Greedy + seed-0 makes pass@1 deterministic
-  (run-to-run variance = 0.000, RESULTS §2), and the emitted code is byte-identical across tiers. So the
-  collapse threshold does **not** move with hardware (RQ3 answered: **no shift**).
+- **Quality is *approximately* a property of (model × quant).** Greedy + seed-0 makes pass@1
+  **deterministic within a device** (re-run variance = 0.000, RESULTS §2). Across devices it is **not
+  byte-identical**, however: the pre-registered cross-device spot-check (`cross-device-check.md`) found
+  backend floating-point differences (Metal/CUDA/CPU) change greedy decoding on a minority of problems and
+  can **flip individual pass/fail** (e.g. HumanEval/5: Jetson passes, Mac + Pi fail). So the *collapse
+  threshold* — a large quantization effect (20–40 pp) that dwarfs this backend noise — is robust and treated
+  as hardware-independent (RQ3: **no meaningful shift**), but exact per-tier pass@1 is **not** claimed
+  identical; the Mac quality axis is a validated proxy, not an exact predictor, of the edge tiers.
 - **Performance is a property of (model × quant × tier).** Throughput, memory and energy change with the
-  backend; quality does not.
+  backend — a large, first-order effect (unlike the small quality-side backend noise above).
 
 Consequence: you can **choose the rung once** on quality grounds, then **read off the cost** of running
 that rung on each tier. The collapse curve (fig1) sets the *floor* of admissible rungs; the performance
@@ -38,7 +43,7 @@ sharpest single claim the study makes, and it is statistically robust, not eyeba
 Overlaying quality on speed (fig3, Mac tier) turns the floor into a *choice*:
 
 - **Qwen — a genuine free lunch to Q4_K_M.** Q4 is the knee: quality is statistically identical to F16
-  (0.616 vs 0.610) while throughput **doubles** (78 → 166 tok/s) and memory **halves** (3.2 → 1.2 GB).
+  (0.616 vs 0.610) while throughput **doubles** (78 → 165 tok/s) and memory **halves** (3.2 → 1.2 GB).
   Quantising to Q4 costs nothing measurable and buys 2×/2×. The curve tracks *right* holding altitude.
 - **Phi — no free lunch; you pay quality almost immediately.** The curve collapses **near-vertically**:
   Q4 already sheds ~10 points for a modest speed gain, and Q8 (the safe rung) is only ~1.7× faster than
@@ -50,27 +55,33 @@ fits the edge — §4).
 
 ## 4. The deployment envelope and the local↔cloud handoff (RQ2/RQ3 applied)
 
-A rung is **deployable on a tier** iff it clears three gates simultaneously:
-(a) **quality-safe** (§2), (b) **fits memory without swap** (fig4; both edge devices verified swap-free),
-(c) **meets a throughput SLO**. Reading the three gates across the tiers:
+A rung is **deployable on a tier** iff it clears three gates simultaneously, all **pre-registered** (proposal
+Methodology — the "good enough" definition, fixed before data collection):
+(a) **quality-safe** — pass@1 within 5pp of F16 (§2);
+(b) **fits RAM without swap** (fig4; both edge devices verified swap-free, D15);
+(c) **meets the performance floor** — **≥ 8–10 tok/s sustained AND TTFT ≤ 1–2 s** (Nielsen's interactive
+limits). These are *registered* floors, not an "illustrative" SLO, so the handoff boundary is **defined**,
+not a knob. Reading the gates across tiers (median tok/s · median TTFT · peak RSS):
 
-| case | Mac (Metal) | Jetson (CUDA) | Pi 5 (CPU) | handoff verdict |
+| case (rung is quality-safe?) | Mac (Metal) | Jetson (CUDA) | Pi 5 (CPU) | verdict vs the registered floor |
 |---|---|---|---|---|
-| **Qwen @ Q4_K_M** | 166 tok/s, 1.2 GB | 40 tok/s, 1.8 GB | 11 tok/s, 2.1 GB | **serves locally on all three** — the happy path |
-| **Qwen @ Q3_K_M** | 143 | **18.6** (GPU dip) | 12.8 | Pi *beats* Jetson here (§5); still local everywhere |
-| **Phi @ Q8_0** | 58 tok/s, 6.5 GB | 14.6 tok/s, 6.5 GB | **2.8 tok/s**, 6.5 GB | edge *runs* it but the **Pi violates any interactive SLO** → hand off |
-| **Phi @ F16** | 35 tok/s, 9.8 GB | **won't fit (>8 GB)** | **won't fit** | **forced off the edge** → cloud/Mac only |
+| **Qwen @ Q4_K_M** (✓ safe) | 165 tok/s · 60 ms · 1.2 GB | 40 · 64 ms · 1.8 GB | **10.9** · 106 ms · 2.1 GB | **all three PASS** — Pi *just* clears the 8–10 band; the happy path |
+| **Qwen @ Q3_K_M** (✓ safe) | 143 · — | **18.6** (GPU trap, §5) | 12.7 · 90 ms | all pass the floor; Pi > Jetson here — but Q4 dominates Q3 on GPU |
+| **Phi @ Q8_0** (✓ safe) | 58 · 6.1 GB | 14.6 · 6.5 GB | **2.6 tok/s** · 6.1 GB | **Pi FAILS the floor** (2.6 ≪ 8) → hand off; Jetson/Mac pass |
+| **Phi @ F16** (✓ safe) | 36 · 9.8 GB | **won't fit (>8 GB)** | **won't fit** | **forced off the edge** → cloud/Mac only |
 
-Two distinct handoff triggers emerge, and they are different in kind:
+Two distinct handoff triggers emerge, different in kind — and both now bite against the *registered* floor:
 
 1. **Memory-forced handoff (hard).** Phi-3 F16 (~9.8 GB) exceeds the 8 GB edge budget outright (fig4).
-   The edge devices *cannot* run the full-precision 3.8B model at all — quantisation is not an
-   optimisation here, it is the price of admission. And because Phi collapses at Q4, the *only* rung that
-   is both quality-safe and edge-fitting is **Q8_0** — a single viable point, with no margin.
-2. **Throughput-forced handoff (soft, SLO-dependent).** Even when a rung fits and is quality-safe, the
-   Pi's CPU decode (Phi Q8 = 2.8 tok/s) will miss an interactive latency target that the Jetson (14.6)
-   and Mac (58) meet. The handoff boundary is therefore **not** a fixed device property — it moves with
-   the SLO you set.
+   The edge devices *cannot* run the full-precision 3.8B model at all — quantisation is the price of
+   admission, not an optimisation. And because Phi collapses at Q4, the *only* rung both quality-safe and
+   edge-fitting is **Q8_0** — a single viable point, no margin.
+2. **Throughput-forced handoff (against the registered floor).** Even fitting and quality-safe, the Pi's
+   CPU decode of **Phi @ Q8 = 2.6 tok/s misses the pre-registered 8–10 tok/s floor by ~3–4×** → that
+   workload must hand off to the Jetson (14.6) / Mac (58) / cloud. The boundary is **fixed by the registered
+   floor**, not chosen post hoc: **Qwen-Q4 on the Pi (10.9 tok/s) squeaks past it; Phi-Q8 on the Pi fails
+   it.** (The Phi-Q2 Pi cell would also fail on TTFT — median 11.8 s, the D22 anomaly — but it is already
+   quality-collapsed, so moot.)
 
 **The synthesised recommendation** the study supports: *specialise the model, quantise to the knee, and
 size the tier to the SLO.* A code-specialised 1.5B at Q4 serves interactively on every tier including a
@@ -104,8 +115,12 @@ three power routes; the within-tier shape is — D13/D23.)_
   significance tests.
 - **RQ2 (the cost of operating there):** the deployment envelope, §4 — throughput/memory per tier at the
   quality-safe rung, with two named handoff triggers.
-- **RQ3 (does the threshold shift with tier):** **no** — quality is hardware-independent (§1); only the
-  *cost* shifts, and the shift is large (~15× Mac-vs-Pi) and occasionally non-monotone (§5).
+- **RQ3 (does the threshold shift with tier):** **no meaningful shift** — the collapse threshold is a
+  quantization effect that dominates the small cross-backend numerical noise (`cross-device-check.md`); the
+  *cost* (performance/energy) is what shifts per tier, and that shift is large (~15× Mac-vs-Pi) and
+  occasionally non-monotone (§5). Caveat: outputs are **not** byte-identical across backends, so per-tier
+  pass@1 is approximately — not exactly — equal (§1); the threshold *location* is robust, exact per-tier
+  quality is a stated proxy.
 - **The gap the near-twins leave** (Shi & Ding: datacentre GPUs only; Nguyen & Nguyen: CPU SBCs only) is
   exactly the CPU→edge-GPU→consumer-GPU span this synthesis quantifies (decisions D5).
 
@@ -120,8 +135,9 @@ three power routes; the within-tier shape is — D13/D23.)_
   accounting path (D21).
 - The Phi-3 Q2_K generation-time memory/TTFT spike is intermittent and **not** mechanistically pinned
   (D22) — flagged, not overclaimed.
-- SLO thresholds in §4 are illustrative ("interactive"); the *shape* of the handoff boundary is the
-  finding, not a specific tok/s cutoff.
+- The §4 SLO floors (8–10 tok/s, TTFT 1–2 s per Nielsen) are the **pre-registered** "good enough"
+  thresholds, applied as the primary gate — not illustrative. A different deployment context would set
+  different floors, but these are the ones the proposal committed to and the verdicts use them.
 
 ## 7. Optional / future work — NONE required for the write-up
 

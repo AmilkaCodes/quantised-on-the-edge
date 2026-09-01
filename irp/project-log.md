@@ -179,26 +179,46 @@ alignment gaps** — the science is done, but it must demonstrably be the scienc
 it would do. Pre-registration is the methodology's selling point; a marker reading both documents
 will check. **To execute ASAP:**
 
-- [ ] **A. Apply the pre-registered 5pp margin explicitly.** The proposal pre-registered
+- [x] **A. Apply the pre-registered 5pp margin explicitly.** ✅ DONE 2026-09-01. The proposal pre-registered
       "quality-acceptable if pass@1 stays within five percentage points of the model's F16
       baseline." The analysis currently defines "quality-safe" by McNemar significance instead.
       The verdicts almost certainly agree (Qwen Q3 −3.7pp = within margin ✓; Phi Q4 ~−11pp =
       outside ✓), but the registered criterion must be applied **explicitly and reported
       alongside** the tests — otherwise it looks silently swapped post hoc.
-- [ ] **B. Add the bootstrap CIs.** The proposal (incl. the statistical-power addition) promised
+- [x] **B. Add the bootstrap CIs.** ✅ DONE 2026-09-01. The proposal (incl. the statistical-power addition) promised
       "bootstrap 95% confidence intervals accompany each pass@1 … margin verdicts are therefore
       reported with their intervals." None exist in `irp/analysis/` yet. ~20 lines in
       `collapse_stats.py`; a written commitment.
-- [ ] **C. Run + document the cross-device spot-check.** Synthesis asserts outputs are
+- [x] **C. Run + document the cross-device spot-check.** ✅ DONE 2026-09-01 — **and it FALSIFIED the
+      assumption** (see results block below). Synthesis asserted outputs are
       "byte-identical across tiers" citing RESULTS §2 — but §2 is Mac-only re-run determinism.
       The proposal pre-registered "a cross-device spot-check confirms outputs match." Run it for
       real (one rung, a handful of problems, diff Mac/Pi/Jetson outputs) and record it —
       ~an hour, and it converts RQ3's central premise from assumption to evidence.
-- [ ] **D. Gate the deployment envelope on the pre-registered SLO, not an "illustrative" one.**
+- [x] **D. Gate the deployment envelope on the pre-registered SLO, not an "illustrative" one.** ✅ DONE 2026-09-01.
       Registered floors exist: **8–10 tok/s sustained + TTFT 1–2 s (Nielsen)**. Apply them as the
       primary gate (Pi/Qwen-Q4 at 11 tok/s squeaks past; Pi/Phi-Q8 at 2.8 fails; Jetson/Q3 at
       18.6 passes but is dominated) — then generalise. Completes RQ3's "good enough" map exactly
       as the proposal defined it.
+
+**Outcomes (all four done 2026-09-01):**
+- **A + B** — `collapse-threshold.md` §1 now leads with the **registered 5pp margin** (McNemar kept
+  alongside); new **§3b** reports pass@1 with **bootstrap 95% CIs** + the paired-drop CI and the 5pp
+  verdict (`collapse_stats.py` extended). Margin threshold **agrees with McNemar** (Qwen Q2, Phi Q4).
+  As the proposal anticipated, the two **boundary rungs** (Qwen Q3, Phi Q4) have drop-CIs **straddling
+  5pp → margin-inconclusive** even where McNemar rejects — reported honestly, not overclaimed.
+- **C — ⚠️ FINDING: the pre-registered "outputs match across devices" is FALSE.** `cross-device-check.md`
+  + `cross_device_check.py` (Qwen Q4, 8 problems, identical GGUF+b9951, only backend differs): **3/8
+  outputs differ across tiers and correctness FLIPS** — HumanEval/5: Jetson passes, Mac + Pi fail
+  (differently). Mechanism: temp-0 greedy argmax + backend FP-order differences → different early token →
+  whole generation diverges. Within-device determinism still holds (§2). **Impact:** the collapse
+  threshold (a 20–40 pp quantization effect) is robust and stays the RQ3 headline, but the Mac quality
+  axis is now stated as a **validated proxy, not an exact per-tier predictor**; "byte-identical / exactly
+  hardware-independent" corrected everywhere (synthesis §1/§6, collapse-threshold §5, RESULTS §9, D4, new
+  **D25**). Aggregate divergence rate not yet quantified (8-problem sample) — optional K≈50 follow-up.
+- **D** — synthesis §4 deployment envelope now gated on the **registered floor** (≥8–10 tok/s + TTFT
+  ≤1–2 s Nielsen + RAM-without-swap), not an illustrative SLO: **Qwen-Q4 on the Pi (10.9 tok/s) squeaks
+  past; Phi-Q8 on the Pi (2.6) fails → handoff**. Boundary is now *defined*, not a knob.
 
 _Also from the same review: log hygiene (tick the completed 08-30 checkboxes + stale Pending
 items — done below), and the standing note that the biggest remaining risk is supervision timing,

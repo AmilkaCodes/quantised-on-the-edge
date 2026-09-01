@@ -49,4 +49,31 @@ for short, full in MODELS.items():
         frac_broken = lost / max(int(f16.sum()), 1)   # of F16-passing problems, share broken at rung
         print(f"      F16 vs {q:7s}: net_drop={net:+.3f}  lost={lost} gained={gain} "
               f"(of {int(f16.sum())} F16-passes, {frac_broken:.0%} broken)  McNemar p={m.pvalue:.3e}")
+
+    # --- Pre-registered 5pp margin + bootstrap 95% CIs (percentile, B=10000, seed 0) ---
+    # Registered (summative final-body.md): quality-acceptable = pass@1 within 5pp of F16;
+    # collapse threshold = first rung >5pp below F16; bootstrap 95% CI accompanies each pass@1;
+    # margin verdicts reported WITH their intervals (per-pass@1 CI ~±7pp is WIDER than 5pp, but the
+    # PAIRED drop CI is tighter -> that is the correct interval for the drop, and why McNemar rejects).
+    MARGIN = 0.05
+    rng = np.random.default_rng(0)
+    Bn, n = 10000, len(f16)
+    idx = rng.integers(0, n, size=(Bn, n))            # ONE shared resample per draw -> paired
+    f16_bs = f16[idx].mean(axis=1)
+    print(f"  --- 5pp margin + bootstrap 95% CI (B={Bn}); drop = F16 - rung (+ve = degradation) ---")
+    for q in QUANTS:
+        r = P[q]; p1 = r.mean()
+        clo, chi = np.percentile(r[idx].mean(axis=1), [2.5, 97.5])       # per-pass@1 CI (as registered)
+        drop = f16.mean() - p1
+        dlo, dhi = np.percentile(f16_bs - r[idx].mean(axis=1), [2.5, 97.5])  # PAIRED drop CI
+        if q == "F16":
+            verdict = "baseline"
+        elif drop <= MARGIN:
+            verdict = "WITHIN 5pp (acceptable)" + ("" if dhi <= MARGIN else "  [CI straddles 5pp]")
+        else:
+            verdict = "OUTSIDE 5pp (collapse)" + ("" if dlo > MARGIN else "  [CI straddles 5pp]")
+        print(f"      {q:7s} pass@1={p1:.3f} 95%CI[{clo:.3f},{chi:.3f}]  "
+              f"drop={drop:+.3f} 95%CI[{dlo:+.3f},{dhi:+.3f}]  -> {verdict}")
+    thr = next((q for q in QUANTS[1:] if (f16.mean() - P[q].mean()) > MARGIN), None)
+    print(f"  --- pre-registered margin threshold (first rung >5pp below F16): {thr}")
 print("\nDONE")
