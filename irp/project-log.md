@@ -272,6 +272,23 @@ Items 1–4 ≈ one bench evening; item 5 ≈ half a day.
 (localised, D22), warm-up exclusion (D11), pre-registration alignment A–D. Scoped-out future
 work stays scoped out (MBPP+, per-prompt Q2_K, external power meter).
 
+## 2026-09-01 (evening) — Supervisor brief + E1 context-conditions design note
+
+- **Supervisor brief drafted** (`irp/supervisor-brief.md`): state of play, three headline
+  findings, audit trail, four questions, prepared extensions E1–E3. To be reviewed/voiced by
+  the student before the meeting; decision register proposed as the meeting agenda.
+- **E1 designed and recorded** (`irp/extensions/e1-context-conditions.md`): the "open-book"
+  extension the proposal itself names as natural future work. Key design musing captured:
+  giving the model the *target's own solution* is the wrong main condition (pass@1 ceilings by
+  construction — measures copying, not assisted coding) but valuable as an honestly-labelled
+  **oracle probe** of pure context-utilisation fidelity; the realistic main condition is
+  **retrieval-style few-shot** (similar problems + their solutions, never the target's), with
+  the headline statistic being the **interaction** — does the context benefit survive
+  quantisation? Costed (~1 Mac compute-day per condition), stats machinery unchanged, free RQ2
+  tie-in (context's KV-cache memory price on the 8GB edge). Trigger: supervisor steer only;
+  if activated, pre-register the E1 protocol before measuring; confirm Fast-Track ethics
+  wording covers it first.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
