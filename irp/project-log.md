@@ -228,6 +228,40 @@ _Also from the same review: log hygiene (tick the completed 08-30 checkboxes + s
 items — done below), and the standing note that the biggest remaining risk is supervision timing,
 not tech: get the supervisor's eyes on the design-as-executed + decision register early._
 
+## 2026-09-01 (later) — Final verification list (everything left to test/verify)
+
+Post A–D audit sweep: what remains before the dataset is fully closed and writing starts.
+Items 1–4 ≈ one bench evening; item 5 ≈ half a day.
+
+- [ ] **1. Manifest gap (found 2026-09-01): JetPack version + power mode not stamped.** D13 +
+      jetson.md Phase 4 promise "provenance manifest fields per run: JetPack version + power
+      mode"; `results/jetson/manifest.json` has neither. Fix: harness stamps
+      `/etc/nv_tegra_release`, `nvpmodel -q` output, and `jetson_clocks` state for all future
+      runs; dated addendum note that the 08-30/31 runs were at MAXN_SUPER per the setup log
+      (honest retro-annotation, not a regenerated manifest).
+- [ ] **2. Pi thermal under sustained load** (pi5.md build-out, still open — validity guard for
+      the CPU latency cells). Rerun one heavy cell (Phi Q8), watch `vcgencmd measure_temp`,
+      then `get_throttled` = 0x0 after the run (sticky flags reset at boot, so it must be
+      checked in-session) → licenses "no thermal throttling occurred during measurement".
+- [ ] **3. Jetson sustained-load twin:** `tegrastats` during a long cell — throttle/power-cap
+      events, DC-supply-holds-MAXN_SUPER confirmation, and the `jetson_clocks` decision
+      (record whether used per run). The one open device item from synthesis §7.
+- [ ] **4. Within-device determinism on the edge tiers:** self-diff the K=50 set on Pi and
+      Jetson (Mac already has variance-0.000 evidence) → makes D25's "deterministic per
+      device, divergent across devices" airtight on all three tiers.
+- [ ] **5. Clean-clone reproducibility rehearsal (capstone):** fresh clone in a new directory
+      on one device → follow the setup doc top-to-bottom → rerun a single cell → confirm it
+      matches the committed CSV. Tests the "published harness, every result reproducible"
+      claim by acting as own replicator; any friction found = documentation debt fixed cheap.
+- [ ] **6. Supervisor review of the design-as-executed** (+ decision register as the agenda) —
+      the verification no script runs; timing is the project's biggest remaining risk.
+- [x] ~~Assembly photos~~ → waived 2026-09-01, reasoned (see 08-26/27 entry).
+
+**Explicitly complete, no further action:** quality axis (stats + CIs + 5pp margin), perf axis
+(3 tiers), energy axis (3 tiers), cross-device divergence (K=50, two scorers), Q2_K anomaly
+(localised, D22), warm-up exclusion (D11), pre-registration alignment A–D. Scoped-out future
+work stays scoped out (MBPP+, per-prompt Q2_K, external power meter).
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
