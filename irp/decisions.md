@@ -141,6 +141,20 @@ unchanged (the `device` column disambiguates the measurement boundary). Comparab
 absolute cross-tier J/token is not apples-to-apples (different boundaries), but the per-tier quant-ladder
 shape is valid — and it flips the raw-watts reading of the GPU Q3 dip (fewest watts, but *worst* J/token).
 
+**D24 — Performance/energy axis reported descriptively (median + mean±std), NO inferential tests.**
+**[RESULTS]+[LIT]**
+Unlike the quality axis (paired Cochran's Q + McNemar — `collapse-threshold.md`), the performance and
+energy axes are reported with **medians and mean±std, without significance testing — deliberately.**
+Justification: the measured spread is negligible against the effects. `std_tok_s` = **0.0–0.4 tok/s**
+across cells, while cross-rung and cross-tier differences are **tens** of tok/s (Qwen Mac F16 78 → Q4 165;
+tiers 165/40/11 at Q4) — effect sizes ~100× the standard deviation, so a significance test would be
+theatre (it would "confirm" what is already visually unambiguous). **K=3 repeats (D10) exist precisely to
+quantify that spread**, and the spread being tiny *is* the reliability evidence. This contrasts with the
+quality axis, where the real uncertainty is the 164-problem *sample* → paired tests were warranted there
+and not here. Where a statistic *is* noise-dominated (cold-start TTFT, std > mean) the **median** is used
+for exactly that reason (D11). The **J/token** figures inherit this: derived from median tok/s × mean
+power, reported as point values with the ladder *shape* (not absolute cross-tier levels) as the claim.
+
 ## 5. Hardware / infrastructure
 
 **D16 — Boot both edge devices from NVMe.** **[PRAGMATIC]**

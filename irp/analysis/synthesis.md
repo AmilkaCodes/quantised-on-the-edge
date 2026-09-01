@@ -122,3 +122,20 @@ three power routes; the within-tier shape is — D13/D23.)_
   (D22) — flagged, not overclaimed.
 - SLO thresholds in §4 are illustrative ("interactive"); the *shape* of the handoff boundary is the
   finding, not a specific tok/s cutoff.
+
+## 7. Optional / future work — NONE required for the write-up
+
+Data collection for every RQ is **complete** (quality + performance + energy, all three tiers, stats +
+figures). The following would *strengthen* the study but are **explicitly scoped out** and **do not block
+the dissertation** — they belong in the Future Work / Limitations section, not the results:
+
+- **MBPP+ / a second coding task** — external validity beyond the single HumanEval+ dataset (n=164).
+- **Q2_K anomaly, per-prompt instrumentation** — to pin the generation-time memory/TTFT spike mechanism
+  (currently localised, not explained — D22).
+- **Cross-tier *absolute* energy via one common external meter** — the only way to compare J/token across
+  tiers at a single boundary; the current software routes differ (Mac SoC-domains · Jetson VDD_IN · Pi
+  PMIC), so only the *within-tier* ladder shape is claimed (D13/D23).
+- **Jetson sustained-load power/thermal (`jetson_clocks` / throttle watch)** — the one still-open device
+  item in the setup log; a robustness characterisation, not an RQ input.
+
+None of these requires re-running anything already collected; each is additive.
