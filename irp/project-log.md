@@ -289,6 +289,24 @@ work stays scoped out (MBPP+, per-prompt Q2_K, external power meter).
   if activated, pre-register the E1 protocol before measuring; confirm Fast-Track ethics
   wording covers it first.
 
+## 2026-09-07 — IRP module starts; summative marking criteria found
+
+Canvas rubric located and recorded (`irp/assessment/summative-marking-criteria.md`, with
+distinction-band language verbatim + mapping to project assets). Weights: **Exec Summary 10 ·
+Intro/Motivation 20 · Methodology 30 · Results/Analysis/Conclusion 30 · Academic Best Practice
+10.** Key planning reads:
+- **60% of marks (Methodology + Results) map directly onto the decision register (D1–D25) and
+  `irp/analysis/`** — the project's strongest assets feed the heaviest criteria.
+- "Wider reading" appears in three criteria → the RP formative lesson (literature doing critical
+  work in EVERY section) now governs up to 80% of the mark.
+- Methodology's ethics phrase is retrospective ("how methods were **applied**") — write applied
+  ethics, not proposal-style prospective ethics.
+- Exec Summary is a NEW component (no RP equivalent) — write last, mirror the finished report.
+- Conclusion must refer back to points AND literature raised earlier — plan the lit review so the
+  conclusion has named claims to return to.
+- **Brief still outstanding** (word count, deadline, structure, formatting, appendix + AI-policy
+  wording) — no assessed prose drafted until it lands. Module notes updated.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
