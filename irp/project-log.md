@@ -307,6 +307,27 @@ Intro/Motivation 20 · Methodology 30 · Results/Analysis/Conclusion 30 · Acade
 - **Brief still outstanding** (word count, deadline, structure, formatting, appendix + AI-policy
   wording) — no assessed prose drafted until it lands. Module notes updated.
 
+## 2026-09-08 — Unit 1 materials landed: converted + readings audited; supervisor identified
+
+- **`irp/units/unit-1/` (25 docx + 1 PDF) converted to .md** (pandoc 3.8.3, all clean);
+  units 2–4 empty (release later). `readings-index.md` compiled with holdings audit.
+- **Reading gap: Biggam, *Succeeding with Your Master's Dissertation* (2015) — the module's
+  named MAIN guidance text — not held. ACQUIRE via York Library e-book (Leganto).** Everything
+  else already in `references/` (Dawson 2009+2015, Cottrell 2014, Creswell 6th-vs-4th edition
+  mismatch noted, Zobel 3rd-vs-2nd noted — map chapters by title). Ross & Sheail 2017 provided
+  in the unit folder.
+- **Supervisor allocated: Seema Jehan** (per student note in 1.2.4) — Fast-Track ethics form
+  emailed to her 2026-09-08, awaiting feedback. IRP mandates a completed+signed ethics form;
+  full-PSEC route not expected (no human data — automated metrics on public benchmarks, per
+  RP-era screening). **Honest note for the record:** module guidance says primary data
+  collection should await ethics confirmation; this project's measurements (no human
+  participants, public artefacts only) ran under the RP-era Fast-Track self-assessment —
+  raise proactively in the first supervision meeting alongside the design-as-executed
+  conversation (supervisor brief ready).
+- Module shape (1.0): 16 weeks, 4 phases — definition/planning (wk 1–4), initiation/conducting,
+  control/testing+analysis, closure/presentation; all units to be reviewed by end of Week 5.
+- Next: full /process-week-style pass on unit-1 (summary, glossary, practice, extracts).
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
