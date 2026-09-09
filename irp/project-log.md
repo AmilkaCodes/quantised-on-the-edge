@@ -328,6 +328,26 @@ Intro/Motivation 20 · Methodology 30 · Results/Analysis/Conclusion 30 · Acade
   control/testing+analysis, closure/presentation; all units to be reviewed by end of Week 5.
 - Next: full /process-week-style pass on unit-1 (summary, glossary, practice, extracts).
 
+## 2026-09-09 — Unit 2 landed + converted; Biggam hunt continues; Bell 4th edn added
+
+- **`irp/units/unit-2/` (8 docx) converted + `readings-index.md` compiled** (Initiation phase,
+  weeks 5–8; module says work through by end of Week 2). Video transcripts captured in-file.
+- **Biggam so far:** EBSCO ch3 (Referencing) + ch5 (Dissertation Introduction) + Figure 1.2
+  skills PNG in `references/`; mapping settled (planning = EBSCO ch4, lit review = EBSCO ch6);
+  **unit-2 adds Chapter 8 "Research methods" to the download list.** More downloads over coming
+  days as quota allows.
+- **New acquisitions needed from unit-2:** the unidentified **"S. Bennet"** text (ch3/ch5/ch21 —
+  open the Leganto link to identify, then acquire) and the **Dawson & Dawson** process-models
+  paper (York libproxy one-click). **Bell & Waters:** 4th edn now in `references/`
+  (student-sourced) but module cites the **6th edn e-book + Chapter 13** — prefer the 6th via
+  York, else map by title and cite the edition read.
+- **Feed-through gold:** 2.4.1 names the pilot harness's category — an **experimental
+  prototype** (Dawson's taxonomy: "explore the technical feasibility … explore and test
+  performance") — adoptable vocabulary for the methodology chapter. 2.5's "do not 'tweak'
+  material that has not worked … writing about the problems is likely to gain you credit" is
+  direct licence for the deviations-as-evidence narrative. MoSCoW maps onto the project's
+  scope tiers. Bell & Waters' research-diary advice describes this very log.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
