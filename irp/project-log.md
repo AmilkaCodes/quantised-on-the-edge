@@ -368,13 +368,28 @@ Intro/Motivation 20 · Methodology 30 · Results/Analysis/Conclusion 30 · Acade
     D13/D23 measurement-boundary caveat (absolute cross-tier J/token not comparable).
   - The 2026 RAM-price inflation is already a lived data point in this log (the £349.30 16GB
     Pi kit) — citable as context for the owned-hardware argument.
-  - **DDR4 second-life claim = literature-grounded discussion only** (decode is
-    memory-bandwidth-bound → older hardware with adequate bandwidth stays serviceable for
-    small quantised models; enterprises with amortised fleets face near-zero marginal capital
-    cost). NOT a finding — we measured no DDR4 device. The measured anchor is: an £80-class
-    Pi 5 clears the interactive SLO at Q4 (deployment envelope). Extrapolation stated as such.
+  - ~~DDR4 second-life claim~~ → **DROPPED (student decision, 2026-09-10):** unmeasured
+    extrapolation, cut rather than caveated. The Discussion keeps only the measured anchor
+    (an £80-class Pi 5 clears the interactive SLO at Q4) + the cost-per-token illustration.
   - Scope guard: ~a page in Discussion + a Future Work line (pairs with E3 external meter);
     no new RQs, no new measurements.
+
+## 2026-09-10 (later) — Unit 3 processed; DDR4 angle dropped
+
+- **`irp/units/unit-3/` (10 docx) converted + readings-index compiled.** Control phase (weeks
+  9–12; work through by end of Week 4). **Nothing to acquire** — every assignment already on
+  the shelf, with the module's edition-inconsistent Biggam chapter numbers resolved by title
+  (An emotional journey → 5th-edn ch3; Limitations and potential hurdles → 5th-edn ch7;
+  Zobel "Getting it wrong" → 3rd-edn ch5 pp.67–72, TOC-verified).
+- **Write-up checklist item from 3.2.2:** testing evidence must be PRESENTED explicitly
+  ("there needs to be evidence that this has taken place") — plan a testing/validation
+  subsection collecting the harness self-checks, determinism tripwire, cross-device check and
+  clean-clone rehearsal.
+- Unit 3's content is largely a description of practices this project already executed and
+  logged — the readings become citations FOR the existing record (Dawson ch7 trade-offs →
+  descope/fallback decisions; Biggam limitations section → Limitations chapter; 3.3.2's
+  "research is iterative" → the JetPack pivot + D25 revision as endorsed practice).
+- DDR4 second-life discussion angle dropped (see amended 2026-09-10 entry above).
 
 ## Pending
 
