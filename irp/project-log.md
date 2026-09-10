@@ -391,6 +391,23 @@ Intro/Motivation 20 · Methodology 30 · Results/Analysis/Conclusion 30 · Acade
   "research is iterative" → the JetPack pivot + D25 revision as endorsed practice).
 - DDR4 second-life discussion angle dropped (see amended 2026-09-10 entry above).
 
+## 2026-09-10 (evening) — Unit 4 processed; ethics meeting brief prepared (meeting 2026-09-11)
+
+- **Unit 4 (Closure/writing-up) converted + indexed — nothing to acquire; ALL FOUR UNITS now
+  processed** within the module's first week (module asks for end of Week 5). Flagged for
+  dedicated study: 4.2.1/4.2.2 examiner-psychology files + the two **example-project ZIPs**
+  (real submitted Masters reports — calibration for structure/length/figures).
+- **Ethics meeting brief written (`irp/ethics-meeting-brief.md`)** for tomorrow's supervisor
+  meeting (Fast-Track approval). Core: the "HumanEval+ = human subjects?" name-flag disarmed
+  from the primary source — Chen et al. 2021 §2.2 is literally titled "HumanEval: Hand-Written
+  Evaluation Set" (human-WRITTEN problems, authored by the paper's own researchers as an
+  anti-contamination measure; evaluation is by automated unit tests, explicitly IN CONTRAST to
+  human evaluators — §1). Plus full form-sweep: §1.2 Yes/No adjudication left to supervisor,
+  black-box training-data caveat, sandboxed code execution (with Chen et al. precedent),
+  proactive "data already collected under RP-era screening, no primary human data" framing,
+  licences verified, summarisation exclusion. Closing rule: don't over-defend; take the
+  supervisor's steer on a signed declaration.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
