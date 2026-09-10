@@ -348,6 +348,34 @@ Intro/Motivation 20 · Methodology 30 · Results/Analysis/Conclusion 30 · Acade
   direct licence for the deviations-as-evidence narrative. MoSCoW maps onto the project's
   scope tiers. Bell & Waters' research-diary advice describes this very log.
 
+## 2026-09-10 — Biggam full 5th edn acquired (quota dance over) + economics/TCO discussion angle
+
+- **Biggam 5th edn full PDF in `references/`** — TOC mapped; all remaining assignments servable
+  by title (ch3 Preparing, ch6 Lit Review, ch7 Research Methods). Module's page cites are
+  2015-edn; EBSCO 2015 chapter PDFs now optional page-exactness backups. Unit-1/2 reading
+  shelves effectively COMPLETE.
+- **Musing recorded (student, 2026-09-10): hardware + energy economics in 2026 as a Discussion
+  angle.** (a) account for 2026 hardware and energy costs; (b) older hardware second-life —
+  e.g. owned 64GB DDR4 vs buying DDR5 at 2026 RAM prices; (c) scales for organisations with
+  amortised datacentre/fleet investments. **Assessment: adopt as Discussion-chapter
+  interpretation, NOT new scope.** Basis:
+  - It closes the loop to the proposal's own opening premise ("hardware organisations already
+    own"; cloud token budgets) — feeds the rubric's "outcomes discussed in the broader context
+    of the field" (Results 30%) and "conclusion refers back to points raised".
+  - All inputs for an ILLUSTRATIVE cost-per-token exist: measured J/token per tier, actual
+    hardware prices (£375.40 Pi stack / £320 nett Jetson / Mac owned), 2026 UK electricity
+    price (cite a source when drafted). Present per-tier, order-of-magnitude, carrying the
+    D13/D23 measurement-boundary caveat (absolute cross-tier J/token not comparable).
+  - The 2026 RAM-price inflation is already a lived data point in this log (the £349.30 16GB
+    Pi kit) — citable as context for the owned-hardware argument.
+  - **DDR4 second-life claim = literature-grounded discussion only** (decode is
+    memory-bandwidth-bound → older hardware with adequate bandwidth stays serviceable for
+    small quantised models; enterprises with amortised fleets face near-zero marginal capital
+    cost). NOT a finding — we measured no DDR4 device. The measured anchor is: an £80-class
+    Pi 5 clears the interactive SLO at Q4 (deployment envelope). Extrapolation stated as such.
+  - Scope guard: ~a page in Discussion + a Future Work line (pairs with E3 external meter);
+    no new RQs, no new measurements.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
