@@ -434,9 +434,11 @@ directly and it is NOT forwarded to the ethics committee. All ten Section-5 answ
 this project. **Draft answers prepared: `irp/SelfAssessment-Ethics-DRAFT-answers.md`** (reuses
 the verified Fast-Track content: RQs, non-expert methodology, data sources + licences verified
 2026-07-21, sandbox note; HumanEval name clarification embedded in §4 to pre-empt the
-name-flag). Fast-Track draft retained as backup detail. Remaining: student fills
-name/stream/number, signs, supervisor counter-signs; signed copy to OneDrive admin folder
-(carries name — not the repo); record approval date here.
+name-flag). Fast-Track draft retained as backup detail. **APPROVAL COMPLETE 2026-09-11** — form signed and
+supervisor-approved (Self-Assessment route; no committee involvement per the form's rule).
+Signed copy: OneDrive module-11 admin folder. **The project's ethics story is closed:** RP-era
+screening → deliberate scope-to-approval alignment (RQ4 descope, summarisation exclusion) →
+Self-Assessment sign-off for the IRP.
 
 ## Pending
 
