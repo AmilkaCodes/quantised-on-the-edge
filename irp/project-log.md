@@ -408,6 +408,23 @@ Intro/Motivation 20 · Methodology 30 · Results/Analysis/Conclusion 30 · Acade
   licences verified, summarisation exclusion. Closing rule: don't over-defend; take the
   supervisor's steer on a signed declaration.
 
+## 2026-09-11 — Literature review health-check (vs units 1.2.2/1.2.3 + IRP rubric)
+
+**Verdict: strong as submitted (themes not summaries; named Liu-vs-Lee contradiction;
+problematisation with warrant — since empirically vindicated); ~70% of the dissertation
+chapter.** Actions for the IRP version:
+- [ ] **Re-run the systematic search before writing** — "no study combines…" is frozen at
+      mid-Aug 2026; confirm it survives September + log the re-search date (method evidence).
+- [ ] **Add literature homes for two findings that lack them:** D25 cross-device divergence →
+      FP non-determinism / backend-variance sources; Q3_K GPU trap → llama.cpp kernel grey-lit.
+      (Collapse-thresholds and the 4-bit rule are already anchored.)
+- [ ] **Reflexivity notch (deferred from RP review):** one sentence each on Kurt [2026] and
+      Nguyen [2025] being preprints doing load-bearing work.
+- [ ] **Structure per 1.2.2:** the dissertation lit-review chapter must END by deriving the
+      RQs (RP moved derivation to the Intro for word economy).
+- [ ] Expansion priority when brief lands: strand 4 (closest studies) grows most — Results/
+      Conclusion call back to it. Skim Biggam ch6 before drafting.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
