@@ -226,6 +226,30 @@ install), not a version/hardware incompatibility — proven by a successful atte
 Keeps the study approval-free (no human data) *and* keeps reliability = repeatability (adding raters
 would require inter-coder reliability + ethics approval). (Week-5 feed-through.)
 
+## 7. Writing / citation practice
+
+**D26 — Preprint-handling policy (set 2026-09-11).** **[LIT]+[PRAGMATIC]**
+The corpus necessarily includes arXiv preprints: the study's niche moves faster than peer review
+(backend-nondeterminism literature is weeks old), and some objects of study only exist as
+technical reports. The policy, applied throughout the dissertation:
+1. **Admission rule:** a preprint is cited only when it is (a) the object of study (model
+   technical reports), (b) the only or primary literature for a fast-moving sub-topic
+   (Kurt; Nguyen & Nguyen; Lee; Silent Hyperparameter; Numerical-Nondeterminism), or
+   (c) a near-twin that must be engaged rather than ignored.
+2. **Claim-weight rule:** no argumentative load rests on a preprint alone where a peer-reviewed
+   source exists — peer-reviewed anchors (ICML/NeurIPS/ACL/MLSys/journals) carry the argument;
+   preprints corroborate, localise, or are engaged-and-differentiated.
+3. **Transparency rule:** preprints are cited AS preprints (arXiv ID visible in the reference
+   list, never dressed as a venue), and load-bearing ones get a one-sentence in-text
+   evidential-weight note (the reflexivity notch: "a recent preprint, not yet peer-reviewed").
+4. **Version-pinning rule:** the extract records the arXiv version (vN) actually read; verbatim
+   quotes are verified against that version (preprint text can change between versions).
+5. **Upgrade check before submission:** re-check every cited preprint (arXiv journal-ref field
+   / dblp / Scholar) for subsequent peer-reviewed publication; if published, cite the published
+   version and RE-VERIFY quotes against it.
+Rationale: matches the rubric's "sensitive to the competing claims of different views" and
+"up-to-date peer-reviewed knowledge" language simultaneously — currency without overclaiming.
+
 ---
 
 _Update this register whenever a decision is made or reversed — with the reason and, where possible,
