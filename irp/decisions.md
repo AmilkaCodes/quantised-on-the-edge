@@ -71,6 +71,11 @@ build — keeping the recipe identical so the two curves stay comparable.
 Identical inference stack = a fair cross-device comparison (hold the software constant, vary only the
 hardware — the Week-4 internal-validity/confound-control point). Metal (Mac), CUDA sm_87 (Jetson),
 CPU/ARM (Pi) builds of the *same* tag.
+_Post-hoc literature validation (2026-09-11): Pape et al. (arXiv:2605.19537) show engine choice
+alone shifts benchmark scores by up to 16.6pp on fixed hardware — an unpinned engine would have
+buried the cross-tier comparison in engine-induced noise. Pinning was load-bearing, and our
+provenance manifest is exactly the "standardized reporting of inference stacks" they call for.
+See `week-07/reading-extracts/pape-2026_silent-hyperparameter.md` (also positions D25)._
 
 ## 4. Performance-axis protocol (`run_pilot.py --perf`)
 
