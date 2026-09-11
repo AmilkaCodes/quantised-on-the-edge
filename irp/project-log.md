@@ -425,6 +425,19 @@ chapter.** Actions for the IRP version:
 - [ ] Expansion priority when brief lands: strand 4 (closest studies) grows most — Results/
       Conclusion call back to it. Skim Biggam ch6 before drafting.
 
+## 2026-09-11 (later) — Ethics route settled: Self-Assessment form suffices
+
+Supervisor meeting outcome: **the Self-Assessment Ethics form is all that is required** —
+lightest of the three routes (Self-Assessment → Fast-Track → full PSEC). Per the form's own
+rule, No to all Section-5 items ⇒ no ethical approval needed; the supervisor approves the form
+directly and it is NOT forwarded to the ethics committee. All ten Section-5 answers are No for
+this project. **Draft answers prepared: `irp/SelfAssessment-Ethics-DRAFT-answers.md`** (reuses
+the verified Fast-Track content: RQs, non-expert methodology, data sources + licences verified
+2026-07-21, sandbox note; HumanEval name clarification embedded in §4 to pre-empt the
+name-flag). Fast-Track draft retained as backup detail. Remaining: student fills
+name/stream/number, signs, supervisor counter-signs; signed copy to OneDrive admin folder
+(carries name — not the repo); record approval date here.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
