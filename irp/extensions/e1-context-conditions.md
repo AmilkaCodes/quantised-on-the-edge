@@ -59,7 +59,13 @@ same chunks; delivery mechanism (given-context vs asked-for-context) is the only
    training), Mac only. If F16 tool-call validity < a pre-set floor, STOP — the floor itself
    is a reportable finding ("edge-class models cannot sustain the agentic paradigm even before
    quantisation"). Either gate branch yields a thesis sentence (research symmetry).
-2. If gate passes: ladder probe — Mac-only, reduced problem set, M1–M3 per rung.
+2. If gate passes: ladder probe — Mac-only, reduced problem set, M1–M3 per rung. **This IS the
+   full RQ1c test; success does NOT auto-escalate** to 164 problems / both models / three tiers
+   (that would convert an exploratory probe into a confirmatory axis owing full pre-registered
+   treatment). Any expansion = a new, explicit, logged decision with supervisor input and a
+   calendar check. Every branch terminates in a contribution: gate-fail → the F16 floor
+   finding; probe → the tool-calling-vs-generation collapse map; spectacular results → a
+   named, evidenced future-work section.
 3. **Timebox the harness build (~1 week incl. validation); overrun ⇒ gate closes honourably.**
 4. Novelty check before claiming the probe's gap: search "quantization × function-calling /
    tool-use reliability" (added to staleness sweep).
