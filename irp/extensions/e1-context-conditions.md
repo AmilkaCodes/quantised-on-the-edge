@@ -23,6 +23,26 @@ license.' Both permissive (use/copy/modify/distribute); research retrieval use c
 permitted. Record the docs VERSION used in the provenance manifest (e.g. "Python 3.12.x docs,
 retrieved YYYY-MM-DD").
 
+**Mechanism decision (2026-09-12): FROZEN OFFLINE RETRIEVAL → PROMPT INJECTION, never
+agentic/tool-use file access.** Rationale (for the protocol + methods chapter):
+1. Consistency by construction: retrieval runs ONCE (Mac, offline) → an augmented-prompt
+   artefact (`openbook_prompts.jsonl`-style: top-k doc chunks + the unchanged closed-book
+   prompt) that is contamination-swept, committed, version-pinned, and consumed byte-identically
+   by every model × rung × tier.
+2. Internal validity: tool-use would require structured function-calling that small models do
+   unreliably and low-bit models would do collapsingly — confounding code ability with
+   tool-calling ability, AND letting degradation change what gets read (context varies with the
+   IV). Frozen injection keeps quantisation level the only manipulated variable.
+3. Comparability: DocPrompting and Yazan condition on retrieved text — same paradigm.
+4. Two-axes design intact: quality axis stays hardware-independent (frozen bytes; D25
+   aggregate-proxy logic unchanged); per-tier perf runs on the same prompts measure the
+   TTFT/KV-memory price of context (the RQ2 tie-in).
+Protocol parameters this implies: **BM25 retrieval** (deterministic; avoids smuggling an
+embedding model into the pipeline as a second confound), query = signature + docstring;
+**context cap dictated by Phi-3-mini-4k's 4,096-token window** → k ≈ 2–3 chunks of ~256–512
+tokens, exact values fixed in the protocol before any run; docs version pinned (e.g. 3.12.x)
+with retrieval date in the manifest.
+
 _Original design note (2026-09-01) below — Condition B superseded as above; oracle probe
 (Condition C) remains optional._ Scope position: outside the current pre-registration, but **named in
 the submitted proposal as the natural extension** ("results characterise closed-book generation
