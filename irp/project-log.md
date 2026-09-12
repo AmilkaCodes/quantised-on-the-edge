@@ -500,6 +500,21 @@ timebox**, novelty search before claiming the gap. Framing captured: Option A's 
 Full design in `irp/extensions/e1-context-conditions.md`; D27's scope consequence now has an
 empirical answer path instead of only a future-work line.
 
+## 2026-09-12 (night) — Writing-style note, canonical RQ file, methodology sync
+
+- **`irp/writing-style.md` created:** the em-dash conversion guide (student-supplied
+  2026-09-12: asides→commas/parentheses; pause/explanation→colon; list-summary→restructure;
+  loose clauses→semicolon/split; "if a sentence needs an em dash it's doing too much") merged
+  with the RP-era rules (definition→brackets; emphatic tail→full stop; contrast→conjunction;
+  en dashes retained for ranges) + standing conventions (British English, IEEE, low quote
+  density, D26 preprint practice). Applies to all dissertation prose.
+- **`irp/research-questions.md` created — the canonical live RQ set** (RQ1→1a→1b→1c→2→2a→3)
+  with per-RQ status (answered / to-run / gated), hypotheses incl. H1c and RQ1c's
+  no-confirmatory-hypothesis note, evidence homes, and the hard gate. Future RQ changes land
+  here first. Marked for refine/revisit after the E1 protocol + supervisor feedback.
+- **`irp/supervisor-brief.md` status-updated:** E1 shown as ACTIVATED (RQ1b + RQ1c) with
+  pointers; E2/E3 remain unactivated.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
