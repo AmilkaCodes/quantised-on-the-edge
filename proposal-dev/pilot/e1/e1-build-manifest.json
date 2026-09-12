@@ -1,0 +1,35 @@
+{
+  "docs_version": "Python 3.12 series (docs.python.org 3.12 branch; text archive)",
+  "docs_url": "https://docs.python.org/3.12/archives/python-3.12-docs-text.zip",
+  "docs_sha256": "8173bb9b389063a8e8bc6555bedc4688fb7bd07a8878f98eccbd900614c8866f",
+  "docs_retrieved": "2026-09-12",
+  "scope": [
+    "library",
+    "reference",
+    "tutorial"
+  ],
+  "n_chunks": 8239,
+  "n_pages": 348,
+  "chunk_chars_min_median_max": [
+    7,
+    968,
+    1500
+  ],
+  "bm25": {
+    "impl": "rank_bm25 BM25Okapi",
+    "k1": 1.5,
+    "b": 0.75,
+    "tokenisation": "lowercase, [a-z0-9]+"
+  },
+  "k": 2,
+  "max_chunk_chars": 1500,
+  "ctx_budget_tokens": 4096,
+  "gen_cap": 768,
+  "n_problems": 164,
+  "openbook_prompts_sha256": "95069f4b461426a48e348065ca110d0a95fb2f2294c637db123d8a472bb5007c",
+  "sweep_summary": {
+    "n_13gram_replacements": 0,
+    "n_problems_with_8_12gram": 34,
+    "n_truncations": 0
+  }
+}

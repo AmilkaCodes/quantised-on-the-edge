@@ -4,20 +4,23 @@ _Operational checklist implementing `e1-protocol.md` (the protocol governs; this
 the order of work). Tick + annotate as-run, setup-log style. Record the protocol's git commit
 hash in every manifest._
 
-## Phase 1 — Corpus + frozen artefact (no measurement yet)
-- [ ] `git pull`; note the e1-protocol.md commit hash: ______
-- [ ] Download the official Python docs **plain-text archive** for one pinned 3.12.x version
-      (docs.python.org publishes `python-3.12.x-docs-text` archives) — record exact version,
-      URL, date, sha256: ______
-- [ ] Chunker per protocol §1 (section split; >1,500 chars → paragraph split; no overlap).
-      Record chunk count + size distribution: ______
-- [ ] BM25 index (rank_bm25 BM25Okapi, defaults). Freeze.
-- [ ] Build `openbook_prompts.jsonl` per §2 (query = signature+docstring verbatim; k=2;
-      4,096-token budget check; truncations logged): ______
-- [ ] **Contamination sweep per §3** → committed report. 13-gram fails (replaced): ______ ·
-      8–12-gram reports: ______
-- [ ] **COMMIT the artefact + sweep report.** From here the prompts are immutable study
-      material; artefact commit hash: ______
+## Phase 1 — Corpus + frozen artefact (no measurement yet) — DONE 2026-09-12
+- [x] `git pull`; e1-protocol.md commit hash: **8375d3c** (gate 1 satisfied).
+- [x] Downloaded Python 3.12 docs **text archive**: URL
+      `https://docs.python.org/3.12/archives/python-3.12-docs-text.zip`, retrieved **2026-09-12**,
+      **sha256 `8173bb9b389063a8e8bc6555bedc4688fb7bd07a8878f98eccbd900614c8866f`** (3.12 branch; text
+      archive carries version strings up to 3.12.9). Raw docs live in `~/pilot-work/e1-corpus/` (regenerable).
+- [x] Chunker per §1 (section split; >1,500 chars → paragraph split; no overlap; scope =
+      library+reference+tutorial): **8,239 chunks from 348 pages**, chars min/median/max = 7/968/1500.
+- [x] BM25 index (rank_bm25 BM25Okapi, k1=1.5 b=0.75, lowercase `[a-z0-9]+` tokenisation). Built in
+      `e1_build.py`; regenerable from the pinned archive.
+- [x] Built `openbook_prompts.jsonl` per §2 (query = signature+docstring verbatim; k=2; 4,096-token
+      budget check): **164 problems, sha256 `95069f4b461426a4…`; 0 truncations.**
+- [x] **Contamination sweep per §3:** **13-gram fails (replaced): 0** · 8–12-gram overlaps reported on
+      **34/164** problems (not failed) · thesis line holds literally ("no retrieved chunk shared a
+      ≥13-gram overlap with any reference solution"). Report: `e1/e1-sweep-report.md`.
+- [x] **COMMITTED** the artefact + sweep report + build script + manifest (`proposal-dev/pilot/e1/`).
+      From here the prompts are immutable study material.
 
 ## Phase 2 — Harness + smoke (instrument validation)
 - [ ] Harness: `--condition open` flag consuming the artefact (prompt substitution ONLY —
