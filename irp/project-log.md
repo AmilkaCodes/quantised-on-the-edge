@@ -466,6 +466,27 @@ Student decision: include open-book runs alongside closed-book. Design as revise
 - **HARD GATE before measuring:** write + commit the E1 protocol (retrieval method, k, chunk
   size, context cap, sweep threshold, same 164/greedy/b9951) — protocol first, data second.
 
+## 2026-09-12 (later) — E1's literature consequences mapped; NEAR-TWIN #3 caught
+
+RQ1b changes the lit review in five ways (recorded in `candidate-reading-list.md` Tier 1c):
+1. **New sub-strand (RAG-for-code + context use):** DocPrompting (ICLR23, the Condition-B
+   design anchor), Lewis RAG (NeurIPS20, canonical), Lost in the Middle (TACL24 journal — the
+   null-model for H1c: context use is fragile even unquantised), Brown et al. (NeurIPS20 —
+   n-gram contamination-check precedent for the sweep). All peer-reviewed → audit rises to
+   ~18 peer-reviewed anchors.
+2. **★ NEAR-TWIN #3 FOUND by pre-claim search: Yazan et al. (arXiv:2406.10251 / CEUR-WS)** —
+   quantisation × RAG measured directly, but FP16→INT4 only, 7–8B models, personalisation.
+   RQ1b's gap is the unexplored region: full ladder into the collapse zone × execution-scored
+   code × edge-class models × docs retrieval. Gap sentence to be written AGAINST this paper.
+   (Third catch for the check-before-claiming discipline: Smaller=Weaker, Pape, now Yazan.)
+3. **Gap statement extends:** "...and no study tests whether retrieval-grounded context shifts
+   the collapse threshold across the full ladder" — verify via extended staleness-sweep terms
+   before asserting.
+4. **Narrative continuity:** the July formative already trailed "context-driven/RAG local
+   models" as future experiments; proposal named the extension; RQ1b executes it — the
+   proposal→dissertation arc is self-consistent.
+5. Word budget: one new sub-strand (~200–300 words) when the brief's counts land.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
