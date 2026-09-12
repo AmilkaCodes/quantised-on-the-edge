@@ -12,9 +12,12 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
   below a defined threshold?
 - **RQ1a** (confirmatory — ANSWERED): does the threshold differ between a code-specialised and
   a general-purpose model?
-- **RQ1b** (confirmatory — TO RUN; added on E1 activation 2026-09-12): does
+- **RQ1b** (confirmatory — **ANSWERED 2026-09-12**, cross-device spot-check pending): does
   reference-documentation context ("open-book" retrieval over the official Python
   documentation) mitigate quantisation-induced degradation relative to closed-book generation?
+  **Answer: NO — Δ(B−A) ≤ 0 at every rung for both models; the distraction cost peaks at each
+  model's own collapse rung (Qwen Q2 −0.098 p=.007; Phi Q4 −0.152 p=.0008); collapse thresholds
+  unchanged. See `irp/analysis/e1-openbook.md`.**
 - **RQ1c** (exploratory, GATED — TO PILOT; added 2026-09-12): at which quantisation level does
   the reliable, structured tool use required for "agentic" assistant operation break down, and
   does it break before or after generation quality? (Descriptive metrics; proceeds only if
@@ -31,8 +34,11 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
   baseline (H0a: no difference). Result: Qwen Q2 p=1.2×10⁻⁷; Phi breaks earlier (Q4, p=0.007).
 - **H1b** (tested — REJECTED H0b): the collapse level differs between the two models
   (H0b: identical). Result: Qwen safe through Q3; Phi breaks at Q4.
-- **H1c** (TO TEST, pre-registered with E1): the open-book benefit (Δ pass@1, open − closed)
-  changes with quantisation level (H0c: the benefit is constant across levels).
+- **H1c** (TESTED 2026-09-12): the open-book benefit (Δ pass@1, open − closed) changes with
+  quantisation level (H0c: constant). **Result: the effect is not constant — it spikes at each
+  model's collapse rung (Phi Δ ranges −0.018 (F16) → −0.152 (Q4, p=.0008)) — but the shape is a
+  collapse-rung spike, not a monotone slope; claim kept descriptive (per-rung Δ + CIs), no
+  difference-of-differences test was registered.**
 - RQ1c carries **no confirmatory hypothesis** — exploratory; descriptive reliability metrics
   (M1 valid-tool-call rate, M2 loop behaviour, M3 conditional pass@1).
 

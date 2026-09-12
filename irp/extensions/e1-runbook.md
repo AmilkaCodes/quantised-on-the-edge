@@ -29,12 +29,16 @@ hash in every manifest._
       artefact byte-for-byte, CSV row written. (Instrument validation, not a scored run.)
 
 ## Phase 3 — Condition B sweeps (RQ1b data)
-- [ ] Qwen: 5 rungs × 164, open-book, Mac, tmux; manifests complete
-- [ ] Phi-3: 5 rungs × 164, open-book
+- [x] Qwen: 5 rungs × 164, open-book, Mac — **DONE 2026-09-12** (caffeinated background run;
+      manifest carries condition=open + artefact sha `95069f4b…`)
+- [x] Phi-3: 5 rungs × 164, open-book — **DONE 2026-09-12** (same run;
+      `pilot_results_open_20260912_144604.csv`)
 - [ ] Cross-device spot-check per §0: K=25 open-book generations, one rung (Q4_K_M),
       Pi + Jetson vs Mac — disagreement rate recorded: ______
-- [ ] Analysis per §4: per-rung B-vs-A McNemar + bootstrap CIs + 5pp margin per condition +
-      the Δ(B−A) interaction; results committed
+- [x] Analysis per §4 — **DONE 2026-09-12** (`irp/analysis/e1_analysis.py` →
+      `irp/analysis/e1-openbook.md`). Headline: **Δ(B−A) ≤ 0 in all 10 cells** — frozen doc-context
+      never helps and hurts most AT each model's collapse rung (Qwen Q2 −0.098 p=.007; Phi Q4 −0.152
+      p=.0008); 5pp thresholds condition-invariant (Q2/Q4).
 - [ ] Optional perf cells: Q4_K_M open vs closed TTFT/peak-mem per tier: ______
 
 ## Phase 4 — Condition D (RQ1c; timebox clock starts at first harness work)

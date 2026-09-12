@@ -1,0 +1,11 @@
+timestamp,device,model,quant,condition,n,parse_rate,pass@1_base,pass@1_plus,mean_ttft_ms,mean_tok_s,peak_rss_mb,llama_cpp_tag,smoke
+2026-09-12T13:53:33Z,mac,qwen2.5-coder-1.5b-instruct,F16,open,164,1.0,0.573,0.53,268.0,77.3,6649.6,b9951,False
+2026-09-12T13:58:53Z,mac,qwen2.5-coder-1.5b-instruct,Q8_0,open,164,1.0,0.579,0.537,279.0,122.6,5306.0,b9951,False
+2026-09-12T14:03:17Z,mac,qwen2.5-coder-1.5b-instruct,Q4_K_M,open,164,1.0,0.598,0.543,284.4,161.8,4668.9,b9951,False
+2026-09-12T14:08:37Z,mac,qwen2.5-coder-1.5b-instruct,Q3_K_M,open,164,1.0,0.561,0.524,295.8,139.4,4652.4,b9951,False
+2026-09-12T14:13:56Z,mac,qwen2.5-coder-1.5b-instruct,Q2_K,open,164,1.0,0.299,0.28,292.6,164.4,4749.2,b9951,False
+2026-09-12T14:30:32Z,mac,phi-3-mini-4k-instruct,F16,open,164,1.0,0.671,0.622,852.8,34.4,19757.3,b9951,False
+2026-09-12T14:41:50Z,mac,phi-3-mini-4k-instruct,Q8_0,open,164,1.0,0.652,0.604,898.5,57.3,18109.6,b9951,False
+2026-09-12T14:53:51Z,mac,phi-3-mini-4k-instruct,Q4_K_M,open,164,1.0,0.433,0.396,973.7,78.8,15817.9,b9951,False
+2026-09-12T15:08:20Z,mac,phi-3-mini-4k-instruct,Q3_K_M,open,164,0.988,0.427,0.396,992.5,73.6,16644.4,b9951,False
+2026-09-12T15:28:16Z,mac,phi-3-mini-4k-instruct,Q2_K,open,164,0.982,0.201,0.177,995.0,77.6,14935.7,b9951,False
