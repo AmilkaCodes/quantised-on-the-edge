@@ -487,6 +487,19 @@ RQ1b changes the lit review in five ways (recorded in `candidate-reading-list.md
    proposal→dissertation arc is self-consistent.
 5. Word budget: one new sub-strand (~200–300 words) when the brief's counts land.
 
+## 2026-09-12 (evening) — Condition D added: agentic tool-use probe (gated, timeboxed)
+
+Student proposal, adopted with guardrails: measure Option B after all — but as a **decomposed
+probe**, not an end-to-end score. Tool-calling reliability becomes its own DV (M1 validity
+rate, M2 loop behaviour, M3 conditional pass@1), which dissolves the D27 confound; the agentic
+tool queries the SAME frozen BM25 index as Condition B, so delivery mechanism is the only
+difference. Guardrails: **F16 gate pilot first** (Qwen-only, ~20 problems, Mac — a floor
+result is itself a finding), Mac-only reduced-set ladder if the gate passes, **~1-week harness
+timebox**, novelty search before claiming the gap. Framing captured: Option A's family
+(inline completion, RAG assistants) = today's dominant paradigm → A primary, D forward-looking.
+Full design in `irp/extensions/e1-context-conditions.md`; D27's scope consequence now has an
+empirical answer path instead of only a future-work line.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)

@@ -43,6 +43,28 @@ embedding model into the pipeline as a second confound), query = signature + doc
 tokens, exact values fixed in the protocol before any run; docs version pinned (e.g. 3.12.x)
 with retrieval date in the manifest.
 
+**Condition D — agentic tool-use probe (ADDED 2026-09-12, student proposal; GATED + TIMEBOXED).**
+Motivation framing (student): Option A's family (inline completion, RAG assistants) is today's
+dominant day-to-day coding paradigm → A stays PRIMARY; the agentic paradigm (Claude Code-style
+tool loops) is the forward-looking probe. The D27 confound is dissolved by **decomposed
+measurement** — tool-calling reliability becomes its own DV, not folded into pass@1:
+- **M1 tool-call validity rate** (well-formed call when expected: parseable, valid tool,
+  sensible query — parser-checked, no execution needed)
+- **M2 loop behaviour** (terminates / loops / hallucinates tool output)
+- **M3 pass@1 conditioned on successful tool phase**
+Design: the agentic tool queries **the SAME frozen BM25 index as Condition B** — same corpus,
+same chunks; delivery mechanism (given-context vs asked-for-context) is the only difference.
+**Guardrails (all pre-registered before any run):**
+1. **GATE: F16 pilot first** — ~20 problems, Qwen only (Phi-3 has no real function-calling
+   training), Mac only. If F16 tool-call validity < a pre-set floor, STOP — the floor itself
+   is a reportable finding ("edge-class models cannot sustain the agentic paradigm even before
+   quantisation"). Either gate branch yields a thesis sentence (research symmetry).
+2. If gate passes: ladder probe — Mac-only, reduced problem set, M1–M3 per rung.
+3. **Timebox the harness build (~1 week incl. validation); overrun ⇒ gate closes honourably.**
+4. Novelty check before claiming the probe's gap: search "quantization × function-calling /
+   tool-use reliability" (added to staleness sweep).
+Ethics: unchanged — same corpus, sandboxed local tool, no network, no new data types.
+
 _Original design note (2026-09-01) below — Condition B superseded as above; oracle probe
 (Condition C) remains optional._ Scope position: outside the current pre-registration, but **named in
 the submitted proposal as the natural extension** ("results characterise closed-book generation
