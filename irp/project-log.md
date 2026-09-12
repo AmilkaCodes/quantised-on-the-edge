@@ -534,6 +534,39 @@ protocol document (hard gate) → supervisor amendment ack → corpus build + co
 → Condition B sweeps + RQ1c gate pilot. Then venue rechecks + staleness sweep before the
 chapter drafts.**
 
+## 2026-09-12 (bench session) — E1 EXECUTED END-TO-END: RQ1b + RQ1c answered in one day
+
+The entire E1 runbook ran and closed today (all committed; hard gate honoured — protocol commit
+`8375d3c` preceded every measurement):
+- **Phase 1:** pinned Python-3.12 docs (sha256 `8173bb9b…`) → 8,239 chunks → BM25 → frozen
+  `openbook_prompts.jsonl` (164, sha `95069f4b…`). **Contamination sweep: 0 ≥13-gram overlaps** —
+  the thesis line holds literally. Committed before any run (eaf38aa).
+- **Phase 2:** harness `--condition open` (verbatim artefact consumption; `_open` outputs;
+  manifest carries condition + artefact sha); smoke green (545ee4f).
+- **Phase 3 — RQ1b ANSWERED:** both models × 5 rungs × 164 open-book. **Δ(B−A) ≤ 0 in all 10
+  cells; harm peaks at each model's own collapse rung** (Qwen Q2 −0.098 p=.007; Phi Q4 −0.152
+  p=.0008, 39 passes broken); 5pp thresholds condition-invariant. K=25 spot-check: 4/25 diverge,
+  1/25 flips (reverse direction vs closed-book) → D25 proxy status inherited. Perf tie-in
+  (same-session pairs, all tiers): context costs prefill+KV, not decode — TTFT mean Mac 23→113 ms,
+  Jetson 77→1,184 ms, **Pi 589→4,957 ms (breaks the registered floor)**; +200–243 MB RSS.
+  (`irp/analysis/e1-openbook.md`.)
+- **Phase 4 — RQ1c ANSWERED AT THE GATE:** Qwen F16, 20 problems → **M1 = 0/20 → FAIL → probe
+  stopped per the binding rule.** Unforced it ignores the tool (and passes 0.90 closed-book);
+  forced it emits the wrong wrapper then degenerates. Instrument fairness verified
+  (/apply-template). Tool use breaks before generation, at the floor.
+  (`irp/analysis/e1-agentic.md`; transcripts committed as the stopped-branch record.)
+- **Tier-1 mechanism check (exploratory):** harm predicted by NEITHER retrieval relevance NOR
+  context length; the one weak uncorrected signal points the other way (higher-scoring chunks
+  break more) → **naive score-gating dropped**; honest statement = "prepended doc-context
+  interferes broadly." Bonus: 164/164 recomputed retrievals match the artefact (determinism).
+- **E2 proposal drafted, NOT activated** (`irp/extensions/e2-proposal.md`): arms ranked
+  imatrix-calibration > dense-retrieval > placement/framing, score-gating dropped on Tier-1
+  evidence; supervisor ask + calendar gate written in. Awaits October discussion.
+
+**The day's one-sentence synthesis:** for edge-class coders, closed-book at the quantisation knee
+is overdetermined — imposed context hurts (worst at the cliff), asked-for context is inoperable,
+and the edge tiers can't afford context's latency/memory bill anyway.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)

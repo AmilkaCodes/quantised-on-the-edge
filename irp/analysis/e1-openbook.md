@@ -69,6 +69,22 @@ Raw: `results/mac/pilot_results_open_20260912_144604.csv` + per-problem eval_res
   closed-book flip, consistent with backend divergences cancelling in aggregate). Same profile as
   closed-book (24% / 1-in-50).
 
+## Mechanism check (exploratory, post-hoc): relevance does NOT explain which problems break
+
+`e1_relevance_harm.py` (2026-09-12): among closed-book passers, does per-problem harm (closed-pass →
+open-fail) track (a) the injected chunks' **BM25 relevance** or (b) **context length**? Answer:
+**neither, in either model** — Phi shows no signal on any test (p ≈ 0.12–1.0); context length is null
+everywhere; and the single nominal result (Qwen pooled, median-split Fisher p = 0.020, one of eight
+uncorrected exploratory tests) runs **opposite** to the naive distraction story: the **higher**-relevance
+half breaks *more* (63/230 vs 42/231). Two honest readings: (i) BM25 lexical overlap ≠ usefulness, so
+"plausible-looking but unhelpful" text may be the worst distractor (obviously-irrelevant text is easier
+to ignore), or (ii) harm is roughly uniform and the hint is noise. Either way, the harm is **not**
+concentrated in low-scoring retrievals — which **undermines naive score-thresholded retrieval-gating as
+a fix** (E2 planning consequence) and keeps the honest mechanism statement at "prepended
+doc-context interferes broadly, not merely when it is obviously off-topic."
+_Side-benefit: recomputing retrieval scores re-verified determinism — 164/164 problems' top-2 chunk
+sources match the committed artefact._
+
 ## Perf tie-in — the price of context, per tier (Qwen Q4_K_M, same-session closed/open pairs, 2026-09-12)
 
 | tier | TTFT mean, closed → open | decode tok/s | Δ peak RSS | note |
