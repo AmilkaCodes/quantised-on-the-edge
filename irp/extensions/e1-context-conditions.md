@@ -1,7 +1,30 @@
 # E1 design note — context conditions ("open-book") and the oracle probe
 
-**Status:** designed, NOT started. Prepared 2026-09-01 as an activatable extension for the
-supervisor conversation. Scope position: outside the current pre-registration, but **named in
+**Status: ACTIVATED (student decision 2026-09-12)** — open-book runs will be included alongside
+closed-book. **Design revised on activation:** Condition B = **retrieval over official Python
+reference documentation** (docs-RAG), not few-shot exemplars — closer to real deployed
+assistants, and cleaner on contamination. Framed as a named sub-question:
+**RQ1b — does reference-documentation context mitigate quantisation-induced degradation?**
+(hypothesis-driven, self-documenting pre-registration). **HARD GATE: the E1 protocol document
+must be written and committed BEFORE any measurement runs** (retrieval method + k + chunk size +
+context cap + thresholds + the contamination-sweep criterion, all fixed in advance).
+
+**Pre-registered validity check — contamination sweep (added 2026-09-12):** before any scored
+run, an n-gram overlap check between every retrieved documentation chunk and the canonical
+HumanEval+ reference solutions (a few problems resemble textbook examples). Threshold fixed in
+the protocol; result gives the thesis its one-line defence: "no retrieved chunk shared >n-gram
+overlap with reference solutions." ~An afternoon of work.
+
+**Python docs licensing (VERIFIED at source 2026-09-12, docs.python.org/3/license.html):**
+Quote: 'Python software and documentation are licensed under the Python Software Foundation
+License Version 2.' Quote: 'Starting with Python 3.8.6, examples, recipes, and other code in
+the documentation are dual licensed under the PSF License Version 2 and the Zero-Clause BSD
+license.' Both permissive (use/copy/modify/distribute); research retrieval use clearly
+permitted. Record the docs VERSION used in the provenance manifest (e.g. "Python 3.12.x docs,
+retrieved YYYY-MM-DD").
+
+_Original design note (2026-09-01) below — Condition B superseded as above; oracle probe
+(Condition C) remains optional._ Scope position: outside the current pre-registration, but **named in
 the submitted proposal as the natural extension** ("results characterise closed-book generation
 (HumanEval+); retrieval-grounded deployment may shift the usable threshold, and testing whether
 quantisation degrades context-following at the same rate is a natural extension" — Expected

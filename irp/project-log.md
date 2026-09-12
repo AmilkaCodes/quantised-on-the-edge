@@ -440,6 +440,32 @@ Signed copy: OneDrive module-11 admin folder. **The project's ethics story is cl
 screening → deliberate scope-to-approval alignment (RQ4 descope, summarisation exclusion) →
 Self-Assessment sign-off for the IRP.
 
+## 2026-09-12 — E1 ACTIVATED: open-book (docs-RAG) runs join the study as RQ1b
+
+Student decision: include open-book runs alongside closed-book. Design as revised on activation
+(`irp/extensions/e1-context-conditions.md`):
+- **RQ1b — "does reference-documentation context mitigate quantisation-induced degradation?"**
+  Named sub-question, not "an extra condition" — hypothesis-driven framing for the supervisor
+  conversation; makes the pre-registration self-documenting.
+- **Condition B = retrieval over official Python reference documentation** (supersedes the
+  few-shot-exemplars sketch). Oracle probe stays optional.
+- **Pre-registered contamination sweep** before any scored run: n-gram overlap between every
+  retrieved chunk and the canonical HumanEval+ solutions (threshold fixed in the protocol) →
+  thesis defence line "no retrieved chunk shared >n-gram overlap with reference solutions".
+- **Python docs licence VERIFIED at source 2026-09-12** (docs.python.org/3/license.html):
+  PSF License v2 for docs; doc code examples dual PSF-2.0 + Zero-Clause BSD since 3.8.6 —
+  permissive, research use clearly permitted. Record docs version + retrieval date in the
+  provenance manifest.
+- **Ethics impact: route unchanged** — all ten Self-Assessment answers stay No (public,
+  openly-licensed documentation; no humans, no personal data). Action: one-line email to
+  supervisor adding Python docs to the signed form's data-sources section (amendment diligence,
+  mirroring the RQ4-descope precedent); update the form's §4 wording.
+- **RQ impact:** RQ1 gains RQ1b + an interaction hypothesis (Δ(open−closed) per rung; three
+  outcomes all reportable, research symmetry). RQ2 gains the optional context-memory tie-in
+  (KV-cache price of context on the 8GB edge). RQ3's closed-book map remains canonical.
+- **HARD GATE before measuring:** write + commit the E1 protocol (retrieval method, k, chunk
+  size, context cap, sweep threshold, same 164/greedy/b9951) — protocol first, data second.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
