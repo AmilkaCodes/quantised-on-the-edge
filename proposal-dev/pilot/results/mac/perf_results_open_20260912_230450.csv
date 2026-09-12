@@ -1,0 +1,2 @@
+timestamp,device,model,quant,n_prompts,repeats,mean_tok_s,std_tok_s,median_tok_s,mean_ttft_ms,std_ttft_ms,median_ttft_ms,peak_rss_mb,mean_power_w,llama_cpp_tag
+2026-09-12T22:05:23Z,mac,qwen2.5-coder-1.5b-instruct,Q4_K_M,10,3,163.5,1.7,163.2,113.1,119.5,16.3,1432.9,25.01,b9951

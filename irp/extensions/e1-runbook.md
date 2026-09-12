@@ -41,7 +41,11 @@ hash in every manifest._
       `irp/analysis/e1-openbook.md`). Headline: **Δ(B−A) ≤ 0 in all 10 cells** — frozen doc-context
       never helps and hurts most AT each model's collapse rung (Qwen Q2 −0.098 p=.007; Phi Q4 −0.152
       p=.0008); 5pp thresholds condition-invariant (Q2/Q4).
-- [ ] Optional perf cells: Q4_K_M open vs closed TTFT/peak-mem per tier: ______
+- [x] Optional perf cells — **DONE 2026-09-12**, same-session closed/open pairs on all three tiers
+      (Qwen Q4). TTFT mean closed→open: Mac 23.5→113 ms · Jetson 77→1,184 ms · **Pi 589→4,957 ms
+      (breaks the registered 1–2 s floor)**; decode tok/s unchanged; Δpeak-RSS ≈ +200–243 MB per tier.
+      Context costs prefill + KV memory, not decode — and the cost is a tier property. Table +
+      reading in `irp/analysis/e1-openbook.md` (perf tie-in section).
 
 ## Phase 4 — Condition D (RQ1c; timebox clock starts at first harness work)
 - [ ] Tool-loop harness per §5 (single `search_docs` tool → same frozen index; max 4 turns;

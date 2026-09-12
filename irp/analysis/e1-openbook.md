@@ -69,6 +69,23 @@ Raw: `results/mac/pilot_results_open_20260912_144604.csv` + per-problem eval_res
   closed-book flip, consistent with backend divergences cancelling in aggregate). Same profile as
   closed-book (24% / 1-in-50).
 
+## Perf tie-in — the price of context, per tier (Qwen Q4_K_M, same-session closed/open pairs, 2026-09-12)
+
+| tier | TTFT mean, closed → open | decode tok/s | Δ peak RSS | note |
+|---|---|---|---|---|
+| Mac (Metal) | 23.5 → 113 ms (~5×) | 165 → 163 | +200 MB | invisible in absolute terms |
+| Jetson (CUDA) | 77 → 1,184 ms (~15×) | 39.8 → 38.8 | +196 MB | at/near the registered 1–2 s TTFT floor |
+| Pi 5 (CPU) | 589 → **4,957 ms** (~8×) | 11.0 → 10.0 | +243 MB | **breaks the registered TTFT floor outright** |
+
+_Medians are cache-flattered (llama-server reuses the prompt prefix across the K=3 repeats → bimodal
+cold/cached distributions, std > mean on the Pi); the means carry the honest cold prefills._
+**Reading:** injected context costs **prefill latency and KV memory, not decode rate** — and that cost
+is a *tier property*: negligible on the Mac, SLO-threatening on the edge GPU, SLO-breaking on the CPU
+tier. So even under a hypothetical quality benefit, open-book would have cost the Pi its pre-registered
+TTFT compliance; combined with RQ1b (quality harm) and RQ1c (tool-use floor), the closed-book-on-the-edge
+recommendation is **overdetermined** — quality, capability, latency and memory all point the same way.
+Raw: `results/{mac,jetson,pi5}/perf_results{,_open}_2026091*.csv`.
+
 ## RQ1b answer (one line)
 **Reference-documentation context does not mitigate quantisation-induced degradation on HumanEval+ — it
 adds a distraction cost that is worst exactly at each model's collapse rung, while leaving the collapse

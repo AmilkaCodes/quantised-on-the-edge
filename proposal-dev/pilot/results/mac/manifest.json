@@ -1,6 +1,6 @@
 {
   "device": "mac",
-  "timestamp": "2026-09-12T13:46:04Z",
+  "timestamp": "2026-09-12T22:05:24Z",
   "os": "macOS-26.6.2-arm64-arm-64bit",
   "processor": "arm",
   "cpu_count": 14,
@@ -9,7 +9,7 @@
   "llama_cpp_tag": "b9951",
   "config_file": "configs/mac.yaml",
   "smoke": false,
-  "condition": "open",
-  "openbook_artefact_sha256": "95069f4b461426a48e348065ca110d0a95fb2f2294c637db123d8a472bb5007c",
+  "condition": "closed",
+  "openbook_artefact_sha256": null,
   "accelerator": {}
 }
