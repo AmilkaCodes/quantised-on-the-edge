@@ -33,8 +33,10 @@ hash in every manifest._
       manifest carries condition=open + artefact sha `95069f4b…`)
 - [x] Phi-3: 5 rungs × 164, open-book — **DONE 2026-09-12** (same run;
       `pilot_results_open_20260912_144604.csv`)
-- [ ] Cross-device spot-check per §0: K=25 open-book generations, one rung (Q4_K_M),
-      Pi + Jetson vs Mac — disagreement rate recorded: ______
+- [x] Cross-device spot-check per §0 — **DONE 2026-09-12**: K=25 open-book, Qwen Q4_K_M, all three
+      tiers. **Disagreement rate 4/25 (16%); correctness flips 1/25** (HumanEval/10: Pi pass,
+      Mac+Jetson fail — direction reversed vs the closed-book flip, consistent with cancellation).
+      Mac↔Jetson closest (24/25). Same profile as closed-book (D25 aggregate-proxy status inherited).
 - [x] Analysis per §4 — **DONE 2026-09-12** (`irp/analysis/e1_analysis.py` →
       `irp/analysis/e1-openbook.md`). Headline: **Δ(B−A) ≤ 0 in all 10 cells** — frozen doc-context
       never helps and hurts most AT each model's collapse rung (Qwen Q2 −0.098 p=.007; Phi Q4 −0.152

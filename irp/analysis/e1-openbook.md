@@ -63,8 +63,11 @@ Raw: `results/mac/pilot_results_open_20260912_144604.csv` + per-problem eval_res
   coding (project-local context, genuinely relevant snippets) may behave differently → external-validity
   limit + the E2 "beyond stock" question.
 - Phi open-book parse_rate dipped slightly at Q3/Q2 (0.988/0.982) — context consumed budget/attention.
-- Cross-device: the open-book quality axis inherits the D25 aggregate-proxy status; the pre-registered
-  K=25 open-book spot-check (protocol §0) runs next and is reported separately.
+- Cross-device: the open-book quality axis inherits the D25 aggregate-proxy status — **confirmed by the
+  pre-registered K=25 spot-check (2026-09-12, Qwen Q4 open-book, all three tiers): 4/25 outputs diverge
+  (16%), 1/25 flips correctness** (HumanEval/10: Pi pass, Mac+Jetson fail — the reverse direction of the
+  closed-book flip, consistent with backend divergences cancelling in aggregate). Same profile as
+  closed-book (24% / 1-in-50).
 
 ## RQ1b answer (one line)
 **Reference-documentation context does not mitigate quantisation-induced degradation on HumanEval+ — it
