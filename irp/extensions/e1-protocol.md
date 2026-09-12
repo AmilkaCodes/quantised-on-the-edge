@@ -4,6 +4,15 @@
 measurement. Runs may begin only after (1) this file is committed unchanged and (2) the
 supervisor acknowledges the amended ethics form. Any later change is a dated amendment
 committed BEFORE the affected run, with rationale (deviation discipline as usual).
+
+> **AMENDMENT 2026-09-12 (gate 2, student decision):** the amended ethics form was emailed to
+> the supervisor 2026-09-12. The amendment changes no Section-5 answers (no participants, no
+> personal data; one additional public, PSF-licensed corpus) — it is administrative diligence
+> on an already-approved form, not a new permission request. **Decision: runs proceed pending
+> acknowledgment**; the student will chase before the October supervision meeting, and any
+> supervisor objection triggers re-examination of the affected runs. Rationale mirrors the
+> RP-era precedent: scope and approval are kept aligned in the record, and the ethical
+> substance was approved 2026-09-11.
 _For the student to review and own before first run; refine wording freely — parameter values
 change only by amendment._
 
