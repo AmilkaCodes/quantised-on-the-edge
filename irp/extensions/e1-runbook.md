@@ -47,10 +47,15 @@ hash in every manifest._
 - [ ] Tool-loop harness per §5 (single `search_docs` tool → same frozen index; max 4 turns;
       sandboxed) — build + validate. **Timebox start date: 2026-09-12** (gate closes 2026-09-19
       if the harness is not validated by then).
-- [ ] **GATE:** Qwen F16, 20 problems → M1 valid-call rate = ______ (pass ≥50%)
-- [ ] If pass: ladder probe, Qwen, 30 × 5 rungs → M1/M2/M3 per rung
-- [ ] If fail: STOP; write the F16-floor finding
-- [ ] Probe write-up either way; escalation only per the binding rule in §5
+- [x] **GATE:** Qwen F16, 20 problems → **M1 valid-call rate = 0/20 (0%) → FAIL** (2026-09-12;
+      harness committed 19e85ac before the run; instrument-fairness verified via /apply-template +
+      a tool_choice=required side-probe — wrong-wrapper + degeneration under coercion).
+- [x] ~~If pass: ladder probe~~ → **not run (gate failed; binding rule honoured).**
+- [x] If fail: STOP; F16-floor finding written → **`irp/analysis/e1-agentic.md`**: tool use absent at
+      full precision (M1=0%) while closed-book competence intact (0.90) → tool operation breaks
+      before generation; coherent with Condition B (imposed context hurts; asked-for context
+      inoperable — closed-book is the only mode this model class can drive).
+- [x] Probe write-up done; any expansion = new logged decision + supervisor input (rule stands).
 
 ## Rhythm
 Push results after every completed phase; log deviations in e1-protocol.md §6 BEFORE the

@@ -18,10 +18,12 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
   **Answer: NO — Δ(B−A) ≤ 0 at every rung for both models; the distraction cost peaks at each
   model's own collapse rung (Qwen Q2 −0.098 p=.007; Phi Q4 −0.152 p=.0008); collapse thresholds
   unchanged. See `irp/analysis/e1-openbook.md`.**
-- **RQ1c** (exploratory, GATED — TO PILOT; added 2026-09-12): at which quantisation level does
-  the reliable, structured tool use required for "agentic" assistant operation break down, and
-  does it break before or after generation quality? (Descriptive metrics; proceeds only if
-  tool use is measurably reliable at F16.)
+- **RQ1c** (exploratory, GATED — **ANSWERED AT THE GATE 2026-09-12**): at which quantisation level
+  does the reliable, structured tool use required for "agentic" assistant operation break down, and
+  does it break before or after generation quality? **Answer: it is already broken at F16 —
+  M1 valid-call rate 0/20 (gate FAIL, probe stopped per the binding rule) while closed-book pass@1
+  is 0.90 on the same problems → tool operation breaks BEFORE generation, at the floor. Forced-mode
+  diagnostic: wrong call wrapper + degeneration. See `irp/analysis/e1-agentic.md`.**
 - **RQ2** (confirmatory — ANSWERED): how do inference latency and peak memory scale with
   quantisation level across CPU-only, edge-GPU and unified-memory tiers?
 - **RQ2a** (confirmatory — ANSWERED): which configurations are feasible on each?
