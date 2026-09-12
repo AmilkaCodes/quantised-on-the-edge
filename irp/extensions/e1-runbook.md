@@ -45,7 +45,8 @@ hash in every manifest._
 
 ## Phase 4 — Condition D (RQ1c; timebox clock starts at first harness work)
 - [ ] Tool-loop harness per §5 (single `search_docs` tool → same frozen index; max 4 turns;
-      sandboxed) — build + validate. Timebox start date: ______
+      sandboxed) — build + validate. **Timebox start date: 2026-09-12** (gate closes 2026-09-19
+      if the harness is not validated by then).
 - [ ] **GATE:** Qwen F16, 20 problems → M1 valid-call rate = ______ (pass ≥50%)
 - [ ] If pass: ladder probe, Qwen, 30 × 5 rungs → M1/M2/M3 per rung
 - [ ] If fail: STOP; write the F16-floor finding
