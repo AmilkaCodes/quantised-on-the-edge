@@ -231,6 +231,25 @@ install), not a version/hardware incompatibility — proven by a successful atte
 Keeps the study approval-free (no human data) *and* keeps reliability = repeatability (adding raters
 would require inter-coder reliability + ethics approval). (Week-5 feed-through.)
 
+**D27 — E1 open-book mechanism: frozen offline retrieval → prompt injection; agentic tool-use
+access explicitly rejected.** **[LIT]+[RESULTS-adjacent]** _(2026-09-12; full reasoning in
+`irp/extensions/e1-context-conditions.md`.)_
+Chosen: retrieval runs once (BM25 over pinned Python docs; query = signature + docstring),
+producing a contamination-swept, committed prompt artefact consumed byte-identically by every
+model × rung × tier. Rejected: giving models file/tool access to read docs themselves.
+Reasons: (1) consistency by construction — the artefact is version-pinned, so cross-tier
+comparability is enforced by git, not by run-time care (the b9951-pinning principle applied to
+prompts); (2) internal validity — tool use requires structured function-calling that
+1.5B–3.8B models do unreliably and low-bit models would do collapsingly, confounding code
+ability with tool-calling ability AND letting degradation change what gets read (context would
+co-vary with the IV); (3) comparability with the paradigm the literature measures (DocPrompting,
+Yazan condition on retrieved text); (4) the two-axes design survives intact (frozen bytes keep
+quality hardware-independent per D25; per-tier runs on the same prompts measure context's
+TTFT/KV-memory price for RQ2). **Scope consequence, stated honestly:** this models the
+RAG/context-assembly paradigm of deployed assistants, NOT the agentic tool-use paradigm
+(Claude Code / Cursor-agent style); quantisation's effect on agentic tool-calling reliability
+is a distinct, confounded-in-one-measurement question — named future work, not a hidden gap.
+
 ## 7. Writing / citation practice
 
 **D26 — Preprint-handling policy (set 2026-09-11).** **[LIT]+[PRAGMATIC]**
