@@ -19,7 +19,7 @@ Usage:
     python run_pilot.py --config configs/mac.yaml --no-manage-server --server-pid 12345
 """
 from __future__ import annotations
-import argparse, ast, csv, json, os, platform, re, signal, subprocess, sys, threading, time
+import argparse, ast, csv, hashlib, json, os, platform, re, signal, subprocess, sys, threading, time
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -288,12 +288,14 @@ def stop_server(proc: subprocess.Popen) -> None:
         proc.kill()
 
 
-def generate(client: OpenAI, model_label: str, problems: dict, cfg) -> tuple[list, dict]:
-    """Return (samples, timing_stats). Greedy, streaming for TTFT."""
+def generate(client: OpenAI, model_label: str, problems: dict, cfg, openbook: dict | None = None) -> tuple[list, dict]:
+    """Return (samples, timing_stats). Greedy, streaming for TTFT.
+    openbook (E1 Condition B): {task_id -> full user message} — sent VERBATIM instead of the closed-book
+    INSTRUCTION wrap (the artefact already contains chunk1\\n\\nchunk2\\n\\n<INSTRUCTION-wrapped prompt>)."""
     samples, ttfts, tok_rates = [], [], []
     n = len(problems)
     for i, (task_id, p) in enumerate(problems.items(), 1):
-        prompt = INSTRUCTION.format(prompt=p["prompt"])
+        prompt = openbook[task_id] if openbook else INSTRUCTION.format(prompt=p["prompt"])
         t0 = time.perf_counter()
         ttft = None
         text = ""
@@ -376,12 +378,13 @@ def _median(xs) -> float | None:
     return round(statistics.median(xs), 1) if xs else None
 
 
-def run_perf(cfg, client, problems, out, device, args) -> None:
+def run_perf(cfg, client, problems, out, device, args, openbook: dict | None = None) -> None:
     """Performance axis: for each (model x quant), run N prompts x K repeats against a warm
     server, measuring tok/s + TTFT (mean±std over all N*K generations), peak RSS, and mean power via
     the per-tier software route (Jetson tegrastats VDD_IN; Pi 5 vcgencmd PMIC rail-sum; Mac powermetrics
     SoC domains, needs root). NO evalplus scoring (quality is the Mac's job, hardware-independent)."""
-    perf_csv = out / f"perf_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    csfx = "" if openbook is None else "_open"
+    perf_csv = out / f"perf_results{csfx}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
     fields = ["timestamp", "device", "model", "quant", "n_prompts", "repeats",
               "mean_tok_s", "std_tok_s", "median_tok_s",
               "mean_ttft_ms", "std_ttft_ms", "median_ttft_ms",
@@ -406,10 +409,10 @@ def run_perf(cfg, client, problems, out, device, args) -> None:
                 # must provably exclude the cold start. (Also record median below, robust to outliers.)
                 if problems:
                     print("      [warm-up] discarded generation to prime the server ...")
-                    generate(client, quant["label"], dict(list(problems.items())[:1]), cfg)
+                    generate(client, quant["label"], dict(list(problems.items())[:1]), cfg, openbook)
                 all_tok, all_ttft = [], []
                 for r in range(args.perf_repeats):
-                    _, stats = generate(client, quant["label"], problems, cfg)
+                    _, stats = generate(client, quant["label"], problems, cfg, openbook)
                     all_tok += stats.get("tok_rates", [])
                     all_ttft += stats.get("ttfts", [])
                 rss.stop(); rss.join()
@@ -474,6 +477,10 @@ def main():
                     help="performance axis: latency/memory/power on a small prompt set, N repeats, NO scoring")
     ap.add_argument("--perf-n", type=int, default=10, help="perf: number of prompts (default 10)")
     ap.add_argument("--perf-repeats", type=int, default=3, help="perf: repeats per cell (default 3)")
+    ap.add_argument("--condition", choices=["closed", "open"], default="closed",
+                    help="E1: 'open' consumes the frozen open-book artefact (RQ1b Condition B)")
+    ap.add_argument("--openbook-artefact", default="e1/openbook_prompts.jsonl",
+                    help="path to the frozen open-book prompts (used when --condition open)")
     args = ap.parse_args()
 
     cfg = yaml.safe_load(Path(args.config).read_text())
@@ -494,6 +501,19 @@ def main():
     mode = ' (SMOKE)' if args.smoke else (f' (PERF {len(problems)}x{args.perf_repeats})' if args.perf else '')
     print(f"Loaded {len(problems)} HumanEval+ problems{mode} | device={device}")
 
+    # E1 Condition B: load the frozen open-book artefact and restrict to the requested problems.
+    condition = args.condition
+    openbook, openbook_sha = None, None
+    if condition == "open":
+        art = Path(args.openbook_artefact)
+        allc = {json.loads(l)["task_id"]: json.loads(l)["content"] for l in art.read_text().splitlines()}
+        missing = [t for t in problems if t not in allc]
+        if missing:
+            sys.exit(f"open-book artefact missing {len(missing)} requested problems, e.g. {missing[:3]}")
+        openbook = {t: allc[t] for t in problems}
+        openbook_sha = hashlib.sha256(art.read_bytes()).hexdigest()
+        print(f"  condition=OPEN | artefact {art.name} sha256 {openbook_sha[:16]}… ({len(openbook)} prompts)")
+
     # Provenance manifest — every recorded run is self-describing (reproducibility).
     vm = psutil.virtual_memory()
     manifest = {
@@ -502,6 +522,7 @@ def main():
         "cpu_count": os.cpu_count(), "ram_gb": round(vm.total / (1024**3), 1),
         "python": platform.python_version(), "llama_cpp_tag": cfg.get("llama_cpp_tag"),
         "config_file": str(args.config), "smoke": args.smoke,
+        "condition": condition, "openbook_artefact_sha256": openbook_sha,
         "accelerator": accel_provenance(),   # JetPack/power-mode (Jetson) · throttle/temp (Pi) · {} (Mac)
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2))
@@ -511,11 +532,13 @@ def main():
     client = OpenAI(base_url=base_url, api_key="sk-noauth")
 
     if args.perf:
-        run_perf(cfg, client, problems, out, device, args)
+        run_perf(cfg, client, problems, out, device, args, openbook)
         return
 
-    results_csv = out / f"pilot_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-    fields = ["timestamp", "device", "model", "quant", "n", "parse_rate", "pass@1_base", "pass@1_plus",
+    csfx = "" if condition == "closed" else f"_{condition}"
+    results_csv = out / f"pilot_results{csfx}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    fields = ["timestamp", "device", "model", "quant", "condition", "n", "parse_rate",
+              "pass@1_base", "pass@1_plus",
               "mean_ttft_ms", "mean_tok_s", "peak_rss_mb", "llama_cpp_tag", "smoke"]
     with results_csv.open("w", newline="") as f:
         csv.DictWriter(f, fieldnames=fields).writeheader()
@@ -537,7 +560,7 @@ def main():
                 if sampler:
                     sampler.start()
 
-                samples, stats = generate(client, quant["label"], problems, cfg)
+                samples, stats = generate(client, quant["label"], problems, cfg, openbook)
 
                 if sampler:
                     sampler.stop(); sampler.join()
@@ -545,7 +568,7 @@ def main():
                 if server:
                     stop_server(server); server = None  # free memory before scoring
 
-                samples_path = out / f"samples_{model['name']}_{quant['label']}{'_smoke' if args.smoke else ''}.jsonl"
+                samples_path = out / f"samples_{model['name']}_{quant['label']}{csfx}{'_smoke' if args.smoke else ''}.jsonl"
                 with samples_path.open("w") as sf:
                     for s in samples:
                         sf.write(json.dumps(s) + "\n")
@@ -554,6 +577,7 @@ def main():
 
                 row = {
                     "timestamp": utcstamp(), "device": device, "model": model["name"], "quant": quant["label"],
+                    "condition": condition,
                     "n": len(problems), "parse_rate": stats["parse_rate"],
                     "pass@1_base": base, "pass@1_plus": plus,
                     "mean_ttft_ms": stats["mean_ttft_ms"], "mean_tok_s": stats["mean_tok_s"],
