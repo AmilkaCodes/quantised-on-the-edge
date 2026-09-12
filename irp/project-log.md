@@ -515,6 +515,25 @@ empirical answer path instead of only a future-work line.
 - **`irp/supervisor-brief.md` status-updated:** E1 shown as ACTIVATED (RQ1b + RQ1c) with
   pointers; E2/E3 remain unactivated.
 
+## 2026-09-12 (extraction pass) — All 17 lit-review extracts complete, quote-verified
+
+Four parallel extraction agents processed the full queue → `irp/reading-extracts/` (18 files
+incl. Pape, consolidated home). Every extract: house template, verbatim quotes with locators,
+D26 preprint labelling, gap-notes positioned against the study; agents instructed to report
+brief-vs-paper contradictions (the Pape lesson institutionalised) — and they found real ones.
+4-quote cross-agent sample spot-verified character-exact against the PDFs. Headline
+intelligence logged in `candidate-reading-list.md` (Extraction Pass Complete section):
+Afrin's own pass@1 table leans our way; Jin's benchmark set contains zero execution-scored
+code (reconciliation verified); Taheri UPGRADED to must-engage (they test FP16 vs Q4_K_M on
+function calling — standard small models crater, two points only → RQ1c ladder gap sharpened);
+TinyAgent confirms off-the-shelf SLMs fail calling at F16 (gate realism); DocPrompting's BM25
+recall bounds expected open-book lift (E1 protocol note); Numerical-Nondeterminism may be
+NeurIPS 2025 (upgrade check); Yu's 9.3%-of-failures quantisation statistic = motivation
+evidence + M2 taxonomy input. **Literature acquisition + extraction phase CLOSED. Next: E1
+protocol document (hard gate) → supervisor amendment ack → corpus build + contamination sweep
+→ Condition B sweeps + RQ1c gate pilot. Then venue rechecks + staleness sweep before the
+chapter drafts.**
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
