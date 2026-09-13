@@ -1,0 +1,29 @@
+# E2a Arm 5 config — Qwen2.5-Coder-7B-Instruct ladder, Mac-only (e2a-protocol.md §2).
+# Study parameters (768 cap, 4096 ctx, greedy/seed-0) identical to the registered 1.5B/3.8B sweeps.
+# Ladder files below Q8_0..Q2_K are produced by self-quantisation from the f16 (naive, no imatrix — D6).
+
+device: "mac"
+llama_cpp_tag: "b9951"
+server_bin: "./local/llama.cpp/build/bin/llama-server"
+
+host: "127.0.0.1"
+port: 8080
+n_ctx: 4096
+seed: 0
+temperature: 0.0
+max_tokens: 768
+manage_server: true
+server_ready_timeout_s: 300
+
+dataset: "humaneval"
+
+models:
+  - name: "qwen2.5-coder-7b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-7b-instruct"
+    ngl: 999
+    quants:
+      - {label: "F16",    file: "Qwen2.5-Coder-7B-Instruct-f16.gguf"}
+      - {label: "Q8_0",   file: "qwen2.5-coder-7b-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "qwen2.5-coder-7b-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "qwen2.5-coder-7b-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "qwen2.5-coder-7b-instruct-Q2_K.gguf"}

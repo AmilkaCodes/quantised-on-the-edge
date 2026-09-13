@@ -1,0 +1,31 @@
+# E2a Arm 4 config — agentic gate 2x2 probe (e2a-protocol.md §1). Registered study configs untouched.
+# Gen cap 2048 is PROBE-LOCAL (reasoning-trace budget; deviation from the 768 study cap, recorded).
+# NB: qwen3-4b's "F16" rung file is bartowski's bf16 artefact (full-precision anchor; protocol §4 deviation).
+
+device: "mac"
+llama_cpp_tag: "b9951"
+server_bin: "./local/llama.cpp/build/bin/llama-server"
+
+host: "127.0.0.1"
+port: 8080
+n_ctx: 8192            # probe-local: room for reasoning trace + tool results within 4 turns
+seed: 0
+temperature: 0.0
+max_tokens: 2048       # probe-local (protocol §1)
+manage_server: true
+server_ready_timeout_s: 300
+
+dataset: "humaneval"
+
+models:
+  - name: "qwen3-4b"
+    gguf_dir: "./local/models/qwen3-4b"
+    ngl: 999
+    quants:
+      - {label: "F16", file: "Qwen_Qwen3-4B-bf16.gguf"}   # bf16 = full-precision anchor (see protocol §4)
+
+  - name: "qwen2.5-coder-1.5b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"
+    ngl: 999
+    quants:
+      - {label: "F16", file: "Qwen2.5-Coder-1.5B-Instruct-f16.gguf"}

@@ -68,3 +68,9 @@ single results doc (`irp/analysis/e2a-results.md`). Config for the new models li
 
 ## 4. Deviations
 _Dated, before the affected run where foreseeable._
+
+- **2026-09-13 (before any Arm-4 run):** bartowski ships Qwen3-4B's full-precision GGUF as **bf16**
+  (`Qwen_Qwen3-4B-bf16.gguf`), not f16. The probe's full-precision anchor is therefore BF16; the rung
+  is still labelled "F16" in harness output in the sense of *full-precision anchor*. Functionally
+  equivalent for the gate question; recorded for exactness. (7B artefact is true f16:
+  `Qwen2.5-Coder-7B-Instruct-f16.gguf`.)
