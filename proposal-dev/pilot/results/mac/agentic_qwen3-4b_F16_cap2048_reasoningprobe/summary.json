@@ -1,0 +1,14 @@
+{
+  "model": "qwen3-4b",
+  "rung": "F16",
+  "K": 5,
+  "mechanism": "native",
+  "gen_cap": 2048,
+  "m1_valid_rate": 0.0,
+  "m2_outcomes": {
+    "completed": 5
+  },
+  "m3_pass_given_valid_tool": null,
+  "overall_pass": 0.8,
+  "gate": "FAIL"
+}

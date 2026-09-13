@@ -1,0 +1,6 @@
+timestamp,device,model,quant,condition,n,parse_rate,pass@1_base,pass@1_plus,mean_ttft_ms,mean_tok_s,peak_rss_mb,llama_cpp_tag,smoke
+2026-09-13T12:35:14Z,mac,qwen2.5-coder-7b-instruct,F16,open,164,1.0,0.817,0.78,1134.6,19.9,20288.2,b9951,False
+2026-09-13T12:50:10Z,mac,qwen2.5-coder-7b-instruct,Q8_0,open,164,1.0,0.805,0.768,1238.7,35.3,14662.9,b9951,False
+2026-09-13T13:01:53Z,mac,qwen2.5-coder-7b-instruct,Q4_K_M,open,164,1.0,0.817,0.768,1332.0,52.3,11532.6,b9951,False
+2026-09-13T13:14:23Z,mac,qwen2.5-coder-7b-instruct,Q3_K_M,open,164,1.0,0.835,0.768,1369.7,41.5,10453.1,b9951,False
+2026-09-13T13:25:16Z,mac,qwen2.5-coder-7b-instruct,Q2_K,open,164,1.0,0.756,0.701,1340.1,54.1,9902.5,b9951,False
