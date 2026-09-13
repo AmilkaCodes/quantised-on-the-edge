@@ -567,6 +567,15 @@ The entire E1 runbook ran and closed today (all committed; hard gate honoured �
 is overdetermined — imposed context hurts (worst at the cliff), asked-for context is inoperable,
 and the edge tiers can't afford context's latency/memory bill anyway.
 
+## 2026-09-13 — Implications framing captured (discussion-chapter feed)
+
+Post-E1 discussion ("does the repatriation case fall apart?") resolved and recorded in
+**`irp/analysis/e1-implications.md`**: the boundary framing (*generation repatriates; orchestration
+does not at this scale*; capability-forced handoff joins the memory/throughput triggers), the
+Condition-B-IS-the-scaffold mirror, the size-vs-training separation for the gate failure
+(instrument ruled out; fine-tuning, not scale, is the field's remedy), the candidate discussion-
+chapter spine paragraph, and the three supervisor-meeting questions. RQ set unchanged.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
