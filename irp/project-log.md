@@ -625,6 +625,21 @@ expansion under any outcome; fine-tuning stays Future Work. Protocol:
 "emotional journey" is rubric-relevant material for the process-evaluation/reflection parts
 of the write-up).
 
+## 2026-09-13 (late) — E1-R EXECUTED AND ANSWERED, same day, inside timebox
+
+Both probes ran end-to-end (protocol 400edc8; artefacts committed pre-run; supervisor line sent):
+- **R1 gate PASS — M1′ 20/20 at F16.** With GBNF carrying the syntax, the 1.5B formulates
+  sensible queries every time: the E1 "agentic floor" was FORMAT + policy, never intent. Ladder:
+  M1′ ≈0.99 to Q3 then breaks at Q2 (0.86, degen 5→26 — collapse-rung signature, 3rd subsystem);
+  R1 pass@1 ≈ B everywhere, significantly below A at Q4/Q3/Q2 — model-chosen context doesn't pay.
+- **R2 oracle: O ≤ A everywhere, O ≈ B everywhere** — significant harms exactly at the collapse
+  rungs (4th signature appearance). Registered-map verdict: **syntax is scaffolding-fixable;
+  context-exploitation is not** — these models cannot exploit even ideal context on
+  self-contained tasks, at any selection quality, any query agency, and (per E2a) any scale.
+- Write-ups: `e1r-agentic.md`, `e1r-oracle.md`; RQ file REVISIT clause answered. The E1→E1-R arc
+  ("failure mode → scaffolding test") is complete; fine-tuning stays Future Work per the binding
+  rule; E4 resourcing note stands as the costed future-work path.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)

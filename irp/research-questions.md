@@ -24,12 +24,18 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
   M1 valid-call rate 0/20 (gate FAIL, probe stopped per the binding rule) while closed-book pass@1
   is 0.90 on the same problems → tool operation breaks BEFORE generation, at the floor. Forced-mode
   diagnostic: wrong call wrapper + degeneration. See `irp/analysis/e1-agentic.md`.**
-- **RQ1b/RQ1c REVISIT (registered 2026-09-13, `irp/extensions/e1r-protocol.md`):** two
-  instrument-modified probes test whether the E1 negatives are fundamental or
-  scaffolding-fixable — **R1** model-chosen retrieval under GBNF grammar constraint (syntax
-  guaranteed; M1′ semantic query quality; Qwen ladder if the F16 gate passes) and **R2**
-  oracle-retrieval open-book (upper-bound selection, both models, contamination-swept).
-  Timebox: complete by 2026-09-20 or dropped. Fine-tuning remains Future Work regardless.
+- **RQ1b/RQ1c REVISIT (registered 2026-09-13, `irp/extensions/e1r-protocol.md`) — ANSWERED
+  2026-09-13 (same day, inside timebox):** two instrument-modified probes tested whether the E1
+  negatives are fundamental or scaffolding-fixable. **R1 (grammar-constrained, model-chosen
+  retrieval): gate PASS — M1′ 20/20 at F16; the E1 "agentic floor" was FORMAT, not intent
+  (a 6-line GBNF deletes it). But the model's own-chosen context still does not pay: R1 ≈ B
+  everywhere, R1 significantly below closed-book at Q4/Q3/Q2 (p=.002/.008/.003), and the query
+  machinery itself breaks at Q2 (M1′ 0.86, degeneration 5→26). R2 (oracle selection): O ≤ A at
+  every rung for both models — significant exactly at each collapse rung (Qwen Q2 p=.020, Phi Q4
+  p=.021) — and O ≈ B throughout: selection quality is not the lever. Verdict per the registered
+  map: syntax is scaffolding-fixable; context-exploitation is not — quantised small models cannot
+  exploit even ideal context on self-contained tasks.** See `irp/analysis/e1r-agentic.md`,
+  `irp/analysis/e1r-oracle.md`. Fine-tuning remains Future Work (binding).
 - **RQ2** (confirmatory — ANSWERED): how do inference latency and peak memory scale with
   quantisation level across CPU-only, edge-GPU and unified-memory tiers?
 - **RQ2a** (confirmatory — ANSWERED): which configurations are feasible on each?

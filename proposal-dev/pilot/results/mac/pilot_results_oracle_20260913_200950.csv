@@ -1,0 +1,11 @@
+timestamp,device,model,quant,condition,n,parse_rate,pass@1_base,pass@1_plus,mean_ttft_ms,mean_tok_s,peak_rss_mb,llama_cpp_tag,smoke
+2026-09-13T19:17:53Z,mac,qwen2.5-coder-1.5b-instruct,F16,oracle,164,1.0,0.604,0.561,230.2,77.0,6208.6,b9951,False
+2026-09-13T19:23:28Z,mac,qwen2.5-coder-1.5b-instruct,Q8_0,oracle,164,1.0,0.598,0.555,239.9,123.1,4835.0,b9951,False
+2026-09-13T19:27:50Z,mac,qwen2.5-coder-1.5b-instruct,Q4_K_M,oracle,164,1.0,0.604,0.579,249.5,161.8,4144.9,b9951,False
+2026-09-13T19:33:13Z,mac,qwen2.5-coder-1.5b-instruct,Q3_K_M,oracle,164,1.0,0.537,0.518,259.8,139.2,4096.7,b9951,False
+2026-09-13T19:38:08Z,mac,qwen2.5-coder-1.5b-instruct,Q2_K,oracle,164,0.994,0.299,0.274,254.5,164.8,4038.9,b9951,False
+2026-09-13T19:53:30Z,mac,phi-3-mini-4k-instruct,F16,oracle,164,1.0,0.652,0.616,762.6,34.3,20058.2,b9951,False
+2026-09-13T20:04:13Z,mac,phi-3-mini-4k-instruct,Q8_0,oracle,164,1.0,0.652,0.622,828.2,56.8,17941.9,b9951,False
+2026-09-13T20:15:53Z,mac,phi-3-mini-4k-instruct,Q4_K_M,oracle,164,0.976,0.494,0.445,912.9,77.6,16242.4,b9951,False
+2026-09-13T20:31:26Z,mac,phi-3-mini-4k-instruct,Q3_K_M,oracle,164,0.988,0.433,0.39,937.9,71.4,15833.0,b9951,False
+2026-09-13T20:50:13Z,mac,phi-3-mini-4k-instruct,Q2_K,oracle,164,0.994,0.22,0.189,922.5,76.3,15127.9,b9951,False
