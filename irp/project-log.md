@@ -610,6 +610,21 @@ requirements (the F16 floor to cross, the Pi prefill budget, the distraction cos
 an editor as a live local completion assistant (screenshot + timed completion) = "artefacts
 developed support this effectively" evidence for the methodology criterion, not new scope.
 
+## 2026-09-13 (later) — E1-R pre-registered: the scaffolding question
+
+Student decision (the sanctioned form of the builder's urge): two instrument-modified probes
+asking whether the E1 negatives are fundamental to the model class or fixable by tooling —
+**R1** (grammar-constrained, two-stage model-chosen retrieval: GBNF removes the syntactic
+failure mode that closed the RQ1c gate; measures semantic query quality + pass@1 vs A and B)
+and **R2** (oracle-retrieval open-book: upper-bound selection with the same contamination
+guard; O-vs-A/O-vs-B decides whether E1's distraction cost was retrieval quality or context
+handling). Registered per the escalation rule as a new logged decision with supervisor
+notification (chase-email line) and calendar check; **binding timebox 2026-09-20**; no further
+expansion under any outcome; fine-tuning stays Future Work. Protocol:
+`irp/extensions/e1r-protocol.md`. Also noted: keep a student-authored reflections thread (the
+"emotional journey" is rubric-relevant material for the process-evaluation/reflection parts
+of the write-up).
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)

@@ -24,6 +24,12 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
   M1 valid-call rate 0/20 (gate FAIL, probe stopped per the binding rule) while closed-book pass@1
   is 0.90 on the same problems → tool operation breaks BEFORE generation, at the floor. Forced-mode
   diagnostic: wrong call wrapper + degeneration. See `irp/analysis/e1-agentic.md`.**
+- **RQ1b/RQ1c REVISIT (registered 2026-09-13, `irp/extensions/e1r-protocol.md`):** two
+  instrument-modified probes test whether the E1 negatives are fundamental or
+  scaffolding-fixable — **R1** model-chosen retrieval under GBNF grammar constraint (syntax
+  guaranteed; M1′ semantic query quality; Qwen ladder if the F16 gate passes) and **R2**
+  oracle-retrieval open-book (upper-bound selection, both models, contamination-swept).
+  Timebox: complete by 2026-09-20 or dropped. Fine-tuning remains Future Work regardless.
 - **RQ2** (confirmatory — ANSWERED): how do inference latency and peak memory scale with
   quantisation level across CPU-only, edge-GPU and unified-memory tiers?
 - **RQ2a** (confirmatory — ANSWERED): which configurations are feasible on each?
