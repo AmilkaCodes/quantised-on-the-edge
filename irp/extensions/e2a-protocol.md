@@ -69,6 +69,12 @@ single results doc (`irp/analysis/e2a-results.md`). Config for the new models li
 ## 4. Deviations
 _Dated, before the affected run where foreseeable._
 
+- **2026-09-13 (after the grid + 7B sweeps, before the follow-up probes):** two additions to close
+  the "why no invocation" question: (i) **policy cells** — a system-role MANDATE ("You MUST call
+  search_docs before answering…"), both models, K=20, native tools unforced → completes the
+  invocation spectrum *nudge → mandate → force*; (ii) the harness now records the server-separated
+  **`reasoning_content`** per turn (previously dropped), plus a **K=5 native reasoning probe** on the
+  4B so its deliberation about skipping the tool is directly quotable. Descriptive, as all Arm-4 cells.
 - **2026-09-13 (after 4a, before the remaining Arm-4 cells):** the 4a result (Qwen3-4B M1 = 0/20
   native-unforced, yet a **perfect structured call under a one-off `tool_choice:"required"` probe**)
   separates "won't" from "can't" — so two **forced-mode diagnostic cells** are added (both models,

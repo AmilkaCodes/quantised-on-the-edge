@@ -62,9 +62,29 @@ memory*, an aggressively quantised larger model beats a full-precision smaller o
 (Decode-speed and edge-tier costs for the 7B are pending the perf cells; the quality-per-byte
 ordering is already unambiguous.)
 
+## Arm 5 — 7B open-book vs closed-book (H-A5b; pass@1 plus, n=164)
+
+| rung | closed A | open B | Δ(B−A) (95% CI) | McNemar p | broke/rescued |
+|---|---:|---:|---|---:|---:|
+| F16 | 0.841 | 0.780 | −0.061 [−0.104, −0.018] | **0.013** | 12/2 |
+| Q8_0 | 0.848 | 0.768 | −0.079 [−0.128, −0.037] | **0.001** | 14/1 |
+| Q4_K_M | 0.854 | 0.768 | −0.085 [−0.134, −0.037] | **0.001** | 16/2 |
+| Q3_K_M | 0.835 | 0.768 | −0.067 [−0.122, −0.018] | **0.019** | 15/4 |
+| Q2_K | 0.793 | 0.701 | **−0.091** [−0.152, −0.037] | **0.004** | 20/5 |
+
+**⭐ H-A5b answered with the stronger branch: the context harm does NOT shrink with scale.** The 7B is
+significantly hurt by injected doc-context at **every** rung, F16 included — despite having no
+quantisation collapse at all. The dissociation is the finding:
+- **Scale rescues quantisation-robustness** (closed ladder flat: F16→Q2 −4.9 pp n.s.) …
+- **… but not context-robustness** (open harm −6 to −9 pp everywhere, all significant; worst at Q2).
+- **The open-book ladder degrades faster than the closed one** (open F16→Q2 −7.9 pp vs closed
+  −4.9 pp): quantisation damages context-use *before* it damages generation, even at 7B — the
+  sharpest H1c-flavoured evidence in the study, consistent with Liu et al.'s full-precision context
+  fragility at frontier scale.
+
 ## Pending
-- Arm 5 open-book sweep (running) → H-A5b: does the context harm shrink at 7B?
-- Reasoning-capture probe + policy-prompt cells (registered deviations; after the open sweep).
+- Reasoning-capture probe + policy-prompt cells (registered deviations; running next).
 - 7B Mac perf cells (optional): tok/s / TTFT / RSS / power per rung.
-- Caveats to carry: probe K=20 descriptive; Q2 drop CI touches +0.104 (uncertainty honest);
-  bf16-anchor deviation for the 4B; multiple comparisons not corrected (probe is exploratory).
+- Caveats to carry: probe K=20 descriptive; closed-Q2 drop CI touches +0.104 (honest uncertainty);
+  bf16-anchor deviation for the 4B; probe multiple comparisons uncorrected (exploratory); the 7B
+  open-book harm is 5 tests, all p ≤ .019 — Q8/Q4/Q2 survive Bonferroni (α=.01).
