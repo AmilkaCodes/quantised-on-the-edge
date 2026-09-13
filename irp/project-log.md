@@ -587,6 +587,29 @@ closed + open 164×5 on the Mac (36 GB F16 anchor verified); edge cells out of s
 Ethics delta nil (two more public open-weights models, same benchmark/corpora). Arms 1–3 remain
 proposal-only for October. Timeboxes: Arm 4 one bench day; Arm 5 three.
 
+## 2026-09-13 — E1 results reviewed; builder-urge scope hold (repatriation claim REFINED, not lost)
+
+Review verdict on the 2026-09-12 E1 execution: all three findings clean and disciplined —
+RQ1b (frozen doc-context hurts, worst at each collapse rung; Δ≤0 all 10 cells), RQ1c (tool
+use absent at F16 while closed-book = 0.90; gate honoured, probe stopped), perf tie-in
+(context cost = prefill + KV, a tier property; Pi open-book TTFT 4,957ms BREAKS the
+registered 1–2s floor → open-book is SLO-infeasible on the CPU tier). Boundary to carry into
+the write-up: the RQ1b finding is bounded by this retrieval configuration (frozen BM25, k=2 —
+the pre-registered modest-lift expectation); "this deployed RAG pattern hurts", not "context
+can never help".
+
+**Scope hold (student concern addressed):** the urge to BUILD a fine-tuned tool-calling model
+that thrives under quantisation on the Pi = a different thesis (weeks of curation/training/
+eval; TinyAgent is the existence proof that specialisation works). Decision: NOT in scope
+(escalation rule + MoSCoW Won't-have stands). The repatriation claim is REFINED, not thrown
+out: proven for the dominant closed-book/completion mode (Qwen@Q4 clears quality + SLO on all
+tiers incl. the Pi); measured boundaries for context-augmented and agentic modes (distraction
+cost, F16 tool floor, prefill price). Future Work will spec the follow-on build with measured
+requirements (the F16 floor to cross, the Pi prefill budget, the distraction cost to avoid).
+**Sanctioned outlet: a one-afternoon DEMO of the proven mode** — Qwen@Q4 on the Pi wired into
+an editor as a live local completion assistant (screenshot + timed completion) = "artefacts
+developed support this effectively" evidence for the methodology criterion, not new scope.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
