@@ -1,6 +1,11 @@
-# E2 PROPOSAL — can anything make context help a quantised edge model? (NOT ACTIVATED)
+# E2 PROPOSAL — can anything make context help a quantised edge model? (ARMS 4–5 ACTIVATED)
 
-**Status: PROPOSAL ONLY (2026-09-12).** No E2 measurement runs until (1) supervisor discussion
+> **AMENDMENT 2026-09-13:** Arms 4 and 5 ACTIVATED by student decision (early enough to secure
+> supervisor agreement to scope changes; E1 gate-2 precedent — supervisor briefed, objection triggers
+> re-examination). Parameters frozen in **`e2a-protocol.md`** (committed before any E2a run).
+> **Arms 1–3 remain proposal-only**, for the October discussion.
+
+**Status of Arms 1–3: PROPOSAL ONLY (2026-09-12).** No E2 measurement runs until (1) supervisor discussion
 (October meeting agenda item), (2) a committed E2 protocol fixing all parameters (same discipline as
 E1: registered-before-run, gated, timeboxed). This note exists so the decision is taken on evidence,
 not improvised. Written per the E1 escalation rule: *any expansion = new logged decision + supervisor

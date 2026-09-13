@@ -576,6 +576,17 @@ Condition-B-IS-the-scaffold mirror, the size-vs-training separation for the gate
 (instrument ruled out; fine-tuning, not scale, is the field's remedy), the candidate discussion-
 chapter spine paragraph, and the three supervisor-meeting questions. RQ set unchanged.
 
+## 2026-09-13 (later) — E2a ACTIVATED: tool-trained gate rerun + Mac-only 7B scale ladder
+
+Student decision (early enough to bring the supervisor along; E1 gate-2 precedent): Arms 4+5 of the
+E2 proposal activate as **E2a**, parameters frozen in `irp/extensions/e2a-protocol.md` BEFORE any
+run. Arm 4: 2×2 probe — (tool-trained Qwen3-4B vs Qwen2.5-Coder-1.5B) × (native chat-template
+tool-calling vs IFFC-style prompted-JSON), F16, first-20 gate problems, gen cap 2048 for the probe
+(reasoning-trace budget). Arm 5: Qwen2.5-Coder-7B-Instruct, bartowski F16 → naive b9951 ladder (D6),
+closed + open 164×5 on the Mac (36 GB F16 anchor verified); edge cells out of scope for now.
+Ethics delta nil (two more public open-weights models, same benchmark/corpora). Arms 1–3 remain
+proposal-only for October. Timeboxes: Arm 4 one bench day; Arm 5 three.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
