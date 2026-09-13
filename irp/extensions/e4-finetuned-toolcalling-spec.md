@@ -43,6 +43,21 @@ restored capability survive quantisation?
    tool-call eval set (train/test hygiene joins the sweep discipline; Brown-style n-gram
    checks apply).
 
+## Resource analysis (2026-09-13): fully local, fully open — no frontier APIs needed
+- **Data, path 1:** openly-licensed function-calling datasets (e.g. Glaive FC v2, commonly
+  Apache-2.0; Hermes FC and others — VERIFY LICENCES AT SOURCE before use, house rule).
+- **Data, path 2 (thematically perfect):** local synthesis — the 32GB Mac runs an Apache-2.0
+  mid-size Qwen (14B comfortably; 32B at Q4) as the teacher. No API, no ToS clause, no data
+  leaves the bench: a local model bootstrapping a local model.
+- **Data scale is SMALL:** one tool (`search_docs`) — a few thousand curated examples, not
+  TinyAgent's 80K general-API corpus. The pipeline collapses accordingly.
+- **Training:** MLX LoRA on the Mac — hours-per-run for the 1.5B (3.8B feasible); no rented
+  GPU required. Model licences explicitly permit fine-tuning (Qwen Apache-2.0, Phi-3 MIT).
+- **Evaluation:** the E1/E1-R laboratory, unchanged.
+- **Conclusion: every resource is in hand except calendar time (3–5 weeks).** This
+  strengthens rather than weakens the scope hold — feasibility is not the constraint;
+  the dissertation deadline is.
+
 ## Why not now (recorded once, bindingly)
 12 weeks remain; the write-up owns ≥6; 3–5 weeks of training-project risk cannot fit without
 endangering the dissertation. The measured E1/E1-R results are the contribution; this spec is
