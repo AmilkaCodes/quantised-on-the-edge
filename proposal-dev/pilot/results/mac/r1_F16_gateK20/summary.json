@@ -1,0 +1,10 @@
+{
+  "probe": "R1",
+  "model": "qwen2.5-coder-1.5b-instruct",
+  "rung": "F16",
+  "K": 20,
+  "m1_prime_rate": 1.0,
+  "m2_prime_degen": 0,
+  "gate": "PASS",
+  "oracle_pass": 0.85
+}
