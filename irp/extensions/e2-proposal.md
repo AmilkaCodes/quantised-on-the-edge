@@ -45,6 +45,24 @@ may be irrelevant; ignore if unhelpful" preface. Settles: is the harm positional
 (lost-in-the-middle; instruction-binding) rather than content-driven? Could run headline-rungs-only
 (Qwen Q2, Phi Q4 + F16 anchors) at ~⅓ sweep cost.
 
+**Arm 4 — tool-trained small-model gate rerun (near-free; added 2026-09-13).**
+Rerun the Condition D gate (20 problems, F16, Mac, same harness) with a function-calling-trained small
+model — Taheri's results point at Qwen-3 4B (Think) as the small-model sweet spot, and IFFC-style
+prompted-JSON framing as a second cheap variant. Settles the size-vs-training attribution in
+`e1-implications.md` directly: if a tool-trained 4B passes the gate our 1.5B failed, the floor is
+training, not scale. Cost: ~1–2 h including model download; descriptive only. (Mac RAM re-checked
+2026-09-13: 36 GB — no feasibility constraint.)
+
+**Arm 5 — in-family scale ladder: Qwen2.5-Coder-7B (added 2026-09-13).**
+Full closed-book (optionally + open-book) ladder for the 7B sibling of our 1.5B — same family, so
+**scale is isolated with specialisation held constant**. Makes Yazan's optimistic 7B headline ("if a
+7B LLM performs the task well, quantization does not impair it") testable with execution-based scoring
+into the sub-4-bit collapse region his two-point FP16-vs-AWQ design never reached, and asks whether the
+collapse-rung context-harm spike vanishes with scale. Feasible: Mac 36 GB hosts the F16 anchor
+(~15 GB); Pi 16 GB runs Q8-down; Jetson 8 GB runs Q4-down (a richer precision-fit boundary, not a
+broken one). Cost: ~2–4 Mac compute-days + edge perf cells + analysis — the most expensive arm; only
+viable if the write-up is well ahead of schedule.
+
 **Dropped: BM25-score-thresholded selective retrieval** — Tier-1 shows score does not separate harmful
 from harmless injections; a gate keyed on it has no empirical basis.
 
