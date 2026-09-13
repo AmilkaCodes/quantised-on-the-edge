@@ -82,9 +82,28 @@ quantisation collapse at all. The dissociation is the finding:
   sharpest H1c-flavoured evidence in the study, consistent with Liu et al.'s full-precision context
   fragility at frontier scale.
 
-## Pending
-- Reasoning-capture probe + policy-prompt cells (registered deviations; running next).
-- 7B Mac perf cells (optional): tok/s / TTFT / RSS / power per rung.
-- Caveats to carry: probe K=20 descriptive; closed-Q2 drop CI touches +0.104 (honest uncertainty);
-  bf16-anchor deviation for the 4B; probe multiple comparisons uncorrected (exploratory); the 7B
-  open-book harm is 5 tests, all p ≤ .019 — Q8/Q4/Q2 survive Bonferroni (α=.01).
+## Arm 4 follow-up — the invocation spectrum + the reasoning evidence (2026-09-13)
+
+**Policy cells (system-role MANDATE, K=20):** 4B M1 = **0.40** (M3 = 1.0 again; overall 0.80);
+1.5B M1 = **0.00** (mandate cannot create absent capability). The 4B's invocation rate is therefore a
+clean **dose-response in instruction strength**:
+
+> **nudge 0.00 → mandate 0.40 → force 0.80** — and at every level where a tool phase completes,
+> M3 = 1.0 and overall pass is unchanged (0.80). Invocation is a *policy dial*, not a capability
+> cliff, for the tool-trained model; for the untrained model every setting of the dial reads zero.
+
+**Reasoning probe (K=5, native, `reasoning_content` captured):** in **4 of 5** episodes the tool
+never enters the model's deliberation at all — thousands of characters of problem-solving reasoning
+with no mention of `search_docs`. In the fifth (HumanEval/4) the model **explicitly weighs the
+instruction and dismisses it**:
+> "the user mentioned that I should first call search_docs … But in this case, the function is
+> straightforward, and the code is simple."
+Direct first-person evidence of invocation-policy override: relevance judgement beats instruction —
+and per Condition B, that judgement is *empirically correct* on this task. (Also explains the 4
+empty forced episodes: hidden reasoning traces consuming the cap.)
+
+## Caveats
+- Probe cells K=20 (K=5 for the reasoning probe), descriptive, multiple comparisons uncorrected.
+- Closed-7B Q2 drop CI touches +0.104 (honest uncertainty); bf16-anchor deviation for the 4B.
+- The 7B open-book harm is 5 tests, all p ≤ .019 — Q8/Q4/Q2 survive Bonferroni (α = .01).
+- 7B Mac perf cells (tok/s/TTFT/RSS/power per rung) remain optional/unrun.

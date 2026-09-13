@@ -1,0 +1,14 @@
+{
+  "model": "qwen3-4b",
+  "rung": "F16",
+  "K": 20,
+  "mechanism": "policy",
+  "gen_cap": 2048,
+  "m1_valid_rate": 0.4,
+  "m2_outcomes": {
+    "completed": 20
+  },
+  "m3_pass_given_valid_tool": 1.0,
+  "overall_pass": 0.8,
+  "gate": "FAIL"
+}
