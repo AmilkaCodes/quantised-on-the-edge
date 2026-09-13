@@ -1,0 +1,6 @@
+# E1-R Probe R1 — GBNF grammar constraining stage-1 decoding to the exact search_docs call schema.
+# Committed BEFORE any R1 run (e1r-protocol gate 3). Query = printable chars excluding double-quote
+# and backslash (no escape sequences -> parse is trivial); length bounded by the stage-1 token cap.
+root  ::= "{\"name\": \"search_docs\", \"arguments\": {\"query\": \"" query "\"}}"
+query ::= qchar+
+qchar ::= [^"\\\x00-\x1F]

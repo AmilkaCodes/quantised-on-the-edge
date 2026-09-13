@@ -477,10 +477,12 @@ def main():
                     help="performance axis: latency/memory/power on a small prompt set, N repeats, NO scoring")
     ap.add_argument("--perf-n", type=int, default=10, help="perf: number of prompts (default 10)")
     ap.add_argument("--perf-repeats", type=int, default=3, help="perf: repeats per cell (default 3)")
-    ap.add_argument("--condition", choices=["closed", "open"], default="closed",
-                    help="E1: 'open' consumes the frozen open-book artefact (RQ1b Condition B)")
-    ap.add_argument("--openbook-artefact", default="e1/openbook_prompts.jsonl",
-                    help="path to the frozen open-book prompts (used when --condition open)")
+    ap.add_argument("--condition", choices=["closed", "open", "oracle"], default="closed",
+                    help="E1: 'open' = frozen BM25 artefact (Condition B); 'oracle' = E1-R upper-bound "
+                         "selection artefact (Probe R2)")
+    ap.add_argument("--openbook-artefact", default=None,
+                    help="artefact path override; defaults per condition (e1/openbook_prompts.jsonl / "
+                         "e1/oracle_prompts.jsonl)")
     args = ap.parse_args()
 
     cfg = yaml.safe_load(Path(args.config).read_text())
@@ -504,15 +506,16 @@ def main():
     # E1 Condition B: load the frozen open-book artefact and restrict to the requested problems.
     condition = args.condition
     openbook, openbook_sha = None, None
-    if condition == "open":
-        art = Path(args.openbook_artefact)
+    if condition != "closed":
+        art = Path(args.openbook_artefact or
+                   {"open": "e1/openbook_prompts.jsonl", "oracle": "e1/oracle_prompts.jsonl"}[condition])
         allc = {json.loads(l)["task_id"]: json.loads(l)["content"] for l in art.read_text().splitlines()}
         missing = [t for t in problems if t not in allc]
         if missing:
             sys.exit(f"open-book artefact missing {len(missing)} requested problems, e.g. {missing[:3]}")
         openbook = {t: allc[t] for t in problems}
         openbook_sha = hashlib.sha256(art.read_bytes()).hexdigest()
-        print(f"  condition=OPEN | artefact {art.name} sha256 {openbook_sha[:16]}… ({len(openbook)} prompts)")
+        print(f"  condition={condition.upper()} | artefact {art.name} sha256 {openbook_sha[:16]}… ({len(openbook)} prompts)")
 
     # Provenance manifest — every recorded run is self-describing (reproducibility).
     vm = psutil.virtual_memory()
