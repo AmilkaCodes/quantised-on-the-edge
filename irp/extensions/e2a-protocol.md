@@ -69,6 +69,14 @@ single results doc (`irp/analysis/e2a-results.md`). Config for the new models li
 ## 4. Deviations
 _Dated, before the affected run where foreseeable._
 
+- **2026-09-13 (after 4a, before the remaining Arm-4 cells):** the 4a result (Qwen3-4B M1 = 0/20
+  native-unforced, yet a **perfect structured call under a one-off `tool_choice:"required"` probe**)
+  separates "won't" from "can't" — so two **forced-mode diagnostic cells** are added (both models,
+  K=20, `tool_choice:"required"` on turn 0 only, unforced thereafter so M3 stays meaningful):
+  M1-forced measures format *capability*; native-unforced M1 measures invocation *policy*. Also the
+  1.5B **native cell is re-run at the probe cap (2048)** so all 2×2(+forced) cells share identical
+  probe parameters (the original 768-cap E1 gate remains the registered E1 result, untouched —
+  probe outputs carry a `_cap2048` suffix). Descriptive, as with all Arm-4 metrics.
 - **2026-09-13 (before any Arm-4 run):** bartowski ships Qwen3-4B's full-precision GGUF as **bf16**
   (`Qwen_Qwen3-4B-bf16.gguf`), not f16. The probe's full-precision anchor is therefore BF16; the rung
   is still labelled "F16" in harness output in the sense of *full-precision anchor*. Functionally

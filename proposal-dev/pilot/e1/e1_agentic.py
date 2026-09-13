@@ -131,7 +131,15 @@ try:
         turns, first_attempted, first_valid, first_note = [], False, False, ""
         outcome, final_text = None, ""
         for turn in range(MAX_TURNS):
-            kw = {} if MECH == "json" else {"tools": TOOLS}
+            if MECH == "json":
+                kw = {}
+            elif MECH == "forced" and turn == 0:
+                # E2a deviation 2026-09-13: coercion cell — the FIRST turn requires a tool call
+                # (measures format capability, "can"); later turns are unforced so the episode
+                # can complete naturally and M3 stays meaningful.
+                kw = {"tools": TOOLS, "tool_choice": "required"}
+            else:
+                kw = {"tools": TOOLS}
             m = client.chat.completions.create(model=rung, messages=msgs,
                                                temperature=cfg["temperature"], seed=cfg["seed"],
                                                max_tokens=cfg["max_tokens"], **kw).choices[0].message
@@ -209,7 +217,8 @@ finally:
     H.stop_server(srv)
 
 out = H.RESULTS_ROOT / str(cfg.get("device")) / (f"agentic_{model_key}_{rung}"
-                                                 + ("_json" if MECH == "json" else ""))
+                                                 + ("" if MECH == "native" else f"_{MECH}")
+                                                 + ("" if cfg["max_tokens"] == 768 else f"_cap{cfg['max_tokens']}"))
 out.mkdir(parents=True, exist_ok=True)
 (out / "transcripts.jsonl").write_text("".join(json.dumps(e) + "\n" for e in episodes))
 m1 = sum(e["m1_valid"] for e in episodes) / len(episodes)
@@ -218,7 +227,8 @@ m2 = dict(Counter(e["m2_outcome"] for e in episodes))
 wf = [e for e in episodes if e["m1_valid"]]
 m3 = (sum(e["pass"] == "pass" for e in wf) / len(wf)) if wf else None
 overall = sum(e["pass"] == "pass" for e in episodes) / len(episodes)
-summary = {"model": model_key, "rung": rung, "K": K, "mechanism": MECH, "m1_valid_rate": round(m1, 3),
+summary = {"model": model_key, "rung": rung, "K": K, "mechanism": MECH,
+           "gen_cap": cfg["max_tokens"], "m1_valid_rate": round(m1, 3),
            "m2_outcomes": m2, "m3_pass_given_valid_tool": None if m3 is None else round(m3, 3),
            "overall_pass": round(overall, 3),
            "gate": ("PASS" if m1 >= 0.5 else "FAIL") if rung == "F16" else None}
