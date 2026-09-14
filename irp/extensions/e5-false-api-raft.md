@@ -96,7 +96,7 @@ dynamic range at F16 is effectively the whole interval. R ≈ B says lexical ret
 near-sufficient when docs are necessary and jargon-matched (BM25's home turf — the designed
 contrast with E1's HumanEval setting, where retrieval had nothing useful to fetch).
 One harness fairness fix recorded pre-gate (smoke): the scorer supplies `import <module>`
-since the task text says to assume it works. **FAB is a valid instrument; G3 authorised.**
+since the task text says to assume it works. **FAB is a valid instrument; G3 authorised.** G3 COMPLETE same day — ladders + stats in `irp/analysis/e5-fab-g3.md`; headline: 1.5B necessary-context exploitation 0.983 at F16 collapses to 0.592 at Q2_K (47 broke/0 rescued, p=1.4e-14), harder than generation collapsed on HumanEval; 7B flat (n.s.). Stage 2 (RAFT) now awaits the student's review of the G3 read, per this registration.
 
 ## Deviations
 _(none yet)_
