@@ -10,7 +10,7 @@
     "reply": 14271
   },
   "train_call_share": 0.467,
-  "template": "Qwen2.5-Coder-1.5B-Instruct chat template with tools (hermes <tool_call>)",
-  "train_sha256": "e437a6570cd761d1edd233b32320cba2e90d27302728fe1fcc107f2f61f7957f",
-  "valid_sha256": "f5a376b7f9a56908d8b9c5d8de29704b02db6d63f03cad8f45ed8ed267b2f276"
+  "format": "NATIVE ChatDataset examples ({messages, tools}) \u2014 iteration-2 fix; single templating by mlx_lm; train with --mask-prompt",
+  "train_sha256": "340309c54c29c349d3d9064e022cc9d0a9ac9061dfe9621c23362632f387b3b3",
+  "valid_sha256": "1826740e97097e10e0bcaa83f1336c5d1a74bbf63256eaeb9878c73ff625d921"
 }

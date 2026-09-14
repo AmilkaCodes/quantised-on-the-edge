@@ -26,7 +26,7 @@ for split in ["train", "valid"]:
     rows = [json.loads(l) for l in (D / f"{split}.jsonl").open()]
     keep, dropped = [], 0
     for r in rows:
-        if ngrams13(r["prompt"] + r["completion"]) & bench:
+        if ngrams13(json.dumps(r["messages"]) + json.dumps(r.get("tools",[]))) & bench:
             dropped += 1
         else:
             keep.append(r)

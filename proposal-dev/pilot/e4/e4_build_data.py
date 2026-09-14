@@ -78,18 +78,21 @@ def parse_chat(chat):
     return msgs or None
 
 def pairs_from(tool, msgs):
-    """One (prompt, completion) per assistant turn, via chat-template prefix subtraction."""
+    """ITERATION-2 FIX (2026-09-14, dated deviation): run 1 used prompt/completion pairs of
+    PRE-RENDERED template text — but mlx_lm's CompletionsDataset wraps those fields as user/assistant
+    messages and RE-applies the chat template (double templating), embedding literal
+    '<|im_start|>assistant' inside a user turn followed by '<|im_end|>' — teaching exactly the
+    instant-EOS pathology observed at the gate (root cause verified: base model answers the same
+    prompt; adapter EOSes; datasets.py L108-111). Fix: emit NATIVE ChatDataset examples —
+    {"messages": msgs[:i+1], "tools": [tool]} per assistant turn — single templating by mlx itself,
+    with --mask-prompt so loss lands on the final assistant turn only."""
     out = []
     for i, m in enumerate(msgs):
         if m["role"] != "assistant": continue
         try:
-            prompt = tok.apply_chat_template(msgs[:i], tools=[tool], tokenize=False,
-                                             add_generation_prompt=True)
-            full = tok.apply_chat_template(msgs[:i+1], tools=[tool], tokenize=False)
-            if not full.startswith(prompt): continue
-            completion = full[len(prompt):]
-            if 0 < len(completion) < 4000 and len(prompt) < 8000:
-                out.append({"prompt": prompt, "completion": completion,
+            rendered = tok.apply_chat_template(msgs[:i+1], tools=[tool], tokenize=False)
+            if len(rendered) < 8000:
+                out.append({"messages": msgs[:i+1], "tools": [tool],
                             "kind": "call" if m.get("tool_calls") else "reply"})
         except Exception:
             continue
@@ -119,14 +122,14 @@ rng.shuffle(calls); rng.shuffle(replies)
 train = calls[:1400] + replies[:1600]
 valid = calls[1400:1550] + replies[1600:1750]
 rng.shuffle(train); rng.shuffle(valid)
-(OUTD / "train.jsonl").write_text("".join(json.dumps({"prompt": p["prompt"], "completion": p["completion"]}) + "\n" for p in train))
-(OUTD / "valid.jsonl").write_text("".join(json.dumps({"prompt": p["prompt"], "completion": p["completion"]}) + "\n" for p in valid))
+(OUTD / "train.jsonl").write_text("".join(json.dumps({"messages": p["messages"], "tools": p["tools"]}) + "\n" for p in train))
+(OUTD / "valid.jsonl").write_text("".join(json.dumps({"messages": p["messages"], "tools": p["tools"]}) + "\n" for p in valid))
 manifest = {"source": "glaiveai/glaive-function-calling-v2 (apache-2.0, verified at source)",
             "source_sha256": "e9b5d671812b5ca2fbd7b625a37d5c99a19576c37252cdc806defe256aea6dad",
             "seed": SEED, "pool_pairs": len(pairs), "train": len(train), "valid": len(valid),
             "kind_mix_pool": kinds,
             "train_call_share": round(sum(p['kind']=='call' for p in train)/len(train), 3),
-            "template": "Qwen2.5-Coder-1.5B-Instruct chat template with tools (hermes <tool_call>)",
+            "format": "NATIVE ChatDataset examples ({messages, tools}) — iteration-2 fix; single templating by mlx_lm; train with --mask-prompt",
             "train_sha256": hashlib.sha256((OUTD/'train.jsonl').read_bytes()).hexdigest(),
             "valid_sha256": hashlib.sha256((OUTD/'valid.jsonl').read_bytes()).hexdigest()}
 (HERE / "e4-data-manifest.json").write_text(json.dumps(manifest, indent=2))

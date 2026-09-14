@@ -47,6 +47,21 @@ this study would reuse; its marginal cost is the training.**
   (prefetched); pipeline = mlx_lm.lora → fuse to HF → `convert_hf_to_gguf.py` → the SAME naive
   b9951 quantise recipe (merge-then-quantise, as specified).
 
+## Iteration-2 deviation (2026-09-14, dated — root cause of run-1 gate failure + fix)
+Run 1's F16 gate produced M1 0/20 AND overall_pass 0.00 with empty outputs — flagged as an
+instrument artefact, not accepted as a result. Diagnosis chain (all recorded): generation intact
+without tools; instant single-token EOS whenever tools present; fused AND unfused adapter EOS on
+verbatim training prompts while the BASE model answers them; mlx_lm `datasets.py` CompletionsDataset
+wraps prompt/completion fields as user/assistant messages and RE-applies the chat template →
+run 1's pre-rendered prompts were DOUBLE-TEMPLATED, embedding literal `<|im_start|>assistant`
+inside a user turn followed by `<|im_end|>` — training the model that assistant-start → EOS.
+**Fix (run 2 = second and final α iteration):** data re-emitted as NATIVE ChatDataset examples
+({messages, tools} per assistant turn; single templating by mlx itself), trained with
+`--mask-prompt` (loss on the final assistant turn only). Same source/seed/rebalance; re-swept
+(0 contamination drops); new shas in the manifest. Run-1 val loss 0.237 is explained: it measured
+easy template-text prediction, not call behaviour — a caution recorded for the write-up
+("validation loss on malformed data is a liar").
+
 ## Research question (RQ4-shaped)
 Can task-specific fine-tuning restore reliable tool use in edge-class models — and does the
 restored capability survive quantisation?
