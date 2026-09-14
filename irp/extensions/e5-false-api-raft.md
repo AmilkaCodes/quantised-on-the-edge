@@ -136,6 +136,24 @@ name-prior guessing (FAB/28; name absent from training data — verified), not l
 analysis: `irp/analysis/e5-raft-stage2.md`. A meaningful RAFT retest requires train tasks the
 base model FAILS with docs (new registration, student decision).
 
+## Stage-3 REGISTRATION (2026-09-14, student go — "proceed with the untested improvement paths"):
+two NON-TRAINING levers, pre-registered before runs. Model weights untouched in both.
+
+- **Lever 1 — calibrated quantisation (E2b transplant):** existing committed 1.5B imatrix
+  artefacts (imat-Q4/Q3/Q2, bartowski calibration set, E2b provenance) on FAB conditions B and O,
+  vs the naive-ladder G3 baselines. **Question:** does calibration rescue necessary-context
+  exploitation at the cliff as it rescued generation (prediction from "benefit follows the
+  cliff": naive Q2 B 0.592 should move up materially)?
+- **Lever 2 — example-dense documentation (the G3 finding-4 test):** a parallel docs set —
+  identical functions, semantics, and tasks; each doc page carries THREE worked examples instead
+  of one (deterministic, computed via the hidden impl; frozen FAB v1 files untouched; separate
+  `families_dense.json` + `_dense`-suffixed results). Cells: naive 1.5B Q2/Q3 × B/O (the
+  degradation region) + F16 B (control: density must not hurt at full precision).
+  **Question:** if collapse-rung context processing is example-mimicry (the recorded
+  hypothesis), dense docs should lift Q2 cells — and O@Q2 (0.408, the inversion) most of all.
+- Readout thresholds are NOT pre-committed (these are exploratory improvement measurements, not
+  gates); paired per-task comparison vs G3 baselines with McNemar, reported either way.
+
 ## Deviations
 - (2026-09-14, stage-2 design note) The G3 finding-4 "example density" knob is NOT varied in
   this first RAFT pass (docs pages keep one worked example each); only distractor count is
