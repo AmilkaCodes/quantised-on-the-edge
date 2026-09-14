@@ -687,6 +687,22 @@ aborts unconditionally if first full methods+results drafts aren't on track by 2
 Sequence: E2c completes → α begins. Stage-0 (data path + licences + decontamination) starts now
 in parallel — no bench conflict.
 
+## 2026-09-14 (later) — Formative = the governing deliverable; reflective thread registered
+
+- **Summative brief not yet open on Canvas; the FORMATIVE is the working target** (Mon week 8,
+  13:00; brief + template ingested, `irp/assessment/Formative_Assignment/`). It is the review
+  gate for everything staged (E4 iteration 3, E5) and shapes supervision from here — treated
+  as load-bearing despite carrying no marks. Plan: draft Literature Review + Methodology per
+  the brief's suggestion; propose to the supervisor that part of the feedback time go to a
+  results-chapter sample (campaign finished early; brief says feedback allocation is agreed
+  jointly). Third person; RP formatting standards; IEEE.
+- **Reflective thread registered (write-up-relevant, rubric-relevant):** the student's day job
+  is Azure Local SME / Principal Cloud Engineer — professionally wired to ship working
+  solutions. The recurring builder's urge vs research discipline (scope holds → registered
+  probes → timeboxes → E4-α's gated build → E5 specced-not-built) is the process-evaluation
+  arc for the report's reflective element. `irp/reflections.md` created with prompting
+  questions — **content stays student-authored only.**
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
