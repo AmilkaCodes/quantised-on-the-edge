@@ -1,0 +1,27 @@
+# E2c — 7B edge perf cells, Jetson Orin Nano Super (8GB, CUDA). Fit-attempt rung (Q8_0) LAST —
+# expected not to fit (7.7GB + KV vs ~7.3GB usable); the attempt outcome is the recorded datapoint.
+
+device: "jetson"
+llama_cpp_tag: "b9951"
+server_bin: "./local/llama.cpp/build/bin/llama-server"
+
+host: "127.0.0.1"
+port: 8080
+n_ctx: 4096
+seed: 0
+temperature: 0.0
+max_tokens: 768
+manage_server: true
+server_ready_timeout_s: 600
+
+dataset: "humaneval"
+
+models:
+  - name: "qwen2.5-coder-7b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-7b-instruct"
+    ngl: 999
+    quants:
+      - {label: "Q4_K_M", file: "qwen2.5-coder-7b-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "qwen2.5-coder-7b-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "qwen2.5-coder-7b-instruct-Q2_K.gguf"}
+      - {label: "Q8_0",   file: "qwen2.5-coder-7b-instruct-Q8_0.gguf"}   # fit ATTEMPT — expected too big

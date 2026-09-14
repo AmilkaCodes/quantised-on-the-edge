@@ -1,0 +1,29 @@
+# E2c — 7B edge perf cells, Pi 5 (16GB, CPU). Fit-attempt rung (F16) deliberately LAST: a failed
+# load aborts the remaining loop, so ordering guarantees the fitting cells complete first and the
+# F16 attempt outcome is the final, recorded event (e2c-7b-edge-perf.md).
+
+device: "pi5"
+llama_cpp_tag: "b9951"
+server_bin: "./local/llama.cpp/build/bin/llama-server"
+
+host: "127.0.0.1"
+port: 8080
+n_ctx: 4096
+seed: 0
+temperature: 0.0
+max_tokens: 768
+manage_server: true
+server_ready_timeout_s: 600          # 14.5GB F16 load attempt from NVMe needs headroom
+
+dataset: "humaneval"
+
+models:
+  - name: "qwen2.5-coder-7b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-7b-instruct"
+    ngl: 0
+    quants:
+      - {label: "Q8_0",   file: "qwen2.5-coder-7b-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "qwen2.5-coder-7b-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "qwen2.5-coder-7b-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "qwen2.5-coder-7b-instruct-Q2_K.gguf"}
+      - {label: "F16",    file: "Qwen2.5-Coder-7B-Instruct-f16.gguf"}   # fit ATTEMPT — expected borderline
