@@ -1,0 +1,16 @@
+{
+  "source": "glaiveai/glaive-function-calling-v2 (apache-2.0, verified at source)",
+  "source_sha256": "e9b5d671812b5ca2fbd7b625a37d5c99a19576c37252cdc806defe256aea6dad",
+  "seed": 0,
+  "pool_pairs": 15921,
+  "train": 3000,
+  "valid": 300,
+  "kind_mix_pool": {
+    "call": 1650,
+    "reply": 14271
+  },
+  "train_call_share": 0.467,
+  "template": "Qwen2.5-Coder-1.5B-Instruct chat template with tools (hermes <tool_call>)",
+  "train_sha256": "e437a6570cd761d1edd233b32320cba2e90d27302728fe1fcc107f2f61f7957f",
+  "valid_sha256": "f5a376b7f9a56908d8b9c5d8de29704b02db6d63f03cad8f45ed8ed267b2f276"
+}

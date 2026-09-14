@@ -1,0 +1,14 @@
+{
+  "train": {
+    "before": 3000,
+    "dropped": 0,
+    "after": 3000,
+    "sha256_after": "e437a6570cd761d1edd233b32320cba2e90d27302728fe1fcc107f2f61f7957f"
+  },
+  "valid": {
+    "before": 300,
+    "dropped": 0,
+    "after": 300,
+    "sha256_after": "f5a376b7f9a56908d8b9c5d8de29704b02db6d63f03cad8f45ed8ed267b2f276"
+  }
+}
