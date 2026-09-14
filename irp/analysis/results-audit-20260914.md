@@ -34,10 +34,16 @@ and all 6 imatrix closed + 2 imatrix open cells **match the analysis tables exac
 - **Impact on conclusions: none.** Every R1 claim (R1 ≈ B, R1 < A at Q4/Q3/Q2, cliff at Q2)
   holds under either set; the shift is ≤2/164 per rung, one-directional, and smaller than any
   reported effect.
-- **Resolution owed (Mac, minutes):** clear the EvalPlus cache, re-score the R1 samples fresh,
-  adjudicate which set is authoritative, align `e1r-agentic.md` + paired stats to it, and note
-  the correction dated. Until then, figures and prose use the published summary values, and
-  this table is the discrepancy record.
+- ~~Resolution owed~~ → **RESOLVED same day (`0090ef6`, Mac re-score, caches deleted first):
+  zero per-problem flips — the SNAPSHOT set (0.561/0.555/0.512/0.494/0.268) is authoritative
+  and `e1r-agentic.md`'s table already carried it; the stale variant was the harness
+  `summary.json` pass@1 parse (echoed in commit message `3135cf1`), i.e. the known
+  parsed-vs-eval_results ≤1–2 problem divergence.** fig6's R1 series switched to the snapshot
+  (single authority for all quality series). Two instrument notes recorded in the
+  `e1r-agentic.md` verification appendix: the EvalPlus CLI prints base∧plus (reads ~1 lower
+  than this study's `plus_status` metric — all study scripts count `plus_status`, so all
+  deltas are like-for-like), and `EVALPLUS_MAX_MEMORY_BYTES=-1` is REQUIRED on the Mac or all
+  164 problems silently time out to pass@1 = 0.000.
 
 ## 2. Suspicious aggregate ties — genuine, not copy-bugs
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """IRP figures, batch 2 — E1/E1-R conditions, context cost, scale, dose-response,
 imatrix, deployment, collapse-rung signature. House style per make_figs.py.
-Data authority: per-problem eval_results snapshots (pilot/eval-results/mac) for quality;
-R1 pass@1 from the harness summary.json (as published in e1r-agentic.md — the snapshot
-re-score differs by <=2 problems/rung, logged in results-audit-20260914.md);
+Data authority: per-problem eval_results snapshots (pilot/eval-results/mac) for ALL quality
+series, R1 included (Mac re-score 2026-09-14 confirmed the snapshots with zero flips; the
+harness summary.json pass@1 parse is the stale variant — see results-audit-20260914.md §1);
 perf CSVs pinned per figure (never glob-latest: the newest files are 7B-only)."""
 import json, csv, os
 import numpy as np
@@ -61,7 +61,7 @@ for model, label, ax, cliff in SPECS:
     ax.plot(X, B, "-s", color=BLUE, lw=1.8, ms=6, label="B  frozen BM25 docs", zorder=3)
     ax.plot(X, O, "-^", color=AQUA, lw=1.8, ms=6, label="O  oracle docs (instrument)", zorder=3)
     if model == QW:
-        R1 = [r1_summary(q)["pass@1_plus"] for q in QUANTS]
+        R1 = ladder(model, "r1")
         ax.plot(X, R1, "-D", color=PURPLE, lw=1.8, ms=5.5,
                 label="R1 model-chosen docs (grammar)", zorder=3)
     ax.axvspan(cliff - 0.45, cliff + 0.45, color=RED, alpha=0.06, zorder=1)
