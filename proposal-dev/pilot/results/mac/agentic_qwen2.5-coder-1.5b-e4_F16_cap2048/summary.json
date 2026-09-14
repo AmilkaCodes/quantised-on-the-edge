@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5-coder-1.5b-e4",
+  "rung": "F16",
+  "K": 20,
+  "mechanism": "native",
+  "gen_cap": 2048,
+  "m1_valid_rate": 0.0,
+  "m2_outcomes": {
+    "completed": 16,
+    "malformed_abandonment": 4
+  },
+  "m3_pass_given_valid_tool": null,
+  "overall_pass": 0.0,
+  "gate": "FAIL"
+}

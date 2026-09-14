@@ -1,0 +1,4 @@
+timestamp,device,model,quant,n_prompts,repeats,mean_tok_s,std_tok_s,median_tok_s,mean_ttft_ms,std_ttft_ms,median_ttft_ms,peak_rss_mb,mean_power_w,llama_cpp_tag
+2026-09-14T08:30:43Z,jetson,qwen2.5-coder-7b-instruct,Q4_K_M,10,3,12.4,0.0,12.4,189.6,90.1,139.1,5135.1,21.33,b9951
+2026-09-14T08:38:53Z,jetson,qwen2.5-coder-7b-instruct,Q3_K_M,10,3,9.1,0.0,9.1,215.2,90.0,163.5,4393.1,18.87,b9951
+2026-09-14T08:45:32Z,jetson,qwen2.5-coder-7b-instruct,Q2_K,10,3,11.1,0.0,11.1,223.0,130.1,146.3,3694.8,19.33,b9951

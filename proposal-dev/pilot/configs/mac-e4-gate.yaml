@@ -1,0 +1,19 @@
+# E4-alpha F16 gate config — fine-tuned 1.5B, probe params matched to the E2a 2x3 grid (cap 2048).
+device: "mac"
+llama_cpp_tag: "b9951"
+server_bin: "./local/llama.cpp/build/bin/llama-server"
+host: "127.0.0.1"
+port: 8080
+n_ctx: 8192
+seed: 0
+temperature: 0.0
+max_tokens: 2048
+manage_server: true
+server_ready_timeout_s: 300
+dataset: "humaneval"
+models:
+  - name: "qwen2.5-coder-1.5b-e4"
+    gguf_dir: "./local/models/qwen2.5-coder-1.5b-e4"
+    ngl: 999
+    quants:
+      - {label: "F16", file: "qwen2.5-coder-1.5b-e4r2-f16.gguf"}

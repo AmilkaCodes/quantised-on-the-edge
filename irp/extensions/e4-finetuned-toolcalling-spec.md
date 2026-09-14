@@ -62,6 +62,44 @@ inside a user turn followed by `<|im_end|>` — training the model that assistan
 easy template-text prediction, not call behaviour — a caution recorded for the write-up
 ("validation loss on malformed data is a liar").
 
+## α CLOSURE (2026-09-14 — gate outcome, recorded; both permitted iterations used)
+
+**Verdict: α gate FAIL — H4a not demonstrated at this recipe/scale. β (H4b ladder) does not run.**
+Timebox honoured (α consumed 2 calendar days of the 10); further iteration is
+formative-feedback-gated per the amendment. The outcome is reportable, and richer than a null:
+
+- **Run 2 (native ChatDataset + `--mask-prompt`; val loss 0.406) produced genuine behavioural
+  change:** unlike run 1's instrument artefact, the fine-tuned model *spontaneously emits
+  structured calls with sensible payloads* — MLX and llama-server probes both yield
+  `{"name": "search_docs", "arguments": {"query": "python prime number check"}}` on turn 1,
+  unforced, with domain transfer from Glaive's tools to the unseen `search_docs`.
+- **But the F16 gate reads M1 native 0.0, M1 json 0.0, overall_pass 0.00 (K=20, both mechanisms)**
+  — three coupled failures, each verified in transcripts:
+  1. **Wrapper token never learned:** calls are emitted as bare JSON content (MLX shows
+     `<|im_start|>` where `<tool_call>` belongs); the server parser yields `tool_calls: null`,
+     so native M1 cannot credit them.
+  2. **Task-conditioned mode collapse (the headline):** with tools in context the model answers
+     HumanEval problems *with a call JSON instead of code* — 20/20 first turns are call-shaped;
+     16/20 hallucinate **the task's own function** as a callable tool (`has_close_elements(...)`),
+     4/20 pick `search_docs`. The call is its final answer; no code follows.
+  3. **The control isolates it:** the SAME gguf with **no tools in context codes correctly**
+     (proper prose + correct function body). Coding is not forgotten — tools-in-context
+     *switches it off*. The fine-tune taught "tools present ⇒ emit one call and stop".
+- **Mechanistic reading (hypothesis, recorded not asserted):** per-turn truncated examples
+  (loss on the final assistant turn) + call-share rebalanced to 46.7% + Glaive's short-chat
+  domain jointly built a "call-and-stop" attractor; the training set contains no
+  "tools present + technical task → write code" examples, so call policy over-generalised
+  from never-call to always-call. The pre-authorised `search_docs`-domain supplement (with
+  post-tool-response *code* answers) is the designed fix — but it is iteration 3, hence gated.
+- **Method lesson (extends run 1's):** run 2's honest val loss (0.406, on well-formed data)
+  was ALSO uninformative about the failure — completion loss cannot see policy inversion.
+  Gate batteries, not loss curves, are the only trustworthy readout for behaviour-targeted
+  fine-tuning.
+- **For the write-up:** the can't/won't decomposition (E2a) gains a third pole — *only-that*:
+  naive FC-LoRA at 1.5B moved the model along the invocation-policy axis but coupled the
+  motion to task abandonment. The capability levers are not independent at this scale.
+  Full analysis: `irp/analysis/e4-alpha.md`.
+
 ## Research question (RQ4-shaped)
 Can task-specific fine-tuning restore reliable tool use in edge-class models — and does the
 restored capability survive quantisation?
