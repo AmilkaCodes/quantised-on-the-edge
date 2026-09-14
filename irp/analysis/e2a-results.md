@@ -149,6 +149,21 @@ distinct from the quality-side signature (which is backend-independent).
 - Probe cells K=20 (K=5 for the reasoning probe), descriptive, multiple comparisons uncorrected.
 - Closed-7B Q2 drop CI touches +0.104 (honest uncertainty); bf16-anchor deviation for the 4B.
 - The 7B open-book harm is 5 tests, all p ≤ .019 — Q8/Q4/Q2 survive Bonferroni (α = .01).
-- E2c perf: N=10×3 per cell, closed-book prompts only (perf mode does not score); power is
-  software-reported per tier (not wall-plug); Pi F16 TTFT benefits from mmap page-cache warmth
-  after the first load; SLO verdicts use the registered floors, not application-specific ones.
+- E2c perf: N=10×3 per cell, closed-book prompts only (perf mode does not score); Pi F16 TTFT
+  benefits from mmap page-cache warmth after the first load; SLO verdicts use the registered
+  floors, not application-specific ones.
+- **Power/energy scope (confirmed 2026-09-14 against run logs — backend engaged as designed on
+  all three tiers, CSV values match log lines):** each tier's mean W is measured at a
+  **different physical boundary**, so the J/token column is comparable *within* a tier but NOT
+  boundary-matched *across* tiers:
+  - **Jetson** — `tegrastats` VDD_IN: **whole-board DC input** (widest; includes carrier board,
+    RAM, and regulator losses downstream of the jack).
+  - **Pi 5** — `vcgencmd pmic_read_adc` Σ V×I over rails: **PMIC-downstream** power (excludes
+    PMIC conversion loss and USB-C input overhead; narrower than board input).
+  - **Mac** — `powermetrics` SoC domains (CPU+GPU+ANE/Combined): **SoC package only**
+    (narrowest; excludes display, SSD, rest of platform).
+  Cross-tier absolute J/token therefore flatters the Mac and penalises the Jetson; rung-to-rung
+  orderings within a tier (incl. the Q3_K_M J/token bump on both GPU tiers) are
+  instrument-consistent. Figures are **gross** mean W during decode — no idle-baseline
+  subtraction, so they are not marginal energy per token. Any cross-tier energy claim in the
+  write-up must carry this scope statement or be dropped.

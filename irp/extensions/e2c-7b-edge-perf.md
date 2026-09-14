@@ -28,4 +28,11 @@ registered floors; the memory-matched claim then carries its deployment leg or i
 day.** No quality cells, no new conditions, no further expansion.
 
 ## Deviations
-_(none yet)_
+_(none)_
+
+## Measurement-scope confirmation (2026-09-14, post-run)
+Power backend verified engaged per tier against run logs (CSV values match log lines):
+Mac `powermetrics/SoC` (SoC package domains), Pi `pmic/rail-sum` (PMIC-downstream Σ V×I),
+Jetson `tegrastats/VDD_IN` (whole-board DC input). Boundaries differ by tier → J/token is
+within-tier comparable only; gross (no idle subtraction). Full scope caveat recorded in
+`irp/analysis/e2a-results.md` (E2c caveats).
