@@ -1,15 +1,15 @@
 {
   "device": "mac",
-  "timestamp": "2026-09-13T19:09:50Z",
+  "timestamp": "2026-09-14T00:31:27Z",
   "os": "macOS-26.6.2-arm64-arm-64bit",
   "processor": "arm",
   "cpu_count": 14,
   "ram_gb": 36.0,
   "python": "3.12.13",
   "llama_cpp_tag": "b9951",
-  "config_file": "configs/mac.yaml",
+  "config_file": "configs/mac-e2b.yaml",
   "smoke": false,
-  "condition": "oracle",
-  "openbook_artefact_sha256": "875fe30d12fb7a52e8bec4812d003eb861ff4141bdd9cea11f84b0389efedd9c",
+  "condition": "open",
+  "openbook_artefact_sha256": "95069f4b461426a48e348065ca110d0a95fb2f2294c637db123d8a472bb5007c",
   "accelerator": {}
 }

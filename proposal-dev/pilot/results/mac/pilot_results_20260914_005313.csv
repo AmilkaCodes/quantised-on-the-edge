@@ -1,0 +1,7 @@
+timestamp,device,model,quant,condition,n,parse_rate,pass@1_base,pass@1_plus,mean_ttft_ms,mean_tok_s,peak_rss_mb,llama_cpp_tag,smoke
+2026-09-13T23:56:30Z,mac,qwen2.5-coder-1.5b-instruct-imat,Q4_K_M,closed,164,0.994,0.665,0.616,68.2,164.9,2570.3,b9951,False
+2026-09-14T00:00:07Z,mac,qwen2.5-coder-1.5b-instruct-imat,Q3_K_M,closed,164,1.0,0.659,0.628,68.8,142.5,2436.2,b9951,False
+2026-09-14T00:03:12Z,mac,qwen2.5-coder-1.5b-instruct-imat,Q2_K,closed,164,1.0,0.555,0.518,67.0,168.3,2267.7,b9951,False
+2026-09-14T00:08:00Z,mac,phi-3-mini-4k-instruct-imat,Q4_K_M,closed,164,1.0,0.683,0.622,188.3,87.2,15444.5,b9951,False
+2026-09-14T00:13:58Z,mac,phi-3-mini-4k-instruct-imat,Q3_K_M,closed,164,1.0,0.683,0.622,187.7,82.2,15525.0,b9951,False
+2026-09-14T00:27:14Z,mac,phi-3-mini-4k-instruct-imat,Q2_K,closed,164,0.982,0.39,0.36,192.2,86.9,14564.5,b9951,False

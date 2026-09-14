@@ -640,6 +640,18 @@ Both probes ran end-to-end (protocol 400edc8; artefacts committed pre-run; super
   ("failure mode → scaffolding test") is complete; fine-tuning stays Future Work per the binding
   rule; E4 resourcing note stands as the costed future-work path.
 
+## 2026-09-14 — E2b (imatrix arm) run and answered: calibration moves the cliff — and the context harm moves with it
+
+Registered 72e1c43, chain ran overnight (imatrix x2 -> calibrated Q4/Q3/Q2 -> closed 6 cells +
+open collapse-rung cells). **H-E2b1: calibration moves Phi-3's collapse threshold TWO rungs
+(Q4->Q2; Q4/Q3 now within the 5pp margin at -1.8pp) and halves Qwen's Q2 cliff (+22.6->+8.0pp,
+I-N +14.6pp p=.0004).** Model-dependent in mirror image of the collapse. **H-E2b2: the context
+harm FOLLOWS the cliff, not the bit-width** — it vanishes at calibrated Phi-Q4 (no longer a
+cliff) and persists at calibrated Qwen-Q2 (still cliff-adjacent): 5th collapse-rung-signature
+appearance, now with an intervention demonstrating co-movement. D6 vindicated both ways (naive
+ladder needed to SEE the collapse; calibrated arm measures the +14-20pp mask). "Use imatrix
+quants" is now a measured recommendation. Write-up: `irp/analysis/e2b-imatrix.md`.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)

@@ -1,0 +1,2 @@
+timestamp,device,model,quant,condition,n,parse_rate,pass@1_base,pass@1_plus,mean_ttft_ms,mean_tok_s,peak_rss_mb,llama_cpp_tag,smoke
+2026-09-14T00:40:45Z,mac,phi-3-mini-4k-instruct-imat,Q4_K_M,open,164,1.0,0.652,0.585,956.3,79.5,16607.4,b9951,False
