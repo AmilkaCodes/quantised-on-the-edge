@@ -81,5 +81,22 @@ from pretraining** — docs-necessity by construction, contamination-proof by co
 3. G3 ladders (Mac; 1.5B all rungs + 7B all rungs, conditions A/B/R/O) — the headline.
 4. Stage-2 RAFT only after G1∧G2 hold and the student has seen the G3 read.
 
+## Gate outcomes (2026-09-14, same day — stock 7B @ F16, n=120 per condition)
+
+| condition | pass@1 | single | chain |
+|---|---:|---:|---:|
+| A closed-book | **0.000** | 0.000 | 0.000 |
+| B open-book (+3 distractors) | **0.992** | 1.000 | 0.980 |
+| R BM25 k=2 (80-page corpus) | 0.958 | 0.986 | 0.920 |
+| O oracle (correct pages only) | 1.000 | 1.000 | 1.000 |
+
+**G1 PASS (0.000 ≤ 0.10)** — the false API is unguessable; docs-necessity holds by measurement,
+not just construction. **G2 PASS (0.992 ≥ 0.60)** — docs are sufficient; the instrument's
+dynamic range at F16 is effectively the whole interval. R ≈ B says lexical retrieval is
+near-sufficient when docs are necessary and jargon-matched (BM25's home turf — the designed
+contrast with E1's HumanEval setting, where retrieval had nothing useful to fetch).
+One harness fairness fix recorded pre-gate (smoke): the scorer supplies `import <module>`
+since the task text says to assume it works. **FAB is a valid instrument; G3 authorised.**
+
 ## Deviations
 _(none yet)_
