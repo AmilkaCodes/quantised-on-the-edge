@@ -42,6 +42,30 @@ dissertation's own registered caveat ("oracle ≠ task-necessity") answered. Pre
 here informally: A ≈ 0 by construction; B/O reveal whether untrained models can exploit
 must-have context at all. Either outcome sets RAFT's headroom.
 
+### The necessary-context ladder question (student insight, dictated 2026-09-14)
+
+**Does necessary-context exploitation survive the quantisation ladder, and does it fail at the
+same rung as generation or earlier?** The dissertation could not ask this: with Δ(open−closed)
+≤ 0 everywhere on HumanEval+, there was no benefit to destroy. On a docs-required benchmark the
+sign flips by construction: closed-book ≈ 0, so at F16 the context benefit Δ is potentially
+near the whole score (~+0.9 if the model can exploit docs at all). **For the first time there
+is headroom for quantisation to destroy a context benefit**, making Phase 2's ladder a novel
+measurement BEFORE any training runs:
+
+- **Branch (a) — untrained models show usable Δ at F16:** walk the ladder and compare the
+  FAB docs-conditioned curve against the (already-measured) HumanEval+ closed-book generation
+  curve per model. Same-rung break = more collapse-rung-signature evidence on a new capability;
+  earlier break = context-exploitation is the MORE quantisation-fragile capability — consistent
+  with the dissertation's 7B evidence that the open ladder degrades faster than the closed one,
+  and the sharpest available extension of it. **The 1.5B's Q2_K rung is the cell of interest.**
+- **Branch (b) — Δ ≈ 0 even at F16:** the dissertation's "cannot exploit even ideal context"
+  finding extends to necessary-context tasks — its strongest possible form — and RAFT becomes
+  the enabler rather than the enhancer; the ladder question then re-runs on the RAFT'd model
+  (the H4b analogue: does the TRAINED benefit survive the ladder, and where does it break?).
+
+Either branch produces the study's headline figure; the branch itself is a finding. Register
+the branch logic and the per-rung Δ comparison in the Phase-2 protocol before any scored run.
+
 ## Phase 3 — RAFT training (the intervention)
 
 - **Recipe (Zhang et al. 2024, arXiv:2403.10131 — v2 "Preprint, Under Review"; venue check
