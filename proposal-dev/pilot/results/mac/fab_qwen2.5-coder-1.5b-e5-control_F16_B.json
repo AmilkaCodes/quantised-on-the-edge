@@ -1,0 +1,1094 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-e5-control",
+  "rung": "F16",
+  "condition": "B",
+  "n": 120,
+  "pass@1": 0.775,
+  "pass_single": 0.886,
+  "pass_chain": 0.62,
+  "tasks_sha256": "e656806088093f95"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.baxgan_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.quenmir_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.rulvor_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.rulpal_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.fexquen(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.zortam_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.rulzor_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.rulvor_op(sardrulib.zortam_fx(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.rulvor_op(sardrulib.fexquen(x))\n",
+   "raw_len": 97
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.rulkev_dg(sardrulib.quenmir_dg(x))\n",
+   "raw_len": 100
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 7, in <module>\n    assert solve('yc') == '6~2^yc^0~2'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.rulkev_dg(sardrulib.rulzor_fx(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.fexquen(sardrulib.rulzor_fx(x))\n",
+   "raw_len": 97
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.sarhiz_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.vekmir_cv(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.fexsar_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.hizdru_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.kevvek_fx(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.tokdru_cv(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.julpal_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " '16|11|y5qexhpz|2|5'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return veklishlib.veknid_fx(veklishlib.vekmir_cv(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'veknid_fx'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.veknid_fx(veklishlib.vekmir_cv(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "(veklishlib.fexsar_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/veklishlib.py\", line 2, in hizdru_dg\n    ys = list(xs[4:]) + list(xs[:4])\n              ~~^^^^\nTypeError: 'int' object is not subscriptable\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.hizdru_dg(veklishlib.fexsar_dg(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ve('gdqyzgmd') == 127\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return veklishlib.fexzor_op(veklishlib.vekdru_cv(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'fexzor_op'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.fexzor_op(veklishlib.vekdru_cv(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.sarhiz_dg(veklishlib.julpal_dg(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.tokdru_cv(veklishlib.hizdru_dg(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.kevbax_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.palsar_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.palpal(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.palvor_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.baxkev_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.vorhiz_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.zorvek_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.vorhiz_dg(vorjullib.kevbax_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.baxkev_cv(vorjullib.kevbax_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.tokrul(vorjullib.zorvek_op(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.zorvek_op(vorjullib.tokrul(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.vorhiz_dg(vorjullib.baxkev_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.vekfex_cv(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.gantam_op(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "sert solve('z') == 246\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return quentamlib.palnid_op(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'palnid_op'. Did you mean: 'plonid_op'?\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.palnid_op(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "(abs(n))) + 25\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/quentamlib.py\", line 14, in <genexpr>\n    n = sum(int(d) * 5 for d in str(abs(n))) + 25\n            ^^^^^^\nValueError: invalid literal for int() with base 10: '.'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.sarlish_cv(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.vorvek(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " 27, 14, 16, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return quentamlib.fexok(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'fexok'. Did you mean: 'fextok'?\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.fexok(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.vekfex_cv(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "x))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/quentamlib.py\", line 17, in lishmir_cv\n    return round(v * 8.48 + 15.4, 4)\n                 ~~^~~~~~\nTypeError: can't multiply sequence by non-int of type 'float'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.lishmir_cv(quentamlib.fextok(x))\n",
+   "raw_len": 100
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "olve('wwcaqnq') == 113\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return quentamlib.vorhiz_cv(quentamlib.vekfex_cv(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'vorhiz_cv'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.vorhiz_cv(quentamlib.vekfex_cv(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "   assert solve('5') == 127\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return quentamlib.plohiz_dg(quentamlib.lishvek_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'plohiz_dg'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.plohiz_dg(quentamlib.lishvek_dg(x))\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.lishvek_dg(quentamlib.vekfex_cv(x))\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.sarlish_cv(quentamlib.plonid_op(x))\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.drutok_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.vorgan_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.sardru_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.druhiz_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.rulnid_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.julmir_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "14, 19]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return vekganlib.palrul_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'palrul_cv'. Did you mean: 'palmir_cv'?\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.palrul_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "lve('') == 46\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return vekganlib.sardru_cv(vekganlib.choplo_fx(x))\n                               ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'choplo_fx'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.sardru_cv(vekganlib.choplo_fx(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.rulnid_cv(vekganlib.druhiz_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.sardru_cv(vekganlib.julmir_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.rulnid_cv(vekganlib.drutok_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.drutok_cv(vekganlib.julmir_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.druquen_op(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.hizlish_op(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.quendru_op(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.nidjul_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.baxvor_cv(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vorzor_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.ganplo_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "x))\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/quenkevlib.py\", line 17, in nidjul_dg\n    return round(v * 4.58 + 14.3, 4)\n                 ~~^~~~~~\nTypeError: can't multiply sequence by non-int of type 'float'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.rulfex_op(quenkevlib.nidjul_dg(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 7, in <module>\n    assert solve('pp') == 194\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.quendru_op(quenkevlib.ganplo_dg(x))\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 7, in <module>\n    assert solve('mrkkzk45') == 170\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.druquen_op(quenkevlib.rulfex_op(x))\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.druquen_op(quenkevlib.rulfex_op(x))\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "nkevlib.druquen_op(x))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/quenkevlib.py\", line 2, in quendru_op\n    ys = list(xs[3:]) + list(xs[:3])\n              ~~^^^^\nTypeError: 'int' object is not subscriptable\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.quendru_op(quenkevlib.druquen_op(x))\n",
+   "raw_len": 104
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.kevdru_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/nidveklib.py\", line 6, in palpal_op\n    return (sum(ord(c) * w[i % 4] for i, c in enumerate(s)) + 34) % 211\n                                              ^^^^^^^^^^^^\nTypeError: 'int' object is not iterable\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.palpal_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.palvor(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.vekrul_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.tokmir_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.vorvek_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.palpal_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.palpal_op(nidveklib.palvek_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.tamjul_op(nidveklib.palpal_op(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.palpal_op(nidveklib.kevdru_op(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.vorvek_dg(nidveklib.kevdru_op(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "b.palvor(x))\n                               ^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/nidveklib.py\", line 17, in palvor\n    return round(v * 8.87 + 23.4, 4)\n                 ~~^~~~~~\nTypeError: can't multiply sequence by non-int of type 'float'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.kevdru_op(nidveklib.palvor(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.druvek_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.jultok_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "y\", line 7, in <module>\n    assert solve(6569) == 29\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return vekjullib.vekhiz_dg(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'vekhiz_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.vekhiz_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.toklish_cv(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.rulgan_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.palnid_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "7, in <module>\n    assert solve('zzw') == '3|zzw|9'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return vekjullib.vekjul_op(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'vekjul_op'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.vekjul_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "3~dye~4|1'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return vekjullib.julkev_op(vekjullib.zorbax_dg(x))\n                               ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'zorbax_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.julkev_op(vekjullib.zorbax_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "') == 87\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return vekjullib.rulgan_op(vekjullib.zorbax_dg(x))\n                               ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'zorbax_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.rulgan_op(vekjullib.zorbax_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.sarfex_op(vekjullib.palnid_fx(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.rulgan_op(vekjullib.julkev_op(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "k') == 'c~8|yqzfeczk|4~6'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return vekjullib.vekjul_dg(vekjullib.julkev_op(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'vekjul_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.vekjul_dg(vekjullib.julkev_op(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.hiznid_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " line 7, in <module>\n    assert solve('') == '0~~0'\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return vorplolib.vorquen_fx(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'vorquen_fx'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.vorquen_fx(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.ganquen_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.drumir_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.vorgan(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.plorul_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.plohiz_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.ganquen_dg(vorplolib.tamvek_fx(x))\n",
+   "raw_len": 100
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.drumir_dg(vorplolib.tamvek_fx(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "lolib.tamvek_fx(vorplolib.drumir_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/vorplolib.py\", line 25, in tamvek_fx\n    n, digs = len(s), ''\n              ^^^^^^\nTypeError: object of type 'int' has no len()\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.tamvek_fx(vorplolib.drumir_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 7, in <module>\n    assert solve('enxqh0n') == '14^10~enxqh0n~3^8'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.tamvek_fx(vorplolib.plorul_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.plohiz_op(vorplolib.ganquen_dg(x))\n",
+   "raw_len": 100
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.vekplo_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.mirtam_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.mirjul(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.tokplo_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.druhiz(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.lishsar_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.vorvor_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.zorgan_dg(tokzorlib.tokplo_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "7, in <module>\n    assert solve('') == 129\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpa6z7p7ku/sol.py\", line 4, in solve\n    return tokzorlib.zorpal(tokzorlib.vorvor_dg(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'zorpal'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.zorpal(tokzorlib.vorvor_dg(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.vorvor_dg(tokzorlib.tokplo_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.lishsar_op(tokzorlib.zorgan_dg(x))\n",
+   "raw_len": 100
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.druhiz(tokzorlib.mirtam_fx(x))\n",
+   "raw_len": 96
+  }
+ ]
+}

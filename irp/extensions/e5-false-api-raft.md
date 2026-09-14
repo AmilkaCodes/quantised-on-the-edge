@@ -127,6 +127,15 @@ since the task text says to assume it works. **FAB is a valid instrument; G3 aut
   E4's two-iteration discipline applies per arm (one rebuild each on instrument-artefact
   grounds only; a genuine gate FAIL is a result, not a retry ticket).
 
+## Stage-2 CLOSURE (2026-09-14, same day): gate FAIL on criteria 1 (FAB B 0.775 vs 0.983) and
+2 (HumanEval+ 0.262 vs 0.610); ladder not run; both arms closed. Mechanism verified — with
+`--mask-prompt` and train tasks the base model already solves with docs, there was zero
+context-exploitation gradient; both arms converged to identical format-narrowing (120/120
+byte-identical eval outputs) that taxed chains, oracle-following, and general coding. A=0.008 is
+name-prior guessing (FAB/28; name absent from training data — verified), not leakage. Full
+analysis: `irp/analysis/e5-raft-stage2.md`. A meaningful RAFT retest requires train tasks the
+base model FAILS with docs (new registration, student decision).
+
 ## Deviations
 - (2026-09-14, stage-2 design note) The G3 finding-4 "example density" knob is NOT varied in
   this first RAFT pass (docs pages keep one worked example each); only distractor count is
