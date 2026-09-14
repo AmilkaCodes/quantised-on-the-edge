@@ -1,0 +1,8 @@
+{
+  "run": "e4-alpha-run1", "date": "2026-09-14",
+  "base": "Qwen/Qwen2.5-Coder-1.5B-Instruct (HF, prefetched)",
+  "method": "mlx_lm lora", "iters": 800, "batch_size": 4, "num_layers": 16, "seed": 0,
+  "data": "~/pilot-work/e4-data train.jsonl/valid.jsonl (sha e437a657... / f5a376b7..., decontaminated)",
+  "adapter_path": "~/pilot-work/e4-data/adapters-run1",
+  "note": "first of at most two iterations inside the 10-day alpha timebox (spec amendment)"
+}
