@@ -698,11 +698,16 @@ in parallel — no bench conflict.
       evidential facts (supplier, items,
       prices, dates) are transcribed in the setup logs, which is what the IRP report cites.
       _Lesson for the log: verify PDF redaction by text extraction, not by appearance._
-- [ ] 7B edge-tier perf cells (memory-matched deployment leg) — decide register-first; only if
-      the write-up schedule absorbs it (entry 2026-09-14 later)
-- [ ] E4 activation question — supervisor conversation first (binding clause in the E4 spec);
-      formative (October) is the natural vehicle
-- [ ] Confirm SSD fitted in the HAT+; take assembly photos
+- [x] ~~7B edge-tier perf cells~~ → **done 2026-09-14 as E2c** (registered first:
+      `irp/extensions/e2c-7b-edge-perf.md`): Jetson serves 7B@Q2 at 11.1 tok/s (memory-matched
+      claim deploys on that tier); Pi fails the throughput floor at every rung (claim honestly
+      bounded); Q3 dip localised to GPU kernels. Results appended to `e2a-results.md`.
+- [x] ~~E4 activation question~~ → **superseded 2026-09-14 by the dated ACTIVATION AMENDMENT**
+      (staged α/β, write-up lien, formative = review gate, supervisor informed via chase
+      thread). α ran and CLOSED same day: gate FAIL, reportable (see `e4-alpha.md`); β does
+      not run; iteration 3 is formative-feedback-gated.
+- [x] ~~Confirm SSD fitted in the HAT+; take assembly photos~~ → both resolved earlier in this
+      log: SSD fitment confirmed 2026-08-27 (assembly entry); photos waived 2026-09-01, reasoned.
 - [x] ~~Jetson order~~ → **ordered; kit + SanDisk Ultra 64GB microSD ARRIVED 2026-08-28**;
       Integral 500GB NVMe 2280 still in transit. Prices/invoice to record (see
       `irp/setup/jetson/jetson.md`). Setup proceeds from microSD — SSD not blocking.
