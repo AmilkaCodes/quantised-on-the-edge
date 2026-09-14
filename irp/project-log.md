@@ -675,6 +675,18 @@ in-study existence proof (4B forced 0.80) + crisp headroom + the unmeasured H4b 
 (4) interpretive asymmetry. RAFT = sequenced not rejected; benchmark+RAFT pairing = the
 PhD-seed follow-on. Discussion/Future-Work chapters should carry this ordering argument.
 
+## 2026-09-14 (later) — E4 ACTIVATED (staged), overriding the supervisor-first clause: dated decision
+
+Student decision: don't hold E4 for the October meeting — **the formative becomes the review
+gate** and its feedback the supervision input (supervisor informed via the standing thread).
+Override is risk-staged in the spec amendment: **α** = data (licence-verified, decontaminated,
+open/local only) + ONE LoRA run (≤2 iterations, 10-day hard timebox) + F16 gate on the E1/E1-R
+battery (H4a); **β** = the H4b quantisation ladder ONLY on α-pass (cheap once an adapter exists);
+further iteration = formative-gated. **Write-up lien binding:** α is additive never load-bearing,
+aborts unconditionally if first full methods+results drafts aren't on track by 2026-09-28.
+Sequence: E2c completes → α begins. Stage-0 (data path + licences + decontamination) starts now
+in parallel — no bench conflict.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)

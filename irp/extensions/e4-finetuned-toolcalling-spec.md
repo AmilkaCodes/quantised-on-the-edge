@@ -1,7 +1,29 @@
-# E4 — Fine-tuned tool-calling under quantisation (FUTURE-WORK SPEC, not activated)
+# E4 — Fine-tuned tool-calling under quantisation (ACTIVATED, STAGED — amendment below)
 
-**Status: SPECIFIED ONLY (2026-09-13). Not in scope for this dissertation** (scope hold of
-2026-09-13 stands; escalation rules bind). This spec exists so the dissertation's Future Work
+> **ACTIVATION AMENDMENT (2026-09-14, student decision — an explicit, dated override of the
+> "supervisor conversation first" clause below):** the student elects not to wait for the October
+> meeting; the **formative (October) becomes the review gate** and its feedback the supervision
+> input, with the supervisor informed via the standing chase thread (same pattern as E1/E2a
+> activations; ethics delta handled at stage 0 below). The override is risk-managed by STAGING:
+>
+> - **Stage α (activated now; runs after E2c frees the bench):** data path chosen + licence
+>   verified AT SOURCE + decontaminated → **ONE LoRA training run** (MLX, 1.5B) → **F16 gate**
+>   on the E1/E1-R battery (M1 native + M1′; H4a). **Hard timebox: 10 calendar days of effort;
+>   at most TWO training iterations inside it.** Gate outcome either way is a reportable finding.
+> - **Stage β (gated):** the quantisation ladder (H4b — merge-then-quantise, naive recipe, the
+>   novel measurement) runs ONLY if the α gate passes; it is cheap (~1 bench day) once a working
+>   adapter exists. Further iteration beyond α's two runs = **formative-feedback-gated**, full stop.
+> - **Write-up lien (binding):** E4-α is additive, never load-bearing — the dissertation's
+>   contribution remains E1/E1-R/E2a/E2b regardless of α's outcome; any week α slips, the
+>   write-up claims the time back; α aborts unconditionally if the first full methods+results
+>   drafts are not on track by 2026-09-28.
+> - **Ethics (stage 0, before any training):** dataset licence verified at source; training data
+>   decontaminated against HumanEval+ (13-gram discipline) AND disjoint from any named future
+>   benchmark (MBPP+ reserved); Self-Assessment form gains the dataset/licence line (Section 5
+>   remains all-No); no frontier-API synthesis (the TRAP path stays closed — local/open only).
+
+**Original status (superseded as above): SPECIFIED ONLY (2026-09-13). Not in scope for this
+dissertation** (scope hold of 2026-09-13 stands; escalation rules bind). This spec exists so the dissertation's Future Work
 section can present a designed study rather than a wish, and so the follow-on (post-submission
 project / publication / PhD seed) starts from a plan. **The E1/E1-R instrument stack — grammar,
 frozen index, contamination sweeps, harness, metrics, analysis machinery — is the laboratory
