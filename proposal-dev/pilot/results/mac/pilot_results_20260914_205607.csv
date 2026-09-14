@@ -1,0 +1,2 @@
+timestamp,device,model,quant,condition,n,parse_rate,pass@1_base,pass@1_plus,mean_ttft_ms,mean_tok_s,peak_rss_mb,llama_cpp_tag,smoke
+2026-09-14T19:58:38Z,mac,qwen2.5-coder-1.5b-e5-raft,F16,closed,164,0.963,0.311,0.262,64.5,76.7,4031.2,b9951,False
