@@ -154,6 +154,12 @@ two NON-TRAINING levers, pre-registered before runs. Model weights untouched in 
 - Readout thresholds are NOT pre-committed (these are exploratory improvement measurements, not
   gates); paired per-task comparison vs G3 baselines with McNemar, reported either way.
 
+**Stage-3 OUTCOME (same day): lever 1 DECISIVE — calibration rescues Q2 context-exploitation
+(B 0.592→0.933, p=5.9e-11; O 0.408→0.967, p=2.2e-18; inversion gone: it was a naive-quant
+artefact). Lever 2 NULL — dense docs lift all quant cells directionally but n.s. (Q2 B p=.21);
+inversion persists; F16 control inert. "Benefit follows the cliff" is now causal. Full analysis:
+`irp/analysis/e5-stage3-levers.md`. Lever ranking: imatrix >> formatting ~ 0 > LoRA (< 0).**
+
 ## Deviations
 - (2026-09-14, stage-2 design note) The G3 finding-4 "example density" knob is NOT varied in
   this first RAFT pass (docs pages keep one worked example each); only distractor count is
