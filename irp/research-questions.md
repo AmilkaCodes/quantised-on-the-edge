@@ -12,7 +12,8 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
   below a defined threshold?
 - **RQ1a** (confirmatory — ANSWERED): does the threshold differ between a code-specialised and
   a general-purpose model?
-- **RQ1b** (confirmatory — **ANSWERED 2026-09-12**, cross-device spot-check pending): does
+- **RQ1b** (confirmatory — **ANSWERED 2026-09-12**; cross-device spot-check DONE same day —
+  4/25 diverge, inherits D25 aggregate-proxy status, see `e1-openbook.md` caveats): does
   reference-documentation context ("open-book" retrieval over the official Python
   documentation) mitigate quantisation-induced degradation relative to closed-book generation?
   **Answer: NO — Δ(B−A) ≤ 0 at every rung for both models; the distraction cost peaks at each
@@ -42,6 +43,37 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
 - **RQ3** (confirmatory — ANSWERED closed-book): for each tier, at which quantisation level
   does each model meet pre-defined quality and performance thresholds ("good enough")?
 
+## Registered exploratory extensions (beyond the proposal's RQ set — all CLOSED 2026-09-14)
+
+_Each registered before running (protocol committed first), each exploratory and firewalled from
+the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as such._
+
+- **E2a** (`e2a-protocol.md` — ANSWERED 2026-09-13): scale arms. **Arm 5:** the 7B does NOT
+  collapse anywhere on the naive ladder (threshold None; Q2 −4.9pp n.s.) → collapse is a
+  small-model phenomenon; memory-matched, 7B@Q2 (2.9GB, 0.793) beats 1.5B@F16 (3.1GB, 0.610);
+  BUT open-book harm is significant at every 7B rung incl. F16 → scale rescues
+  quantisation-robustness, not context-robustness. **Arm 4:** invocation decomposes into
+  can't (1.5B degenerates under coercion) / won't-by-policy (4B: nudge 0.00 → mandate 0.40 →
+  force 0.80, M3=1.0, first-person reasoning receipts). See `e2a-results.md`.
+- **E2b** (`e2b-protocol.md` — ANSWERED 2026-09-14): imatrix calibration moves Phi's threshold
+  TWO rungs (Q4→Q2) and halves Qwen's Q2 cliff; **the context harm follows the cliff, not the
+  bit-width** (vanishes at calibrated Phi-Q4, persists at cliff-adjacent calibrated Qwen-Q2) —
+  5th collapse-rung-signature appearance, first with intervention co-movement; D6 vindicated
+  both directions. See `e2b-imatrix.md`.
+- **E2c** (`e2c-7b-edge-perf.md` — ANSWERED 2026-09-14): deployment leg of the memory-matched
+  claim. Jetson serves 7B@Q2 at 11.1 tok/s (deploys); Pi fails the throughput floor at every
+  rung (1.5B stays that tier's only interactive option) but uniquely FITS F16 (0.8 tok/s,
+  batch-only); Q3_K_M throughput dip = GPU-kernel artefact (absent on Pi CPU). Appended to
+  `e2a-results.md`.
+- **E4-α** (`e4-finetuned-toolcalling-spec.md` amendment — CLOSED 2026-09-14, gate FAIL,
+  reportable): FC-LoRA on the 1.5B produced spontaneous well-formed calls BUT
+  tools-in-context mode collapse ("only-that": 16/20 hallucinate the task's own function as a
+  tool; no-tools control codes perfectly) → completes the can't/won't/only-that triad; β (H4b
+  ladder) not run; iteration 3 formative-feedback-gated. Method lesson: gate batteries, not
+  loss curves. See `e4-alpha.md`.
+- **E5** (`e5-raft-benchmark-spec.md` — SPECIFIED ONLY, not activated): docs-required
+  fictitious-API benchmark + RAFT; post-submission/PhD-seed. Future Work presents it designed.
+
 ## Hypotheses
 
 - **H1a** (tested — REJECTED H0a): pass@1 at ≤Q2_K is significantly below the model's F16
@@ -58,13 +90,17 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
 
 ## Where each is answered / to be answered
 
-| RQ | Evidence home |
+| RQ / extension | Evidence home |
 |---|---|
 | RQ1/1a | `irp/analysis/collapse-threshold.md` (+ CIs, 5pp margin) |
-| RQ1b | E1 Condition B runs (protocol pending) → analysis extension |
-| RQ1c | E1 Condition D gate pilot → probe (if gate passes) |
+| RQ1b | `irp/analysis/e1-openbook.md`; boundary tests `e1r-oracle.md` (O ≤ A) |
+| RQ1c | `irp/analysis/e1-agentic.md`; revisit `e1r-agentic.md`; grid `e2a-results.md` Arm 4 |
 | RQ2/2a | `proposal-dev/pilot/RESULTS.md` §9 (3 tiers + energy) |
 | RQ3 | `irp/analysis/synthesis.md` (deployment envelope, registered SLO gate) |
+| E2a/E2c | `irp/analysis/e2a-results.md` (scale bound, memory-matched + deployment leg) |
+| E2b | `irp/analysis/e2b-imatrix.md` (calibration moves the cliff; harm follows it) |
+| E4-α | `irp/analysis/e4-alpha.md` (only-that; gate batteries lesson) |
+| Whole-arc synthesis | `irp/analysis/implications-synthesis.md` (six-claim spine) |
 
 ## Design + governance pointers
 - E1 design + mechanism decisions: `irp/extensions/e1-context-conditions.md` (D27 in the
