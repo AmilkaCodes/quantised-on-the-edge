@@ -98,5 +98,37 @@ contrast with E1's HumanEval setting, where retrieval had nothing useful to fetc
 One harness fairness fix recorded pre-gate (smoke): the scorer supplies `import <module>`
 since the task text says to assume it works. **FAB is a valid instrument; G3 authorised.** G3 COMPLETE same day — ladders + stats in `irp/analysis/e5-fab-g3.md`; headline: 1.5B necessary-context exploitation 0.983 at F16 collapses to 0.592 at Q2_K (47 broke/0 rescued, p=1.4e-14), harder than generation collapsed on HumanEval; 7B flat (n.s.). Stage 2 (RAFT) now awaits the student's review of the G3 read, per this registration.
 
+## Stage-2 ACTIVATION (2026-09-14, student go — "go on stage 2"; pre-registered before any build/run)
+
+- **Train pool:** seed block 2000+ via the frozen generator machinery — 30 training families
+  (+3 held-out valid families). **Name-disjointness sweep vs the eval block is a hard build
+  gate** (zero module/function name overlap). Eval tasks, docs, and seeds untouched.
+- **Two arms, identical solutions, one variable (the registered control design):**
+  - **RAFT arm:** user turn = docs (correct pages + k distractor pages, k ∈ {0,1,3} varied
+    deterministically per task — the G3 finding-4 knob) + task; assistant turn = reference
+    solution in a fenced block. Native ChatDataset `{messages}`, `--mask-prompt`
+    (E4-α lessons: single templating; examples END with code; no call-and-stop attractor).
+  - **Control arm:** identical tasks and solutions, NO docs in the user turn — separates
+    docs-conditioned learning from task-distribution practice.
+- **Training (both arms, pre-registered):** mlx_lm lora, Qwen2.5-Coder-1.5B-Instruct, iters 600,
+  batch 4, num-layers 16, seed 0, isolated e4-venv; sequential runs (Metal contention).
+- **F16 gate (pre-registered criteria):**
+  1. RAFT-arm FAB eval: B ≥ stock's 0.983 band (no degradation; A must stay 0.000 — names
+     are disjoint, so any A > 0 is leakage and fails the gate);
+  2. **Composition gate:** HumanEval+ closed-book n=164 within noise of stock 0.610 (the
+     E4-α only-that failure screen);
+  3. Control-arm FAB eval B shows NO material gain over stock (else gains are practice, not
+     docs-use).
+- **If gate passes:** merge-then-quantise naive ladder (Q8/Q4/Q3/Q2), FAB B/R/O per rung —
+  **the H4b-transplant headline: does trained context-exploitation survive the ladder better
+  than stock's (Q2 B: stock 0.592)?** The F16 ceiling (stock 0.983) means the measurement
+  lives on the ladder, not at F16 — recorded so the F16 gate is read as a screen, not the result.
+- **Timebox:** data build + both trainings + gate ≈ 1 bench day; ladder ≈ half a day more.
+  E4's two-iteration discipline applies per arm (one rebuild each on instrument-artefact
+  grounds only; a genuine gate FAIL is a result, not a retry ticket).
+
 ## Deviations
-_(none yet)_
+- (2026-09-14, stage-2 design note) The G3 finding-4 "example density" knob is NOT varied in
+  this first RAFT pass (docs pages keep one worked example each); only distractor count is
+  varied. Recorded so a null on distractor-robustness is not misread as covering the
+  example-density hypothesis.
