@@ -53,12 +53,13 @@ artefact hashes in the paired manifest). Paths relative to repo root. Display as
 
 ## Open items (small, honest)
 
-1. **Per-problem data archival (RESOLVED as a to-do, was "verify C1 source"):** the
-   authoritative per-problem `*_eval_results.json` files (which every paired McNemar consumed)
-   are deliberately gitignored and live ONLY on the Mac. Before write-up finalisation, archive
-   them into the dissertation's **artefact bundle** (the template's Artefact Directory) — they
-   are small, they make every paired statistic independently checkable, and losing the Mac
-   copy would make the paired analyses unreproducible from the repo alone.
+1. ~~Per-problem data archival~~ → **CLOSED 2026-09-14 (`7a421d1`):** per-problem
+   `*_eval_results.json` snapshots now TRACKED under `proposal-dev/pilot/eval-results/`
+   (56 files, 5.7MB; coverage verified complete — closed/open/oracle/R1 ladders both models,
+   all imatrix cells incl. both registered open cells, full 7B ladders, 3× xdev). Source of
+   truth remains `results/<device>/` per its README (stale-cache caution noted there). Every
+   paired statistic is now independently checkable from the repo. Residual to-do at
+   submission time only: include this folder in the dissertation's Artefact Directory zip.
 2. **7B energy (J/token) on Jetson/Pi**: confirm whether inside E2c's registered scope; if not,
    state the bound wherever C10's memory-matched claim appears.
 3. Figure regeneration session (one Mac sitting, extend `make_figs.py`) — after formative
