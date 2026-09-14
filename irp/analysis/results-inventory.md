@@ -60,7 +60,14 @@ artefact hashes in the paired manifest). Paths relative to repo root. Display as
    truth remains `results/<device>/` per its README (stale-cache caution noted there). Every
    paired statistic is now independently checkable from the repo. Residual to-do at
    submission time only: include this folder in the dissertation's Artefact Directory zip.
-2. **7B energy (J/token) on Jetson/Pi**: confirm whether inside E2c's registered scope; if not,
-   state the bound wherever C10's memory-matched claim appears.
-3. Figure regeneration session (one Mac sitting, extend `make_figs.py`) — after formative
-   lit-review + methodology drafts exist.
+2. ~~7B energy scope~~ → **CLOSED 2026-09-14 (`053e680`):** power WAS measured on all three
+   tiers and verified engaged against run logs. **Binding scope caveat (now in `e2a-results.md`
+   E2c caveats):** per-tier boundaries differ (Mac = SoC package only; Pi = PMIC-downstream
+   rail-sum; Jetson = whole-board DC input) → **J/token is within-tier comparable ONLY**, gross
+   not marginal (no idle subtraction). Cross-tier absolute J/token flatters the Mac, penalises
+   the Jetson. Any cross-tier energy sentence in the write-up carries this statement or is
+   dropped — and `fig5_energy` (plus any successor) must say "within-tier comparison" in its
+   caption.
+3. Figure build session (extend `make_figs.py` — all source CSVs are in-repo, so this machine
+   works; no Mac dependency) — after formative lit-review + methodology drafts exist, except
+   the two early figures if a results sample goes to the supervisor.
