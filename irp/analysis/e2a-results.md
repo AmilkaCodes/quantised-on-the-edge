@@ -102,8 +102,53 @@ Direct first-person evidence of invocation-policy override: relevance judgement 
 and per Condition B, that judgement is *empirically correct* on this task. (Also explains the 4
 empty forced episodes: hidden reasoning traces consuming the cap.)
 
+## E2c — the deployment leg: 7B perf across all three tiers (2026-09-14; registered `irp/extensions/e2c-7b-edge-perf.md`)
+
+Standard perf mode (N=10×3, warm-up discard, closed-book prompts, per-tier b9951 builds, software
+power). Registered SLO floors: **≥8–10 tok/s sustained, TTFT ≤1–2 s, RAM without swap.**
+J/token = mean W ÷ mean tok/s.
+
+| tier | rung | tok/s (med) | TTFT med (ms) | peak RSS (MB) | mean W | J/token | SLO |
+|---|---|---:|---:|---:|---:|---:|---|
+| Mac (Metal, 36 GB) | F16 | 20.0 | 59 | 14,768 | 27.7 | 1.39 | PASS |
+| | Q8_0 | 35.8 | 34 | 8,107 | 34.6 | 0.97 | PASS |
+| | Q4_K_M | 55.9 | 26 | 4,897 | 35.7 | 0.64 | PASS |
+| | Q3_K_M | **45.6 ↓** | 28 | 4,074 | 39.4 | **0.87 ↑** | PASS |
+| | Q2_K | 59.8 | 22 | 3,331 | 38.4 | 0.64 | PASS |
+| Jetson (CUDA, 8 GB) | Q8_0 | — | — | — | — | — | **does not fit**: `cudaMalloc` of the 7,165 MiB weight buffer fails on the 7,485 MiB unified-memory device (captured verbatim) |
+| | Q4_K_M | 12.4 | 139 | 5,135 | 21.3 | 1.72 | PASS |
+| | Q3_K_M | **9.1 ↓** | 164 | 4,393 | 18.9 | **2.07 ↑** | borderline (inside the 8–10 band) |
+| | Q2_K | 11.1 | 146 | 3,695 | 19.3 | 1.74 | PASS |
+| Pi 5 (CPU, 16 GB) | F16 | 0.8 | 1,323 | 14,475 | 6.2 | 7.73 | **fits** (15.2 GB weights mmap'd, swap-free) — but far below the throughput floor |
+| | Q8_0 | 1.5 | 692 | 14,263 | 6.1 | 4.09 | FAIL (tok/s) |
+| | Q4_K_M | 2.5 | 423 | 8,674 | 6.6 | 2.65 | FAIL (tok/s) |
+| | Q3_K_M | 2.9 | 370 | 5,384 | 7.6 | 2.62 | FAIL (tok/s) |
+| | Q2_K | 3.4 | 308 | 3,406 | 8.1 | 2.37 | FAIL (tok/s) |
+
+**⭐ The memory-matched claim now carries its deployment leg — with an honest tier split.**
+- **Jetson: the claim deploys.** 7B@Q2_K (3.7 GB RSS) serves at 11.1 tok/s above the SLO floor on
+  the 8 GB device — the quality-per-byte winner (0.793 vs 1.5B@F16's 0.610) is *servable* on the
+  tier where the memory constraint bites. Q4_K_M (5.1 GB, 12.4 tok/s) is the comfort choice.
+- **Pi: the claim's honest bound.** Even Q2_K reaches only 3.4 tok/s — every 7B rung fails the
+  interactive floor on CPU. On this tier the 1.5B remains the only interactive option; the 7B is
+  batch-only. (TTFT and swap-free RAM pass everywhere; throughput is the binding constraint.)
+- **Both fit-attempt rungs resolved as registered, one each way:** Jetson Q8_0 = does-not-fit
+  (predicted); Pi F16 = **fits** (borderline call went the other way: 14.5 GB RSS in 16 GB,
+  swap-free, 0.8 tok/s) — the Pi is the only edge tier that can hold the 7B at full precision,
+  at a decode rate that rules out interactive use.
+
+**⭐ The Q3_K_M dip is a GPU phenomenon.** It reproduces on **Metal** (55.9 → 45.6 → 59.8) and
+**CUDA** (12.4 → 9.1 → 11.1) — slower than *both* neighbouring rungs, and the most expensive
+K-quant in J/token on both GPU tiers — while the **Pi's CPU ladder is cleanly monotone**
+(1.5 → 2.5 → 2.9 → 3.4 tok/s; J/token 4.09 → 2.65 → 2.62 → 2.37, no exception). Backend
+dependence points at the Q3_K dequant kernel path, not the format's information content: the
+collapse-rung signature's throughput appearance is an implementation artefact of GPU kernels,
+distinct from the quality-side signature (which is backend-independent).
+
 ## Caveats
 - Probe cells K=20 (K=5 for the reasoning probe), descriptive, multiple comparisons uncorrected.
 - Closed-7B Q2 drop CI touches +0.104 (honest uncertainty); bf16-anchor deviation for the 4B.
 - The 7B open-book harm is 5 tests, all p ≤ .019 — Q8/Q4/Q2 survive Bonferroni (α = .01).
-- 7B Mac perf cells (tok/s/TTFT/RSS/power per rung) remain optional/unrun.
+- E2c perf: N=10×3 per cell, closed-book prompts only (perf mode does not score); power is
+  software-reported per tier (not wall-plug); Pi F16 TTFT benefits from mmap page-cache warmth
+  after the first load; SLO verdicts use the registered floors, not application-specific ones.

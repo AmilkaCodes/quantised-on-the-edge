@@ -1,6 +1,10 @@
 # E2c NOTE — 7B edge-tier perf cells (deployment leg of the memory-matched claim)
 
-**Status: PRE-REGISTERED BY COMMIT** (2026-09-14, per the project-log rule for this loose end:
+**Status: COMPLETE (2026-09-14, same day)** — all cells run on all three tiers; both fit-attempt
+rungs resolved (Jetson Q8_0 does-not-fit as predicted; Pi F16 **fits**, 0.8 tok/s). Results +
+verdicts in `irp/analysis/e2a-results.md` (E2c deployment-leg section). Deviations: none.
+
+Originally: **PRE-REGISTERED BY COMMIT** (2026-09-14, per the project-log rule for this loose end:
 register-first, frozen before runs; ethics delta nil; existing machinery only). **Question:** the
 E2a memory-matched headline (7B@Q2_K 2.9 GB = 0.793 vs 1.5B@F16 3.1 GB = 0.610) rests on the Mac
 quality axis. Does the 7B actually **run acceptably on the edge tiers** — against the registered
