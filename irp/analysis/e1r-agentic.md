@@ -41,3 +41,27 @@ syntax (e.g. "python mean absolute deviation function", "rolling max python typi
 full precision — but the retrieved context still does not pay, and both the query machinery and the
 context benefit collapse together at the quantisation cliff.** Fine-tuning remains Future Work
 (e1r-protocol binding rule).
+
+## Verification appendix — R1 Mac re-score (2026-09-14, student-requested)
+
+All five R1 rungs were re-scored from the committed sanitized samples with caches deleted first
+(the stale-cache rule). **Result: CONFIRMED — zero per-problem flips at any rung** (fresh
+eval_results identical to the originals snapshotted in `proposal-dev/pilot/eval-results/mac/`),
+and plus-status pass@1 reproduces the table above exactly: 0.561 / 0.555 / 0.512 / 0.494 / 0.268.
+
+Two instrument notes recorded en route:
+
+1. **Metric definition (consistency check, passed):** the EvalPlus CLI prints "humaneval+"
+   pass@1 as base∧plus, which reads one problem lower at every rung than this study's metric.
+   A few tasks report `plus_status = pass` with `base_status = fail`
+   (HumanEval/20 at F16/Q8/Q4; +141 at Q3; /92 at Q2 — the suites are timed separately, so a
+   borderline-timing task can fail one and pass the other). **Every analysis script in the study
+   counts `plus_status == "pass"`** (`e1_analysis.py`, `collapse_stats.py`,
+   `e1_relevance_harm.py`, `make_figs2.py`, `score_xdev.py`) — all cross-condition deltas are
+   like-for-like; no numbers change.
+2. **Environment requirement for any future (re-)score on the Mac:**
+   `EVALPLUS_MAX_MEMORY_BYTES=-1` must be set (as `score_xdev.py` does). Without it,
+   evalplus 0.3.1's `reliability_guard` `setrlimit` call raises under this machine's limits,
+   every worker dies, and **all 164 problems silently record `timeout` → pass@1 = 0.000** —
+   a failure mode that looks like a catastrophic result. Delete `*_eval_results.json` caches
+   before scoring, always (EvalPlus resumes from them).
