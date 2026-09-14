@@ -58,6 +58,42 @@ restored capability survive quantisation?
   strengthens rather than weakens the scope hold — feasibility is not the constraint;
   the dissertation deadline is.
 
+## Why E4 (tool-calling) and not RAFT (context-handling fine-tune) — sequencing rationale (2026-09-14)
+
+The obvious thematic follow-up to the E1/E1-R/E2b headline (context-exploitation is not
+scaffolding-fixable and follows residual quantisation damage) is a RAFT-style fine-tune
+(retrieval-augmented fine-tuning with distractor documents; Zhang et al. 2024, arXiv:2403.10131 —
+verify at source before citing). It is deliberately NOT the next experiment, for four recorded
+reasons; write-up should carry this as the justification for the chosen Future-Work ordering.
+
+1. **The current benchmark cannot detect a RAFT success.** Per the e1r-oracle caveat, HumanEval+
+   problems are self-contained: context has near-zero headroom to *help*, so the best achievable
+   RAFT outcome on this instrument is Δ(open−closed) ≈ 0 — and distractor training would likely
+   reach it degenerately, by teaching the model to IGNORE injected context. "Harm eliminated" is
+   indistinguishable from "context disregarded"; it demonstrates nothing about *exploiting*
+   context. Positive exploitation requires a **docs-required benchmark** (problems unsolvable
+   without the reference material) — a benchmark-construction project (design, validation, its
+   own contamination story) that must precede the training project.
+2. **Structurally worse contamination surface.** RAFT training data = (problem + docs → solution)
+   code-generation triples — the eval set's own task family. Even 13-gram-clean, any gain invites
+   the reading "more coding practice near the benchmark distribution", separable from genuine
+   context-handling repair only via a no-docs control arm (doubling the training matrix). E4's
+   function-calling dialogues are disjoint from HumanEval+ by construction.
+3. **E4's success criterion is crisp with real headroom.** The deficit is demonstrated in-study
+   at F16 (1.5B M1 0/20; degeneration 20/20 under coercion) and the capability's existence proof
+   is in-study (Qwen3-4B forced M1 0.80, M3 = 1.0). Instruments exist and discriminate; H4b
+   (does the trained capability survive the ladder?) is unmeasured anywhere. RAFT's readout on
+   current instruments is a null dressed as a win; E4's is 0 → ~0.8 plus a novel ladder.
+4. **Interpretive asymmetry.** A "successful" RAFT invites "you trained it to ignore context —
+   closed-book already does that for free." A successful E4 restores a discrete, measurable
+   protocol behaviour and opens a new measurement. One result defends itself.
+
+**Status of RAFT: sequenced, not rejected.** It is blocked on an instrument that does not yet
+exist (the docs-required benchmark); E4 is blocked only on the supervisor conversation. The
+pairing "build the docs-required benchmark, then test whether RAFT-style training lets small
+quantised models pass it" is the PhD-seed-shaped follow-on, and Future Work should present it
+exactly so.
+
 ## Why not now (recorded once, bindingly)
 12 weeks remain; the write-up owns ≥6; 3–5 weeks of training-project risk cannot fit without
 endangering the dissertation. The measured E1/E1-R results are the contribution; this spec is

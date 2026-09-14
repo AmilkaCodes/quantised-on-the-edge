@@ -652,6 +652,29 @@ appearance, now with an intervention demonstrating co-movement. D6 vindicated bo
 ladder needed to SEE the collapse; calibrated arm measures the +14-20pp mask). "Use imatrix
 quants" is now a measured recommendation. Write-up: `irp/analysis/e2b-imatrix.md`.
 
+## 2026-09-14 (later) — Loose end registered: 7B edge-tier perf cells (deployment leg of the memory-matched claim)
+
+Flagged in `e2a-results.md` caveats, promoted here so it cannot silently evaporate: the E2a
+memory-matched headline (7B@Q2_K 2.9GB = 0.793 vs 1.5B@F16 3.1GB = 0.610, +18pp) currently rests
+on the Mac quality axis only. Its **deployment leg is unmeasured**: does 7B-Q2 actually run
+acceptably on the Pi and Jetson (tok/s, TTFT vs the registered SLO floor, peak RSS, J/token)?
+This is the single most tempting remaining measurement — small, one bench day, existing machinery,
+ethics delta nil. **Rule: it happens register-first (own protocol note, frozen before runs) and
+only if the write-up schedule genuinely absorbs it; otherwise it is reported honestly as a bounded
+claim ("quality-per-byte ordering measured; edge-tier feasibility of the 7B untested").**
+
+## 2026-09-14 (later) — Why-not-RAFT rationale recorded (write-up feed)
+
+The E4-vs-RAFT ordering question ("why fine-tune tool-calling next, not context-handling, when
+context is the headline deficit?") is answered and recorded in the E4 spec (§"Why E4 and not
+RAFT"): (1) HumanEval+ is self-contained, so RAFT success is undetectable on current instruments
+— best case Δ≈0, reachable degenerately by learning to ignore context; a docs-required benchmark
+must exist first; (2) RAFT's training data sits in the eval set's own task family (worse
+contamination surface, needs a no-docs control arm); (3) E4 has in-study deficit (0/20) +
+in-study existence proof (4B forced 0.80) + crisp headroom + the unmeasured H4b ladder;
+(4) interpretive asymmetry. RAFT = sequenced not rejected; benchmark+RAFT pairing = the
+PhD-seed follow-on. Discussion/Future-Work chapters should carry this ordering argument.
+
 ## Pending
 
 - [x] ~~Verify the £349.30 line item~~ → confirmed from invoice 2026-08-27 (16GB RAM-price inflation)
@@ -663,6 +686,10 @@ quants" is now a measured recommendation. Write-up: `irp/analysis/e2b-imatrix.md
       evidential facts (supplier, items,
       prices, dates) are transcribed in the setup logs, which is what the IRP report cites.
       _Lesson for the log: verify PDF redaction by text extraction, not by appearance._
+- [ ] 7B edge-tier perf cells (memory-matched deployment leg) — decide register-first; only if
+      the write-up schedule absorbs it (entry 2026-09-14 later)
+- [ ] E4 activation question — supervisor conversation first (binding clause in the E4 spec);
+      formative (October) is the natural vehicle
 - [ ] Confirm SSD fitted in the HAT+; take assembly photos
 - [x] ~~Jetson order~~ → **ordered; kit + SanDisk Ultra 64GB microSD ARRIVED 2026-08-28**;
       Integral 500GB NVMe 2280 still in transit. Prices/invoice to record (see
