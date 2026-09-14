@@ -29,6 +29,24 @@ project / publication / PhD seed) starts from a plan. **The E1/E1-R instrument s
 frozen index, contamination sweeps, harness, metrics, analysis machinery — is the laboratory
 this study would reuse; its marginal cost is the training.**
 
+## Stage-0 record (2026-09-14, pre-training decisions — dated, fixed before any training run)
+- **Data = Glaive FC v2, licence VERIFIED AT SOURCE via the HF datasets API: `apache-2.0`, ungated**
+  (Hermes FC v1 apache-2.0 as fallback; xLAM excluded — gated). Format inspected: `system` block of
+  JSON tool definitions + `chat` dialogues with `<functioncall>` turns AND explicit
+  refusal/irrelevance examples ("I don't have the capability…") — the latter retained deliberately:
+  the E2a grid showed invocation *policy* is half the deficit.
+- **Transformation:** Glaive dialogues re-rendered into the Qwen chat-template hermes format
+  (`<tool_call>` JSON) — training the model in exactly the wrapper the stock 1.5B failed to emit;
+  sampled to the low-thousands scale per the resource analysis; a small locally-synthesised
+  `search_docs`-specific supplement only if the α gate shows domain-transfer failure (dated
+  decision if so).
+- **Decontamination (before training):** 13-gram sweep of all training text vs HumanEval+
+  prompts+canonical solutions (and MBPP+ held reserved); sweep report committed with the dataset.
+- **Training stack:** ISOLATED venv (`~/pilot-work/e4-venv`, mlx-lm; study venv verified untouched
+  — evalplus + pinned transformers intact). Base = `Qwen/Qwen2.5-Coder-1.5B-Instruct` HF weights
+  (prefetched); pipeline = mlx_lm.lora → fuse to HF → `convert_hf_to_gguf.py` → the SAME naive
+  b9951 quantise recipe (merge-then-quantise, as specified).
+
 ## Research question (RQ4-shaped)
 Can task-specific fine-tuning restore reliable tool use in edge-class models — and does the
 restored capability survive quantisation?
