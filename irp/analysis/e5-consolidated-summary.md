@@ -38,7 +38,10 @@ all three models at every rung; open-book 0.99 (7B F16). Replicated on a second 
    content-irrelevant extra page → 0.671 — registered prediction confirmed) and Phi's
    near-total single-call failure (B singles 0.029 vs chains 0.48). The B>O inversion is
    Qwen-specific (direction replicates on v2, significance does not); the singles-first
-   failure is cross-model.
+   failure is cross-model. _Stage-V refinement: a single RICH, structured (Sphinx-style) page
+   does not trigger the fixation and abolishes the inversion (O 0.408 → 0.767) — the
+   mechanism is prompt bulk/structure, not page count per se; the terse-page case remains the
+   measured pathology._
 
 ## The deployment sentence (all clauses now measured)
 
@@ -46,7 +49,8 @@ all three models at every rung; open-book 0.99 (7B F16). Replicated on a second 
 > give it — at the model's own quality cliff, before and harder than it breaks generation. The
 > fix is in the quantiser: calibrated (imatrix) quantisation restores context-exploitation at
 > identical memory, speed, and power, verified on Raspberry Pi 5 and Jetson Orin Nano. Prompt
-> engineering does not fix it (though never send a collapse-rung model a single-page context),
+> engineering does not fix it (though never send a collapse-rung model a single TERSE page of
+> context; a rich, structured page is safe — stage-V refinement),
 > and naive LoRA fine-tuning makes it worse.
 
 ## Include-or-hold — DECIDED 2026-09-15: HOLD, with the boundary stated on main

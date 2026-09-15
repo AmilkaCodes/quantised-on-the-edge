@@ -90,3 +90,15 @@ extra page reverts to a small cost. The Q2 inversion is therefore not about dist
 single-call tasks. Deployment corollary (Q2 only): pad retrieval to ≥2 pages; never ship a
 single-page context to a naively-quantised collapse-rung model. (Calibration remains the real
 fix — imat Q2 O 0.967 needs no padding.)
+
+## Stage-V addendum (2026-09-15): the mechanism refined by the format variant
+
+The Sphinx/reST format variant (`e5-fab-external-validity.md` V-B) tested the fixation
+against a single RICH, structured page (directive header, field lists, doctest example;
+semantics and example values verbatim from v1). Result: the one-page pathology does NOT
+appear (naive Q2 O 0.408 terse → 0.767 Sphinx; inversion abolished, O > B restored).
+**Refinement: the trigger is prompt bulk/structure, not page count per se** — R1b's
+second-page rescue and the Sphinx single-page rescue are two routes to the same escape from
+a terse-single-page attractor. The hypothesis's name is kept for continuity; its operative
+form is now "terse-page fixation". Deployment corollary tightens accordingly: never ship a
+collapse-rung model a single TERSE reference page; either add a page or enrich the one page.
