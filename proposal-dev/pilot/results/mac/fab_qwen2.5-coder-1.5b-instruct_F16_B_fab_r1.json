@@ -1,0 +1,1098 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-instruct",
+  "rung": "F16",
+  "condition": "B",
+  "n": 120,
+  "pass@1": 0.942,
+  "pass_single": 0.943,
+  "pass_chain": 0.94,
+  "fab_dir": "fab_r1",
+  "docs_variant": null,
+  "temperature": 0.0,
+  "samples": 1,
+  "tasks_sha256": "857f2e086c37e007"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "r(abs(n))) + 20\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp636rth3v/coreforge.py\", line 14, in <genexpr>\n    n = sum(int(d) * 8 for d in str(abs(n))) + 20\n            ^^^^^^\nValueError: invalid literal for int() with base 10: '.'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    tamex_units = coreforge.scale_measure(x)\n    kevex_fold = coreforge.condense_number(tamex_units)\n    tokex_digest = coreforge.digest_string(str(kevex_fold))\n    frame_payload = coreforge.frame_payload(str(tokex_digest))\n    return frame_payload\n"
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.cycle_amplify(x)\n"
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.condense_number(x)\n"
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import coreforge\n\ndef solve(x):\n    return coreforge.shuffle_step(x)\n"
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import coreforge\n\ndef solve(x):\n    # Wrap the input string in the nidar envelope\n    nidar_envelope = coreforge.wrap_envelope(x)\n    \n    # Compute the kevex digest of the wrapped string\n    kevex_digest = coreforge.rolling_hash(nidar_envelope)\n    \n    return kevex_digest\n"
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import coreforge\n\ndef solve(x):\n    # Wrap in the mirar envelope\n    mirar_envelope = coreforge.frame_payload(x)\n    \n    # Wrap in the nidar envelope\n    nidar_envelope = coreforge.wrap_envelope(mirar_envelope)\n    \n    return nidar_envelope\n"
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import coreforge\n\ndef solve(x):\n    # Wrap the input string in the mirar envelope\n    mirar_envelope = coreforge.frame_payload(x)\n    \n    # Compute the kevex digest of the wrapped string\n    kevex_digest = coreforge.rolling_hash(mirar_envelope)\n    \n    return kevex_digest\n"
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import coreforge\n\ndef solve(x):\n    # Apply fexu shuffle\n    fexu_result = coreforge.cycle_amplify(x)\n    \n    # Apply saron shuffle\n    saron_result = coreforge.shuffle_step(fexu_result)\n    \n    return saron_result\n"
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "e>\n    assert solve('') == 76\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp636rth3v/sol.py\", line 6, in solve\n    kevex_digest = coreforge.kevex_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'kevex_digest'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    # Compute the kevex digest of x\n    kevex_digest = coreforge.kevex_digest(x)\n    \n    # Compute the kevex fold of the kevex digest\n    kevex_fold = coreforge.kevex_fold(kevex_digest)\n    \n    return kevex_fold\n"
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import digestix\n\ndef solve(x):\n    return digestix.scale_measure(x)\n"
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return digestix.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return digestix.condense_number(x)\n"
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return digestix.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return digestix.cycle_amplify(x)\n"
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return digestix.frame_payload_vek(x)\n"
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return digestix.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in kevar envelope\n    kevar_envelope = digestix.frame_payload_vek(x)\n    \n    # Compute zoron digest\n    zoron_digest = digestix.rolling_hash(kevar_envelope)\n    \n    return zoron_digest\n"
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the kevar envelope\n    kevar_envelope = digestix.frame_payload_vek(x)\n    \n    # Compute the tamu digest\n    tamu_digest = digestix.digest_string(kevar_envelope)\n    \n    return tamu_digest\n"
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in kevar envelope\n    kevar_envelope = digestix.frame_payload_vek(x)\n    \n    # Wrap in tokex envelope\n    tokex_envelope = digestix.wrap_envelope(kevar_envelope)\n    \n    return tokex_envelope\n"
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the tokex envelope\n    wrapped = digestix.wrap_envelope(x)\n    \n    # Compute the zoron digest of the wrapped string\n    zoron_digest = digestix.rolling_hash(wrapped)\n    \n    return zoron_digest\n"
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    zoron_digest = digestix.rolling_hash(x)\n    baxu_fold = digestix.condense_number(zoron_digest)\n    return baxu_fold\n"
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x: str) -> str:\n    return chunkify.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp636rth3v/sol.py\", line 6, in <module>\n    assert solve('q4y') == 142\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    return chunkify.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.condense_number(x)\n"
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.frame_payload(x)\n"
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.shuffle_step(x)\n"
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import chunkify\n\ndef solve(x):\n    return chunkify.cycle_amplify(x)\n"
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the baxex envelope\n    baxex_envelope = chunkify.wrap_packet(x)\n    \n    # Wrap in the quenu envelope\n    quenu_envelope = chunkify.frame_payload(baxex_envelope)\n    \n    return quenu_envelope\n"
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import chunkify\n\ndef solve(x):\n    vorar_digest = chunkify.rolling_hash(x)\n    zorex_fold = chunkify.condense_number(vorar_digest)\n    return zorex_fold\n"
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the quenu envelope\n    quenu_envelope = chunkify.frame_payload(x)\n    \n    # Compute the miru digest of the quenu envelope\n    miru_digest = chunkify.digest_string(quenu_envelope)\n    \n    return miru_digest\n"
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import chunkify\n\ndef solve(x):\n    # Compute the miru digest of x\n    miru_digest = chunkify.digest_string(x)\n    \n    # Compute the zorex fold of the miru digest\n    zorex_fold = chunkify.condense_number(miru_digest)\n    \n    return zorex_fold\n"
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the quenu envelope\n    quenu_envelope = chunkify.frame_payload(x)\n    \n    # Compute the vorar digest of the quenu envelope\n    vorar_digest = chunkify.rolling_hash(quenu_envelope)\n    \n    return vorar_digest\n"
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import textura\n\ndef solve(x):\n    return textura.cycle_amplify(x)\n"
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.rotate_scale(x)\n"
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.weighted_checksum(x)\n"
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.fold_digits(x)\n"
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.frame_payload_gan(x)\n"
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import textura\n\ndef solve(x):\n    # Wrap the input string in the vorar envelope\n    wrapped_vorar = textura.wrap_packet(x)\n    \n    # Compute the quenu digest of the wrapped string\n    quenu_digest = textura.weighted_checksum(wrapped_vorar)\n    \n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the baxon shuffle\n    baxon_result = textura.rotate_scale(x)\n    \n    # Apply the sarex shuffle\n    sarex_result = textura.cycle_amplify(baxon_result)\n    \n    return sarex_result\n"
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import textura\n\ndef solve(x):\n    # Wrap the string in the nidex envelope\n    nidex_envelope = textura.frame_payload_gan(x)\n    \n    # Compute the zorex digest of the nidex envelope\n    zorex_digest = textura.rolling_hash(nidex_envelope)\n    \n    # Return the final value\n    return zorex_digest\n"
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import textura\n\ndef solve(x):\n    # Apply sarex shuffle\n    x = textura.cycle_amplify(x)\n    \n    # Apply baxon shuffle\n    x = textura.rotate_scale(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the quenu digest of x\n    quenu_digest = textura.weighted_checksum(x)\n    \n    # Compute the lishon fold of the quenu digest\n    lishon_fold = textura.fold_digits(quenu_digest)\n    \n    return lishon_fold\n"
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return flowdesk.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return flowdesk.iterate_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp636rth3v/sol.py\", line 8, in <module>\n    assert solve([18, -8, 6, 6, 7, 17, 12, -2]) == [30, 7, 85, 12, -10, 18, -40, 6]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.shuffle_step(x)\n"
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x: str) -> int:\n    return flowdesk.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return flowdesk.encode_frame_tok(x)\n"
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.scale_measure(x)\n"
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return flowdesk.compute_digest_dru(x)\n"
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the string in the tokon envelope\n    tokon_envelope = flowdesk.encode_frame_tok(x)\n    \n    # Compute the quenex digest of the tokon envelope\n    quenex_digest = flowdesk.digest_string(tokon_envelope)\n    \n    return quenex_digest\n"
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the quenex digest of x\n    quenex_digest = flowdesk.digest_string(str(x))\n    \n    # Compute the jular fold of the quenex digest\n    jular_fold = flowdesk.iterate_fold(quenex_digest)\n    \n    return jular_fold\n"
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ecent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp636rth3v/sol.py\", line 12, in <module>\n    assert solve([12, 6, 0, 3, 11, 9, -2, -4]) == [135, -2, -20, 12, 90, 0, 15, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    # Apply the fexon shuffle to x\n    x = flowdesk.shuffle_step(x)\n    # Apply the fexon shuffle to the result\n    x = flowdesk.shuffle_step(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the hizu digest of x\n    hizu_digest = flowdesk.compute_digest_dru(x)\n    \n    # Compute the jular fold of the hizu digest\n    jular_fold = flowdesk.iterate_fold(hizu_digest)\n    \n    return jular_fold\n"
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    envelope = flowdesk.wrap_envelope(x)\n    hizu_digest = flowdesk.compute_digest_dru(envelope)\n    return hizu_digest\n"
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.iterate_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.frame_payload(x)\n"
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.scale_measure(x)\n"
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.shuffle_step(x)\n"
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return netquill.compute_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x: str) -> int:\n    return netquill.weighted_checksum(x)\n"
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.rotate_scale(x)\n"
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    wrapped = netquill.wrap_packet(x)\n    quenu_digest = netquill.compute_digest(wrapped)\n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    # Wrap in hizex envelope\n    hizex_envelope = netquill.frame_payload(x)\n    \n    # Wrap in julu envelope\n    julu_envelope = netquill.wrap_packet(hizex_envelope)\n    \n    return julu_envelope\n"
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    # Apply palon shuffle\n    palon_result = netquill.rotate_scale(x)\n    \n    # Apply rulon shuffle\n    rulon_result = netquill.shuffle_step(palon_result)\n    \n    return rulon_result\n"
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    quenu_digest = netquill.compute_digest(x)\n    tamon_fold = netquill.iterate_fold(quenu_digest)\n    return tamon_fold\n"
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import netquill\n\ndef solve(x):\n    # Wrap in the hizex envelope\n    hizex_envelope = netquill.frame_payload(x)\n    \n    # Compute the quenu digest\n    quenu_digest = netquill.compute_digest(hizex_envelope)\n    \n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.frame_payload(x)\n"
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp636rth3v/sol.py\", line 8, in <module>\n    assert solve([0, 8, 14]) == [0, 8, 14]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.cycle_amplify(x)\n"
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.scale_measure(x)\n"
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.digit_reduce(x)\n"
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp636rth3v/sol.py\", line 12, in <module>\n    assert solve([14, -4, 12, 11, 12, -2]) == [42, 4, 12, 11, -36, -2]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import streamkit\n\ndef solve(x):\n    # Apply the zoron shuffle to x\n    x = streamkit.mix_rotate(x)\n    # Apply the zoron shuffle to the result\n    x = streamkit.mix_rotate(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    mirar_digest = streamkit.digest_string(x)\n    polar_fold = streamkit.digit_reduce(mirar_digest)\n    return polar_fold\n"
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    # Wrap the input string in the zorex envelope\n    zorex_envelope = streamkit.wrap_envelope(x)\n    \n    # Compute the mirar digest of the zorex-enveloped string\n    mirar_digest = streamkit.digest_string(zorex_envelope)\n    \n    return mirar_digest\n"
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    # Wrap the input string in the baxu envelope\n    baxu_envelope = streamkit.frame_payload(x)\n    \n    # Compute the mirar digest of the baxu envelope\n    mirar_digest = streamkit.digest_string(baxu_envelope)\n    \n    return mirar_digest\n"
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import streamkit\n\ndef solve(x):\n    # Wrap in zorex envelope\n    zorex_envelope = streamkit.wrap_envelope(x)\n    \n    # Wrap in baxu envelope\n    baxu_envelope = streamkit.frame_payload(zorex_envelope)\n    \n    return baxu_envelope\n"
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return signalio.rolling_hash(str(x))\n"
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.weighted_checksum(x)\n"
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.encode_frame(x)\n"
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return signalio.iterate_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.rotate_scale(x)\n"
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.to_base_scale(x)\n"
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    # Apply rulex shuffle\n    x = signalio.shuffle_step(x)\n    \n    # Apply baxex shuffle\n    x = signalio.rotate_scale(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    # Wrap in the lishex envelope\n    lishex_envelope = signalio.wrap_packet(x)\n    \n    # Wrap in the voron envelope\n    voron_envelope = signalio.encode_frame(lishex_envelope)\n    \n    return voron_envelope\n"
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    saron_digest = signalio.weighted_checksum(x)\n    nidar_fold = signalio.iterate_fold(saron_digest)\n    return nidar_fold\n"
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    julu_digest = signalio.rolling_hash(str(x))\n    nidar_fold = signalio.iterate_fold(julu_digest)\n    return nidar_fold\n"
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    # Wrap the input string in the lishex envelope\n    wrapped = signalio.wrap_packet(x)\n    \n    # Compute the saron digest of the wrapped string\n    saron_digest = signalio.weighted_checksum(wrapped)\n    \n    return saron_digest\n"
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.encode_frame(x)\n"
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.wrap_envelope_rul(x)\n"
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.iterate_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.scale_measure(x)\n"
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.mix_rotate(x)\n"
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.rotate_scale_gan(x)\n"
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.compute_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    # Wrap in the tamar envelope\n    tamar_envelope = bytesmith.encode_frame(x)\n    \n    # Wrap in the hizon envelope\n    hizon_envelope = bytesmith.wrap_envelope_rul(tamar_envelope)\n    \n    return hizon_envelope\n"
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    # Wrap in the hizon envelope\n    hizon_envelope = bytesmith.wrap_envelope_rul(x)\n    \n    # Wrap in the tamar envelope\n    tamar_envelope = bytesmith.encode_frame(hizon_envelope)\n    \n    return tamar_envelope\n"
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    wrapped = bytesmith.wrap_envelope_rul(x)\n    digest = bytesmith.rolling_hash(wrapped)\n    return round(digest, 4)\n"
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    # Apply nidex shuffle\n    nidex_result = bytesmith.rotate_scale_gan(x)\n    \n    # Apply lishon shuffle\n    lishon_result = bytesmith.mix_rotate(nidex_result)\n    \n    return lishon_result\n"
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import bytesmith\n\ndef solve(x):\n    # Wrap the input string in the hizon envelope\n    wrapped = bytesmith.wrap_envelope_rul(x)\n    \n    # Compute the miru digest of the wrapped string\n    digest = bytesmith.compute_digest(wrapped)\n    \n    return digest\n"
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return framely.fold_digits(x)\n"
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    return framely.frame_payload(x)\n"
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return framely.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    return framely.mix_rotate(x)\n"
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    return framely.weighted_checksum(x)\n"
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    return framely.convert_units(x)\n"
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    return framely.compute_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    # Apply the ploar shuffle\n    ploar_result = framely.mix_rotate(x)\n    \n    # Apply the hizex shuffle\n    hizex_result = framely.rotate_scale(ploar_result)\n    \n    return hizex_result\n"
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    # Wrap the input string in the hizex envelope\n    hizex_envelope = framely.wrap_packet(x)\n    \n    # Compute the jular digest of the wrapped string\n    jular_digest = framely.compute_digest(hizex_envelope)\n    \n    return jular_digest\n"
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    # Wrap the input string in the julex envelope\n    julex_envelope = framely.frame_payload(x)\n    \n    # Compute the jular digest of the julex envelope\n    jular_digest = framely.compute_digest(julex_envelope)\n    \n    return jular_digest\n"
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    # Compute the jular digest of x\n    jular_digest = framely.compute_digest(x)\n    \n    # Compute the ploex fold of the jular digest\n    ploex_fold = framely.fold_digits(jular_digest)\n    \n    return ploex_fold\n"
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import framely\n\ndef solve(x):\n    # Wrap the input string in the hizex envelope\n    hizex_envelope = framely.wrap_packet(x)\n    \n    # Compute the voron digest of the hizex envelope\n    voron_digest = framely.weighted_checksum(hizex_envelope)\n    \n    return voron_digest\n"
+  }
+ ]
+}

@@ -104,9 +104,15 @@ every rung, and realism is the recorded external-validity cost, not a hidden one
 
 ## 10. Threats and limits (carried on every claim)
 
-- **External validity:** synthetic micro-APIs built from five semantic template families by
-  one generator; transfer to real library documentation is argued (§9), not measured. This is
-  the instrument's largest limit and the first item on its follow-on list.
+- **External validity — MEASURED (stage-V, 2026-09-15; `e5-fab-external-validity.md`):** the
+  headline pattern (collapse at the cliff, calibration rescue) is invariant to generator seed
+  (4 generations: depth −40.8 ± 2.5 pp, rescue +37.9 ± 4.6 pp), documentation format
+  (Sphinx/reST: pattern intact, and the terse-page fixation abolished — mechanism refinement),
+  name realism (realistic API names: closed-book stays exactly 0.000 everywhere — necessity
+  does not depend on name obscurity), and decoding regime (temp 0.2×3: Q2 collapse identical).
+  The remaining unmeasured gap is real post-cutoff libraries and repository-scale context,
+  recorded as the paper's future work (necessity there is unverifiable by construction — the
+  reason FAB exists).
 - **Statistical:** n = 120 per cell, one seed, temperature 0 only; effects below roughly 8 pp
   are not reliably detectable; multiple comparisons uncorrected (headline effects survive any
   correction; fine-structure effects are labelled descriptive).

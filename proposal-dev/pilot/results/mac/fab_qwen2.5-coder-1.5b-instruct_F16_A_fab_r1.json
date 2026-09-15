@@ -1,0 +1,1098 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-instruct",
+  "rung": "F16",
+  "condition": "A",
+  "n": 120,
+  "pass@1": 0.0,
+  "pass_single": 0.0,
+  "pass_chain": 0.0,
+  "fab_dir": "fab_r1",
+  "docs_variant": null,
+  "temperature": 0.0,
+  "samples": 1,
+  "tasks_sha256": "857f2e086c37e007"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "   assert solve(13.05) == 59.5685\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return coreforge.convert(x, 'tamex', 'result_unit')\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'convert'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    return coreforge.convert(x, 'tamex', 'result_unit')\n"
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "sert solve([3, 8, 10]) == [40, 10, 3]\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return coreforge.fexu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'fexu_shuffle'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    return coreforge.fexu_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "1vf4a/sol.py\", line 8, in <module>\n    assert solve(6503) == 132\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return coreforge.kevex(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'kevex'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    return coreforge.kevex(x)\n"
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "20, 16, 35, 13, 14]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return coreforge.saron_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'saron_shuffle'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    return coreforge.saron_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "e 8, in <module>\n    assert solve('exhhedwbxb5') == 133\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return coreforge.kevex(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'kevex'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    return coreforge.kevex(x)\n"
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "n <module>\n    assert solve('4cwy') == 43\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return coreforge.tokex_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'tokex_digest'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    return coreforge.tokex_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "4;9'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return coreforge.nidar_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'nidar_envelope'. Did you mean: 'wrap_envelope'?\n",
+   "code": "import coreforge\n\ndef solve(x):\n    return coreforge.nidar_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " line 15, in <module>\n    assert solve('gaag5') == 129\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = coreforge.wrap(x)\n                ^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'wrap'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    # Wrap in the nidar envelope\n    wrapped_x = coreforge.wrap(x)\n    \n    # Compute the kevex digest\n    kevex_digest = coreforge.kevex(wrapped_x)\n    \n    # Return the final value\n    return kevex_digest\n"
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    mirar_envelope = coreforge.wrap_in_mirar_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'wrap_in_mirar_envelope'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    # Wrap in the mirar envelope\n    mirar_envelope = coreforge.wrap_in_mirar_envelope(x)\n    \n    # Wrap in the nidar envelope\n    nidar_envelope = coreforge.wrap_in_nidar_envelope(mirar_envelope)\n    \n    # Return the final value\n    return nidar_envelope\n"
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    envelope = coreforge.wrap_in_mirar_envelope(x)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'wrap_in_mirar_envelope'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    # Wrap in the mirar envelope\n    envelope = coreforge.wrap_in_mirar_envelope(x)\n    \n    # Compute the kevex digest\n    kevex_digest = coreforge.compute_kevex_digest(envelope)\n    \n    # Return the final value\n    return kevex_digest\n"
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "solve([0, 16, 10, 1]) == [50, 1, 0, 80]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    x = coreforge.fexu_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'fexu_shuffle'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    # Apply fexu shuffle\n    x = coreforge.fexu_shuffle(x)\n    # Apply saron shuffle\n    x = coreforge.saron_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "5, in <module>\n    assert solve('') == 76\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    digest = coreforge.kevex_digest(x)\n             ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'coreforge' has no attribute 'kevex_digest'\n",
+   "code": "import coreforge\n\ndef solve(x):\n    # Compute the kevex digest of x\n    digest = coreforge.kevex_digest(x)\n    \n    # Compute the kevex fold of the digest\n    fold = coreforge.kevex_fold(digest)\n    \n    # Return the final value\n    return fold\n"
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " <module>\n    assert solve(-3.67) == -18.9227\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return digestix.saron_to_son(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'saron_to_son'\n",
+   "code": "import digestix\n\ndef solve(x):\n    return digestix.saron_to_son(x)\n"
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "line 8, in <module>\n    assert solve('g') == 95\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return digestix.zoron_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'zoron_digest'\n",
+   "code": "import digestix\n\ndef solve(x):\n    return digestix.zoron_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "l.py\", line 8, in <module>\n    assert solve(4265) == 31\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return digestix.baxu_fold(x)\n           ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'baxu_fold'\n",
+   "code": "import digestix\n\ndef solve(x):\n    return digestix.baxu_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "hyd1vf4a/sol.py\", line 8, in <module>\n    assert solve('cdad') == 81\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return digestix.tamu(x)\n           ^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'tamu'\n",
+   "code": "import digestix\n\ndef solve(x):\n    return digestix.tamu(x)\n"
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "5, 4]) == [25, 4, 13, 20, 5, 1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return digestix.baxu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'baxu_shuffle'\n",
+   "code": "import digestix\n\ndef solve(x):\n    return digestix.baxu_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "in <module>\n    assert solve('gfmcwz05a') == '9^gfmcwz05a^4'\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return digestix.kevar(x)\n           ^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'kevar'\n",
+   "code": "import digestix\n\ndef solve(x):\n    return digestix.kevar(x)\n"
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " assert solve('b5e0rm') == '6^b5e0rm^8'\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return digestix.wrap_in_tokex(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'wrap_in_tokex'\n",
+   "code": "import digestix\n\ndef solve(x):\n    return digestix.wrap_in_tokex(x)\n"
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "odule>\n    assert solve('y') == 22\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = digestix.wrap_in_kevar(x)\n                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'wrap_in_kevar'\n",
+   "code": "import digestix\n\ndef solve(x):\n    # Wrap in the kevar envelope\n    wrapped_x = digestix.wrap_in_kevar(x)\n    \n    # Compute the zoron digest\n    zoron_digest = digestix.compute_zoron_digest(wrapped_x)\n    \n    # Return the final value\n    return zoron_digest\n"
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "\n    assert solve('cagq') == 78\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = digestix.wrap_in_kevar(x)\n                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'wrap_in_kevar'\n",
+   "code": "import digestix\n\ndef solve(x):\n    # Wrap in the kevar envelope\n    wrapped_x = digestix.wrap_in_kevar(x)\n    \n    # Compute the tamu digest\n    tamu_digest = digestix.compute_tamu_digest(wrapped_x)\n    \n    return tamu_digest\n"
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " solve('mg5nzped') == '15^8^mg5nzped^8^6'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    kevar_envelope = digestix.kevar(x)\n                     ^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'kevar'\n",
+   "code": "import digestix\n\ndef solve(x):\n    # Wrap in the kevar envelope\n    kevar_envelope = digestix.kevar(x)\n    \n    # Wrap in the tokex envelope\n    tokex_envelope = digestix.tokex(kevar_envelope)\n    \n    # Return the final value\n    return tokex_envelope\n"
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "l.py\", line 15, in <module>\n    assert solve('4aan') == 48\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = digestix.wrap(x)\n                ^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'wrap'\n",
+   "code": "import digestix\n\ndef solve(x):\n    # Wrap in the tokex envelope\n    wrapped_x = digestix.wrap(x)\n    \n    # Compute the zoron digest\n    zoron_digest = digestix.zoron(wrapped_x)\n    \n    # Return the final value\n    return zoron_digest\n"
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "y\", line 10, in <module>\n    assert solve('h') == 41\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    zoron_digest = digestix.zoron(x)\n                   ^^^^^^^^^^^^^^\nAttributeError: module 'digestix' has no attribute 'zoron'\n",
+   "code": "import digestix\n\ndef solve(x):\n    zoron_digest = digestix.zoron(x)\n    baxu_fold = digestix.baxu(zoron_digest)\n    return baxu_fold\n"
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " solve('npgkrcy') == '10^npgkrcy^2'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return chunkify.baxex_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'baxex_envelope'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    return chunkify.baxex_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "8, in <module>\n    assert solve('q4y') == 142\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return chunkify.vorar_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'vorar_digest'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    return chunkify.vorar_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "y\", line 8, in <module>\n    assert solve(7630) == 63\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return chunkify.zorex_fold(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'zorex_fold'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    return chunkify.zorex_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "e>\n    assert solve('cdb') == '3|cdb|7'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return chunkify.quenu_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'quenu_envelope'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    return chunkify.quenu_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ol.py\", line 8, in <module>\n    assert solve('4bqabz4fx') == 51\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return chunkify.miru(x)\n           ^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'miru'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    return chunkify.miru(x)\n"
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ", 5, -9]) == [6, -8, 5, 9, 8]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return chunkify.tokon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'tokon_shuffle'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    return chunkify.tokon_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " -1, 14, -16, -3, -1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return chunkify.tokar_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'tokar_shuffle'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    return chunkify.tokar_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "   assert solve('5zyze') == '12|5^5zyze^0|1'\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    baxex_envelope = chunkify.baxex(x)\n                     ^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'baxex'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    # Wrap in the baxex envelope\n    baxex_envelope = chunkify.baxex(x)\n    \n    # Wrap in the quenu envelope\n    quenu_envelope = chunkify.quenu(baxex_envelope)\n    \n    # Return the final value\n    return quenu_envelope\n"
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ">\n    assert solve('5b') == 36\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    vorar_digest = chunkify.vorar_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'vorar_digest'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    vorar_digest = chunkify.vorar_digest(x)\n    zorex_fold = chunkify.zorex_fold(vorar_digest)\n    return zorex_fold\n"
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " line 15, in <module>\n    assert solve('y') == 43\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = chunkify.envelope(x)\n                ^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'envelope'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    # Wrap in the quenu envelope\n    wrapped_x = chunkify.envelope(x)\n    \n    # Compute the miru digest\n    miru_digest = chunkify.digest(wrapped_x)\n    \n    # Return the final value\n    return miru_digest\n"
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "l.py\", line 10, in <module>\n    assert solve('ng') == 54\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    miru_digest = chunkify.miru(x)\n                  ^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'miru'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    miru_digest = chunkify.miru(x)\n    zorex_fold = chunkify.zorex(miru_digest)\n    return zorex_fold\n"
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "in <module>\n    assert solve('f4mkd5') == 97\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = chunkify.envelope(x)\n                ^^^^^^^^^^^^^^^^^\nAttributeError: module 'chunkify' has no attribute 'envelope'\n",
+   "code": "import chunkify\n\ndef solve(x):\n    # Wrap in the quenu envelope\n    wrapped_x = chunkify.envelope(x)\n    \n    # Compute the vorar digest\n    vorar_digest = chunkify.vorar(wrapped_x)\n    \n    # Return the final value\n    return vorar_digest\n"
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "1, 10, 13, 14]) == [-1, 10, 13, 14]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return textura.sarex_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'sarex_shuffle'\n",
+   "code": "import textura\n\ndef solve(x):\n    return textura.sarex_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " -1]) == [90, 9, -1, 6, 25, 1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return textura.baxon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'baxon_shuffle'\n",
+   "code": "import textura\n\ndef solve(x):\n    return textura.baxon_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " assert solve('grnzar') == '6;grnzar;4'\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return textura.vorar_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'vorar_envelope'\n",
+   "code": "import textura\n\ndef solve(x):\n    return textura.vorar_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ", in <module>\n    assert solve('wkk4b') == 167\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return textura.quenu_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'quenu_digest'\n",
+   "code": "import textura\n\ndef solve(x):\n    return textura.quenu_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "y\", line 8, in <module>\n    assert solve(7520) == 71\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return textura.lishon_fold(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'lishon_fold'\n",
+   "code": "import textura\n\ndef solve(x):\n    return textura.lishon_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "    assert solve('qqm4f') == '5~qqm4f~5'\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return textura.nidex_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'nidex_envelope'\n",
+   "code": "import textura\n\ndef solve(x):\n    return textura.nidex_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "\", line 8, in <module>\n    assert solve('xhnnqkbabme') == 115\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return textura.zorex(x)\n           ^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'zorex'\n",
+   "code": "import textura\n\ndef solve(x):\n    return textura.zorex(x)\n"
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "py\", line 15, in <module>\n    assert solve('xyzyeehr') == 227\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped = textura.wrap(x)\n              ^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'wrap'\n",
+   "code": "import textura\n\ndef solve(x):\n    # Wrap in the vorar envelope\n    wrapped = textura.wrap(x)\n    \n    # Compute the quenu digest\n    quenu_digest = textura.quenu(wrapped)\n    \n    # Return the final value\n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ", 13, 8]) == [-10, 1, 65, 13, -8, 7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    x = textura.baxon_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'baxon_shuffle'\n",
+   "code": "import textura\n\ndef solve(x):\n    # Apply the baxon shuffle to x\n    x = textura.baxon_shuffle(x)\n    # Apply the sarex shuffle to the result\n    x = textura.sarex_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "   assert solve('emrdp') == 57\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = textura.nidex_envelope(x)\n                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'nidex_envelope'\n",
+   "code": "import textura\n\ndef solve(x):\n    # Wrap in the nidex envelope\n    wrapped_x = textura.nidex_envelope(x)\n    \n    # Compute the zorex digest\n    zorex_digest = textura.zorex_digest(wrapped_x)\n    \n    # Return the final value\n    return zorex_digest\n"
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " solve([-6, 14, 3, 15]) == [75, 6, 14, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    x = textura.sarex_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'sarex_shuffle'\n",
+   "code": "import textura\n\ndef solve(x):\n    # Apply sarex shuffle\n    x = textura.sarex_shuffle(x)\n    # Apply baxon shuffle\n    x = textura.baxon_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "module>\n    assert solve('pfzb5n dwgn') == 71\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    quenu_digest = textura.quenu(x)\n                   ^^^^^^^^^^^^^\nAttributeError: module 'textura' has no attribute 'quenu'\n",
+   "code": "import textura\n\ndef solve(x):\n    quenu_digest = textura.quenu(x)\n    lishon_fold = textura.lishon(quenu_digest)\n    return lishon_fold\n"
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "qrpqkc~8'\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return flowdesk.wrap_in_rulon_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'wrap_in_rulon_envelope'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.wrap_in_rulon_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "y\", line 8, in <module>\n    assert solve(4276) == 61\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return flowdesk.jular_fold(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'jular_fold'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.jular_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ", -10, 18, -40, 6]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return flowdesk.fexon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'fexon_shuffle'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.fexon_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ine 8, in <module>\n    assert solve('') == 29\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return flowdesk.quenex_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'quenex_digest'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.quenex_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "'6;whpxmg;8'\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return flowdesk.wrap_in_tokon_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'wrap_in_tokon_envelope'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.wrap_in_tokon_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "dule>\n    assert solve(78.93) == 206.7213\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return flowdesk.convert(x, 'druex', 'metric')\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'convert'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.convert(x, 'druex', 'metric')\n"
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "<module>\n    assert solve('qagkfxb ') == 15\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return flowdesk.hizu_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'hizu_digest'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    return flowdesk.hizu_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "module>\n    assert solve('f') == 0\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = flowdesk.wrap_in_tokon(x)\n                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'wrap_in_tokon'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    # Wrap in the tokon envelope\n    wrapped_x = flowdesk.wrap_in_tokon(x)\n    \n    # Compute the quenex digest\n    quenex_digest = flowdesk.compute_quenex_digest(wrapped_x)\n    \n    # Return the final value\n    return quenex_digest\n"
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "'ehzhkb5rb') == 93\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    quenex_digest = flowdesk.quenex_digest(x)\n                    ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'quenex_digest'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    # Compute the quenex digest of x\n    quenex_digest = flowdesk.quenex_digest(x)\n    \n    # Compute the jular fold of the quenex digest\n    jular_fold = flowdesk.jular_fold(quenex_digest)\n    \n    # Return the final value\n    return jular_fold\n"
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ", -20, 12, 90, 0, 15, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    x = flowdesk.fexon_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'fexon_shuffle'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    # Apply fexon shuffle to x\n    x = flowdesk.fexon_shuffle(x)\n    # Apply fexon shuffle to the result\n    x = flowdesk.fexon_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "<module>\n    assert solve('e') == 97\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    hizu_digest = flowdesk.hizu_digest(x)\n                  ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'hizu_digest'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    hizu_digest = flowdesk.hizu_digest(x)\n    jular_fold = flowdesk.jular_fold(hizu_digest)\n    return jular_fold\n"
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "('x') == 13\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped = flowdesk.wrap_in_rulon_envelope(x)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'wrap_in_rulon_envelope'\n",
+   "code": "import flowdesk\n\ndef solve(x):\n    # Wrap in the rulon envelope\n    wrapped = flowdesk.wrap_in_rulon_envelope(x)\n    \n    # Compute the hizu digest\n    hizu_digest = flowdesk.compute_hizu_digest(wrapped)\n    \n    # Return the final value\n    return hizu_digest\n"
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "\", line 8, in <module>\n    assert solve(6784) == 103\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return netquill.tamon_fold(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'tamon_fold'\n",
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.tamon_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "/sol.py\", line 8, in <module>\n    assert solve('fqk') == '3^fqk^8'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return netquill.hizex(x)\n           ^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'hizex'\n",
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.hizex(x)\n"
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "dule>\n    assert solve(96.24) == 597.2008\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return netquill.convert(x, 'tamon', 'result')\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'convert'\n",
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.convert(x, 'tamon', 'result')\n"
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "solve([-1, 15, 11]) == [1, 15, -11]\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return netquill.rulon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'rulon_shuffle'\n",
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.rulon_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "e 8, in <module>\n    assert solve('4f') == 193\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return netquill.quenu_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'quenu_digest'\n",
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.quenu_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "<module>\n    assert solve('yyqygq') == 132\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return netquill.ganex_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'ganex_digest'\n",
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.ganex_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " 17, 3, -6]) == [-17, 3, -6, -2]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return netquill.palon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'palon_shuffle'\n",
+   "code": "import netquill\n\ndef solve(x):\n    return netquill.palon_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ne 15, in <module>\n    assert solve('4my0') == 181\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    julu_envelope = netquill.wrap(x)\n                    ^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'wrap'\n",
+   "code": "import netquill\n\ndef solve(x):\n    # Wrap in the julu envelope\n    julu_envelope = netquill.wrap(x)\n    \n    # Compute the quenu digest\n    quenu_digest = netquill.quenu(julu_envelope)\n    \n    # Return the final value\n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "dule>\n    assert solve('dbn') == '7|3^dbn^8|4'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    hizex_envelope = netquill.hizex(x)\n                     ^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'hizex'\n",
+   "code": "import netquill\n\ndef solve(x):\n    # Wrap in the hizex envelope\n    hizex_envelope = netquill.hizex(x)\n    \n    # Wrap in the julu envelope\n    julu_envelope = netquill.julu(hizex_envelope)\n    \n    # Return the final value\n    return julu_envelope\n"
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "11]) == [-1, 11, 1]\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    palon_result = netquill.palon_shuffle(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'palon_shuffle'\n",
+   "code": "import netquill\n\ndef solve(x):\n    # Apply palon shuffle\n    palon_result = netquill.palon_shuffle(x)\n    \n    # Apply rulon shuffle\n    rulon_result = netquill.rulon_shuffle(palon_result)\n    \n    return rulon_result\n"
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "module>\n    assert solve('4wpy4naqp') == 110\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    quenu_digest = netquill.quenu(x)\n                   ^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'quenu'\n",
+   "code": "import netquill\n\ndef solve(x):\n    # Compute the quenu digest of x\n    quenu_digest = netquill.quenu(x)\n    \n    # Compute the tamon fold of the quenu digest\n    tamon_fold = netquill.tamon_fold(quenu_digest)\n    \n    # Return the final value\n    return tamon_fold\n"
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ", in <module>\n    assert solve('xbfa') == 146\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    hizex_envelope = netquill.hizex(x)\n                     ^^^^^^^^^^^^^^\nAttributeError: module 'netquill' has no attribute 'hizex'\n",
+   "code": "import netquill\n\ndef solve(x):\n    # Wrap in the hizex envelope\n    hizex_envelope = netquill.hizex(x)\n    \n    # Compute the quenu digest\n    quenu_digest = netquill.quenu(hizex_envelope)\n    \n    # Return the final value\n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "= '1|b|6'\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return streamkit.baxu_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'baxu_envelope'. Did you mean: 'wrap_envelope'?\n",
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.baxu_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "line 8, in <module>\n    assert solve('z') == 52\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return streamkit.voru_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'voru_digest'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.voru_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "rt solve([0, 8, 14]) == [0, 8, 14]\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return streamkit.zoron_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'zoron_shuffle'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.zoron_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ule>\n    assert solve('efzkr0f') == 75\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return streamkit.mirar_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'mirar_digest'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.mirar_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " <module>\n    assert solve(-17.58) == -116.7454\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return streamkit.convert(x, 'sarex')\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'convert'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.convert(x, 'sarex')\n"
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " line 8, in <module>\n    assert solve(4536) == 18\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return streamkit.polar_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'polar_fold'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.polar_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "n <module>\n    assert solve('hpqkceqh') == '10;hpqkceqh;4'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return streamkit.zorex(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'zorex'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    return streamkit.zorex(x)\n"
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "= [42, 4, 12, 11, -36, -2]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    x = streamkit.zoron_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'zoron_shuffle'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    # Apply zoron shuffle to x\n    x = streamkit.zoron_shuffle(x)\n    # Apply zoron shuffle to the result\n    x = streamkit.zoron_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "'rphrke4xfx') == 26\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    mirar_digest = streamkit.mirar_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'mirar_digest'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    mirar_digest = streamkit.mirar_digest(x)\n    polar_fold = streamkit.polar_fold(mirar_digest)\n    return polar_fold\n"
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "le>\n    assert solve('00eddd0p') == 98\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    zorex_envelope = streamkit.zorex(x)\n                     ^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'zorex'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    # Wrap in the zorex envelope\n    zorex_envelope = streamkit.zorex(x)\n    \n    # Compute the mirar digest\n    mirar_digest = streamkit.mirar(zorex_envelope)\n    \n    # Return the final value\n    return mirar_digest\n"
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "5, in <module>\n    assert solve('5ngxk') == 52\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    baxu_envelope = streamkit.baxu(x)\n                    ^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'baxu'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    # Wrap in the baxu envelope\n    baxu_envelope = streamkit.baxu(x)\n    \n    # Compute the mirar digest\n    mirar_digest = streamkit.mirar(baxu_envelope)\n    \n    # Return the final value\n    return mirar_digest\n"
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " assert solve('qzgnb') == '9|5;qzgnb;0|4'\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    zerox_envelope = streamkit.zerox(x)\n                     ^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'zerox'\n",
+   "code": "import streamkit\n\ndef solve(x):\n    # Wrap in the zerox envelope\n    zerox_envelope = streamkit.zerox(x)\n    \n    # Wrap in the baxu envelope\n    baxu_envelope = streamkit.baxu(zerox_envelope)\n    \n    # Return the final value\n    return baxu_envelope\n"
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "line 8, in <module>\n    assert solve('ph') == 108\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return signalio.julu_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'julu_digest'\n",
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.julu_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "y\", line 8, in <module>\n    assert solve('wpxk') == '4;wpxk;6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return signalio.lishex(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'lishex'\n",
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.lishex(x)\n"
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " 8, in <module>\n    assert solve('0q4') == 29\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return signalio.saron_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'saron_digest'\n",
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.saron_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "dule>\n    assert solve('new440') == '6^new440^2'\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return signalio.vorono_env(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'vorono_env'\n",
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.vorono_env(x)\n"
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "y\", line 8, in <module>\n    assert solve(1622) == 32\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return signalio.nidar_fold(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'nidar_fold'\n",
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.nidar_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ", 0, -6, -15, 7, 6, 60]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return signalio.baxex_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'baxex_shuffle'\n",
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.baxex_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "8, in <module>\n    assert solve(-17.29) == -14.6678\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return signalio.convert(x, 'fexu')\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'convert'\n",
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.convert(x, 'fexu')\n"
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "sert solve([14, 18, -1]) == [210, 54, -1]\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    x = signalio.rulex_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'rulex_shuffle'\n",
+   "code": "import signalio\n\ndef solve(x):\n    # Apply rulex shuffle\n    x = signalio.rulex_shuffle(x)\n    # Apply baxex shuffle\n    x = signalio.baxex_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ") == '8^4;gmfr;6^6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    lishex_envelope = signalio.wrap_in_ishex(x)\n                      ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'wrap_in_ishex'\n",
+   "code": "import signalio\n\ndef solve(x):\n    # Wrap in the lishex envelope\n    lishex_envelope = signalio.wrap_in_ishex(x)\n    \n    # Wrap in the voron envelope\n    voron_envelope = signalio.wrap_in_voron(lishex_envelope)\n    \n    # Return the final value\n    return voron_envelope\n"
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " solve('qeyfpz5y') == 32\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    saron_digest = signalio.saron_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'saron_digest'\n",
+   "code": "import signalio\n\ndef solve(x):\n    # Compute the saron digest of x\n    saron_digest = signalio.saron_digest(x)\n    \n    # Compute the nidar fold of the saron digest\n    nidar_fold = signalio.nidar_fold(saron_digest)\n    \n    # Return the final value\n    return nidar_fold\n"
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "\n    assert solve('hcqca') == 32\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    julu_digest = signalio.julu_digest(x)\n                  ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'julu_digest'\n",
+   "code": "import signalio\n\ndef solve(x):\n    julu_digest = signalio.julu_digest(x)\n    nidar_fold = signalio.nidar_fold(julu_digest)\n    return nidar_fold\n"
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "/sol.py\", line 15, in <module>\n    assert solve('mkb') == 178\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    envelope = signalio.wrap(x)\n               ^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'wrap'\n",
+   "code": "import signalio\n\ndef solve(x):\n    # Wrap in the lishex envelope\n    envelope = signalio.wrap(x)\n    \n    # Compute the saron digest\n    saron_digest = signalio.saron(envelope)\n    \n    # Return the final value\n    return saron_digest\n"
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " '4^0ghz^0'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return bytesmith.wrap_in_tamar_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'wrap_in_tamar_envelope'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.wrap_in_tamar_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "olve('pgerqym') == '7~pgerqym~9'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return bytesmith.hizon_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'hizon_envelope'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.hizon_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "\", line 8, in <module>\n    assert solve(247) == 76\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return bytesmith.ploon_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'ploon_fold'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.ploon_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "\n    assert solve(-18.19) == -143.5041\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return bytesmith.convert(x, 'nidon', 'bytes')\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'convert'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.convert(x, 'nidon', 'bytes')\n"
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "4, -21, 5, -12, -7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return bytesmith.lishon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'lishon_shuffle'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.lishon_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " solve([-4, -3, 0]) == [3, 0, -4]\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return bytesmith.nidex_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'nidex_shuffle'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.nidex_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "in <module>\n    assert solve('yx0mhhqk') == 108\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return bytesmith.digest(x, 'miru')\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'digest'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    return bytesmith.digest(x, 'miru')\n"
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "g5a4wq4^0~5'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    tamar_envelope = bytesmith.wrap_in_tamar(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'wrap_in_tamar'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    # Wrap in the tamar envelope\n    tamar_envelope = bytesmith.wrap_in_tamar(x)\n    \n    # Wrap in the hizon envelope\n    hizon_envelope = bytesmith.wrap_in_hizon(tamar_envelope)\n    \n    # Return the final value\n    return hizon_envelope\n"
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "lve('akryzype') == '15^8~akryzype~6^0'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    hizon_envelope = bytesmith.hizon(x)\n                     ^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'hizon'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    # Wrap in the hizon envelope\n    hizon_envelope = bytesmith.hizon(x)\n    \n    # Wrap in the tamar envelope\n    tamar_envelope = bytesmith.tamar(hizon_envelope)\n    \n    # Return the final value\n    return tamar_envelope\n"
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " 14, in <module>\n    assert solve('reacyzzqqm') == 39\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped = bytesmith.wrap(x)\n              ^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'wrap'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    # Wrap in the hizon envelope\n    wrapped = bytesmith.wrap(x)\n    \n    # Compute the quenon digest\n    digest = bytesmith.quenon(wrapped)\n    \n    return digest\n"
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    nidex_result = bytesmith.nidex_shuffle(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'nidex_shuffle'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    # Apply nidex shuffle\n    nidex_result = bytesmith.nidex_shuffle(x)\n    \n    # Apply lishon shuffle\n    final_result = bytesmith.lishon_shuffle(nidex_result)\n    \n    return final_result\n"
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "1vf4a/sol.py\", line 14, in <module>\n    assert solve('') == 140\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped = bytesmith.wrap(x)\n              ^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'wrap'\n",
+   "code": "import bytesmith\n\ndef solve(x):\n    # Wrap in the hizon envelope\n    wrapped = bytesmith.wrap(x)\n    \n    # Compute the miru digest\n    miru_digest = bytesmith.digest(wrapped, 'miru')\n    \n    return miru_digest\n"
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "/tmphyd1vf4a/sol.py\", line 8, in <module>\n    assert solve(1124) == 57\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return framely.ploex(x)\n           ^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'ploex'\n",
+   "code": "import framely\n\ndef solve(x):\n    return framely.ploex(x)\n"
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "/tmphyd1vf4a/sol.py\", line 8, in <module>\n    assert solve('') == '0||0'\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return framely.julex(x)\n           ^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'julex'\n",
+   "code": "import framely\n\ndef solve(x):\n    return framely.julex(x)\n"
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "n <module>\n    assert solve('exrw5bnzn0') == '13^exrw5bnzn0^0'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return framely.hizex(x)\n           ^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'hizex'\n",
+   "code": "import framely\n\ndef solve(x):\n    return framely.hizex(x)\n"
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ve([1, -8, -7, 4]) == [2, -8, -7, 4]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return framely.polar_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'polar_shuffle'\n",
+   "code": "import framely\n\ndef solve(x):\n    return framely.polar_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "<module>\n    assert solve('bfchcxfz') == 60\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return framely.voron_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'voron_digest'\n",
+   "code": "import framely\n\ndef solve(x):\n    return framely.voron_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " <module>\n    assert solve(93.41) == 356.0032\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return framely.convert(x, 'vekex', 'units')\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'convert'\n",
+   "code": "import framely\n\ndef solve(x):\n    return framely.convert(x, 'vekex', 'units')\n"
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " <module>\n    assert solve(' rmcqzxn') == 2\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 5, in solve\n    return framely.jular_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'jular_digest'\n",
+   "code": "import framely\n\ndef solve(x):\n    return framely.jular_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "   assert solve([3, -6, -1]) == [-12, -1, 12]\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    x = framely.ploar_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'ploar_shuffle'\n",
+   "code": "import framely\n\ndef solve(x):\n    # Apply the ploar shuffle to x\n    x = framely.ploar_shuffle(x)\n    # Apply the hizex shuffle to the result\n    x = framely.hizex_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "line 15, in <module>\n    assert solve('4b') == 126\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    hizex_envelope = framely.hizex(x)\n                     ^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'hizex'\n",
+   "code": "import framely\n\ndef solve(x):\n    # Wrap in the hizex envelope\n    hizex_envelope = framely.hizex(x)\n    \n    # Compute the jular digest\n    jular_digest = framely.jular(hizex_envelope)\n    \n    # Return the final value\n    return jular_digest\n"
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "mphyd1vf4a/sol.py\", line 15, in <module>\n    assert solve('g') == 16\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped = framely.wrap(x)\n              ^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'wrap'\n",
+   "code": "import framely\n\ndef solve(x):\n    # Wrap in the julex envelope\n    wrapped = framely.wrap(x)\n    \n    # Compute the jular digest\n    digest = framely.digest(wrapped)\n    \n    # Return the final value\n    return digest\n"
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "module>\n    assert solve('wa egn5m4hx') == 66\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    jular_digest = framely.jular(x)\n                   ^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'jular'\n",
+   "code": "import framely\n\ndef solve(x):\n    # Compute the jular digest of x\n    jular_digest = framely.jular(x)\n    \n    # Compute the ploex fold of the jular digest\n    ploex_fold = framely.ploex(jular_digest)\n    \n    # Return the final value\n    return ploex_fold\n"
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " line 15, in <module>\n    assert solve('rcxkhba') == 15\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmphyd1vf4a/sol.py\", line 6, in solve\n    wrapped_x = framely.hizex(x)\n                ^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'hizex'\n",
+   "code": "import framely\n\ndef solve(x):\n    # Wrap in the hizex envelope\n    wrapped_x = framely.hizex(x)\n    \n    # Compute the voron digest\n    voron_digest = framely.voron(wrapped_x)\n    \n    # Return the final value\n    return voron_digest\n"
+  }
+ ]
+}

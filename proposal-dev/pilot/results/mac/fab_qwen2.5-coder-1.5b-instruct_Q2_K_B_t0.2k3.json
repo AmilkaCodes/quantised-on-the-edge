@@ -1,0 +1,1098 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-instruct",
+  "rung": "Q2_K",
+  "condition": "B",
+  "n": 120,
+  "pass@1": 0.592,
+  "pass_single": 0.638,
+  "pass_chain": 0.527,
+  "fab_dir": "fab",
+  "docs_variant": null,
+  "temperature": 0.2,
+  "samples": 3,
+  "tasks_sha256": "e656806088093f95"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.baxgan_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    return sardrulib.quenmir_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sardrulib.rulvor_op(x)\n"
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sardrulib.rulpal_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import sardrulib\n    \n    # Use the function to compute the nidu digest of x\n    return sardrulib.fexquen(x)\n"
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in <module>\n    assert solve('gq0wheg') == 180\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    import sardrulib\r\n    return sardrulib.rulzor_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "3, in <module>\n    assert solve('') == 37\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 4, in solve\n    palon_digest = sardrulib.palon_fx(x)\n                   ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'palon_fx'\n",
+   "code": "def solve(x):\n    # First, compute the palon digest of x\n    palon_digest = sardrulib.palon_fx(x)\n    \n    # Then, compute the miru fold of the palon digest\n    miru_fold = sardrulib.rulvor_op(palon_digest)\n    \n    # Return the final value\n    return miru_fold\n"
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "ve('pdxqxbwm4q ') == 37\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 4, in solve\n    nidu_digest = sardrulib.nidu_digest(x)\n                  ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'nidu_digest'\n",
+   "code": "def solve(x):\n    # First, compute the nidu digest of x\n    nidu_digest = sardrulib.nidu_digest(x)\n    \n    # Then, compute the miru fold of the nidu digest\n    miru_fold = sardrulib.rulvor_op(nidu_digest)\n    \n    # Return the final value\n    return miru_fold\n"
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": " 18, 7]) == [450, 35, 6, -5, 18]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 4, in solve\n    x = sardrulib.kevex_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevex_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the kevex shuffle to the list\n    x = sardrulib.kevex_shuffle(x)\n    # Apply the quenu shuffle to the list\n    x = sardrulib.quenu_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the plou envelope\n    plou_envelope = sardrulib.rulzor_fx(x)\n    \n    # Wrap in the tokon envelope\n    tokon_envelope = sardrulib.rulpal_fx(plou_envelope)\n    \n    return tokon_envelope\n"
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 11, in <module>\n    assert solve('b454qgz') == 36\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the plou envelope\n    sardrulib.rulzor_fx(x)\n    # Compute the nidu digest of the string\n    sardrulib.fexquen(x)\n    # Return the final value\n    return sardrulib.rulkev_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in <module>\n    assert solve(-54) == 56\n           ^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return veklishlib.vekmir_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import veklishlib\n    \n    # Convert the input string to its Tokon digest\n    return veklishlib.fexsar_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import veklishlib\n    import veklishlib\n    \n    # Apply palon shuffle to x\n    palon_shuffle_x = veklishlib.hizdru_dg(x)\n    \n    # Return the result\n    return palon_shuffle_x\n"
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    import veklishlib\n    return veklishlib.kevvek_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.tokdru_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    # Import the veklishlib library\n    import veklishlib\n    \n    # Use the julu digest function to compute the julu digest of the input string\n    return veklishlib.julpal_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 10, in <module>\n    assert solve('y5qexhpz') == '16|11|y5qexhpz|2|5'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap in the voru envelope\n    voru_envelope = veklishlib.kevvek_fx(x)\n    # Wrap in the nidon envelope\n    final_value = veklishlib.vekmir_cv(voru_envelope)\n    return final_value\n"
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    # Compute the tokon digest of the string\n    tokon_digest = veklishlib.fexsar_dg(x)\n    \n    # Compute the hizu fold of the string\n    hizu_fold = veklishlib.sarhiz_dg(tokon_digest)\n    \n    # Return the final value\n    return hizu_fold\n"
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the nidon envelope\n    nidon_envelope = veklishlib.kevvek_fx(x)\n    # Compute the tokon digest of the wrapped string\n    tokon_digest = veklishlib.fexsar_dg(nidon_envelope)\n    # Return the final value\n    return tokon_digest\n"
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in solve\n    jular_units = veklishlib.julapal_dg(x)\n                  ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'julapal_dg'. Did you mean: 'julpal_dg'?\n",
+   "code": "def solve(x):\n    # Import veklishlib\n    import veklishlib\n    \n    # Convert the input string to jular units\n    jular_units = veklishlib.julapal_dg(x)\n    \n    # Convert jular units to base scale\n    base_scale = veklishlib.plolish(jular_units)\n    \n    # Convert base scale to hizu fold\n    hizu_fold = veklishlib.sarhiz_dg(base_scale)\n    \n    # Return the final value\n    return hizu_fold\n"
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 5, in solve\n    palon_shuffle = veklishlib.palon_shuffle_dg(x)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'palon_shuffle_dg'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    palon_shuffle = veklishlib.palon_shuffle_dg(x)\n    zoron_shuffle = veklishlib.zoron_shuffle_du(palon_shuffle)\n    return zoron_shuffle\n"
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    import vorjullib\r\n    return vorjullib.kevbax_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    return vorjullib.palsar_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return vorjullib.palpal(x)\n"
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.palvor_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import vorjullib\n\ndef solve(x):\n    zoru_envelope = vorjullib.baxkev_cv(x)\n    return zoru_envelope\n"
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    def vorjullib_vorhiz_dg(s):\n        return vorjullib.vorhiz_dg(s)\n    \n    def vorjullib_palpal(s):\n        return vorjullib.palpal(s)\n    \n    def vorjullib_kevbax_dg(s):\n        return vorjullib.kevbax_dg(s)\n    \n    miru_digest = vorjullib.vorhiz_dg(x)\n    return miru_digest\n"
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "",
+   "code": "def solve(x):\n    # Apply the ganu shuffle to the list of integers\n    return vorjullib.zorvek_op(x)\n"
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the string in the fexon envelope\n    wrapped_string = vorjullib.kevbax_dg(x)\n    \n    # Compute the miru digest\n    miru_digest = vorjullib.vorhiz_dg(wrapped_string)\n    \n    # Return the final value\n    return miru_digest\n"
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the fexon envelope\n    fexon_envelope = vorjullib.kevbax_dg(x)\n    # Wrap in the zoru envelope\n    zorvek_envelope = vorjullib.baxkev_cv(fexon_envelope)\n    return zorvek_envelope\n"
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "= [8, -1, 8, -9]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 4, in solve\n    ganu_shuffle = vorjullib.ganu_shuffle(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'ganu_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the ganu shuffle to the input list\n    ganu_shuffle = vorjullib.ganu_shuffle(x)\n    \n    # Apply the saru shuffle to the ganu shuffled list\n    saru_shuffle = vorjullib.saru_shuffle(ganu_shuffle)\n    \n    # Return the final value after applying both shuffles\n    return saru_shuffle\n"
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import vorjullib\n\ndef solve(x):\n    # Apply the saru shuffle to the input list\n    x = vorjullib.tokrul(x)\n    \n    # Apply the ganu shuffle to the result of the saru shuffle\n    x = vorjullib.zorvek_op(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/vorjullib.py\", line 6, in <genexpr>\n    return (sum(ord(c) * w[i % 4] for i, c in enumerate(s)) + 30) % 97\n                ^^^^^^\nTypeError: ord() expected a character, but string of length 2 found\n",
+   "code": "def solve(x):\n    # Wrap the input string in the zoru envelope\n    zoru_envelope = vorjullib.zorvek_op(x)\n    \n    # Compute the miru digest of the zoru envelope\n    miru_digest = vorjullib.vorhiz_dg(zoru_envelope)\n    \n    return miru_digest\n"
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "     ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 9, in solve\n    rulex_envelope = quentamlib.ishvek_dg(x)\n                     ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'ishvek_dg'. Did you mean: 'lishvek_dg'?\n",
+   "code": "def solve(x):\n    # Wrap the input string in the tamon envelope\n    tamon_envelope = quentamlib.vekfex_cv(x)\n    tamon_envelope = tamon_envelope.replace('0', '0;').replace(';', ';;')\n    tamon_envelope = tamon_envelope.replace(';', ';;', 1)\n    \n    # Wrap the input string in the rulex envelope\n    rulex_envelope = quentamlib.ishvek_dg(x)\n    rulex_envelope = rulex_envelope.replace('0', '0;').replace(';', ';;')\n    rulex_envelope = rulex_envelope.replace(';', ';;', 1)\n    \n    # Return the tamon and rulex envelopes\n    return tamon_envelope, rulex_envelope\n"
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    # Import necessary library\n    import quentamlib\n\n    # Use the library to compute the ploon digest of x\n    ploon_digest = quentamlib.gantam_op(x)\n\n    # Return the result\n    return ploon_digest\n"
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return quentamlib.plonid_op(x)\n"
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": " 760.1984\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in solve\n    converted = quentamlib.ishmir_cv(x)\n                ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'ishmir_cv'. Did you mean: 'lishmir_cv'?\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import quentamlib\n\n    # Convert baxar units to base scale\n    converted = quentamlib.ishmir_cv(x)\n    return converted\n"
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": ", 9, 18]) == [18, 18, 20, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 6, in solve\n    return quentamlib.nidu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'nidu_shuffle'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    # Apply the nidu shuffle to the list of integers\n    return quentamlib.nidu_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    # Apply the quenon shuffle to the input list x\n    return quentamlib.fextok(x)\n"
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\nimport quentamlib\n\ndef solve(x):\n    tamon_envelope = quentamlib.vekfex_cv(x)\n    tamon_envelope = tamon_envelope.replace(' ', '')  # Remove spaces for the envelope\n    tamon_envelope = tamon_envelope.replace('0', '0;')  # Replace '0' with '0;'\n\n    tamon_envelope = tamon_envelope.replace('1', '1;')  # Replace '1' with '1;'\n\n    tamon_envelope = tamon_envelope.replace('2', '2;')  # Replace '2' with '2;'\n\n    tamon_envelope = tamon_envelope.replace('3', '3;')  # Replace '3' with '3;'\n\n    tamon_envelope = tamon_envelope.replace('4', '4;')  # Replace '4' with '4;'\n\n    tamon_envelope = tamon_envelope.replace('5', '5;')  # Replace '5' with '5;'\n\n    tamon_envelope = tamon_envelope.replace('6', '6;')  # Replace '6' with '6;'\n\n    tamon_envelope = tamon_envelope.replace('7', '7;')  # Replace '7' with '7;'\n\n    tamon_envelope = tamon_envelope.replace('8', '8;')  # Replace '8' with '8;'\n\n    tamon_envelope = tamon_envelope.replace('9', '9;')  # Replace '9' with '9;'\n\n    tamon_envelope = tamon_envelope.replace('0', '0;')  # Replace '0' with '0;'\n\n    tamon_envelope = tamon_envelope.replace('1', '1;')  # Replace '1' with '1;'\n\n    tamon_envelope = tamon_envelope.replace('2', '2;')  # Replace '2' with '2;'\n\n    tamon_envelope = tamon_envelope.replace('3', '3;')  # Replace '3' with '3;'\n\n    tamon_envelope = tamon_envelope.replace('4', '4;')  # Replace '4' with '4;'\n\n    tamon_envelope = tamon_envelope.replace('5', '5;')  # Replace '5' with '5;'\n\n    tamon_envelope = tamon_envelope.replace('6', '6;')  # Replace '6' with '6;'\n\n    tamon_envelope = tamon_envelope.replace('7', '7;')  # Replace '7' with '7;'\n\n    tamon_envelope = tamon_envelope.replace('8', '8;')  # Replace '8' with '8;'\n\n    tamon_envelope = tamon_envelope.replace('9', '9;')  # Replace '9' with '9;'\n\n    tamon_envelope = tamon_envelope.replace('0', '0;')  # Replace '0' with '0;'\n\n    tamon_envelope = tamon_envelope.replace('1', '1;')  # Replace '1' with '1;'\n\n    tamon_envelope = tamon_envelope.replace('2', '2;')  # Replace '2' with '2;'\n\n    tamon_envelope = tamon_envelope.replace('3', '3;')  # Replace '3' with '3;'\n\n    tamon_envelope = tamon_envelope.replace('4', '4;')  # Replace '4' with '4;'\n\n    tamon_envelope = tamon_envelope.replace('5', '5;')  # Replace '5' with '5;'\n\n    tamon_envelope = tamon_envelope.replace('6', '6;')  # Replace '6' with '6;'\n\n    tamon_envelope = tamon_envelope.replace('7', '7;')  # Replace '7' with '7;'\n\n    tamon_envelope = tamon_envelope.replace('8', '8;')  # Replace '8' with '8;'\n\n    tamon_envelope = tam"
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "               ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 6, in <lambda>\n    quenon_shuffle = lambda xs: quentamlib.ishunok(xs)\n                                ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'ishunok'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    # Apply the quenon shuffle to the input list\n    quenon_shuffle = lambda xs: quentamlib.ishunok(xs)\n    shuffled_x = quenon_shuffle(x)\n    \n    # Apply the nidu shuffle to the shuffled list\n    nidu_shuffle = lambda xs: quentamlib.ishunok(xs)\n    final_x = nidu_shuffle(shuffled_x)\n    \n    return final_x\n"
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "') == 113\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 3, in solve\n    tamon_envelope = quentamlib.tamon_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'tamon_envelope'\n",
+   "code": "def solve(x):\n    tamon_envelope = quentamlib.tamon_envelope(x)\n    vorar_digest = quentamlib.vorar_digest(tamon_envelope)\n    return vorar_digest\n"
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "lve('5') == 127\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 4, in solve\n    wrapped = quentamlib.ishvek_dg(x)\n              ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'ishvek_dg'. Did you mean: 'lishvek_dg'?\n",
+   "code": "def solve(x):\n    # Wrap in the rulex envelope\n    wrapped = quentamlib.ishvek_dg(x)\n    \n    # Apply the vorar digest\n    vorar_digest = quentamlib.vorvek([wrapped])\n    \n    # Return the final value\n    return vorar_digest[0]\n"
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    tamon_envelope = quentamlib.vekfex_cv(x)\n    rulex_envelope = quentamlib.lishvek_dg(tamon_envelope)\n    return rulex_envelope\n"
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # First, compute the vorar digest of the input string\n    vorar_digest = quentamlib.plonid_op(x)\n    \n    # Then, compute the kevar fold of the vorar digest\n    kevar_fold = quentamlib.sarlish_cv(vorar_digest)\n    \n    # Return the final value\n    return kevar_fold\n"
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return vekganlib.drutok_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "e/sol.py\", line 9, in <module>\n    assert solve(4.98) == 35.0364\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 6, in solve\n    return vekganlib.solve(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'solve'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    # Convert the input x from veku units to base scale using the vekganlib library\n    return vekganlib.solve(x)\n"
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.sardru_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    # Import necessary library\n    import vekganlib\n\n    # Compute the tokon digest using the provided function\n    return vekganlib.druhiz_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/vekganlib.py\", line 14, in rulnid_cv\n    n = sum(int(d) * 5 for d in str(abs(n))) + 11\n                                    ^^^^^^\nTypeError: bad operand type for abs(): 'str'\n",
+   "code": "def solve(x):\n    # Convert the input to a string for processing\n    input_str = str(x)\n    \n    # Calculate the vorex fold using the provided function\n    vorex_fold = vekganlib.rulnid_cv(input_str)\n    \n    # Return the result of the vorex fold calculation\n    return vorex_fold\n"
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.julmir_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    return vekganlib.palmir_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the rulex envelope\n    s = vekganlib.sardru_cv(x)\n    \n    # Compute the tokon digest of the string\n    tokon_digest = vekganlib.druhiz_dg(s)\n    \n    # Return the final value\n    return tokon_digest\n"
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "ert solve('zzfd5') == 66\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 6, in solve\n    tokon_digest = vekganlib.tokon_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'tokon_digest'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    # Compute the tokon digest of the string\n    tokon_digest = vekganlib.tokon_digest(x)\n    # Compute the vorex fold of the string\n    vorex_fold = vekganlib.vorex_fold(tokon_digest)\n    # Return the final value\n    return vorex_fold\n"
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "t solve('kfdw') == '8;4~kfdw~4;6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 4, in solve\n    kevar_envelope = vekganlib.kevar_cv(x)\n                     ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'kevar_cv'\n",
+   "code": "def solve(x):\n    # Wrap in the kevar envelope\n    kevar_envelope = vekganlib.kevar_cv(x)\n    # Wrap in the rulex envelope\n    rulex_envelope = vekganlib.rulex_cv(kevar_envelope)\n    return rulex_envelope\n"
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 16, in <module>\n    assert solve('pqwxp') == 31\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Convert the input string to a list of integers\n    xs = [int(ord(c)) for c in x]\n    \n    # Compute the mirar digest of the string\n    mirar_digest = vekganlib.drutok_cv(x)\n    \n    # Compute the vorex fold of the mirar digest\n    vorex_fold = vekganlib.vorgan_op(mirar_digest)\n    \n    # Return the final value\n    return vorex_fold\n"
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 13, in <module>\n    assert solve('hdzbca') == 244\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap in the kevar envelope\n    vekganlib.julmir_cv(x)\n    \n    # Compute the mirar digest\n    vekganlib.drutok_cv(x)\n    \n    # Return the final value\n    return x\n"
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 6, in <module>\n    assert solve(' enqeyafqan') == 14\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    return quenkevlib.hizlish_op(x)\n"
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    import quenkevlib\n    return quenkevlib.hizlish_op(x)\n"
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    def quenkevlib.quendru_op(xs: list[int]) -> list[int]:\n        xs = xs[::-1]  # Rotate the list left by 3 positions\n        xs = xs[::2]  # Multiply every element whose (0-based) index is divisible by 2 by 2\n        return xs\n\n    def quenkevlib.baxvor_cv(n: int) -> int:\n        n = abs(n)  # Use the digits of the absolute value\n        return n // 10 + n  # Sum over characters of ord(char) times a weight cycling through (2, 11, 5) (by 0-based position), plus 11, all modulo 251\n\n    def quenkevlib.vorzor_dg(s: str) -> int:\n        weight = 2  # Weight cycling through (2, 11, 5) (by 0-based position)\n        weight = weight * weight  # Square the weight\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight = weight * weight  # Square the weight again\n        weight ="
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 13, in <module>\n    assert solve(27.01) == 138.0058\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import quenkevlib\n    \n    # Convert the input to hizex units\n    hizex_units = x * 1.43  # Multiply by 1.43 to convert from hizex units to base scale\n    \n    # Round the result to 4 decimal places\n    return round(hizex_units, 4)\n"
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in <module>\n    assert solve(9172) == 68\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return quenkevlib.vorzor_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    return quenkevlib.ganplo_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 6, in solve\n    nidu_envelope = quenkevlib.quenkevlib.rulfex_op(nidu_envelope)\n                    ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'quenkevlib'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the rular envelope\n    rular_envelope = quenkevlib.ganplo_dg(x)\n    # Wrap the input string in the nidu envelope that result\n    nidu_envelope = quenkevlib.quenkevlib.rulfex_op(nidu_envelope)\n    # Return the final value\n    return nidu_envelope\n"
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input in the rular envelope\n    envelope = quenkevlib.ganplo_dg(x)\n    # Compute the vekar digest of the wrapped string\n    vekar_digest = quenkevlib.vorzor_dg(envelope)\n    # Return the final value\n    return vekar_digest\n"
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the nidu envelope\n    nidu_envelope = quenkevlib.rulfex_op(x)\n    \n    # Compute the vekar digest of the string\n    vekar_digest = quenkevlib.vorzor_dg(nidu_envelope)\n    \n    # Return the final value\n    return vekar_digest\n"
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input in the nidu envelope\n    nidu_envelope = quenkevlib.rulfex_op(x)\n    \n    # Compute the hizex digest of the wrapped string\n    hizex_digest = quenkevlib.druquen_op(nidu_envelope)\n    \n    return hizex_digest\n"
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "le>\n    assert solve('nm c') == 50\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 4, in solve\n    hizex_digest = quenkevlib.hizex_op(x)\n                   ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'hizex_op'\n",
+   "code": "def solve(x):\n    # Compute the hizex digest of the input string\n    hizex_digest = quenkevlib.hizex_op(x)\n    \n    # Compute the quenar fold of the hizex digest\n    quenar_fold = quenkevlib.quendru_op(hizex_digest)\n    \n    return quenar_fold\n"
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the hizex envelope\n    return nidveklib.kevdru_op(x)\n"
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in <module>\n    assert solve(2247) == 60\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.palvor(x)\n"
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "import nidveklib\n\ndef solve(x):\n    xs = [i for i in x]\n    xs = nidveklib.vekrul_op(xs)\n    return xs\n"
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "ecent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 12, in <module>\n    assert solve([3, -7, 10, -5, 0, -8, 6, -2]) == [-10, 0, -16, 6, -4, 3, -14, 10]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    def mirar_shuffle(xs):\n        xs = xs[::-1]  # Rotate the list left by 3 positions\n        xs = xs[2:]  # Take the last 3 elements\n        xs = xs * 2  # Multiply every element by 2\n        return xs\n\n    return mirar_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in <module>\n    assert solve(' 05') == 8\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    import nidveklib\n    return nidveklib.palpal_op(x)\n"
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    # Wrap in the rular envelope\n    palvek_cv_envelope = nidveklib.palvek_cv(x)\n    \n    # Compute the zoru digest\n    zoru_digest = nidveklib.palpal_op(palvek_cv_envelope)\n    \n    return zoru_digest\n"
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import nidveklib\n    \n    # Compute the zoru digest of the input string\n    zoru_digest = nidveklib.palpal_op(x)\n    \n    # Compute the zoru fold of the zoru digest\n    zoru_fold = nidveklib.tamjul_op(zoru_digest)\n    \n    # Return the final value\n    return zoru_fold\n"
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 12, in <module>\n    assert solve('afa') == 167\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the hizex envelope\n    hizex_envelope = nidveklib.kevdru_op(x)\n    \n    # Compute the zoru digest of the hizex envelope\n    zoru_digest = nidveklib.palvek_cv(hizex_envelope)\n    \n    return zoru_digest\n"
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 12, in <module>\n    assert solve('') == 45\n           ^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input in the hizex envelope\n    hizex_envelope = nidveklib.kevdru_op(x)\n    \n    # Compute the kevar digest of the hizex envelope\n    kevar_digest = nidveklib.palpal_op(hizex_envelope)\n    \n    return kevar_digest\n"
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    # Wrap the input string in the rular envelope\n    pal = nidveklib.palvek_cv(x)\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to perform the kevar digest\n    pal_bytes = pal.encode('utf-8')\n    \n    # Convert the string to bytes to"
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/vekjullib.py\", line 6, in <genexpr>\n    return (sum(ord(c) * w[i % 4] for i, c in enumerate(s)) + 18) % 97\n                ^^^^^^\nTypeError: ord() expected string of length 1, but int found\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.rulgan_op(x)\n"
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.jultok_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    return vekjullib.sarfex_op(x)\n"
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": " 5, in solve\n    return vekjullib.jultok_cv(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/vekjullib.py\", line 19, in jultok_cv\n    ys = list(xs[4:]) + list(xs[:4])\n              ~~^^^^\nTypeError: 'float' object is not subscriptable\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.jultok_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    return vekjullib.rulgan_op(x)\n"
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    # Import necessary library\n    import vekjullib\n\n    # Convert the input string to a list of characters\n    chars = list(x)\n    \n    # Calculate the vekon digest using the palnid_fx function\n    digest = vekjullib.palnid_fx(''.join(chars))\n    \n    # Return the digest as a string\n    return digest\n"
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return vekjullib.julkev_op(x)\n"
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the vorar envelope\n    vorar_envelope = vekjullib.hizplo_dg(x)\n    # Wrap in the lishu envelope\n    lishu_envelope = vekjullib.julkev_op(vorar_envelope)\n    return lishu_envelope\n"
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the vorar envelope\n    wrapped_string = vekjullib.hizplo_dg(x)\n    \n    # Compute the toku digest of the wrapped string\n    toku_digest = vekjullib.rulgan_op(wrapped_string)\n    \n    return toku_digest\n"
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 19, in <module>\n    assert solve('5') == 27\n           ^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    # Convert the input string to its vekon digest\n    vek_digest = vekjullib.palnid_fx(x)\n    # Convert the input string to its hizplo envelope\n    hizplo_dg = vekjullib.hizplo_dg(x)\n    # Convert the input string to its toklish cv\n    tok_cv = vekjullib.toklish_cv(float(x))\n    # Convert the input string to its sarfex_op\n    sar_fol = vekjullib.sarfex_op(int(x))\n    # Convert the input string to its jultok cv\n    jult_cv = vekjullib.jultok_cv(list(x))\n    # Return the final value\n    return sar_fol\n"
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 13, in <module>\n    assert solve('n45') == 33\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input in the lishu envelope\n    lishu_envelope = vekjullib.julkev_op(x)\n    \n    # Compute the toku digest of the lishu envelope\n    toku_digest = vekjullib.julkev_op(lishu_envelope)\n    \n    # Return the final value\n    return toku_digest\n"
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 13, in <module>\n    assert solve('yqzfeczk') == 'c~8|yqzfeczk|4~6'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    # Wrap in the lishu envelope\n    lishu_envelope = vekjullib.julkev_op(x)\n    # Wrap in the vorar envelope\n    vorar_envelope = vekjullib.hizplo_dg(x)\n    # Return the final value\n    return vorar_envelope\n"
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "module>\n    assert solve(-5.0) == -16.15\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 6, in solve\n    return vorplolib.zorex_to_base(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'zorex_to_base'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    # Convert from zorex units to base scale\n    return vorplolib.zorex_to_base(x)\n"
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "j1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 4, in <lambda>\n    tamvek_fx = lambda s: tamvek_fx(s)  # Assuming tamvek_fx is a predefined function in vorplolib\n                          ^^^^^^^^^^^^\n  [Previous line repeated 995 more times]\nRecursionError: maximum recursion depth exceeded\n",
+   "code": "def solve(x):\n    # Wrap the input string in the tamar envelope\n    tamvek_fx = lambda s: tamvek_fx(s)  # Assuming tamvek_fx is a predefined function in vorplolib\n    tamvek_fx(x)\n    return tamvek_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in <module>\n    assert solve('mzrp0bhd') == 82\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    drumar_digest = vorplolib.drumir_dg(x)\n    return drumar_digest\n"
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return vorplolib.vorgan(x)\n"
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return vorplolib.plorul_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.plohiz_op(x)\n"
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    tamvek_envelope = vorplolib.tamvek_fx(x)\n    quenu_digest = vorplolib.ganquen_dg(tamvek_envelope)\n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the tamar envelope\n    tam_envelope = vorplolib.tamvek_fx(x)\n    \n    # Compute the druar digest of the tam_envelope\n    druar_digest = vorplolib.drumir_dg(tam_envelope)\n    \n    return druar_digest\n"
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    druar_digest = vorplolib.drumir_dg(x)\n    hizex_fold = vorplolib.plohiz_op(druar_digest)\n    return hizex_fold\n"
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    tam_envelope = vorplolib.tamvek_fx(x)\n    mir_envelope = vorplolib.plorul_cv(tam_envelope)\n    return mir_envelope\n"
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the quenu digest of the string\n    quenu_digest = vorplolib.ganquen_dg(x)\n    \n    # Compute the hizex fold of the string\n    hizex_fold = vorplolib.plohiz_op(quenu_digest)\n    \n    # Return the final value\n    return hizex_fold\n"
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 9, in <module>\n    assert solve(71.25) == 414.975\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    # Convert the input to palar units using the provided conversion factor\n    return tokzorlib.vekplo_op(x) * 5.74 + 6.0 + round(0.0001 * x, 4)\n"
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    # Apply the lishu shuffle to the input list x\n    return tokzorlib.mirtam_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "",
+   "code": "import tokzorlib\n\ndef solve(x):\n    # Convert the input to a string\n    input_str = str(x)\n    \n    # Compute the voron digest using the mirjul function\n    return tokzorlib.mirjul(input_str)\n"
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return tokzorlib.tokplo_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": 0.3333333333333333,
+   "pass_rate": 0.3333333333333333,
+   "err": "",
+   "code": "def solve(x):\n    return tokzorlib.druhiz(x)\n"
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "e 6, in <module>\n    assert solve(4501) == 106\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 3, in solve\n    return tokzorlib.lishex_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'lishex_fold'\n",
+   "code": "def solve(x):\n    return tokzorlib.lishex_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "yhaz0wh') == 'a^ewzyhaz0wh^0'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in solve\n    return tokzorlib.queno_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'queno_envelope'\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import tokzorlib\n\n    # Convert the input string to the quenu envelope\n    return tokzorlib.queno_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the toku envelope\n    enveloped = tokzorlib.tokplo_dg(x)\n    \n    # Compute the hizar digest of the enveloped string\n    hizar_digest = tokzorlib.zorgan_dg(enveloped)\n    \n    # Return the final value\n    return hizar_digest\n"
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": 1.0,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokzorlib\n    \n    # Wrap the input string in the quenu envelope\n    queno_env = tokzorlib.vorvor_dg(x)\n    \n    # Use the library to compute the hizar digest of the wrapped string\n    hizar_digest = tokzorlib.zorgan_dg(queno_env)\n    \n    # Return the hizar digest\n    return hizar_digest\n"
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": 0.6666666666666666,
+   "pass_rate": 0.6666666666666666,
+   "err": "",
+   "code": "def solve(x):\n    # Wrap in the toku envelope\n    toku_envelope = tokzorlib.tokplo_dg(x)\n    # Wrap in the quenu envelope\n    quenu_envelope = tokzorlib.vorvor_dg(toku_envelope)\n    return quenu_envelope\n"
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "<module>\n    assert solve('5r') == 155\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/sol.py\", line 7, in solve\n    hizar_digest = tokzorlib.hizar(input_bytes)\n                   ^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'hizar'\n",
+   "code": "def solve(x):\n    # Convert the input string to bytes for processing\n    input_bytes = x.encode('utf-8')\n    \n    # Calculate the hizar digest of the input string\n    hizar_digest = tokzorlib.hizar(input_bytes)\n    \n    # Calculate the lishex fold of the hizar digest\n    lishex_fold = tokzorlib.ishsar(hizar_digest)\n    \n    # Return the final value of the lishex fold\n    return lishex_fold\n"
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": 0.0,
+   "pass_rate": 0.0,
+   "err": "lishsar_op(x)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp1l8qdh2e/tokzorlib.py\", line 14, in lishsar_op\n    n = sum(int(d) * 7 for d in str(abs(n))) + 29\n                                    ^^^^^^\nTypeError: bad operand type for abs(): 'list'\n",
+   "code": "def solve(x):\n    # Apply the lishu shuffle to the input list x\n    x = tokzorlib.lishsar_op(x)\n    \n    # Apply the quenar shuffle to the result of the lishu shuffle\n    x = tokzorlib.druhiz(x)\n    \n    return x\n"
+  }
+ ]
+}

@@ -54,5 +54,11 @@ One file: `irp/analysis/e5-fab-external-validity.md` — the measured companion 
 `e5-fab-validity.md` §10, updating §10's first bullet from "argued, not measured" to measured
 components (generator, format, names, decoding) + the recorded out-of-scope real-library item.
 
+## OUTCOME (same day): all four predictions held, two exceeded — full report in
+`irp/analysis/e5-fab-external-validity.md`; `e5-fab-validity.md` §10 updated from "argued"
+to measured. Stage-V closed; the branch's remaining external-validity gap (real libraries,
+repo-scale context) is recorded as the paper's future work.
+
 ## Deviations
-_(none yet)_
+_(none — one build fix pre-freeze: realistic-name pools require module-scoped fn-name
+uniqueness, recorded in the fab_build comments and the freeze commit.)_
