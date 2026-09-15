@@ -49,17 +49,25 @@ all three models at every rung; open-book 0.99 (7B F16). Replicated on a second 
 > engineering does not fix it (though never send a collapse-rung model a single-page context),
 > and naive LoRA fine-tuning makes it worse.
 
-## Include-or-hold options (student decision; no further measurement either way)
+## Include-or-hold — DECIDED 2026-09-15: HOLD, with the boundary stated on main
 
-- **Hold (default per registration):** branch stays the PhD-seed / paper package; dissertation
-  cites nothing from it. Zero risk to the write-up.
-- **Selective include:** the strongest candidate is finding 2+3 as a short "extension" note —
-  it completes the dissertation's own E2b arc (harm-follows-the-cliff → benefit-follows-the-
-  cliff, causal). Cost: methods space for FAB's validity case; the marking criteria reward
-  Results/Analysis 30% but the word budget is the binding constraint.
-- **Paper-shaped:** FAB + findings 1–5 is a self-contained workshop/short-paper unit
-  ("Quantisation breaks documentation-use; calibration fixes it for free") independent of the
-  dissertation timeline.
+Student decision (reasoned; recorded on main in `supervisor-briefing-2026-09.md` and
+`drafts/boundary-paragraph.md`, commit bebd6e5):
+- **"Selective include" was rejected as incoherent:** findings 2–3 rest on finding 1, and
+  finding 1 drags the full FAB validity case (necessity/contamination-by-construction,
+  determinism, v2 replication) into the dissertation's methods chapter — a thin methods
+  write-up of a major claim, an examiner's obvious line of attack on a result that is not
+  load-bearing for the registered RQs. The rubric prices depth (Methodology 30% + Results
+  30%), not ambition; scope is graded as "appropriate", not as size.
+- **Hold the results, keep the knowledge:** the dissertation gains ONE Limitations/Discussion
+  paragraph stating the scope boundary of its negative context result (bounded to
+  self-contained benchmarks by construction) — drafted in two variants on main, no branch
+  results claimed; the follow-up-reference variant is pending the supervisor's answer on
+  York's convention for completed-but-unreported work.
+- **The branch stays intact as one publishable unit** (findings 1–5 + FAB) and the PhD-seed
+  package. Splitting it would give the dissertation a fragment and the paper a hole.
+- Superseded-spec banner and claim-wording audit applied on main (the "in-weights"
+  premise corrected; the self-contained qualifier marked load-bearing).
 
 ## Honest limits (carry into any use)
 Synthetic micro-APIs (external validity argued, not measured); two generations of one
