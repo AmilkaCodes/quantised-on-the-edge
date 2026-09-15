@@ -72,3 +72,21 @@ recover from 0.314 to ≈0.65 (R/B level); chains unchanged. One cell; runner su
   would evade it — the assertion-error signature is indirect evidence, not proof.
 - Chain tasks under O receive two pages by construction, so "chains are immune" and "two
   pages suffice" are confounded with task difficulty; P on chains gives a partial handle.
+
+## R1b — the padded-oracle test (RUN 2026-09-15; registered prediction CONFIRMED)
+
+Condition P (true page + exactly ONE content-irrelevant same-family distractor), naive 1.5B:
+
+| rung | O (1 page) | P (2 pages) | B (5 pages) | prediction |
+|---|---:|---:|---:|---|
+| Q2_K | 0.408 (singles 0.314) | **0.650 (singles 0.671)** | 0.592 | singles → ≈0.65 ✓ (registered) |
+| Q3_K_M | 0.958 (singles 0.986) | 0.908 (singles 0.957) | 0.875 | P ≈ O for singles ✓; extra page costs a little, as the Q3 regime predicts |
+
+**The one-page-fixation hypothesis survives its registered test.** At the collapse rung a
+single-call task with exactly one doc page fails 2× more often than the same task with one
+IRRELEVANT page added (0.314 → 0.671, content-free rescue); at Q3 the effect is absent and the
+extra page reverts to a small cost. The Q2 inversion is therefore not about distractors helping
+— it is about the one-page prompt shape specifically breaking the collapsed model on
+single-call tasks. Deployment corollary (Q2 only): pad retrieval to ≥2 pages; never ship a
+single-page context to a naively-quantised collapse-rung model. (Calibration remains the real
+fix — imat Q2 O 0.967 needs no padding.)
