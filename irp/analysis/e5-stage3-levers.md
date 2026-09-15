@@ -57,3 +57,16 @@ Exploratory measurements (no pre-committed thresholds); paired exact McNemar thr
   FAB-specific (which makes the rescue MORE striking, and rules out calibration-set leakage:
   the calibration text contains no FAB content by construction).
 - Lever-2 nulls are 120-task cells; a small true effect (< ~8 pp) would not reach significance.
+
+## R2 verification (2026-09-15, stage-4): the rescue is deployment-free — MEASURED
+
+Registered expectation (tok/s, TTFT, RSS within noise of naive Q2_K) confirmed on both edge
+tiers (N=10×3, study caps, b9951):
+
+| device | metric | naive Q2_K | imat Q2_K |
+|---|---|---:|---:|
+| Pi 5 | med tok/s / peak RSS / mean W | 14.8 / 1,125 MB / 7.82 | 14.5 / 1,112 MB / 7.93 |
+| Jetson | med tok/s / peak RSS / mean W | 32.3 / 1,506 MB / 15.22 | 32.4 / 1,516 MB / 15.19 |
+
+The deployment sentence stands as measurement, not inference: calibrated quantisation buys the
+context-exploitation rescue at identical inference cost on both edge devices.
