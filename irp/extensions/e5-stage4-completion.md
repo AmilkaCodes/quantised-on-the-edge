@@ -93,4 +93,12 @@ stage-4: the branch presents ONE consolidated summary for the include-or-hold de
 supervisor briefing; no further measurement.
 
 ## Deviations
-_Dated, before the affected run where foreseeable._
+- **(2026-09-15, R4 build, before any v2 scored run)** The "mechanical" generalisation surfaced
+  two latent build defects, both fixed in `fab_build.py` before fab_v2 was generated:
+  (1) v1's doc worked-examples used Python's process-salted `hash()` — v1 TASKS re-derive
+  byte-identically (tasks sha verified equal on rebuild) but v1 doc pages do not; the frozen v1
+  artefacts stand as built and were restored untouched from git. Fixed with an ord-sum seed for
+  v2 onward. (2) cross-family function-name uniqueness was validated but not enforced at build;
+  seed block 3000 hit a real collision (v1 passed by luck). Fixed with a deterministic
+  family-level retry. Neither changes v1 numbers (v1 files untouched); both are recorded
+  instrument notes for the paper's reproducibility section.
