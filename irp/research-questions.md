@@ -37,6 +37,10 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
   map: syntax is scaffolding-fixable; context-exploitation is not — quantised small models cannot
   exploit even ideal context on self-contained tasks.** See `irp/analysis/e1r-agentic.md`,
   `irp/analysis/e1r-oracle.md`. Fine-tuning remains Future Work (binding).
+  _BOUNDED (2026-09-15, branch `extended-work`, scope decision pending): on docs-NECESSARY
+  tasks (FAB) the same models exploit context near-perfectly at F16 and lose the ability at
+  each model's own collapse rung; calibration restores it. The "self-contained tasks"
+  qualifier above is therefore load-bearing — any write-up wording keeps it._
 - **RQ2** (confirmatory — ANSWERED): how do inference latency and peak memory scale with
   quantisation level across CPU-only, edge-GPU and unified-memory tiers?
 - **RQ2a** (confirmatory — ANSWERED): which configurations are feasible on each?

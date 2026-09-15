@@ -1,7 +1,16 @@
-# E5 — Docs-required benchmark + RAFT for edge-class models (SIDE/FOLLOW-ON SPEC, not activated)
+# E5 — Docs-required benchmark + RAFT for edge-class models (SUPERSEDED SPEC)
 
-**Status: SPECIFIED ONLY (2026-09-14). NOT dissertation scope; NOT a dissertation deadline
-dependency.** This is the post-submission / PhD-seed / publication project the dissertation's
+> **SUPERSEDED 2026-09-15:** this programme was registered, built and COMPLETED on branch
+> `extended-work` (registration `e5-false-api-raft.md`; consolidated read
+> `e5-consolidated-summary.md` there). Two of this spec's premises were corrected by the
+> results: (1) the deficit is NOT in-weights — the untrained 1.5B exploits necessary context
+> near-perfectly at F16 (FAB B 0.983), so E1-R's negative was task structure, bounded by
+> instrument; (2) RAFT was run with its control and SUBTRACTED (format-narrowing, no
+> exploitation gradient), while imatrix calibration proved the decisive, deployment-free
+> lever. This file is kept as the design-lineage record; do not cite its premises.
+
+**Original status: SPECIFIED ONLY (2026-09-14). NOT dissertation scope; NOT a dissertation
+deadline dependency.** This is the post-submission / PhD-seed / publication project the dissertation's
 Future Work presents as designed. Nothing here runs while the write-up lien governs
 (methods+results drafts on track by 2026-09-28; formative = review gate). Design reading and
 spec refinement are the only permitted activity before submission, and only in writing breaks.
