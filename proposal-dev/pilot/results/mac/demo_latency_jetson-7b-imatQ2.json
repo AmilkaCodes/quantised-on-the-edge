@@ -1,0 +1,54 @@
+{
+ "tag": "jetson-7b-imatQ2",
+ "port": 8080,
+ "rows": [
+  {
+   "kind": "infill",
+   "prefix_chars": 200,
+   "reps": 6,
+   "ttft_ms_p50": 94.9,
+   "ttft_ms_p95": 607.9,
+   "tok_s_p50": 11.1
+  },
+  {
+   "kind": "infill",
+   "prefix_chars": 1000,
+   "reps": 6,
+   "ttft_ms_p50": 96.9,
+   "ttft_ms_p95": 1274.1,
+   "tok_s_p50": 10.1
+  },
+  {
+   "kind": "infill",
+   "prefix_chars": 4000,
+   "reps": 6,
+   "ttft_ms_p50": 102.9,
+   "ttft_ms_p95": 4264.8,
+   "tok_s_p50": 11.0
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 200,
+   "reps": 6,
+   "ttft_ms_p50": 109.9,
+   "ttft_ms_p95": 585.7,
+   "tok_s_p50": 11.1
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 1000,
+   "reps": 6,
+   "ttft_ms_p50": 112.1,
+   "ttft_ms_p95": 1163.8,
+   "tok_s_p50": 11.1
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 4000,
+   "reps": 6,
+   "ttft_ms_p50": 117.6,
+   "ttft_ms_p95": 4273.3,
+   "tok_s_p50": 11.0
+  }
+ ]
+}

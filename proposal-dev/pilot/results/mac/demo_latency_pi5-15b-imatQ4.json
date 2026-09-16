@@ -1,0 +1,54 @@
+{
+ "tag": "pi5-15b-imatQ4",
+ "port": 8080,
+ "rows": [
+  {
+   "kind": "infill",
+   "prefix_chars": 200,
+   "reps": 6,
+   "ttft_ms_p50": 85.4,
+   "ttft_ms_p95": 1925.8,
+   "tok_s_p50": 12.0
+  },
+  {
+   "kind": "infill",
+   "prefix_chars": 1000,
+   "reps": 6,
+   "ttft_ms_p50": 89.5,
+   "ttft_ms_p95": 6302.2,
+   "tok_s_p50": 11.5
+  },
+  {
+   "kind": "infill",
+   "prefix_chars": 4000,
+   "reps": 6,
+   "ttft_ms_p50": 97.7,
+   "ttft_ms_p95": 24115.0,
+   "tok_s_p50": 10.7
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 200,
+   "reps": 6,
+   "ttft_ms_p50": 90.7,
+   "ttft_ms_p95": 1953.9,
+   "tok_s_p50": 11.9
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 1000,
+   "reps": 6,
+   "ttft_ms_p50": 94.1,
+   "ttft_ms_p95": 5965.4,
+   "tok_s_p50": 11.5
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 4000,
+   "reps": 6,
+   "ttft_ms_p50": 102.3,
+   "ttft_ms_p95": 23935.5,
+   "tok_s_p50": 10.8
+  }
+ ]
+}
