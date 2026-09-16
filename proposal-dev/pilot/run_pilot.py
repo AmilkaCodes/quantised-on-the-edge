@@ -33,7 +33,7 @@ except ImportError as e:
 
 # EvalPlus dataset loader (API is stable; scoring is done via the CLI below).
 try:
-    from evalplus.data import get_human_eval_plus
+    from evalplus.data import get_human_eval_plus, get_mbpp_plus
 except Exception as e:  # pragma: no cover
     sys.exit(f"Could not import evalplus dataset loader: {e}\nRun: pip install evalplus")
 
@@ -339,7 +339,7 @@ def generate(client: OpenAI, model_label: str, problems: dict, cfg, openbook: di
     return samples, stats
 
 
-def score_with_evalplus(samples_path: Path) -> tuple[float | None, float | None]:
+def score_with_evalplus(samples_path: Path, dataset: str = "humaneval") -> tuple[float | None, float | None]:
     """Sanitise + evaluate via EvalPlus CLI. Returns (pass@1 base, pass@1 plus)."""
     # 1) sanitise
     subprocess.run([sys.executable, "-m", "evalplus.sanitize", "--samples", str(samples_path)],
@@ -351,7 +351,7 @@ def score_with_evalplus(samples_path: Path) -> tuple[float | None, float | None]
     # "current limit exceeds maximum limit" (EINVAL) for RLIMIT_AS/RLIMIT_DATA on macOS.
     eval_env = {**os.environ, "EVALPLUS_MAX_MEMORY_BYTES": "-1"}
     proc = subprocess.run(
-        [sys.executable, "-m", "evalplus.evaluate", "--dataset", "humaneval", "--samples", str(target)],
+        [sys.executable, "-m", "evalplus.evaluate", "--dataset", dataset, "--samples", str(target)],
         capture_output=True, text=True, env=eval_env,
     )
     out = proc.stdout + "\n" + proc.stderr
@@ -495,7 +495,11 @@ def main():
     out = RESULTS_ROOT / device
     out.mkdir(parents=True, exist_ok=True)
 
-    problems = dict(get_human_eval_plus())
+    # E6: dataset-aware loader — config `dataset: "mbpp"` selects MBPP+ (378 problems);
+    # default remains HumanEval+. Same schema (prompt + entry_point), same INSTRUCTION wrap
+    # (registered decision: comparability over wording fit).
+    dataset = cfg.get("dataset", "humaneval")
+    problems = dict(get_mbpp_plus() if dataset == "mbpp" else get_human_eval_plus())
     if args.smoke:
         problems = dict(list(problems.items())[:2])
     elif args.perf:
@@ -571,12 +575,13 @@ def main():
                 if server:
                     stop_server(server); server = None  # free memory before scoring
 
-                samples_path = out / f"samples_{model['name']}_{quant['label']}{csfx}{'_smoke' if args.smoke else ''}.jsonl"
+                dtag = "" if dataset == "humaneval" else f"_{dataset}"
+                samples_path = out / f"samples_{model['name']}_{quant['label']}{csfx}{dtag}{'_smoke' if args.smoke else ''}.jsonl"
                 with samples_path.open("w") as sf:
                     for s in samples:
                         sf.write(json.dumps(s) + "\n")
 
-                base, plus = score_with_evalplus(samples_path)
+                base, plus = score_with_evalplus(samples_path, dataset)
 
                 row = {
                     "timestamp": utcstamp(), "device": device, "model": model["name"], "quant": quant["label"],

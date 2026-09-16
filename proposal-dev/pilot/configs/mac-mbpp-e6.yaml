@@ -1,0 +1,44 @@
+# E6 — MBPP+ cross-benchmark replication (registration: irp/extensions/e6-mbpp-replication.md)
+# 13 cells, Mac quality axis, closed-book, n=378. Study caps; identical INSTRUCTION wrap.
+device: "mac"
+llama_cpp_tag: "b9951"
+server_bin: "./local/llama.cpp/build/bin/llama-server"
+host: "127.0.0.1"
+port: 8080
+n_ctx: 4096
+seed: 0
+temperature: 0.0
+max_tokens: 768
+manage_server: true
+server_ready_timeout_s: 300
+dataset: "mbpp"
+models:
+  - name: "qwen2.5-coder-1.5b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"
+    ngl: 999
+    quants:
+      - {label: "F16",    file: "Qwen2.5-Coder-1.5B-Instruct-f16.gguf"}
+      - {label: "Q8_0",   file: "qwen2.5-coder-1.5b-instruct-Q8_0.gguf"}
+      - {label: "Q4_K_M", file: "qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "qwen2.5-coder-1.5b-instruct-Q2_K.gguf"}
+  - name: "qwen2.5-coder-1.5b-instruct-imat"
+    gguf_dir: "./local/models/qwen2.5-coder-1.5b-instruct"
+    ngl: 999
+    quants:
+      - {label: "Q4_K_M", file: "qwen2.5-coder-1.5b-instruct-imat-Q4_K_M.gguf"}
+      - {label: "Q3_K_M", file: "qwen2.5-coder-1.5b-instruct-imat-Q3_K_M.gguf"}
+      - {label: "Q2_K",   file: "qwen2.5-coder-1.5b-instruct-imat-Q2_K.gguf"}
+  - name: "qwen2.5-coder-7b-instruct"
+    gguf_dir: "./local/models/qwen2.5-coder-7b-instruct"
+    ngl: 999
+    quants:
+      - {label: "F16",  file: "Qwen2.5-Coder-7B-Instruct-f16.gguf"}
+      - {label: "Q2_K", file: "qwen2.5-coder-7b-instruct-Q2_K.gguf"}
+  - name: "phi-3-mini-4k-instruct"
+    gguf_dir: "./local/models/phi-3-mini-4k-instruct"
+    ngl: 999
+    quants:
+      - {label: "F16",    file: "Phi-3-mini-4k-instruct-f16.gguf"}
+      - {label: "Q4_K_M", file: "Phi-3-mini-4k-instruct-Q4_K_M.gguf"}
+      - {label: "Q2_K",   file: "Phi-3-mini-4k-instruct-Q2_K.gguf"}
