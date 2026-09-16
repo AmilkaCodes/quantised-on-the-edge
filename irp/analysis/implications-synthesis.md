@@ -59,6 +59,32 @@ loss lied on malformed data; run 2's honest val loss was still blind to policy i
 fine-tuning**. H4b (does trained tool-calling survive the ladder?) remains nobody's measurement,
 now with a sharpened premise: the artefact must first pass a composition gate.
 
+## E6 AMENDMENT (2026-09-16, dated — binds every use of this spine from here on)
+
+The registered MBPP+ cross-benchmark replication (`e6-mbpp-replication.md`, 13 cells, n=378,
+predictions P1–P4 on record) revises two claims and adds the spine's capstone:
+
+- **Claim 1 rewrite:** "Quantisation collapse is a small-model phenomenon" becomes
+  **"deep-rung collapse of the small model is the robust invariant (Q2 −22.6 pp on HE+,
+  −21.2 pp on MBPP+, both p < 10⁻⁷); scale ATTENUATES it (7B: −4.9 n.s. on HE+, −9.0
+  significant on MBPP+) but its erasure is benchmark-dependent."** The 7B's immunity was a
+  HumanEval+ fact, not a general one.
+- **Claim 5 qualifier:** the memory-matched advantage ("7B@Q2 beats 1.5B@F16 by +18 pp") holds
+  on HE+ and collapses to parity on MBPP+ (0.640 vs 0.630, n.s.). Deployment advice from it is
+  task-distribution-conditional and is worded so wherever it appears.
+- **Phi's cliff is instrument-relative:** Q4 on HE+ (and FAB), flat at Q4 on MBPP+ with a
+  catastrophic Q2 (−41 pp, p = 1.4×10⁻³⁷). Every "at the model's own cliff" sentence names its
+  instrument. H1b stands as registered (tested on HE+) with an E6 scope note: threshold
+  DIFFERENCE between models is itself benchmark-relative (both cliffs sit at Q2 on MBPP+).
+- **imatrix generation-rescue is size-variable** (~half the drop on HE+, ~25% on MBPP+,
+  p = .028 uncorrected — descriptive); the claim survives as "real, free, benchmark-dependent
+  in size".
+- **The capstone (claim 7, new):** the study's operating principle — quantised behaviour is
+  not predictable from the full-precision parent, so evaluate the deployed artefact — now has
+  a measured second level: **it is not predictable from another benchmark either. Cliff
+  locations are model × recipe × task distribution.** "Evaluate the artefact, on your task"
+  is the dissertation's twice-demonstrated empirical law, and its strongest sentence.
+
 ## Named future work (each blocked on something specific, none a debt)
 
 - **Docs-necessary benchmark** → the fair test of edge-RAG and the RAFT premise (blocked on
