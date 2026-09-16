@@ -1,0 +1,1094 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-e5-control",
+  "rung": "F16",
+  "condition": "A",
+  "n": 120,
+  "pass@1": 0.008,
+  "pass_single": 0.014,
+  "pass_chain": 0.0,
+  "tasks_sha256": "e656806088093f95"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", line 7, in <module>\n    assert solve(72.14) == 245.3838\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.mirlish(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'mirlish'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.mirlish(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "6, -1, -9]) == [-45, 20, -5, -6, -5]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.kevpal_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevpal_cv'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.kevpal_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "lqpjc/sol.py\", line 7, in <module>\n    assert solve(279) == 37\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.kevplo(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevplo'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.kevplo(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " line 7, in <module>\n    assert solve('cme0') == '4~cme0~8'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.toksar(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'toksar'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.toksar(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "in <module>\n    assert solve('gy5wh mk') == 29\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.kevtok_fx(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevtok_fx'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.kevtok_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ine 7, in <module>\n    assert solve('gq0wheg') == 180\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.zorlish(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'zorlish'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.zorlish(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "7, in <module>\n    assert solve('gc5') == '3^gc5^5'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.ganfex_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'ganfex_cv'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.ganfex_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ne 7, in <module>\n    assert solve('') == 37\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.plogan(sardrulib.zorlish(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'plogan'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.plogan(sardrulib.zorlish(x))\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "e('pdxqxbwm4q ') == 37\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.kevtok_dg(sardrulib.rulbax_op(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevtok_dg'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.kevtok_dg(sardrulib.rulbax_op(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "0, 35, 6, -5, 18]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.plokev_fx(sardrulib.hizjul_fx(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'plokev_fx'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.plokev_fx(sardrulib.hizjul_fx(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ">\n    assert solve('yc') == '6~2^yc^0~2'\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.kevtok(sardrulib.gangan_dg(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevtok'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.kevtok(sardrulib.gangan_dg(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ert solve('b454qgz') == 36\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return sardrulib.kevtok_cv(sardrulib.ganfex_cv(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevtok_cv'\n",
+   "code": "import sardrulib\ndef solve(x):\n    return sardrulib.kevtok_cv(sardrulib.ganfex_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "\", line 7, in <module>\n    assert solve(-54) == 56\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.plokev_cv(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'plokev_cv'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.plokev_cv(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "<module>\n    assert solve('zgbx') == '4|zgbx|6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.fexzor_op(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'fexzor_op'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.fexzor_op(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ve(' egdd') == 131\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.kevnid_fx(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'kevnid_fx'. Did you mean: 'kevvek_fx'?\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.kevnid_fx(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", 15, 0, 3, 2]) == [6, -1, 15, 0, 9]\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.plohiz_cv(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'plohiz_cv'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.plohiz_cv(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "('adp') == '3|adp|5'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.fexzor_dg(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'fexzor_dg'. Did you mean: 'fexsar_dg'?\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.fexzor_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", -6, -1]) == [-18, -1, -5, 8, 48]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.ruljul_fx(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'ruljul_fx'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.ruljul_fx(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "\", line 7, in <module>\n    assert solve('w') == 59\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.plotam_dg(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'plotam_dg'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.plotam_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "     ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.hizjul_dg(veklishlib.fexzor_op(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'hizjul_dg'. Did you mean: 'hizdru_dg'?\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.hizjul_dg(veklishlib.fexzor_op(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "    assert solve('z a') == 84\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.ploke_fx(veklishlib.kevnid_dg(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'ploke_fx'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.ploke_fx(veklishlib.kevnid_dg(x))\n",
+   "raw_len": 101
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "     ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.kevnid_fx(veklishlib.plodin_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'kevnid_fx'. Did you mean: 'kevvek_fx'?\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.kevnid_fx(veklishlib.plodin_dg(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "t solve('cpzb m') == 84\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.plokev_fx(veklishlib.juljul_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'plokev_fx'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.plokev_fx(veklishlib.juljul_dg(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "7, 8]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return veklishlib.ruljul_fx(veklishlib.plohiz_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'ruljul_fx'\n",
+   "code": "import veklishlib\ndef solve(x):\n    return veklishlib.ruljul_fx(veklishlib.plohiz_dg(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "g') == '8|b0wmdwkg|4'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.tokrul_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'tokrul_cv'. Did you mean: 'tokrul'?\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.tokrul_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " assert solve(-9.74) == -20.4424\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.vorhiz(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'vorhiz'. Did you mean: 'vorhiz_dg'?\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.vorhiz(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ol.py\", line 7, in <module>\n    assert solve('z54') == 23\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.vorlish(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'vorlish'\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.vorlish(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "assert solve(8528) == 66\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.plokev_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'plokev_cv'. Did you mean: 'baxkev_cv'?\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.plokev_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.baxkev_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "qpjc/sol.py\", line 7, in <module>\n    assert solve('') == 30\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.vorlish(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'vorlish'\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.vorlish(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "== [0, 3, -2, 15, 34, 3, 30]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.lishgan_dg(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'lishgan_dg'\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.lishgan_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "n <module>\n    assert solve('n') == 21\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.vorlish(vorjullib.tamkev_fx(x))\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'vorlish'\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.vorlish(vorjullib.tamkev_fx(x))\n",
+   "raw_len": 97
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "\n    assert solve('rmzrqecr') == '14;8|rmzrqecr|4;2'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.zorulib(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'zorulib'\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.zorulib(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ") == [8, -1, 8, -9]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.mirhiz_cv(vorjullib.lishgan_dg(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'mirhiz_cv'\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.mirhiz_cv(vorjullib.lishgan_dg(x))\n",
+   "raw_len": 100
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "8, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.mirhiz_cv(vorjullib.plopal_op(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'mirhiz_cv'\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.mirhiz_cv(vorjullib.plopal_op(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "odule>\n    assert solve('aaa5ph') == 65\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorjullib.zorkev(vorjullib.zorhiz(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'zorkev'\n",
+   "code": "import vorjullib\ndef solve(x):\n    return vorjullib.zorkev(vorjullib.zorhiz(x))\n",
+   "raw_len": 93
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "1;0gydewf55;4'\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.plokev_op(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'plokev_op'. Did you mean: 'plonid_op'?\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.plokev_op(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " line 7, in <module>\n    assert solve('rr4be5') == 115\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.hizvek(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'hizvek'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.hizvek(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ine 7, in <module>\n    assert solve('z') == 246\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.rulquen_op(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'rulquen_op'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.rulquen_op(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " <module>\n    assert solve(87.83) == 760.1984\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.sarquen_cv(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'sarquen_cv'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.sarquen_cv(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "e([20, 11, 9, 18]) == [18, 18, 20, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.kevplo_dg(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'kevplo_dg'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.kevplo_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " [27, 18, -4, 27, 14, 16, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.fexzor_fx(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'fexzor_fx'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.fexzor_fx(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "== '7;fef5bb5;2'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.plokev_op(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'plokev_op'. Did you mean: 'plonid_op'?\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.plokev_op(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.kevjul_op(quentamlib.fexzor_fx(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'kevjul_op'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.kevjul_op(quentamlib.fexzor_fx(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "olve('wwcaqnq') == 113\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.tokbax_op(quentamlib.plopal_cv(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'tokbax_op'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.tokbax_op(quentamlib.plopal_cv(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "    assert solve('5') == 127\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.fexkev_op(quentamlib.plokev_op(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'fexkev_op'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.fexkev_op(quentamlib.plokev_op(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "sert solve('') == '4;0;;0;4'\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.plokev_fx(quentamlib.quenplo_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'plokev_fx'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.plokev_fx(quentamlib.quenplo_dg(x))\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "olve('r0xkpey') == 70\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quentamlib.fexzor_op(quentamlib.rulquen_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'fexzor_op'\n",
+   "code": "import quentamlib\ndef solve(x):\n    return quentamlib.fexzor_op(quentamlib.rulquen_dg(x))\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "<module>\n    assert solve('zramwwgqg') == 122\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.zorpal_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'zorpal_cv'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.zorpal_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ine 7, in <module>\n    assert solve(4.98) == 35.0364\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.tokgan_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'tokgan_cv'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.tokgan_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "<module>\n    assert solve('cx44qc0') == '7;cx44qc0;4'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.lishsar(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'lishsar'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.lishsar(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "jc/sol.py\", line 7, in <module>\n    assert solve(' 5') == 189\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.zorhiz(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'zorhiz'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.zorhiz(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "y\", line 7, in <module>\n    assert solve(1023) == 56\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.tokgan_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'tokgan_cv'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.tokgan_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "    assert solve('crfpyrbhz4') == 'a~crfpyrbhz4~0'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.lishsar(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'lishsar'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.lishsar(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " 7, -5]) == [35, -5, 1, 40, 14, 19]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.veksar_fx(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'veksar_fx'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.veksar_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ne 7, in <module>\n    assert solve('') == 46\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.zorhiz(vekganlib.lishsar(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'zorhiz'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.zorhiz(vekganlib.lishsar(x))\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.toknid_cv(vekganlib.vorhiz_cv(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'toknid_cv'. Did you mean: 'rulnid_cv'?\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.toknid_cv(vekganlib.vorhiz_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "rt solve('kfdw') == '8;4~kfdw~4;6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.lishsar(vekganlib.lishinv_op(x))\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'lishsar'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.lishsar(vekganlib.lishinv_op(x))\n",
+   "raw_len": 98
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.toknid_cv(vekganlib.zorpal_cv(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'toknid_cv'. Did you mean: 'rulnid_cv'?\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.toknid_cv(vekganlib.zorpal_cv(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ">\n    assert solve('hdzbca') == 244\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekganlib.vorlish(vekganlib.lishsar(x))\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'vorlish'\n",
+   "code": "import vekganlib\ndef solve(x):\n    return vekganlib.vorlish(vekganlib.lishsar(x))\n",
+   "raw_len": 95
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "<module>\n    assert solve(' enqeyafqan') == 14\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vekxfex(x)\n           ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vekxfex'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vekxfex(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "solve([-1, 12, 9, 5]) == [-3, 12, 9, 5]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.ploplo_fx(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'ploplo_fx'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.ploplo_fx(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "olve([3, 5, 19, 15]) == [30, 3, 10, 19]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.tamnid_op(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'tamnid_op'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.tamnid_op(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "py\", line 7, in <module>\n    assert solve(27.01) == 138.0058\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.lishu(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'lishu'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.lishu(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " line 7, in <module>\n    assert solve(9172) == 68\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vorkev_fx(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vorkev_fx'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vorkev_fx(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", in <module>\n    assert solve('qrfpnkhkcf') == 30\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vekjul(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vekjul'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vekjul(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "    assert solve('y0demxc') == '7;y0demxc;9'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vekzhi_dg(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vekzhi_dg'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vekzhi_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "gkgm00b') == '10;10;dgkgm00b;6;7'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vorkev(quenkevlib.vekzor(x))\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vorkev'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vorkev(quenkevlib.vekzor(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "le>\n    assert solve('pp') == 194\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vekardru(quenkevlib.vekzor(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vekardru'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vekardru(quenkevlib.vekzor(x))\n",
+   "raw_len": 98
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "kkzk45') == 170\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vekarmir_fx(quenkevlib.vekfan_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vekarmir_fx'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vekarmir_fx(quenkevlib.vekfan_dg(x))\n",
+   "raw_len": 104
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "<module>\n    assert solve('qc') == 8\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vekxfex(quenkevlib.qidbax(x))\n           ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vekxfex'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vekxfex(quenkevlib.qidbax(x))\n",
+   "raw_len": 97
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ssert solve('nm c') == 50\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return quenkevlib.vekzor_op(quenkevlib.veksar_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vekzor_op'\n",
+   "code": "import quenkevlib\ndef solve(x):\n    return quenkevlib.vekzor_op(quenkevlib.veksar_dg(x))\n",
+   "raw_len": 102
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ule>\n    assert solve('qaynbpkrn') == '11;qaynbpkrn;1'\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.vorjul(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'vorjul'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.vorjul(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "pjc/sol.py\", line 7, in <module>\n    assert solve(2247) == 60\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.zorkev(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'zorkev'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.zorkev(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "py\", line 7, in <module>\n    assert solve(70.53) == 649.0011\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.vorhiz(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'vorhiz'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.vorhiz(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ssert solve([-9, 13, 14]) == [-13, 14, 9]\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.nidquen_dg(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'nidquen_dg'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.nidquen_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " 0, -16, 6, -4, 3, -14, 10]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.fexzor_fx(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'fexzor_fx'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.fexzor_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "jc/sol.py\", line 7, in <module>\n    assert solve(' 05') == 8\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.zorkev(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'zorkev'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.zorkev(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " 7, in <module>\n    assert solve('rq gbnrdnw') == 137\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.zorkev(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'zorkev'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.zorkev(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.vorjul_dg(nidveklib.baxfex_dg(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'vorjul_dg'. Did you mean: 'vorvek_dg'?\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.vorjul_dg(nidveklib.baxfex_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ", in <module>\n    assert solve('nk') == 100\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.zorkev(nidveklib.vorjul(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'zorkev'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.zorkev(nidveklib.vorjul(x))\n",
+   "raw_len": 93
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "= 167\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.vorjul_dg(nidveklib.vorjul(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'vorjul_dg'. Did you mean: 'vorvek_dg'?\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.vorjul_dg(nidveklib.vorjul(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ine 7, in <module>\n    assert solve('') == 45\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.zorkev(nidveklib.vorjul(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'zorkev'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.zorkev(nidveklib.vorjul(x))\n",
+   "raw_len": 93
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "assert solve('5rdxggxhre') == 61\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return nidveklib.zorkev(nidveklib.baxfex_dg(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'zorkev'\n",
+   "code": "import nidveklib\ndef solve(x):\n    return nidveklib.zorkev(nidveklib.baxfex_dg(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", 16, 19]) == [80, 19, -8, 16, 30]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.quentok_dg(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'quentok_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.quentok_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " == [36, -3, 34, 0, 32, -3, 0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.rulrul_dg(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'rulrul_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.rulrul_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " line 7, in <module>\n    assert solve(6569) == 29\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.mirlish_dg(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'mirlish_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.mirlish_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", line 7, in <module>\n    assert solve(96.6) == 158.176\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.vortamir(x)\n           ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'vortamir'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.vortamir(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "lqpjc/sol.py\", line 7, in <module>\n    assert solve('x') == 64\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.gansar(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'gansar'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.gansar(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", line 7, in <module>\n    assert solve('knh') == 80\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.fexzor_fx(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'fexzor_fx'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.fexzor_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " line 7, in <module>\n    assert solve('zzw') == '3|zzw|9'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.vorlish(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'vorlish'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.vorlish(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "   assert solve('dye') == '7|3~dye~4|1'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.lishvek(vekjullib.sarsar(x))\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'lishvek'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.lishvek(vekjullib.sarsar(x))\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " assert solve('qyzfa') == 87\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.plopal_dg(vekjullib.sarsar_dg(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'plopal_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.plopal_dg(vekjullib.sarsar_dg(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ule>\n    assert solve('5') == 27\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.plopal_dg(vekjullib.fexzor_fx(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'plopal_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.plopal_dg(vekjullib.fexzor_fx(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "    assert solve('n45') == 33\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.vortok_dg(vekjullib.lishvek_fx(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'vortok_dg'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.vortok_dg(vekjullib.lishvek_fx(x))\n",
+   "raw_len": 100
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ve('yqzfeczk') == 'c~8|yqzfeczk|4~6'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vekjullib.rulrul(vekjullib.lishdru(x))\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'rulrul'\n",
+   "code": "import vekjullib\ndef solve(x):\n    return vekjullib.rulrul(vekjullib.lishdru(x))\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ".py\", line 7, in <module>\n    assert solve(-5.0) == -16.15\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.rulquen(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'rulquen'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.rulquen(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "assert solve('') == '0~~0'\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.julrul_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'julrul_cv'. Did you mean: 'plorul_cv'?\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.julrul_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ne 7, in <module>\n    assert solve('mzrp0bhd') == 82\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.vorquen(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'vorquen'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.vorquen(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "in <module>\n    assert solve('ax5ww0gbp0 ') == 71\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.vorquen(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'vorquen'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.vorquen(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " 1, -8, 7, -2]) == [2, 10, -1, -8, -7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.fexzor_fx(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'fexzor_fx'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.fexzor_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "('gfaw') == '4^gfaw^6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.fexvek_fx(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'fexvek_fx'. Did you mean: 'tamvek_fx'?\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.fexvek_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "\", line 7, in <module>\n    assert solve(4285) == 148\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.plotam_dg(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'plotam_dg'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.plotam_dg(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "e>\n    assert solve('g0d5xc') == 167\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.palquen(vorplolib.julrul(x))\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'palquen'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.palquen(vorplolib.julrul(x))\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " <module>\n    assert solve('q4') == 9\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.vorquen(vorplolib.julvek_op(x))\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'vorquen'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.vorquen(vorplolib.julvek_op(x))\n",
+   "raw_len": 97
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ve('nhpgrnx0fnb5') == 92\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.plotam_dg(vorplolib.vorjul(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'plotam_dg'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.plotam_dg(vorplolib.vorjul(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "qh0n') == '14^10~enxqh0n~3^8'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.fexzor_op(vorplolib.julrul(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'fexzor_op'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.fexzor_op(vorplolib.julrul(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "e>\n    assert solve('') == 127\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return vorplolib.rulquen_op(vorplolib.julrul_dg(x))\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'rulquen_op'\n",
+   "code": "import vorplolib\ndef solve(x):\n    return vorplolib.rulquen_op(vorplolib.julrul_dg(x))\n",
+   "raw_len": 100
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "e 7, in <module>\n    assert solve(71.25) == 414.975\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.drujul_fx(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'drujul_fx'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.drujul_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "t solve([2, -2, -8, 9]) == [-9, 2, -2, -8]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.ploplo_fx(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'ploplo_fx'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.ploplo_fx(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ol.py\", line 7, in <module>\n    assert solve('') == 16\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.tamdru_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'tamdru_cv'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.tamdru_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " assert solve('rbwec4kwa') == '9;rbwec4kwa;4'\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.tokbax_op(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'tokbax_op'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.tokbax_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", -3, 2]) == [14, -3, 2, 4, -2, -7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.paljul_cv(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'paljul_cv'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.paljul_cv(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "\", line 7, in <module>\n    assert solve(4501) == 106\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.tokbax_op(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'tokbax_op'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.tokbax_op(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "    assert solve('ewzyhaz0wh') == 'a^ewzyhaz0wh^0'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.baxquen(x)\n           ^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'baxquen'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.baxquen(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.ganplo_op(tokzorlib.tokfex(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'ganplo_op'. Did you mean: 'vekplo_op'?\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.ganplo_op(tokzorlib.tokfex(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " == 129\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.ganplo_op(tokzorlib.baxquen(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'ganplo_op'. Did you mean: 'vekplo_op'?\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.ganplo_op(tokzorlib.baxquen(x))\n",
+   "raw_len": 97
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "aa54h') == 'a^6;haa54h;6^0'\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.tokbax_op(tokzorlib.devmir_op(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'tokbax_op'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.tokbax_op(tokzorlib.devmir_op(x))\n",
+   "raw_len": 99
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ule>\n    assert solve('5r') == 155\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.kevjul_fx(tokzorlib.hizmir(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'kevjul_fx'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.kevjul_fx(tokzorlib.hizmir(x))\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ", -20, 40, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpmrglqpjc/sol.py\", line 4, in solve\n    return tokzorlib.paljul_cv(tokzorlib.quendru_cv(x))\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'paljul_cv'\n",
+   "code": "import tokzorlib\ndef solve(x):\n    return tokzorlib.paljul_cv(tokzorlib.quendru_cv(x))\n",
+   "raw_len": 100
+  }
+ ]
+}

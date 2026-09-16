@@ -1,0 +1,2 @@
+timestamp,device,model,quant,n_prompts,repeats,mean_tok_s,std_tok_s,median_tok_s,mean_ttft_ms,std_ttft_ms,median_ttft_ms,peak_rss_mb,mean_power_w,llama_cpp_tag
+2026-09-16T10:56:42Z,jetson,qwen2.5-coder-7b-instruct-imat,Q2_K,10,3,11.1,0.0,11.1,222.8,129.7,147.3,3659.7,19.21,b9951

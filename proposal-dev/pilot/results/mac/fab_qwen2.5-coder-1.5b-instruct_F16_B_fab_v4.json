@@ -1,0 +1,1098 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-instruct",
+  "rung": "F16",
+  "condition": "B",
+  "n": 120,
+  "pass@1": 0.908,
+  "pass_single": 0.914,
+  "pass_chain": 0.9,
+  "fab_dir": "fab_v4",
+  "docs_variant": null,
+  "temperature": 0.0,
+  "samples": 1,
+  "tasks_sha256": "17ddf134cf5934da"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "gannidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    return gannidlib.kevzor_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "gannidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    return gannidlib.ganbax_op(x)\n"
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "gannidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    return gannidlib.kevdru_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "gannidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return gannidlib.ganfex_dg(str(x))\n"
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "gannidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    return gannidlib.nidsar_op(x)\n"
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "gannidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    return gannidlib.palvor_op(x)\n"
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "gannidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    return gannidlib.drunid_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "gannidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    # Wrap in the julu envelope\n    julu_envelope = gannidlib.zorfex_op(x)\n    \n    # Compute the kevar digest\n    kevar_digest = gannidlib.ganbax_op(julu_envelope)\n    \n    return kevar_digest\n"
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "gannidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    # Wrap in the julu envelope\n    julu_envelope = gannidlib.zorfex_op(x)\n    \n    # Compute the druon digest\n    druon_digest = gannidlib.ganfex_dg(julu_envelope)\n    \n    return druon_digest\n"
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "gannidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    # Apply kevon shuffle\n    x = gannidlib.nidsar_op(x)\n    \n    # Apply palon shuffle\n    x = gannidlib.palvor_op(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "gannidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    # Wrap in the julu envelope\n    julu_envelope = gannidlib.zorfex_op(x)\n    \n    # Wrap in the vekex envelope\n    vekex_envelope = gannidlib.drunid_dg(julu_envelope)\n    \n    return vekex_envelope\n"
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "gannidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import gannidlib\n\ndef solve(x):\n    # Wrap in the vekex envelope\n    vekex_envelope = gannidlib.drunid_dg(x)\n    # Wrap in the julu envelope\n    julu_envelope = gannidlib.zorfex_op(vekex_envelope)\n    return julu_envelope\n"
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "hizrullib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    return hizrullib.vormir_op(x)\n"
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "hizrullib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    return hizrullib.kevnid_op(x)\n"
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "hizrullib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    return hizrullib.quenmir_nid(x)\n"
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "hizrullib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    return hizrullib.ganbax_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "hizrullib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    return hizrullib.gannid(x)\n"
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "hizrullib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    return hizrullib.rulsar_op(x)\n"
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "hizrullib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    return hizrullib.drujul_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "hizrullib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    # Apply sarar shuffle\n    sarar_result = hizrullib.gannid(x)\n    \n    # Apply lishon shuffle\n    lishon_result = hizrullib.vormir_op(sarar_result)\n    \n    return lishon_result\n"
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "hizrullib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    # Wrap the string in the hizu envelope\n    hizu_wrapped = hizrullib.drujul_cv(x)\n    \n    # Compute the veku digest of the hizu-wrapped string\n    veku_digest = hizrullib.kevnid_op(hizu_wrapped)\n    \n    return veku_digest\n"
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "hizrullib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "|5'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 9, in solve\n    hizu_envelope = hizrullib.hizrullib.drujul_cv(kevon_envelope)\n                    ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'hizrullib' has no attribute 'hizrullib'\n",
+   "code": "import hizrullib\n\ndef solve(x):\n    # Wrap in kevon envelope\n    kevon_envelope = hizrullib.ganbax_cv(x)\n    \n    # Wrap in hizu envelope\n    hizu_envelope = hizrullib.hizrullib.drujul_cv(kevon_envelope)\n    \n    return hizu_envelope\n"
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "hizrullib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    kevar_digest = hizrullib.baxbax_cv(x)\n    tamon_fold = hizrullib.quenmir_nid(int(kevar_digest))\n    return tamon_fold\n"
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "hizrullib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import hizrullib\n\ndef solve(x):\n    # Wrap in kevon envelope\n    kevon_envelope = hizrullib.ganbax_cv(x)\n    \n    # Compute veku digest\n    veku_digest = hizrullib.kevnid_op(kevon_envelope)\n    \n    return veku_digest\n"
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "fexveklib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import fexveklib\n\ndef solve(x):\n    return fexveklib.tamtam(x)\n"
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "fexveklib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import fexveklib\n\ndef solve(x: str) -> int:\n    return fexveklib.mirbax_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "fexveklib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import fexveklib\n\ndef solve(x):\n    return fexveklib.quenrul_op(x)\n"
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "fexveklib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/fexveklib.py\", line 23, in kevlish_dg\n    return (sum(ord(c) * w[i % 4] for i, c in enumerate(s)) + 37) % 211\n                                              ^^^^^^^^^^^^\nTypeError: 'float' object is not iterable\n",
+   "code": "import fexveklib\n\ndef solve(x):\n    return fexveklib.palfex_fx(fexveklib.quenrul_op(fexveklib.vekzor_cv(fexveklib.kevlish_dg(x))))\n"
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "fexveklib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return fexveklib.vekzor_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "fexveklib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return fexveklib.plovek_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "fexveklib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return fexveklib.kevlish_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "fexveklib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import fexveklib\n\ndef solve(x):\n    # Wrap in the druu envelope\n    druu_envelope = fexveklib.quenrul_op(x)\n    \n    # Compute the ploex digest\n    ploex_digest = fexveklib.mirbax_cv(druu_envelope)\n    \n    return ploex_digest\n"
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "fexveklib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import fexveklib\n\ndef solve(x):\n    # Wrap in the palar envelope\n    palar_envelope = fexveklib.rullish_cv(x)\n    \n    # Wrap in the druu envelope\n    druu_envelope = fexveklib.quenrul_op(palar_envelope)\n    \n    return druu_envelope\n"
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "fexveklib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import fexveklib\n\ndef solve(x):\n    # Apply fexar shuffle\n    x = fexveklib.plovek_dg(x)\n    \n    # Apply zoron shuffle\n    x = fexveklib.vekzor_cv(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "fexveklib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import fexveklib\n\ndef solve(x):\n    # Wrap in the druu envelope\n    druu_wrapped = fexveklib.quenrul_op(x)\n    \n    # Compute the nidex digest\n    nidex_digest = fexveklib.kevlish_dg(druu_wrapped)\n    \n    return nidex_digest\n"
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "fexveklib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "wam') == 106\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 6, in solve\n    palar_envelope = fexveklib.polar_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'fexveklib' has no attribute 'polar_envelope'\n",
+   "code": "import fexveklib\n\ndef solve(x):\n    # Wrap in the palar envelope\n    palar_envelope = fexveklib.polar_envelope(x)\n    \n    # Compute the ploex digest of the palar envelope\n    ploex_digest = fexveklib.mirbax_cv(palar_envelope)\n    \n    return ploex_digest\n"
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "tokkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    return tokkevlib.toktam_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "tokkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    return tokkevlib.rultok(x)\n"
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "tokkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    return tokkevlib.vektok_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "tokkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 8, in <module>\n    assert solve([7, 19, 16, -3, -4]) == [95, 16, -3, -20, 7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import tokkevlib\n\ndef solve(x):\n    return tokkevlib.rultok(x)\n"
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "tokkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    return tokkevlib.zorgan_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "tokkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    return tokkevlib.fexvek_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "tokkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    return tokkevlib.mirlish_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "tokkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    # Wrap in the tamar envelope\n    tamar_envelope = tokkevlib.vorhiz_cv(x)\n    \n    # Wrap in the voron envelope\n    final_envelope = tokkevlib.toktam_dg(tamar_envelope)\n    \n    return final_envelope\n"
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "tokkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    # Wrap in the tamar envelope\n    tamar_envelope = tokkevlib.vorhiz_cv(x)\n    \n    # Compute the quenu digest\n    quenu_digest = tokkevlib.vektok_fx(tamar_envelope)\n    \n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "tokkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    # Wrap in the voron envelope\n    voron_envelope = tokkevlib.toktam_dg(x)\n    \n    # Compute the quenu digest\n    quenu_digest = tokkevlib.vektok_fx(voron_envelope)\n    \n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "tokkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    hizon_digest = tokkevlib.zorgan_cv(x)\n    tamon_fold = tokkevlib.fexvek_dg(hizon_digest)\n    return tamon_fold\n"
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "tokkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokkevlib\n\ndef solve(x):\n    tamar_envelope = tokkevlib.vorhiz_cv(x)\n    hizon_digest = tokkevlib.zorgan_cv(tamar_envelope)\n    return hizon_digest\n"
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "baxfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import baxfexlib\n\ndef solve(x: str) -> int:\n    return baxfexlib.ruldru_op(x)\n"
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "baxfexlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 8, in <module>\n    assert solve('ehz') == '3^ehz^4'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import baxfexlib\n\ndef solve(x):\n    return baxfexlib.tokrul_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "baxfexlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 8, in <module>\n    assert solve([18, 5, 14, 18, -9, 0, 6]) == [9, 0, 6, 18, -5, 14, 18]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import baxfexlib\n\ndef solve(x):\n    return baxfexlib.nidvek_dg([x])\n"
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "baxfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import baxfexlib\n\ndef solve(x):\n    return baxfexlib.kevjul(x)\n"
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "baxfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import baxfexlib\n\ndef solve(x):\n    return baxfexlib.baxjul_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "baxfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import baxfexlib\n\ndef solve(x):\n    return baxfexlib.tokrul_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "baxfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import baxfexlib\n\ndef solve(x):\n    return baxfexlib.vekpal_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "baxfexlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 6, in solve\n    veku_envelope = baxfexlib.vekrul_dg(x)\n                    ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'baxfexlib' has no attribute 'vekrul_dg'. Did you mean: 'tokrul_dg'?\n",
+   "code": "import baxfexlib\n\ndef solve(x):\n    # Wrap in the veku envelope\n    veku_envelope = baxfexlib.vekrul_dg(x)\n    \n    # Wrap in the tokex envelope\n    tokex_envelope = baxfexlib.lishplo(veku_envelope)\n    \n    return tokex_envelope\n"
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "baxfexlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 14, in <module>\n    assert solve('faba4nw5da') == 69\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import baxfexlib\n\ndef solve(x):\n    # Wrap in the tokex envelope\n    tokex_envelope = baxfexlib.tokrul_dg(x)\n    \n    # Compute the quenex digest\n    quenex_digest = baxfexlib.ruldru_op(tokex_envelope)\n    \n    return quenex_digest\n"
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "baxfexlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import baxfexlib\n\ndef solve(x):\n    # Compute the rulon digest of x\n    rulon_digest = baxfexlib.vekpal_dg(x)\n    \n    # Compute the palu fold of the rulon digest\n    palu_fold = baxfexlib.baxjul_fx(rulon_digest)\n    \n    return palu_fold\n"
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "baxfexlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import baxfexlib\n\ndef solve(x):\n    # Wrap in the veku envelope\n    veku_envelope = baxfexlib.tokrul_dg(x)\n    \n    # Compute the quenex digest\n    quenex_digest = baxfexlib.ruldru_op(veku_envelope)\n    \n    return quenex_digest\n"
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "baxfexlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import baxfexlib\n\ndef solve(x):\n    quenex_digest = baxfexlib.ruldru_op(x)\n    palu_fold = baxfexlib.baxjul_fx(quenex_digest)\n    return palu_fold\n"
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "lishlishlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x: str) -> str:\n    return lishlishlib.plotok(x)\n"
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "lishlishlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    return lishlishlib.fexlish_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "lishlishlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    return lishlishlib.plolish_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "lishlishlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    return lishlishlib.quenlish_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "lishlishlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x: float) -> float:\n    return lishlishlib.gankev_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "lishlishlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    return lishlishlib.vornid_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "lishlishlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    return lishlishlib.vekhiz_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "lishlishlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    # Wrap in the druu envelope\n    druu_envelope = lishlishlib.plotok(x)\n    \n    # Compute the hizar digest\n    hizar_digest = lishlishlib.quenlish_fx(druu_envelope)\n    \n    return hizar_digest\n"
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "lishlishlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    # Apply palu shuffle\n    palu_shuffled = lishlishlib.vornid_cv(x)\n    \n    # Apply veku shuffle\n    veku_shuffled = lishlishlib.plolish_fx(palu_shuffled)\n    \n    return veku_shuffled\n"
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "lishlishlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    # Wrap in the baxex envelope\n    baxex_envelope = lishlishlib.vekhiz_fx(x)\n    \n    # Wrap in the druu envelope\n    druu_envelope = lishlishlib.plotok(baxex_envelope)\n    \n    return druu_envelope\n"
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "lishlishlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    # Apply veku shuffle\n    veku_result = lishlishlib.plolish_fx(x)\n    \n    # Apply palu shuffle\n    palu_result = lishlishlib.vornid_cv(veku_result)\n    \n    return palu_result\n"
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "lishlishlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import lishlishlib\n\ndef solve(x):\n    ploon_digest = lishlishlib.quennid(x)\n    tokar_fold = lishlishlib.fexlish_dg(ploon_digest)\n    return tokar_fold\n"
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "tokmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    return tokmirlib.pallish_op(x)\n"
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "tokmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    return tokmirlib.ganplo_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "tokmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    return tokmirlib.tamrul_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "tokmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    return tokmirlib.hizpal_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "tokmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    return tokmirlib.tamfex_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "tokmirlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 8, in <module>\n    assert solve('af55wgakh') == '9;af55wgakh;6'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import tokmirlib\n\ndef solve(x):\n    return tokmirlib.tamrul_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "tokmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    return tokmirlib.hiznid_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "tokmirlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    # Wrap in the lishar envelope\n    lishar_envelope = tokmirlib.tamrul_cv(x)\n    \n    # Compute the kevex digest\n    kevex_digest = tokmirlib.lishfex(lishar_envelope)\n    \n    return kevex_digest\n"
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "tokmirlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    # Compute the kevex digest of x\n    kevex_digest = tokmirlib.lishfex(x)\n    \n    # Compute the zorex fold of the kevex digest\n    zorex_fold = tokmirlib.tamfex_cv(kevex_digest)\n    \n    return zorex_fold\n"
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "tokmirlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    # Apply palu shuffle\n    x = tokmirlib.pallish_op(x)\n    # Apply quenar shuffle\n    x = tokmirlib.hiznid_cv(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "tokmirlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tokmirlib\n\ndef solve(x):\n    # Wrap in the lishar envelope\n    lishar_envelope = tokmirlib.tamrul_cv(x)\n    \n    # Wrap in the tamu envelope\n    tamu_envelope = tokmirlib.julfex_fx(lishar_envelope)\n    \n    return tamu_envelope\n"
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "tokmirlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "rt solve('gm0') == 77\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 5, in solve\n    tamu_envelope = tokmirlib.tamu_envelope(x)\n                    ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokmirlib' has no attribute 'tamu_envelope'\n",
+   "code": "import tokmirlib\n\ndef solve(x):\n    tamu_envelope = tokmirlib.tamu_envelope(x)\n    kevex_digest = tokmirlib.lishfex(tamu_envelope)\n    return kevex_digest\n"
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "mirnidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    return mirnidlib.vektok_op(x)\n"
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "mirnidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    return mirnidlib.druzor_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "mirnidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    return mirnidlib.lishrul_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "mirnidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    return mirnidlib.tokhiz_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "mirnidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    return mirnidlib.julgan_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "mirnidlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "6, -3, 18, -5]) == [-6, 18, -5, 32, -6]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp3ngj64w4/sol.py\", line 5, in solve\n    return mirnidlib.hizex_cv(x)\n           ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'mirnidlib' has no attribute 'hizex_cv'\n",
+   "code": "import mirnidlib\n\ndef solve(x):\n    return mirnidlib.hizex_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "mirnidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    return mirnidlib.kevvor_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "mirnidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    # Wrap the string in the voru envelope\n    voru_envelope = mirnidlib.lishrul_dg(x)\n    \n    # Compute the tokex digest of the wrapped string\n    tokex_digest = mirnidlib.druzor_dg(voru_envelope)\n    \n    return tokex_digest\n"
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "mirnidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    tokex_digest = mirnidlib.druzor_dg(x)\n    baxex_fold = mirnidlib.kevvor_fx(tokex_digest)\n    return baxex_fold\n"
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "mirnidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    # Wrap in the voru envelope\n    voru_envelope = mirnidlib.lishrul_dg(x)\n    \n    # Wrap in the lishon envelope\n    lishon_envelope = mirnidlib.ganzor(voru_envelope)\n    \n    return lishon_envelope\n"
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "mirnidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    # Wrap in the lishon envelope\n    enveloped_x = mirnidlib.ganzor(x)\n    \n    # Compute the kevar digest\n    kevar_digest = mirnidlib.vektok_op(enveloped_x)\n    \n    return kevar_digest\n"
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "mirnidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import mirnidlib\n\ndef solve(x):\n    # Wrap in the lishon envelope\n    lishon_envelope = mirnidlib.ganzor(x)\n    \n    # Wrap in the voru envelope\n    voru_envelope = mirnidlib.lishrul_dg(lishon_envelope)\n    \n    return voru_envelope\n"
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "kevganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x: str) -> str:\n    return kevganlib.nidvek_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "kevganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    return kevganlib.rultam(x)\n"
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "kevganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    return kevganlib.rulzor(x)\n"
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "kevganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    return kevganlib.hizlish_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "kevganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    return kevganlib.toklish_op(x)\n"
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "kevganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    return kevganlib.rulfex(x)\n"
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "kevganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    return kevganlib.julnid_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "kevganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    # Wrap in the baxex envelope\n    baxex_envelope = kevganlib.nidvek_fx(x)\n    \n    # Compute the nidex digest of the result\n    nidex_digest = kevganlib.hizlish_dg(baxex_envelope)\n    \n    return nidex_digest\n"
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "kevganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    # Wrap in the baxex envelope\n    baxex_envelope = kevganlib.nidvek_fx(x)\n    \n    # Wrap in the nidar envelope\n    nidar_envelope = kevganlib.rulzor(baxex_envelope)\n    \n    return nidar_envelope\n"
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "kevganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    # Apply lishon shuffle\n    lishon_result = kevganlib.julnid_dg(x)\n    \n    # Apply tokon shuffle\n    tokon_result = kevganlib.rultam(lishon_result)\n    \n    return tokon_result\n"
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "kevganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    # Wrap in the nidar envelope\n    nidar_envelope = kevganlib.rulzor(x)\n    \n    # Compute the nidex digest\n    nidex_digest = kevganlib.hizlish_dg(nidar_envelope)\n    \n    return nidex_digest\n"
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "kevganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import kevganlib\n\ndef solve(x):\n    # Apply tokon shuffle\n    tokon_result = kevganlib.rultam(x)\n    \n    # Apply lishon shuffle\n    final_result = kevganlib.julnid_dg(tokon_result)\n    \n    return final_result\n"
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "tambaxlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x: str) -> int:\n    return tambaxlib.vorjul(x)\n"
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "tambaxlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    return tambaxlib.rulfex_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "tambaxlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    return tambaxlib.tokdru_op(x)\n"
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "tambaxlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    return tambaxlib.plotam_cv(str(x))\n"
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "tambaxlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    return tambaxlib.palvor_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "tambaxlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    return tambaxlib.drugan_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "tambaxlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x: str) -> str:\n    return tambaxlib.mirjul_op(x)\n"
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "tambaxlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    # Wrap the string in the nidar envelope\n    nidar_envelope = tambaxlib.mirjul_op(x)\n    \n    # Compute the lishex digest of the wrapped string\n    lishex_digest = tambaxlib.plotam_cv(nidar_envelope)\n    \n    return lishex_digest\n"
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "tambaxlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    # Wrap the input string in the saron envelope\n    enveloped = tambaxlib.baxnid(x)\n    \n    # Compute the lishex digest of the enveloped string\n    lishex_digest = tambaxlib.plotam_cv(enveloped)\n    \n    return lishex_digest\n"
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "tambaxlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    nidar_envelope = tambaxlib.mirjul_op(x)\n    hizon_digest = tambaxlib.vorjul(nidar_envelope)\n    return hizon_digest\n"
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "tambaxlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    # Apply rulex shuffle\n    x = tambaxlib.rulfex_fx(x)\n    # Apply ganex shuffle\n    x = tambaxlib.palvor_dg(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "tambaxlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import tambaxlib\n\ndef solve(x):\n    # Apply ganex shuffle\n    ganex_result = tambaxlib.palvor_dg(x)\n    \n    # Apply rulex shuffle\n    rulex_result = tambaxlib.rulfex_fx(ganex_result)\n    \n    return rulex_result\n"
+  }
+ ]
+}

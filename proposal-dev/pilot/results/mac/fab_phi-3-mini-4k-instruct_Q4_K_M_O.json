@@ -1,0 +1,1095 @@
+{
+ "summary": {
+  "model": "phi-3-mini-4k-instruct",
+  "rung": "Q4_K_M",
+  "condition": "O",
+  "n": 120,
+  "pass@1": 0.875,
+  "pass_single": 0.971,
+  "pass_chain": 0.74,
+  "fab_dir": "fab",
+  "tasks_sha256": "e656806088093f95"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    return round(sardrulib.baxgan_cv(x), 4)\n",
+   "raw_len": 89
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.quenmir_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.rulvor_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.rulpal_fx(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.fexquen(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.zortam_fx(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.rulzor_fx(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\nimport sardrulib\n\ndef solve(x):\n    palon_digest = sardrulib.zortam_fx(x)\n    miru_fold = sardrulib.rulvor_op(palon_digest)\n    return miru employee_id, employee_name, employee_salary\n\ndef calculate_total_salary(employee_list):\n    total_salary = 0\n    for employee in employee_list:\n        total_salary += employee[2]\n    return total_salary\n\n# Example usage:\nemployees = [\n    (1, 'Alice', 50000),\n    (2, 'Bob', 60000),\n    (3, 'Charlie', 70000)\n]\n\ntotal_salary = calculate_total_salary(employees)\nprint(f\"The total salary for all employees is: {total employee_id, employee_name, employee_salary\n\ndef solve(x):\n    palon_digest = sardrulib.zortam_fx(x)\n    miru_fold = sardrulib.rulvor_op(palon_digest)\n    return miru_fold\n\n# Example usage:\nresult = solve('example_string')\nprint(f\"The result of the computation is: {result}\")\n",
+   "raw_len": 842
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    nidu_digest = sardrulib.fexquen(x)\n    miru_fold = sardrulib.rulvor_op(nidu_digest)\n    return miru_fold\n",
+   "raw_len": 154
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    kevex_shuffled = sardrulib.quenmir_dg(x)\n    quenu_shuffled = sardrulib.rulkev_dg(kevex_shuffled)\n    return quenu_shuffled\n",
+   "raw_len": 173
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import sardrulib\n\ndef solve(x):\n    plou_envelope = sardrulib.rulzor_fx(x)\n    tokon_envelope = sardrulib.rulpal_fx(plou_envelope)\n    return tokon_envelope\n",
+   "raw_len": 170
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 7\n    return nidu employee_id = 100\n                ^^^^^^^^^^^\nSyntaxError: invalid syntax\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    wrapped_string = sardrulib.rulzor_fx(x)\n    nidu_digest = sardrulib.fexquen(wrapped_string)\n    return nidu employee_id = 100\n\ndef calculate_bonus(employee_id):\n    if employee_id < 100:\n        return \"Employee ID must be at least 100.\"\n    else:\n        return f\"Employee ID {employee_id} qualifies for a bonus.\"\n\n# Example usage:\nprint(calculate_bonus(employee_id))\n",
+   "raw_len": 418
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n\n    return veklishlib.sarhiz_dg(x)\n\n",
+   "raw_len": 65
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.vekmir_cv(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return veklishlib.fexsar_dg(x)\n",
+   "raw_len": 62
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "from veklishlib import hizdru_dg\n\ndef solve(x):\n    return hizdru_dg(x)\n",
+   "raw_len": 85
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.kevvek_fx(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.tokdru_cv(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return veklishlib.julpal_dg(x)\n",
+   "raw_len": 62
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    voru_envelope = veklishlib.vekmir_cv(x)\n    final_value = veklishlib.kevvek_fx(voru_envelope)\n    return final_value\n",
+   "raw_len": 167
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    tokon_digest = veklishlib.fexsar_dg(x)\n    hizu_fold = veklishlib.sarhiz_dg(tokon_digest)\n    return hizu_fold\n",
+   "raw_len": 161
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 7\n    return tokon employee_id = '12345'\n                 ^^^^^^^^^^^\nSyntaxError: invalid syntax\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    wrapped_string = veklishlib.kevvek_fx(x)\n    tokon_digest = veklishlib.fexsar_dg(wrapped_string)\n    return tokon employee_id = '12345'\nwrapped_employee_id = veklishlib.kevvek_fx(employee_id)\nprint(f\"The wrapped employee ID is: {wrapped_employee_id}\")\n\n# Example usage of the solve function\nresult = solve('wmdmg04kq')\nprint(f\"The tokon digest of the wrapped string is: {result}\")\n",
+   "raw_len": 431
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    julu_digest = veklishlib.julpal_dg(x)\n    hizu_fold = veklishlib.sarhiz_dg(julu_digest)\n    return hizu_fold\n",
+   "raw_len": 159
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    # Apply the palon shuffle to x\n    palon_shuffled = veklishlib.hizdru_dg(x)\n    # Apply the zoron shuffle to the result of the palon shuffle\n    final_result = veklishlib.tokdru_cv(palon_shuffled)\n    return final_result\n",
+   "raw_len": 271
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 2, in <module>\n    import vorjulib\nModuleNotFoundError: No module named 'vorjulib'\n",
+   "code": "import vorjulib\n\ndef solve(x):\n    return vorjulib.kevbax_dg(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\n\n\ndef solve(x):\n\n    return vorjullib.palsar_dg(x)\n\n",
+   "raw_len": 83
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.palpal(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.palvor_cv(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 2, in <module>\n    import vorjulib\nModuleNotFoundError: No module named 'vorjulib'\n",
+   "code": "import vorjulib\n\ndef solve(x):\n    return vorjulib.baxkev_cv(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.vorhiz_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.zorvek_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 7\n    return miru employee_id = '12345'\n                ^^^^^^^^^^^\nSyntaxError: invalid syntax\n",
+   "code": "import vorjulib\n\ndef solve(x):\n    wrapped_x = vorjulib.kevbax_dg(x)\n    miru_digest = vorjulib.vorhiz_dg(wrapped_x)\n    return miru employee_id = '12345'\n\nprint(solve(employee_id))\n",
+   "raw_len": 195
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 6\n    zoru_envelope = vorjulib.baxkev_cv(fexon estate, 'fexon_envelope')\n                                       ^^^^^^^^^^^^\nSyntaxError: invalid syntax. Perhaps you forgot a comma?\n",
+   "code": "import vorjulib\n\ndef solve(x):\n    fexon_envelope = vorjulib.kevbax_dg(x)\n    zoru_envelope = vorjulib.baxkev_cv(fexon estate, 'fexon_envelope')\n    return zoru_envelope\n",
+   "raw_len": 183
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorjullib\n\ndef solve(x):\n    ganu_shuffled = vorjullib.zorvek_op(x)\n    saru_shuffled = vorjullib.tokrul(ganu_shuffled)\n    return saru_shuffled\n",
+   "raw_len": 165
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " -2]) == [6, -2, -38, 20, -14, 15, 18, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 5, in solve\n    x = vorjulib.tokrul(x)\n        ^^^^^^^^\nNameError: name 'vorjulib' is not defined. Did you mean: 'vorjullib'?\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    x = vorjulib.tokrul(x)\n    x = vorjulib.zorvek_op(x)\n    return x\n",
+   "raw_len": 115
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 7\n    return miru employee_id, employee_name, employee_salary = 'E001', 'John Doe', 50000\n                ^^^^^^^^^^^\nSyntaxError: invalid syntax\n",
+   "code": "import vorjulib\n\ndef solve(x):\n    wrapped_string = vorjulib.baxkev_cv(x)\n    miru_digest = vorjulib.vorhiz_dg(wrapped_string)\n    return miru employee_id, employee_name, employee_salary = 'E001', 'John Doe', 50000\n\ndef calculate_bonus(employee_id, employee_name, employee_salary):\n    wrapped_string = vorjulib.baxkev_cv(employee_id + employee_name + str(employee_salary))\n    miru_digest = vorjulib.vorhiz_dg(wrapped_string)\n    return miru_digest\n\n# Example usage:\nbonus = calculate_bonus(employee_id, employee_name, employee_salary)\nprint(f\"The miru digest for the bonus calculation is: {bonus}\")\n",
+   "raw_len": 614
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.lishvek_dg(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return quentamlib.gantam_op(x)\n",
+   "raw_len": 62
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.plonid_op(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    return round(quentamlib.lishmir_cv(x), 4)\n",
+   "raw_len": 92
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.vorvek(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.fextok(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.vekfex_cv(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    quenon_shuffled = quentamlib.fextok(x)\n    nidu_shuffled = quentamlib.vorvek(quenon_shuffled)\n    return nidu_shuffled\n",
+   "raw_len": 169
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    wrapped_x = quentamlib.vekfex_cv(x)\n    vorar_digest = quentamlib.plonid_op(wrapped_x)\n    return vorar_digest\n",
+   "raw_len": 161
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    wrapped_x = quentamlib.lishvek_dg(x)\n    vorar_digest = quentamlib.plonid_op(wrapped_x)\n    return vorar_digest\n",
+   "raw_len": 162
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    tamon_envelope = quentamlib.vekfex_cv(x)\n    rulex_envelope = quentamlib.lishvek_dg(tamon_envelope)\n    return rulex_envelope\n",
+   "raw_len": 176
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quentamlib\n\ndef solve(x):\n    vorar_digest = quentamlib.plonid_op(x)\n    kevar_fold = quentamlib.sarlish_cv(vorar_digest)\n    return kevar_fold\n",
+   "raw_len": 164
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.drutok_cv(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\n\ndef solve(x):\n\n    return round(vekganlib.vorgan_op(x), 4)\n\n",
+   "raw_len": 93
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.sardru_cv(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.druhiz_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\n\ndef solve(x):\n\n    return vekganlib.rulnid_cv(x)\n\n",
+   "raw_len": 83
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.julmir_cv(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.palmir_cv(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    wrapped_x = vekganlib.sardru_cv(x)\n    tokon_digest = vekganlib.druhiz_dg(wrapped_x)\n    return tokon_digest\n",
+   "raw_len": 158
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    tokon_digest = vekganlib.druhiz_dg(x)\n    vorex_fold = vekganlib.rulnid_cv(tokon_digest)\n    return vorex_fold\n",
+   "raw_len": 160
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekganlib\n\ndef solve(x):\n    kevar_envelope = vekganlib.julmir_cv(x)\n    rulex_envelope = vekganlib.sardru_cv(kevar_envelope)\n    return rulex_envelope\n",
+   "raw_len": 172
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 7\n    vorex_fold = vekganlib.rulnid_cv(mirar employee's salary is $50,000, and the tax rate is 20%. How much tax does the employee pay?\n                                                   ^\nSyntaxError: unterminated string literal (detected at line 7)\n",
+   "code": "```python\nimport vekganlib\n\ndef solve(x):\n    mirar_digest = vekganlib.drutok_cv(x)\n    vorex_fold = vekganlib.rulnid_cv(mirar employee's salary is $50,000, and the tax rate is 20%. How much tax does the employee pay?\n\nTo calculate the tax, we need to multiply the salary by the tax rate.\n\nSalary = $50,000\nTax rate = 20% = 0.20\n\nTax = Salary * Tax rate\nTax = $50,000 * 0.20\nTax = $10,000\n\nThe employee pays $10,000 in tax.\n\n",
+   "raw_len": 425
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 7\n    return mirar employee_id = input(\"Enter your employee ID: \")\n                 ^^^^^^^^^^^\nSyntaxError: invalid syntax\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    kevar_envelope = vekganlib.julmir_cv(x)\n    mirar_digest = vekganlib.drutok_cv(kevar_envelope)\n    return mirar employee_id = input(\"Enter your employee ID: \")\n\n# Validate the employee ID format\nif not employee_id.isdigit():\n    print(\"Invalid employee ID. Please enter a numeric ID.\")\nelse:\n    # Call the solve function with the employee ID\n    result = solve(employee_id)\n    print(f\"The result is: {result}\")\n",
+   "raw_len": 462
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.druquen_op(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.hizlish_op(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.quendru_op(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    return round(quenkevlib.nidjul_dg(x), 4)\n",
+   "raw_len": 91
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.baxvor_cv(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.vorzor_dg(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.ganplo_dg(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    wrapped_rular = quenkevlib.ganplo_dg(x)\n    wrapped_nidu = quenkevlib.rulfex_op(wrapped_rular)\n    return wrapped_nidu\n",
+   "raw_len": 169
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 7\n    return vekar employee's total compensation for the year, including base salary, bonuses, and benefits.\n                         ^\nSyntaxError: unterminated string literal (detected at line 7)\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    wrapped_string = quenkevlib.ganplo_dg(x)\n    vekar_digest = quenkevlib.vorzor_dg(wrapped_string)\n    return vekar employee's total compensation for the year, including base salary, bonuses, and benefits.\n\ndef solve(x):\n    wrapped_string = quenkevlib.ganplo_dg(x)\n    vekar_digest = quenkevlib.vorzor_dg(wrapped_string)\n    return vekar_digest\n",
+   "raw_len": 394
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    wrapped_string = quenkevlib.rulfex_op(x)\n    vekar_digest = quenkevlib.vorzor_dg(wrapped_string)\n    return vekar_digest\n",
+   "raw_len": 171
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import quenkevlib\n\ndef solve(x):\n    wrapped_string = quenkevlib.rulfex_op(x)\n    hizex_digest = quenkevlib.druquen_op(wrapped_string)\n    return hizex_digest\n",
+   "raw_len": 172
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 43\n    {\"name\": \"Mia\", \"age\n                    ^\nSyntaxError: unterminated string literal (detected at line 43)\n",
+   "code": "```python\nimport quenkevlib\n\ndef solve(x):\n    hizex_digest = quenkevlib.druquen_op(x)\n    quenar_fold = quenkevlib.baxvor_cv(hizex_digest)\n    return quenar employee_data = [\n    {\"name\": \"John\", \"age\": 28, \"department\": \"Sales\"},\n    {\"name\": \"Jane\", \"age\": 32, \"department\": \"Marketing\"},\n    {\"name\": \"Emily\", \"age\": 41, \"department\": \"IT\"},\n    {\"name\": \"Daniel\", \"age\": 35, \"department\": \"Sales\"},\n    {\"name\": \"Sarah\", \"age\": 29, \"department\": \"Marketing\"},\n    {\"name\": \"Michael\", \"age\": 38, \"department\": \"IT\"},\n    {\"name\": \"Olivia\", \"age\": 34, \"department\": \"Sales\"},\n    {\"name\": \"William\", \"age\": 30, \"department\": \"Marketing\"},\n    {\"name\": \"Sophia\", \"age\": 37, \"department\": \"IT\"},\n    {\"name\": \"James\", \"age\": 33, \"department\": \"Sales\"},\n    {\"name\": \"Emma\", \"age\": 31, \"department\": \"Marketing\"},\n    {\"name\": \"Matthew\", \"age\": 36, \"department\": \"IT\"},\n    {\"name\": \"Isabella\", \"age\": 27, \"department\": \"Sales\"},\n    {\"name\": \"Ethan\", \"age\": 39, \"department\": \"Marketing\"},\n    {\"name\": \"Ava\", \"age\": 33, \"department\": \"IT\"},\n    {\"name\": \"Logan\", \"age\": 31, \"department\": \"Sales\"},\n    {\"name\": \"Scarlett\", \"age\": 35, \"department\": \"Marketing\"},\n    {\"name\": \"Jackson\", \"age\": 37, \"department\": \"IT\"},\n    {\"name\": \"Amelia\", \"age\": 32, \"department\": \"Sales\"},\n    {\"name\": \"Lucas\", \"age\": 34, \"department\": \"Marketing\"},\n    {\"name\": \"Mia\", \"age\": 38, \"department\": \"IT\"},\n    {\"name\": \"William\", \"age\": 30, \"department\": \"Sales\"},\n    {\"name\": \"Sophia\", \"age\": 37, \"department\": \"Marketing\"},\n    {\"name\": \"James\", \"age\": 33, \"department\": \"IT\"},\n    {\"name\": \"Emma\", \"age\": 31, \"department\": \"Sales\"},\n    {\"name\": \"Matthew\", \"age\": 36, \"department\": \"Marketing\"},\n    {\"name\": \"Isabella\", \"age\": 27, \"department\": \"IT\"},\n    {\"name\": \"Ethan\", \"age\": 39, \"department\": \"Sales\"},\n    {\"name\": \"Ava\", \"age\": 33, \"department\": \"Marketing\"},\n    {\"name\": \"Logan\", \"age\": 31, \"department\": \"IT\"},\n    {\"name\": \"Scarlett\", \"age\": 35, \"department\": \"Sales\"},\n    {\"name\": \"Jackson\", \"age\": 37, \"department\": \"Marketing\"},\n    {\"name\": \"Amelia\", \"age\": 32, \"department\": \"IT\"},\n    {\"name\": \"Lucas\", \"age\": 34, \"department\": \"Sales\"},\n    {\"name\": \"Mia\", \"age",
+   "raw_len": 2171
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.kevdru_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.tamjul_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    return round(nidveklib.palvor(x), 4)\n",
+   "raw_len": 86
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.vekrul_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.tokmir_fx(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.vorvek_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.palpal_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    wrapped_x = nidveklib.palvek_cv(x)\n    zoru_digest = nidveklib.palpal_op(wrapped_x)\n    return zoru_digest\n",
+   "raw_len": 156
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 44\n    {\"name\": \"Oliv\n             ^\nSyntaxError: unterminated string literal (detected at line 44)\n",
+   "code": "```python\nimport nidveklib\n\ndef solve(x):\n    zoru_digest = nidveklib.palpal_op(x)\n    zoru_fold = nidveklib.tamjul_op(zoru_digest)\n    return zoru employee_data = [\n    {\"name\": \"John\", \"age\": 28, \"department\": \"Sales\"},\n    {\"name\": \"Jane\", \"age\": 32, \"department\": \"Marketing\"},\n    {\"name\": \"Dave\", \"age\": 45, \"department\": \"IT\"},\n    {\"name\": \"Sarah\", \"age\": 38, \"department\": \"HR\"},\n    {\"name\": \"Mike\", \"age\": 30, \"department\": \"Sales\"},\n    {\"name\": \"Emma\", \"age\": 25, \"department\": \"Marketing\"},\n    {\"name\": \"Tom\", \"age\": 50, \"department\": \"IT\"},\n    {\"name\": \"Linda\", \"age\": 33, \"department\": \"HR\"},\n    {\"name\": \"Alex\", \"age\": 29, \"department\": \"Sales\"},\n    {\"name\": \"Sophia\", \"age\": 35, \"department\": \"Marketing\"},\n    {\"name\": \"William\", \"age\": 42, \"department\": \"IT\"},\n    {\"name\": \"Olivia\", \"age\": 31, \"department\": \"HR\"},\n    {\"name\": \"James\", \"age\": 37, \"department\": \"Sales\"},\n    {\"name\": \"Isabella\", \"age\": 27, \"department\": \"Marketing\"},\n    {\"name\": \"Benjamin\", \"age\": 48, \"department\": \"IT\"},\n    {\"name\": \"Emily\", \"age\": 36, \"department\": \"HR\"},\n    {\"name\": \"Daniel\", \"age\": 34, \"department\": \"Sales\"},\n    {\"name\": \"Sophie\", \"age\": 28, \"department\": \"Marketing\"},\n    {\"name\": \"Jack\", \"age\": 47, \"department\": \"IT\"},\n    {\"name\": \"Ava\", \"age\": 39, \"department\": \"HR\"},\n    {\"name\": \"Ethan\", \"age\": 31, \"department\": \"Sales\"},\n    {\"name\": \"Mia\", \"age\": 29, \"department\": \"Marketing\"},\n    {\"name\": \"William\", \"age\": 42, \"department\": \"IT\"},\n    {\"name\": \"Olivia\", \"age\": 31, \"department\": \"HR\"},\n    {\"name\": \"James\", \"age\": 37, \"department\": \"Sales\"},\n    {\"name\": \"Isabella\", \"age\": 27, \"department\": \"Marketing\"},\n    {\"name\": \"Benjamin\", \"age\": 48, \"department\": \"IT\"},\n    {\"name\": \"Emily\", \"age\": 36, \"department\": \"HR\"},\n    {\"name\": \"Daniel\", \"age\": 34, \"department\": \"Sales\"},\n    {\"name\": \"Sophie\", \"age\": 28, \"department\": \"Marketing\"},\n    {\"name\": \"Jack\", \"age\": 47, \"department\": \"IT\"},\n    {\"name\": \"Ava\", \"age\": 39, \"department\": \"HR\"},\n    {\"name\": \"Ethan\", \"age\": 31, \"department\": \"Sales\"},\n    {\"name\": \"Mia\", \"age\": 29, \"department\": \"Marketing\"},\n    {\"name\": \"William\", \"age\": 42, \"department\": \"IT\"},\n    {\"name\": \"Oliv",
+   "raw_len": 2171
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    wrapped_string = nidveklib.kevdru_op(x)\n    zoru_digest = nidveklib.palpal_op(wrapped_string)\n    return zoru_digest\n",
+   "raw_len": 166
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    wrapped_string = nidveklib.kevdru_op(x)\n    kevar_digest = nidveklib.vorvek_dg(wrapped_string)\n    return kevar_digest\n",
+   "raw_len": 168
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import nidveklib\n\ndef solve(x):\n    wrapped_x = nidveklib.palvek_cv(x)\n    kevar_digest = nidveklib.vorvek_dg(wrapped_x)\n    return kevar_digest\n",
+   "raw_len": 158
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.druvek_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.jultok_cv(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n\n    return vekjullib.sarfex_op(x)\n\n",
+   "raw_len": 64
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\n\ndef solve(x):\n\n    return round(vekjullib.toklish_cv(x), 4)\n\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.rulgan_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.palnid_fx(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.julkev_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    vorar_envelope = vekjullib.hizplo_dg(x)\n    lishu_envelope = vekjullib.julkev_op(vorar_envelope)\n    return lishu_envelope\n",
+   "raw_len": 172
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    wrapped_string = vekjullib.hizplo_dg(x)\n    toku_digest = vekjullib.rulgan_op(wrapped_string)\n    return toku_digest\n",
+   "raw_len": 166
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    vekon_digest = vekjullib.palnid_fx(x)\n    lishar_fold = vekjullib.sarfex_op(vekon_digest)\n    return lishar_fold\n",
+   "raw_len": 162
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    wrapped_string = vekjullib.julkev_op(x)\n    toku_digest = vekjullib.rulgan_op(wrapped_string)\n    return toku_digest\n",
+   "raw_len": 166
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    lishu_envelope = vekjullib.julkev_op(x)\n    vorar_envelope = vekjullib.hizplo_dg(lishu_envelope)\n    return vorar_envelope\n",
+   "raw_len": 172
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.hiznid_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.tamvek_fx(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.ganquen_dg(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.drumir_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.vorgan(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.plorul_cv(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.plohiz_op(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    wrapped_x = vorplolib.tamvek_fx(x)\n    quenu_digest = vorplolib.ganquen_dg(wrapped_x)\n    return quenu_digest\n",
+   "raw_len": 159
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp7nuwf0ar/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\nimport vorplolib\n\ndef solve(x):\n    tamar_envelope = vorplolib.tamvek_fx(x)\n    druar_digest = vorplolib.drumir_dg(tamar_envelope)\n    return druar agent_id, agent_type, agent_name, agent_description, agent_status, agent_priority, agent_created_at, agent_updated_at, agent_deleted_at, agent_deleted_by, agent_tags, agent_tags_string, agent_tags_string_array, agent_tags_array, agent_tags_array_string, agent_tags_array_string_array, agent_tags_array_array, agent_tags_array_array_string, agent_tags_array_array_string_array, agent_tags_array_array_array, agent_tags_array_array_array_string, agent_tags_array_array_array_string_array, agent_tags_array_array_array_array, agent_tags_array_array_array_array_string, agent_tags_array_array_array_array_string_array, agent_tags_array_array_array_array_array, agent_tags_array_array_array_array_array_string, agent_tags_array_array_array_array_array_string_array, agent_tags_array_array_array_array_array_array, agent_tags_array_array_array_array_array_array_string, agent_tags_array_array_array_array_array_array_string_array, agent_tags_array_array_array_array_array_array_array, agent_tags_array_array_array_array_array_array_array_string, agent_tags_array_array_array_array_array_array_array_string_array, agent_tags_array_array_array_array_array_array_array_array, agent_tags_array_array_array_array_array_array_array_array_string, agent_tags_array_array_array_array_array_array_array_string_array, agent agent_id, agent_type, agent_name, agent_description, agent_status, agent_priority, agent_created_at, agent_updated_at, agent_deleted_at, agent_deleted_by, agent_tags, agent_tags_string, agent_tags_string_array, agent_tags_array, agent_tags_array_string, agent_tags_array_string_array, agent_tags_array_array, agent_tags_array_array_string, agent_tags_array_array_string_array, agent_tags_array_array_array, agent_tags_array_array_array_string, agent_tags_array_array_array_string_array, agent_tags_array_array_array_array, agent_tags_array_array_array_array_string, agent_tags_array_array_array_array_string_array, agent_tags_array_array_array_array_array, agent_tags_array_array_array_array_array_string, agent_tags_array_array_array_array_array_string_array, agent_tags_array_array_array_array_array_array, agent_tags_array_array_array_array_array_array_string, agent_tags_array_array_array_array_array_array_string_array, agent_tags_array_array_array_array_array_array_array, agent_tags_array_array_array_array_array_array_array_string, agent_tags_array_array_array_array_array_array_array_string_array, agent_tags_array_array_array_array_array_array_array_array, agent_tags_array_array_array_array_array_array_array_array_string, agent",
+   "raw_len": 2704
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    druar_digest = vorplolib.drumir_dg(x)\n    hizex_fold = vorplolib.plohiz_op(druar_digest)\n    return hizex_fold\n",
+   "raw_len": 160
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    tamar_envelope = vorplolib.tamvek_fx(x)\n    mirar_envelope = vorplolib.plorul_cv(tamar_envelope)\n    return mirar_envelope\n",
+   "raw_len": 172
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import vorplolib\n\ndef solve(x):\n    quenu_digest = vorplolib.ganquen_dg(x)\n    hizex_fold = vorplolib.plohiz_op(quenu_digest)\n    return hizex_fold\n",
+   "raw_len": 161
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    return round(tokzorlib.vekplo_op(x), 4)\n",
+   "raw_len": 89
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.mirtam_fx(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.mirjul(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.tokplo_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.druhiz(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.lishsar_op(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.vorvor_dg(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    toku_envelope = tokzorlib.tokplo_dg(x)\n    hizar_digest = tokzorlib.zorgan_dg(toku_envelope)\n    return hizar_digest\n",
+   "raw_len": 166
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    wrapped_string = tokzorlib.vorvor_dg(x)\n    hizar_digest = tokzorlib.zorgan_dg(wrapped_string)\n    return hizar_digest\n",
+   "raw_len": 168
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    toku_envelope = tokzorlib.tokplo_dg(x)\n    final_result = tokzorlib.vorvor_dg(toku_envelope)\n    return final_result\n",
+   "raw_len": 166
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    hizar_digest = tokzorlib.zorgan_dg(x)\n    lishex_fold = tokzorlib.lishsar_op(hizar_digest)\n    return lishex_fold\n",
+   "raw_len": 163
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import tokzorlib\n\ndef solve(x):\n    lishu_result = tokzorlib.mirtam_fx(x)\n    quenar_result = tokzorlib.druhiz(lishu_result)\n    return quenar_result\n",
+   "raw_len": 163
+  }
+ ]
+}

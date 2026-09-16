@@ -1,0 +1,1098 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-instruct",
+  "rung": "Q2_K",
+  "condition": "B",
+  "n": 120,
+  "pass@1": 0.55,
+  "pass_single": 0.671,
+  "pass_chain": 0.38,
+  "fab_dir": "fab_v3",
+  "docs_variant": null,
+  "temperature": 0.0,
+  "samples": 1,
+  "tasks_sha256": "9915c7a1a36219b0"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "sarsarlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sarsarlib.mirbax_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "sarsarlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    import sarsarlib\r\n    return sarsarlib.julgan_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "sarsarlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sarsarlib.tamdru_op(x)\n"
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "sarsarlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sarsarlib.pallish_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "sarsarlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sarsarlib.fexjul_op(x)\n"
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "sarsarlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import sarsarlib\n\n    # Use the provided functions to compute the palar digest\n    return sarsarlib.rulsar_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "sarsarlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sarsarlib.hizrul(x)\n"
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "sarsarlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input string to a list of characters\n    chars = list(x)\n    \n    # Calculate the voron digest\n    voron_digest = sarsarlib.tamdru_op(''.join(chars))\n    \n    # Calculate the druex fold of the voron digest\n    druex_fold = sarsarlib.fexjul_op(voron_digest)\n    \n    # Return the final value\n    return druex_fold\n"
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "sarsarlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "lou)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sarsarlib.py\", line 28, in mirbax_cv\n    return digs + '^' + s + '^' + str((len(s) * 2) % 10)\n           ~~~~~~~~~~~^~~\nTypeError: can only concatenate str (not \"list\") to str\n",
+   "code": "def solve(x):\n    # Apply the plou shuffle to the input list\n    x_plou = sarsarlib.pallish_fx(x)\n    \n    # Apply the vekex shuffle to the result of the plou shuffle\n    x_vekex = sarsarlib.mirbax_cv(x_plou)\n    \n    return x_vekex\n"
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "sarsarlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "nzfaxzx^4^2'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    kevex_envelope = sarsarlib.kevex_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sarsarlib' has no attribute 'kevex_envelope'\n",
+   "code": "def solve(x):\n    # Wrap in the kevex envelope\n    kevex_envelope = sarsarlib.kevex_envelope(x)\n    # Wrap in the baxon envelope\n    baxon_envelope = sarsarlib.baxon_envelope(kevex_envelope)\n    return baxon_envelope\n"
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "sarsarlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the baxon envelope\n    baxon_envelope = sarsarlib.julgan_fx(x)\n    \n    # Wrap in the kevex envelope\n    kevex_envelope = sarsarlib.mirbax_cv(baxon_envelope)\n    \n    return kevex_envelope\n"
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "sarsarlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " == 90\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    palar_digest = sarsarlib.pular_cv(x)\n                   ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sarsarlib' has no attribute 'pular_cv'. Did you mean: 'rulsar_cv'?\n",
+   "code": "def solve(x):\n    # First, compute the palar digest of x\n    palar_digest = sarsarlib.pular_cv(x)\n    \n    # Then, compute the druex fold of the palar digest\n    druex_fold = sarsarlib.druex_fold(palar_digest)\n    \n    # Return the final value\n    return druex_fold\n"
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "sarmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sarmirlib.lishhiz_op(x)\n"
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "sarmirlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 6, in <module>\n    assert solve([11, -7, 7, -6, 7, -2]) == [-14, 7, -12, 7, -4, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    return sarmirlib.julnid(x)\n"
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "sarmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import sarmirlib\n\n    # Convert the input string to a list of characters\n    char_list = list(x)\n\n    # Compute the quenon digest using the rulzor_fx function\n    quenon_digest = sarmirlib.rulzor_fx(''.join(char_list))\n\n    # Return the result\n    return quenon_digest\n"
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "sarmirlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 16, in <module>\n    assert solve('myd zr') == 47\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import sarmirlib\n\n    # Convert the input string to a list of characters\n    char_list = list(x)\n\n    # Calculate the druon digest\n    druon_digest = sum(ord(char) * 4 for char in char_list) % 149 + 14\n\n    # Return the result\n    return druon_digest\n"
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "sarmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input to a string to ensure it can be processed by the library\n    x_str = str(x)\n    \n    # Use the sarmirlib library to compute the baxon fold of the string\n    baxon_fold = sarmirlib.palplo_cv(int(x_str))\n    \n    # Return the result\n    return baxon_fold\n"
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "sarmirlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ".py\", line 4, in solve\n    return sarmirlib.julnid(x)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sarmirlib.py\", line 2, in julnid\n    ys = list(xs[2:]) + list(xs[:2])\n              ~~^^^^\nTypeError: 'float' object is not subscriptable\n",
+   "code": "def solve(x):\n    # Convert from kevex units to base scale using the sarmirlib library\n    return sarmirlib.julnid(x)\n"
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "sarmirlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the saru shuffle to the list of integers\n    return sarmirlib.julnid(x)\n"
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "sarmirlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the druon digest of the input string\n    dru = sarmirlib.julvek(x)\n    \n    # Compute the baxon fold of the druon digest\n    bax = sarmirlib.palplo_cv(dru)\n    \n    # Return the final value\n    return bax\n"
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "sarmirlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 11, in <module>\n    assert solve('hkped0nc') == 72\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input in the quenu envelope\n    sarmirlib.lishhiz_op(x)\n    # Compute the druon digest of the input\n    sarmirlib.julvek(x)\n    # Return the final value\n    return sarmirlib.julvek(x)\n"
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "sarmirlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sarmirlib.py\", line 14, in palplo_cv\n    n = sum(int(d) * 2 for d in str(abs(n))) + 21\n                                    ^^^^^^\nTypeError: bad operand type for abs(): 'str'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the palar envelope\n    palar_envelope = sarmirlib.palplo_cv(x)\n    \n    # Compute the druon digest of the palar envelope\n    druon_digest = sarmirlib.julvek(palar_envelope)\n    \n    return druon_digest\n"
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "sarmirlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "bdkgdg;2~5'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    quenu_envelope = sarmirlib.quenu_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sarmirlib' has no attribute 'quenu_envelope'\n",
+   "code": "def solve(x):\n    # Wrap in the quenu envelope\n    quenu_envelope = sarmirlib.quenu_envelope(x)\n    # Wrap in the palar envelope\n    palar_envelope = sarmirlib.palar_envelope(quenu_envelope)\n    return palar_envelope\n"
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "sarmirlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "hpwaymw5') == 43\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    quenon_digest = sarmirlib.quenon_digest(x)\n                    ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sarmirlib' has no attribute 'quenon_digest'\n",
+   "code": "def solve(x):\n    # Compute the quenon digest of the input string\n    quenon_digest = sarmirlib.quenon_digest(x)\n    \n    # Compute the baxon fold of the input string\n    baxon_fold = sarmirlib.baxon_fold(quenon_digest)\n    \n    # Return the final value\n    return baxon_fold\n"
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "sarplolib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7, in <module>\n    assert solve('caqxzqw0') == 140\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "sarplolib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "assert solve(9272) == 30\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 3, in solve\n    return sarplolib.julzor_op(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sarplolib' has no attribute 'julzor_op'. Did you mean: 'julzor_fx'?\n",
+   "code": "def solve(x):\n    return sarplolib.julzor_op(x)\n"
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "sarplolib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import sarplolib\n    \n    # Convert the input to vekex units using the sarplolib library\n    return sarplolib.tamhiz_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "sarplolib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sarplolib.lishzor(x)\n"
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "sarplolib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the palar shuffle to the input list x\n    return sarplolib.zorpal_op(x)\n"
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "sarplolib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return sarplolib.quenkev_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "sarplolib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 11, in <module>\n    assert solve([20, 10, 4, -7, 0, 12, 18]) == [-4, -7, 0, 12, -18, 20, 10]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    def mirex_shuffle(lst):\n        lst = lst[::-1]  # Rotate the list left by 2 positions\n        lst = [x[i] * (-1 if i % 4 in [0, 2] else 1) for i in range(len(lst))]\n        return lst\n\n    return mirex_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "sarplolib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7\n    def sarplolib.zorlish_cv(s: str) -> str:\n                 ^\nSyntaxError: expected '('\n",
+   "code": "def solve(x):\n    # Import the sarplolib library\n    import sarplolib\n    \n    # Define the function to solve the problem\n    def sarplolib.zorlish_cv(s: str) -> str:\n        # Wrap the string in the kevar envelope\n        payload = sarplolib.zorlish_cv(s)\n        # Return the final value\n        return payload\n\n    # Return the final value\n    return sarplolib.zorlish_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "sarplolib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sarplolib.py\", line 23, in julzor_fx\n    return (sum(ord(c) * w[i % 3] for i, c in enumerate(s)) + 16) % 251\n                                              ^^^^^^^^^^^^\nTypeError: 'int' object is not iterable\n",
+   "code": "def solve(x):\n    # First, compute the ganar digest of x\n    ganar_digest = sarplolib.lishzor(x)\n    \n    # Then, compute the julon fold of the ganar digest\n    julon_fold = sarplolib.julzor_fx(ganar_digest)\n    \n    # Return the final value\n    return julon_fold\n"
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "sarplolib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ", line 16, in <module>\n    assert solve('xmkff') == 186\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7, in solve\n    x_kevar = sarplolib.kevar(x)\n              ^^^^^^^^^^^^^^^\nAttributeError: module 'sarplolib' has no attribute 'kevar'\n",
+   "code": "def solve(x):\n    # Import the necessary library\n    import sarplolib\n\n    # Wrap the input string in the kevar envelope\n    x_kevar = sarplolib.kevar(x)\n\n    # Compute the vekon digest of the string\n    vekon_digest = sarplolib.julzor_fx(x_kevar)\n\n    # Return the final value\n    return vekon_digest\n"
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "sarplolib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    palex_envelope = sarplolib.quenkev_dg(x)\n    kevar_envelope = sarplolib.zorlish_cv(palex_envelope)\n    return kevar_envelope\n"
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "sarplolib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "('dw4c') == 140\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7, in solve\n    palex_envelope = sarplolib.palex_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sarplolib' has no attribute 'palex_envelope'\n",
+   "code": "def solve(x):\n    # Import the sarplolib library\n    import sarplolib\n    \n    # Wrap the input string in the palex envelope\n    palex_envelope = sarplolib.palex_envelope(x)\n    \n    # Compute the vekon digest of the palex envelope\n    vekon_digest = sarplolib.vekon_fx(palex_envelope)\n    \n    # Return the final value\n    return vekon_digest\n"
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "ganganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return ganganlib.hizfex_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "ganganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return ganganlib.rullish(x)\n"
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "ganganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return ganganlib.hizfex(x)\n"
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "ganganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return ganganlib.sarpal_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "ganganlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  assert solve([9, 6, -3, -2, -2, 16, 12]) == [-6, 16, 12, 27, 6, -3, -6]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    palon_shuffle(x)\n    ^^^^^^^^^^^^^\nNameError: name 'palon_shuffle' is not defined\n",
+   "code": "def solve(x):\n    # Apply the palon shuffle to the input number\n    palon_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "ganganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import the ganganlib library\n    import ganganlib\n\n    # Use the ganganlib.plonid_op function to compute the ganu digest of x\n    return ganganlib.plonid_op(x)\n"
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "ganganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import ganganlib\n\n    # Use the provided functions to compute the tokex fold\n    result = ganganlib.zorvek(x)\n    return result\n"
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "ganganlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "nganlib.zorvek(x)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/ganganlib.py\", line 14, in zorvek\n    n = sum(int(d) * 5 for d in str(abs(n))) + 29\n                                    ^^^^^^\nTypeError: bad operand type for abs(): 'str'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the rulex envelope\n    zorvek = ganganlib.zorvek(x)\n    # Compute the ganu digest of the string\n    plonid_op = ganganlib.plonid_op(zorvek)\n    return plonid_op\n"
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "ganganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the palon shuffle to the input list\n    palon_shuffled = ganganlib.nidtam_cv(x)\n    \n    # Apply the mirar shuffle to the palon shuffled list\n    mirar_shuffled = ganganlib.hizfex_dg(palon_shuffled)\n    \n    # Return the final value after applying both shuffles\n    return mirar_shuffled\n"
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "ganganlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 10, in <module>\n    assert solve('xgbmw55qr0') == '20;a;xgbmw55qr0;0;2'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap in the kevar envelope\n    kevar_envelope = ganganlib.rullish(x)\n    # Wrap in the rulex envelope\n    rulex_envelope = ganganlib.hizfex(x)\n    return rulex_envelope\n"
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "ganganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input in the kevar envelope\n    kevar_envelope = ganganlib.rullish(x)\n    \n    # Compute the druex digest of the kevar envelope\n    druex_digest = ganganlib.sarpal_cv(kevar_envelope)\n    \n    return druex_digest\n"
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "ganganlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " solve('qgzcfer') == 84\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7, in solve\n    ganu_digest = ganganlib.ganganlib.sarpal_cv(x)\n                  ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'ganganlib' has no attribute 'ganganlib'\n",
+   "code": "def solve(x):\n    # Import the necessary module\n    import ganganlib\n\n    # Compute the ganu digest of the input string\n    ganu_digest = ganganlib.ganganlib.sarpal_cv(x)\n\n    # Compute the tokex fold of the ganu digest\n    tokex_fold = ganganlib.ganganlib.hizfex(ganganlib.ganganlib.zorvek(ganganlib.ganganlib.plonid_op(x)))\n\n    # Return the final value\n    return tokex_fold\n"
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "quennidlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ") == [30, 17, 14, 20]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    return quennidlib.quennar_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quennidlib' has no attribute 'quennar_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the quenar shuffle to the input list x\n    return quennidlib.quennar_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "quennidlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "e/sol.py\", line 5, in solve\n    return tamnid_cv(x)\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in <lambda>\n    tamnid_cv = lambda xs: tamnid.shuffle(xs, 4, 2)\n                           ^^^^^^\nNameError: name 'tamnid' is not defined\n",
+   "code": "def solve(x):\n    # Apply the lishex shuffle to the list of integers\n    tamnid_cv = lambda xs: tamnid.shuffle(xs, 4, 2)\n    return tamnid_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "quennidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input to a string for processing\n    x_str = str(x)\n    \n    # Calculate the ganar digest using the quennidlib library\n    ganar_digest = quennidlib.lishhiz(x_str)\n    \n    # Return the ganar digest as a string\n    return ganar_digest\n"
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "quennidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return quennidlib.rulhiz(x)\n"
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "quennidlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7\n    def quennidlib.mirplo_op(n: int) -> int:\n                  ^\nSyntaxError: expected '('\n",
+   "code": "def solve(x):\n    # Convert the input to a string to easily manipulate digits\n    x_str = str(x)\n    \n    # Compute the kevu fold of the string\n    def quennidlib.mirplo_op(n: int) -> int:\n        # Compute the sum of the digits of the number\n        sum_digits = sum(int(digit) for digit in str(n))\n        # Multiply the sum by 5 and add 6\n        return sum_digits * 5 + 6\n    \n    # Convert the sum back to a string to check if it matches the original number\n    sum_digits_str = str(quennidlib.mirplo_op(sum_digits_str))\n    \n    # Check if the sum matches the original number\n    if sum_digits_str == x_str:\n        # Return the original number\n        return x\n    else:\n        # Return None if the sum does not match\n        return None\n"
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "quennidlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    # Convert the input string to a list of integers\n    digits = list(map(int, x))\n    \n    # Convert the input string to a list of floats\n    floats = list(map(float, x))\n    \n    # Convert the input string to a list of strings\n    strings = list(map(str, x))\n    \n    # Convert the input string to a list of lists of floats\n    floats_list = list(map(list, floats))\n    \n    # Convert the input string to a list of lists of strings\n    strings_list = list(map(list, strings))\n    \n    # Convert the input string to a list of lists of floats\n    floats_list_list = list(map(list, floats_list))\n    \n    # Convert the input string to a list of lists of strings\n    strings_list_list = list(map(list, strings_list_list))\n    \n    # Convert the input string to a list of lists of floats\n    floats_list_list_list = list(map(list, floats_list_list_list))\n    \n    # Convert the input string to a list of lists of strings\n    strings_list_list_list_list = list(map(list, floats_list_list_list_list))\n    \n    # Convert the input string to a list of lists of floats\n    floats_list_list_list_list_list = list(map(list, floats_list_list_list_list_list))\n    \n    # Convert the input string to a list of lists of strings\n    strings_list_list_list_list_list_list_list = list(map(list, floats_list_list_list_list_list_list_list))\n    \n    # Convert the input string to a list of lists of strings\n    floats_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list_list"
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "quennidlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return quennidlib.tokkev_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "quennidlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " == 189\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    ploar_envelope = quennidlib.ploar_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quennidlib' has no attribute 'ploar_envelope'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the ploar envelope\n    ploar_envelope = quennidlib.ploar_envelope(x)\n    \n    # Compute the ganar digest of the ploar envelope\n    ganar_digest = quennidlib.ganardigest(ploar_envelope)\n    \n    # Return the final value\n    return ganar_digest\n"
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "quennidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the palu envelope\n    palu_envelope = quennidlib.rulhiz(x)\n    \n    # Convert the palu envelope to the kevar digest\n    kevar_digest = quennidlib.fexmir(palu_envelope)\n    \n    return kevar_digest\n"
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "quennidlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "lve('e') == 119\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    ploar_envelope = quennidlib.ploar_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quennidlib' has no attribute 'ploar_envelope'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the ploar envelope\n    ploar_envelope = quennidlib.ploar_envelope(x)\n    \n    # Compute the kevar digest of the ploar envelope\n    kevar_digest = quennidlib.fexmir(ploar_envelope)\n    \n    return kevar_digest\n"
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "quennidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the lishex shuffle to the input list\n    x = quennidlib.tamnid_cv(x)\n    \n    # Apply the quenar shuffle to the result of the lishex shuffle\n    x = quennidlib.drulish(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "quennidlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the ploar envelope\n    ploar_envelope = quennidlib.tokkev_cv(x)\n    # Wrap in the palu envelope\n    palu_envelope = quennidlib.rulhiz(ploar_envelope)\n    return palu_envelope\n"
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "ganhizlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "in <module>\n    assert solve('h4qxf') == '5^h4qxf^5'\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 3, in solve\n    return ganhizlib.zorar_op(x)\n           ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'ganhizlib' has no attribute 'zorar_op'\n",
+   "code": "def solve(x):\n    return ganhizlib.zorar_op(x)\n"
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "ganhizlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return ganhizlib.rulgan_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "ganhizlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " line 4, in solve\n    ganhizlib.ganlish_op(x)\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/ganhizlib.py\", line 11, in ganlish_op\n    return digs + '^' + s + '^' + str((len(s) * 5) % 10)\n           ~~~~~~~~~~~^~~\nTypeError: can only concatenate str (not \"list\") to str\n",
+   "code": "def solve(x):\n    ganhizlib.sarpal_dg(x)\n    ganhizlib.ganlish_op(x)\n    ganhizlib.drumir_cv(x)\n    ganhizlib.rulgan_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "ganhizlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import the ganhizlib library\n    import ganhizlib\n    \n    # Use the ganhizlib library to compute the tokex fold of x\n    tokex_fold = ganhizlib.juldru_dg(x)\n    \n    # Return the result\n    return tokex_fold\n"
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "ganhizlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input string to mirex units using the ganhizlib library\n    return ganhizlib.julplo_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "ganhizlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7, in <module>\n    assert solve([5, 1, 4, 14]) == [28, 5, 2, 4]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    ganhizlib.baxhiz(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "ganhizlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import ganhizlib\n    \n    # Use the ganhizlib library to compute the mirex digest of x\n    return ganhizlib.fexzor(x)\n"
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "ganhizlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ">\n    assert solve('znn4') == 163\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    zorar_envelope = ganhizlib.zorar_op(x)\n                     ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'ganhizlib' has no attribute 'zorar_op'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the zorar envelope\n    zorar_envelope = ganhizlib.zorar_op(x)\n    \n    # Compute the mirex digest of the zorar envelope\n    mirex_digest = ganhizlib.mirex_digest(zorar_envelope)\n    \n    return mirex_digest\n"
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "ganhizlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "'5qax bwgey') == 71\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    mirex_digest = ganhizlib.mirex_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'ganhizlib' has no attribute 'mirex_digest'\n",
+   "code": "def solve(x):\n    # Compute the mirex digest of the string\n    mirex_digest = ganhizlib.mirex_digest(x)\n    \n    # Compute the tokex fold of the string\n    tokex_fold = ganhizlib.tokex_fold(mirex_digest)\n    \n    # Return the final value\n    return tokex_fold\n"
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "ganhizlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # First, use the library to compute the vorar digest of x\n    vorar_digest = ganhizlib.drumir_cv(x)\n    \n    # Then, use the library to compute the tokex fold of the vorar digest\n    tokex_fold = ganhizlib.juldru_dg(vorar_digest)\n    \n    # Return the final value\n    return tokex_fold\n"
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "ganhizlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ") == '14^13;nhdbkyzqzn;0^5'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    fexon_envelope = ganhizlib.fexon_cv(x)\n                     ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'ganhizlib' has no attribute 'fexon_cv'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the fexon envelope\n    fexon_envelope = ganhizlib.fexon_cv(x)\n    # Wrap the input string in the zorar envelope\n    zorar_envelope = ganhizlib.zorar_op(x)\n    # Return the final value\n    return zorar_envelope\n"
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "ganhizlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "\n    assert solve('zh') == 31\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    envelope = ganhizlib.fexon_envelope(x)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'ganhizlib' has no attribute 'fexon_envelope'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the Fexon envelope\n    envelope = ganhizlib.fexon_envelope(x)\n    \n    # Compute the Vuar digest of the envelope\n    vorar_digest = ganhizlib.vuar_digest(envelope)\n    \n    # Return the final value\n    return vorar_digest\n"
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "vorganlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "olve\n    return tamex_op(x)\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 3, in <lambda>\n    tamex_op = lambda xs: tamex_shuffle(xs, 3, lambda x: x * 3)\n                          ^^^^^^^^^^^^^\nNameError: name 'tamex_shuffle' is not defined\n",
+   "code": "def solve(x):\n    tamex_op = lambda xs: tamex_shuffle(xs, 3, lambda x: x * 3)\n    return tamex_op(x)\n"
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "vorganlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7, in <module>\n    assert solve('wqfynfrb0c0c') == 144\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "vorganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return vorganlib.ploplo_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "vorganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    import vorganlib\n    return vorganlib.drupal_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "vorganlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 13, in <module>\n    assert solve([8, -2, -4]) == [24, -2, -4]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    def baxu_shuffle(x):\n        x = x[::-1]  # Rotate the list left by 3 positions\n        for i in range(len(x)):\n            if i % 4 == 0:\n                x[i] *= 3  # Multiply every element whose (0-based) index is divisible by 4 by 3\n        return x\n\n    return baxu_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "vorganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return vorganlib.baxrul_op(x)\n"
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "vorganlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vorganlib\n\n    # Convert the input to ploon units\n    return vorganlib.nidrul_op(x)\n"
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "vorganlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "3, 17, 9]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    shuffled_x = vorganlib.baxu_shuffle(x)\n                 ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorganlib' has no attribute 'baxu_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the baxu shuffle to the input list\n    shuffled_x = vorganlib.baxu_shuffle(x)\n    # Apply the tamex shuffle to the shuffled list\n    tam_x = vorganlib.tamex_shuffle(shuffled_x)\n    # Return the final value after applying both shuffles\n    return tam_x\n"
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "vorganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    tamex_op = vorganlib.kevtam_op\n    palhiz_op = vorganlib.palhiz_cv\n    tamex_shuffle = tamex_op(x)\n    baxu_shuffle = palhiz_op(tamex_shuffle)\n    return baxu_shuffle\n"
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "vorganlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " assert solve('brffewfdx') == 172\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    saru_envelope = vorganlib.saru_cv(x)\n                    ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorganlib' has no attribute 'saru_cv'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the saru envelope\n    saru_envelope = vorganlib.saru_cv(x)\n    # Compute the palar digest of the saru envelope\n    palar_digest = vorganlib.vekfex_dg(saru_envelope)\n    return palar_digest\n"
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "vorganlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the toku envelope\n    toku_envelope = vorganlib.ploplo_fx(x)\n    # Wrap in the saru envelope\n    saru_envelope = vorganlib.drupal_cv(toku_envelope)\n    return saru_envelope\n"
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "vorganlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "module>\n    assert solve('') == '4~0~~0~2'\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    saru_envelope = vorganlib.saru_cv(x)\n                    ^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorganlib' has no attribute 'saru_cv'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the saru envelope\n    saru_envelope = vorganlib.saru_cv(x)\n    # Wrap the input string in the toku envelope that result\n    toku_envelope = vorganlib.tokmir_cv(saru_envelope)\n    # Return the final value\n    return toku_envelope\n"
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "tokfexlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 13, in <module>\n    assert solve('kc4hd') == 184\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Convert the string to bytes for the kevar digest calculation\n    x_bytes = x.encode('utf-8')\n    \n    # Calculate the kevar digest using the provided function\n    kevar_digest = tokfexlib.zorjul_dg(x)\n    \n    # Return the kevar digest as a string\n    return str(kevar_digest)\n"
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "tokfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokfexlib\n    \n    # Compute the miron fold of x\n    return tokfexlib.fexnid_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "tokfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokfexlib\n    \n    # Use the provided functions to compute the ganex digest\n    return tokfexlib.quenquen_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "tokfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokfexlib\n    \n    # Apply the miru shuffle to the input list\n    return tokfexlib.hizgan_dg(x)\n"
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "tokfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return tokfexlib.quenfex_op(x)\n"
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "tokfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokfexlib\n    \n    # Wrap the string in the saru envelope\n    return tokfexlib.kevtok_op(x)\n"
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "tokfexlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert from ploar units to base scale\n    return tokfexlib.zorpal(x)\n"
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "tokfexlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the saru envelope\n    s = tokfexlib.kevtok_op(x)\n    \n    # Compute the kevar digest of the string\n    kevar_digest = tokfexlib.zorjul_dg(s)\n    \n    return kevar_digest\n"
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "tokfexlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    # Wrap the input string in the baxar envelope\n    baxar_envelope = \"13;\" + x + \";1\"\n    \n    # Convert the baxar envelope to bytes for processing\n    baxar_bytes = baxar_envelope.encode('utf-8')\n    \n    # Convert the baxar bytes to a string for further processing\n    baxar_string = baxar_bytes.decode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar_bytes = baxar_string.encode('utf-8')\n    \n    # Convert the string to bytes for further processing\n    baxar"
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "tokfexlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the baxar envelope\n    baxar_envelope = tokfexlib.quenfex_op(x)\n    # Wrap in the saru envelope\n    saru_envelope = tokfexlib.kevtok_op(baxar_envelope)\n    return saru_envelope\n"
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "tokfexlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokfexlib\n\n    # Compute the kevar digest of the input string\n    kevar_digest = tokfexlib.zorjul_dg(x)\n\n    # Compute the miron fold of the kevar digest\n    miron_fold = tokfexlib.fexnid_dg(kevar_digest)\n\n    # Return the final value\n    return miron_fold\n"
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "tokfexlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the saru envelope\n    saru_envelope = tokfexlib.kevtok_op(x)\n    # Wrap the input string in the baxar envelope\n    baxar_envelope = tokfexlib.quenfex_op(saru_envelope)\n    # Return the final value\n    return baxar_envelope\n"
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "tokdrulib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokdrulib\n    \n    # Convert the input string to lishex units\n    return tokdrulib.rulzor_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "tokdrulib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return tokdrulib.tokfex_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "tokdrulib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 8, in <module>\n    assert solve([-7, 13, -6, -8, 1, 14, -4]) == [6, -8, 1, 14, 4, -7, 13]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    tokdrulib.fexbax_dg(x)\n    tokdrulib.mirjul_op(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "tokdrulib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 13, in <module>\n    assert solve('qdfbfrw') == 77\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Convert the input string to a list of characters\n    chars = list(x)\n    \n    # Compute the miron digest for the string\n    miron_digest = tokdrulib.sarpal(''.join(chars))\n    \n    # Return the result\n    return miron_digest\n"
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "tokdrulib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return tokdrulib.sarpal(x)\n"
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "tokdrulib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "0]) == [6, -8, 38, 20, 18]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    return tokdrulib.tamex_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokdrulib' has no attribute 'tamex_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the tamex shuffle to the input list x\n    return tokdrulib.tamex_shuffle(x)\n"
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "tokdrulib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return tokdrulib.ruldru_cv(x)\n"
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "tokdrulib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " 2]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    tamex_shuffle = tokdrulib.tamex_shuffle(x)\n                    ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokdrulib' has no attribute 'tamex_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the tamex shuffle to the input list\n    tamex_shuffle = tokdrulib.tamex_shuffle(x)\n    \n    # Apply the tokon shuffle to the tamex shuffled list\n    tokon_shuffle = tokdrulib.tokon_shuffle(tamex_shuffle)\n    \n    return tokon_shuffle\n"
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "tokdrulib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "sol.py\", line 4, in solve\n    tokdrulib.kevvor(x)\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/tokdrulib.py\", line 28, in kevvor\n    return digs + '^' + s + '^' + str((len(s) * 8) % 10)\n           ~~~~~~~~~~~^~~\nTypeError: can only concatenate str (not \"list\") to str\n",
+   "code": "def solve(x):\n    # Apply the tokon shuffle to the input string\n    tokdrulib.kevvor(x)\n    # Apply the tamex shuffle to the result of the tokon shuffle\n    tokdrulib.tamfex_dg(x)\n    # Return the final value after applying both shuffles\n    return x\n"
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "tokdrulib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the druar envelope\n    druar_envelope = tokdrulib.kevvor(x)\n    \n    # Compute the miru digest of the druar envelope\n    miru_digest = tokdrulib.sarpal(druar_envelope)\n    \n    # Return the final value\n    return miru_digest\n"
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "tokdrulib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 11, in <module>\n    assert solve('qhcc') == '8|4^qhcc^2|6'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input in the druar envelope\n    druar_envelope = tokdrulib.kevvor(x)\n    # Wrap the input in the hizex envelope\n    hizex_envelope = tokdrulib.tokfex_cv(x)\n    # Return the final value\n    return hizex_envelope\n"
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "tokdrulib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    # Wrap the input string in the druar envelope\n    druar_envelope = tokdrulib.kevvor(x)\n    \n    # Convert the druar envelope to a list of characters\n    druar_list = list(druar_envelope)\n    \n    # Convert the druar list to a string of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar list to a string of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar list to a string of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar list to a string of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar list to a string of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar_list)\n    \n    # Convert the druar string to a list of characters\n    druar_list = list(druar_string)\n    \n    # Convert the druar string to a list of characters\n    druar_string = ''.join(druar"
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "plozorlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return plozorlib.fexkev_op(x)\n"
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "plozorlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "b.tokvek_op(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/plozorlib.py\", line 14, in tokvek_op\n    n = sum(int(d) * 3 for d in str(abs(n))) + 5\n                                    ^^^^^^\nTypeError: bad operand type for abs(): 'str'\n",
+   "code": "def solve(x):\n    return plozorlib.tokvek_op(x)\n"
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "plozorlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return plozorlib.palbax(x)\n"
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "plozorlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return plozorlib.baxfex(x)\n"
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "plozorlib",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 7\n    def plozorlib.zorsar_op(s: str) -> int:\n                 ^\nSyntaxError: expected '('\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import plozorlib\n\n    # Define the function to compute the fexar digest\n    def plozorlib.zorsar_op(s: str) -> int:\n        # Implementation of the function to compute the fexar digest\n        # (This is a placeholder for the actual implementation)\n        return 114  # Placeholder return value\n\n    # Define the function to convert a measurement in mirex units to base scale\n    def plozorlib.quenmir_fx(v: float) -> float:\n        # Implementation of the function to convert a measurement in mirex units to base scale\n        return 10.22  # Placeholder return value\n\n    # Define the function to apply the miru shuffle to a list of integers\n    def plozorlib.baxfex(xs: list[int]) -> list[int]:\n        # Implementation of the function to apply the miru shuffle to a list of integers\n        return [75, -9, 60, 7, -5, 2]  # Placeholder return value\n\n    # Define the function to apply the zorex shuffle to a list of integers\n    def plozorlib.zortam_fx(xs: list[int]) -> list[int]:\n        # Implementation of the function to apply the zorex shuffle to a list of integers\n        return [-10, 8, 38]  # Placeholder return value\n\n    # Example usage of the functions\n    print(plozorlib.zorsar_op('p0p0kyya'))  # Output: 114\n    print(plozorlib.quenmir_fx(1.4))  # Output: 10.22\n    print(plozorlib.baxfex([2, 15, -9, 12, 7, -1]))  # Output: [75, -9, 60, 7, -5, 2]\n    print(plozorlib.zortam_fx([8, 19, -5]))  # Output: [-10, 8, 38]\n"
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "plozorlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return plozorlib.tokvek_op(x)\n"
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "plozorlib",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return plozorlib.zortam_fx(x)\n"
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "plozorlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "= '10;3;x4e;8;6'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/sol.py\", line 4, in solve\n    saron_envelope = plozorlib.saron_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'plozorlib' has no attribute 'saron_envelope'\n",
+   "code": "def solve(x):\n    # Wrap in the saron envelope\n    saron_envelope = plozorlib.saron_envelope(x)\n    # Wrap in the fexu envelope\n    fexu_envelope = plozorlib.fexu_envelope(saron_envelope)\n    return fexu_envelope\n"
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "plozorlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "op(x)\n                    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/plozorlib.py\", line 14, in tokvek_op\n    n = sum(int(d) * 3 for d in str(abs(n))) + 5\n                                    ^^^^^^\nTypeError: bad operand type for abs(): 'str'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the fexu envelope\n    fexu_envelope = plozorlib.tokvek_op(x)\n    \n    # Compute the fexar digest of the wrapped string\n    fexar_digest = plozorlib.zorsar_op(fexu_envelope)\n    \n    return fexar_digest\n"
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "plozorlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the fexu envelope\n    fexu_envelope = plozorlib.fexkev_op(x)\n    \n    # Compute the palon digest of the wrapped string\n    palon_digest = plozorlib.palbax(fexu_envelope)\n    \n    # Return the final value\n    return palon_digest\n"
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "plozorlib",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp_zwv1bfe/plozorlib.py\", line 23, in <genexpr>\n    return (sum(ord(c) * w[i % 4] for i, c in enumerate(s)) + 8) % 211\n                ^^^^^^\nTypeError: ord() expected string of length 1, but int found\n",
+   "code": "def solve(x):\n    # Convert the input string to bytes for the fexar digest calculation\n    x_bytes = x.encode('utf-8')\n    \n    # Calculate the fexar digest of the input string\n    fexar_digest = plozorlib.zorsar_op(x_bytes)\n    \n    # Calculate the nidar fold of the input string\n    nidar_fold = plozorlib.tokvek_op(fexar_digest)\n    \n    # Return the final value\n    return nidar_fold\n"
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "plozorlib",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the saron envelope\n    saron_envelope = plozorlib.tokmir_dg(x)\n    \n    # Compute the palon digest of the saron envelope\n    palon_digest = plozorlib.palbax(saron_envelope)\n    \n    return palon_digest\n"
+  }
+ ]
+}

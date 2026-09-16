@@ -1,0 +1,1094 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-instruct",
+  "rung": "Q2_K",
+  "condition": "R",
+  "n": 120,
+  "pass@1": 0.592,
+  "pass_single": 0.657,
+  "pass_chain": 0.5,
+  "tasks_sha256": "e656806088093f95"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    # Convert the input string to a list of characters\n    characters = list(x)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr(ord(char)) for char in ascii_values)\n    # Convert the string of ASCII characters back to a list of characters\n    ascii_characters = list(ascii_string)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in ascii_characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr(ord(char)) for char in ascii_values)\n    # Convert the string of ASCII characters back to a list of characters\n    ascii_characters = list(ascii_string)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in ascii_characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr(ord(char)) for char in ascii_values)\n    # Convert the string of ASCII characters back to a list of characters\n    ascii_characters = list(ascii_string)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in ascii_characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr(ord(char)) for char in ascii_values)\n    # Convert the string of ASCII characters back to a list of characters\n    ascii_characters = list(ascii_string)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in ascii_characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr(ord(char)) for char in ascii_values)\n    # Convert the string of ASCII characters back to a list of characters\n    ascii_characters = list(ascii_string)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in ascii_characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr(ord(char)) for char in ascii_values)\n    # Convert the string of ASCII characters back to a list of characters\n    ascii_characters = list(ascii_string)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in ascii_characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr(ord(char)) for char in ascii_values)\n    # Convert the string of ASCII characters back to a list of characters\n    ascii_characters = list(ascii_string)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in ascii_characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr(ord(char)) for char in ascii_values)\n    # Convert the string of ASCII characters back to a list of characters\n    ascii_characters = list(ascii_string)\n    # Convert the list of characters to a list of their ASCII values\n    ascii_values = [ord(char) for char in ascii_characters]\n    # Calculate the sum of the ASCII values\n    sum_ascii_values = sum(ascii_values)\n    # Convert the sum to a string of ASCII characters\n    ascii_string = ''.join(chr",
+   "raw_len": 4012
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 8, in <module>\n    assert solve([20, -5, -6, -1, -9]) == [-45, 20, -5, -6, -5]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Apply the kevex shuffle to x\n    sardrulib.quenmir_dg(x)\n    return x\n",
+   "raw_len": 103
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 10, in <module>\n    assert solve(279) == 37\n           ^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    def sardrulib_rulvor_op(n: int) -> int:\n        def sum_of_digits(n):\n            return sum(int(digit) for digit in str(n))\n        return sum(sum_of_digits(n) * 3 for _ in range(3)) + 7\n    return sardrulib_rulvor_op(x)\n",
+   "raw_len": 253
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return sardrulib.rulpal_fx(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import sardrulib\n    \n    # Use the function to compute the nidu digest of the input string\n    return sardrulib.fexquen(x)\n",
+   "raw_len": 186
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import sardrulib\n\n    # Use the zortam_fx function to compute the palon digest\n    return sardrulib.zortam_fx(x)\n",
+   "raw_len": 175
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return sardrulib.rulzor_fx(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import sardrulib\n    \n    # Compute the palon digest\n    palon_digest = sardrulib.zortam_fx(x)\n    \n    # Compute the miru fold\n    miru_fold = sardrulib.rulvor_op(palon_digest)\n    \n    # Return the final value\n    return miru_fold\n",
+   "raw_len": 295
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import sardrulib\n    \n    # Compute the nidu digest of the string\n    nidu_digest = sardrulib.fexquen(x)\n    \n    # Compute the miru fold of the string\n    miru_fold = sardrulib.rulvor_op(nidu_digest)\n    \n    # Return the final value\n    return miru_fold\n",
+   "raw_len": 318
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the kevex shuffle to the list\n    k = sardrulib.quenmir_dg(x)\n    # Apply the quenu shuffle to the list obtained from the kevex shuffle\n    return sardrulib.rulkev_dg(k)\n",
+   "raw_len": 209
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 11, in <module>\n    assert solve('yc') == '6~2^yc^0~2'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the plou envelope\n    plou_envelope = sardrulib.rulzor_fx(x)\n    # Wrap the input string in the tokon envelope\n    tokon_envelope = sardrulib.rulpal_fx(x)\n    # Return the final value\n    return tokon_envelope\n",
+   "raw_len": 268
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 9, in <module>\n    assert solve('b454qgz') == 36\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the plou envelope\n    sardrulib.rulzor_fx(x)\n    # Compute the nidu digest of the wrapped string\n    sardrulib.fexquen(x)\n",
+   "raw_len": 180
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 3\n    def veklishlib.sarhiz_dg(n: int) -> int:\n                  ^\nSyntaxError: expected '('\n",
+   "code": "def solve(x):\n    def veklishlib.sarhiz_dg(n: int) -> int:\n        def sum_of_digits(n):\n            return sum(int(digit) for digit in str(n))\n        return sum(sum_of_digits(n) * 7 for digit in str(n)) + 7\n\n    def quentamlib.plonid_op(s: str) -> int:\n        def sum_of_chars(s):\n            return sum(ord(char) for char in s)\n        return sum(sum_of_chars(s) * (10 + 11 + 12) * (i + 1) for i, char in enumerate(s)) % 251 + 30\n\n    return veklishlib.sarhiz_dg(x) if x < 0 else quentamlib.plonid_op(str(abs(x)))\n",
+   "raw_len": 531
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return veklishlib.vekmir_cv(x)\n",
+   "raw_len": 62
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import veklishlib\n    \n    # Compute the tokon digest using the provided function\n    tokon_digest = veklishlib.fexsar_dg(x)\n    \n    # Return the result\n    return tokon_digest\n",
+   "raw_len": 240
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the palon shuffle to the input list x\n    return veklishlib.hizdru_dg(x)\n",
+   "raw_len": 112
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return veklishlib.kevvek_fx(x)\n",
+   "raw_len": 62
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    def veklishlib.tokdru_cv(xs: list[int]) -> list[int]:\n        xs = xs[::-1]  # Rotate the list left by 3 positions\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] + xs[:x.index(0) + 1]  # Rotate back to the original order\n        xs = xs[xs.index(0) + 1:] +",
+   "raw_len": 2410
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " 10, in <module>\n    assert solve('w') == 59\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 7, in solve\n    return veklishlib.julu_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'julu_digest'\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import veklishlib\n\n    # Use the julu_digest function from the veklishlib library\n    return veklishlib.julu_digest(x)\n",
+   "raw_len": 181
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "xhpz|2|5'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 10, in solve\n    nidon_envelope = veklishlib.veklishlib.kevvek_fx(x)\n                     ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'veklishlib'\n",
+   "code": "def solve(x):\n    # Import veklishlib\n    import veklishlib\n    \n    # Wrap the input string in the voru envelope\n    voru_envelope = veklishlib.vekmir_cv(x)\n    \n    # Wrap the input string in the nidon envelope\n    nidon_envelope = veklishlib.veklishlib.kevvek_fx(x)\n    \n    # Return the final value\n    return voru_envelope + \" \" + nidon_envelope\n",
+   "raw_len": 364
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import veklishlib\n    \n    # Compute the tokon digest of the string\n    tokon_digest = veklishlib.fexsar_dg(x)\n    \n    # Compute the hizu fold of the string\n    hizu_fold = veklishlib.sarhiz_dg(tokon_digest)\n    \n    # Return the final value\n    return hizu_fold\n",
+   "raw_len": 326
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the nidon envelope\n    nidon_envelope = veklishlib.kevvek_fx(x)\n    \n    # Compute the tokon digest of the wrapped string\n    tokon_digest = veklishlib.fexsar_dg(nidon_envelope)\n    \n    # Return the final value\n    return tokon_digest\n",
+   "raw_len": 294
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "b m') == 84\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 10, in solve\n    hizu_fold = veklishlib.veklishlib.sarhiz_dg(julu_digest)\n                ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'veklishlib'\n",
+   "code": "def solve(x):\n    # Import veklishlib\n    import veklishlib\n    \n    # Compute the julu digest of x\n    julu_digest = veklishlib.julpal_dg(x)\n    \n    # Compute the hizu fold of the julu digest\n    hizu_fold = veklishlib.veklishlib.sarhiz_dg(julu_digest)\n    \n    # Return the final value\n    return hizu_fold\n",
+   "raw_len": 323
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "import veklishlib\n\ndef solve(x):\n    palon_shuffle = veklishlib.hizdru_dg(x)\n    zoron_shuffle = veklishlib.tokdru_cv(palon_shuffle)\n    return zoron_shuffle\n",
+   "raw_len": 171
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return vorjullib.kevbax_dg(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return vorjullib.palsar_dg(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vorjullib\n    \n    # Use the vorjullib.palpal function to compute the vekon digest\n    return vorjullib.palpal(x)\n",
+   "raw_len": 183
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vorjullib\n\n    # Convert the input to a string for processing\n    x_str = str(x)\n\n    # Define the mirar fold function\n    def mirar_fold(n):\n        # Convert the number to a string to process its digits\n        digits = str(n)\n        # Calculate the mirar fold by cycling through the digits\n        return vorjullib.palvor_cv(n)\n\n    # Calculate the mirar fold of the input number\n    mirar_fold_x = mirar_fold(x)\n\n    # Return the mirar fold of the input number\n    return mirar_fold_x\n",
+   "raw_len": 559
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return vorjullib.baxkev_cv(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vorjullib\n    \n    # Compute the miru digest of the string x\n    miru_digest = vorjullib.vorhiz_dg(x)\n    \n    # Return the result\n    return miru_digest\n",
+   "raw_len": 223
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the ganu shuffle to the list of integers\n    return vorjullib.zorvek_op(x)\n",
+   "raw_len": 114
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the fexon envelope\n    fexon_envelope = vorjullib.kevbax_dg(x)\n    \n    # Compute the miru digest of the wrapped string\n    miru_digest = vorjullib.vorhiz_dg(fexon_envelope)\n    \n    # Return the final value\n    return miru_digest\n",
+   "raw_len": 289
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 11, in <module>\n    assert solve('rmzrqecr') == '14;8|rmzrqecr|4;2'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the fexon envelope\n    fexon_envelope = vorjullib.kevbax_dg(x)\n    # Wrap the input string in the zoru envelope\n    zoru_envelope = vorjullib.baxkev_cv(x)\n    # Return the final value\n    return zoru_envelope\n",
+   "raw_len": 267
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "u_h5q/sol.py\", line 10, in <module>\n    assert solve([4, -9, -4, -1]) == [8, -1, 8, -9]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 4, in solve\n    ganu_shuffle(x)\n    ^^^^^^^^^^^^\nNameError: name 'ganu_shuffle' is not defined\n",
+   "code": "def solve(x):\n    # Apply the ganu shuffle to the list\n    ganu_shuffle(x)\n    # Apply the saru shuffle to the list\n    saru_shuffle(x)\n    return x\n",
+   "raw_len": 162
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the saru shuffle to the list\n    x = vorjullib.tokrul(x)\n    \n    # Apply the ganu shuffle to the list\n    x = vorjullib.zorvek_op(x)\n    \n    return x\n",
+   "raw_len": 191
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the zoru envelope\n    zoru_envelope = vorjullib.baxkev_cv(x)\n    \n    # Compute the miru digest of the zoru envelope\n    miru_digest = vorjullib.vorhiz_dg(zoru_envelope)\n    \n    # Return the final value\n    return miru_digest\n",
+   "raw_len": 285
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 7, in solve\n    return quentamlib.ponid_op(x) + ' ' + quentamlib.lishvek_dg(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'ponid_op'. Did you mean: 'plonid_op'?\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import quentamlib\n    \n    # Wrap the input string in the rulex envelope\n    return quentamlib.ponid_op(x) + ' ' + quentamlib.lishvek_dg(x)\n",
+   "raw_len": 202
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 28, in <module>\n    assert solve('rr4be5') == 115\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Import the quentamlib library\n    import quentamlib\n    \n    # Define the ploon digest function\n    def ploon_digest(s):\n        # Check if the input string is empty, return 5 if true\n        if not s:\n            return 5\n        # Initialize the sum and weight cycling\n        total_sum = 0\n        weight_positions = [2, 4, 8, 10]\n        weight_positions_cycle = 0\n        # Iterate over each character in the string\n        for char in s:\n            # Add the sum of the character's ASCII value times the current weight position modulo 149\n            total_sum += (ord(char) * weight_positions[weight_positions_cycle]) % 149\n            # Cycle through the weight positions\n            weight_positions_cycle = (weight_positions_cycle + 1) % len(weight_positions)\n        # Return the total sum modulo 149\n        return total_sum % 149\n    \n    # Return the ploon digest of the input string\n    return ploon_digest(x)\n",
+   "raw_len": 959
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 3\n    def quentamlib.plonid_op(s: str) -> int:\n                  ^\nSyntaxError: expected '('\n",
+   "code": "def solve(x):\n    def quentamlib.plonid_op(s: str) -> int:\n        return sum(ord(char) * (10 + i) for i, char in enumerate(s))\n\n    def quentamlib.sarlish_cv(n: int) -> int:\n        return sum(ord(char) * 5 for char in str(abs(n)))\n\n    return quentamlib.plonid_op(x) + 30\n",
+   "raw_len": 287
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 13, in <module>\n    assert solve(-2.35) == -4.528\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    # Convert the input string to baxar units using the quentamlib library\n    return x * 8.48 + 15.4\n",
+   "raw_len": 148
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import quentamlib\n    \n    # Apply the nidu shuffle to the input list\n    return quentamlib.vorvek(x)\n",
+   "raw_len": 164
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import the quentamlib library\n    import quentamlib\n    \n    # Apply the quenon shuffle to the input list x\n    return quentamlib.fextok(x)\n",
+   "raw_len": 173
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    tamon_envelope = quentamlib.vekfex_cv(x)\n    return tamon_envelope\n",
+   "raw_len": 98
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/quentamlib.py\", line 23, in <genexpr>\n    return (sum(ord(c) * w[i % 2] for i, c in enumerate(s)) + 30) % 251\n                ^^^^^^\nTypeError: ord() expected string of length 1, but int found\n",
+   "code": "def solve(x):\n    # Apply the quenon shuffle to the input list\n    quentamlib.plonid_op(x)\n    \n    # Apply the nidu shuffle to the result of the quenon shuffle\n    quentamlib.fextok(x)\n    \n    # Return the final value after applying both shuffles\n    return x\n",
+   "raw_len": 275
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    tamon_envelope = quentamlib.vekfex_cv(x)\n    vorar_digest = quentamlib.plonid_op(tamon_envelope)\n    return vorar_digest\n",
+   "raw_len": 152
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/quentamlib.py\", line 23, in plonid_op\n    return (sum(ord(c) * w[i % 2] for i, c in enumerate(s)) + 30) % 251\n                                              ^^^^^^^^^^^^\nTypeError: 'int' object is not iterable\n",
+   "code": "def solve(x):\n    # Wrap the input string in the rulex envelope\n    wrapped_string = quentamlib.plonid_op(x)\n    \n    # Compute the vorar digest of the wrapped string\n    vorar_digest = quentamlib.plonid_op(wrapped_string)\n    \n    # Return the final value\n    return vorar_digest\n",
+   "raw_len": 294
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "4;0;;0;4'\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 4, in solve\n    return quentamlib.ishvek_dg(tamon_envelope)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'ishvek_dg'. Did you mean: 'lishvek_dg'?\n",
+   "code": "def solve(x):\n    tamon_envelope = quentamlib.vekfex_cv(x)\n    return quentamlib.ishvek_dg(tamon_envelope)\n",
+   "raw_len": 120
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import the quentamlib library\n    import quentamlib\n    \n    # Compute the vorar digest of the string\n    vorar_digest = quentamlib.plonid_op(x)\n    \n    # Compute the kevar fold of the vorar digest\n    kevar_fold = quentamlib.sarlish_cv(vorar_digest)\n    \n    # Return the final value\n    return kevar_fold\n",
+   "raw_len": 341
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vekganlib\n\n    # Use the vekganlib.drutok_cv function to compute the mirar digest\n    mirar_digest = vekganlib.drutok_cv(x)\n    \n    # Return the computed mirar digest\n    return mirar_digest\n",
+   "raw_len": 261
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return vekganlib.vorgan_op(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 3\n    def vekganlib.sardru_cv(s: str) -> str:\n                 ^\nSyntaxError: expected '('\n",
+   "code": "def solve(x):\n    def vekganlib.sardru_cv(s: str) -> str:\n        payload_length = len(s)\n        payload_length_base11 = payload_length.to_string()\n        check_digit = (payload_length_base11 * 2) % 10\n        return f\"{payload_length_base11};{s};{check_digit}\"\n    \n    def vekganlib.julmir_cv(s: str) -> str:\n        payload_length = len(s)\n        payload_length_base11 = payload_length.to_string()\n        check_digit = (payload_length_base11 * 6) % 10\n        return f\"{payload_length_base11}~{s}~{check_digit}\"\n    \n    return vekganlib.sardru_cv(x) if x else \"\"\n",
+   "raw_len": 584
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vekganlib\n    \n    # Compute the tokon digest using the provided function\n    tokon_digest = vekganlib.druhiz_dg(x)\n    \n    # Return the result\n    return tokon_digest\n",
+   "raw_len": 238
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "66l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 11\n    return sum(sum_of_chars(s) * weight cycling through (10, 11) (by 0-based position), plus 30, all modulo 251). The empty string gives 30.\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: invalid syntax. Perhaps you forgot a comma?\n",
+   "code": "def solve(x):\n    def vekganlib_rulnid_cv(n):\n        def sum_of_digits(n):\n            return sum(int(digit) for digit in str(abs(n)))\n        return sum(sum_of_digits(n) * 5 for _ in range(3)) + 11\n    \n    def quentamlib_plonid_op(s):\n        def sum_of_chars(s):\n            return sum(ord(char) for char in s)\n        return sum(sum_of_chars(s) * weight cycling through (10, 11) (by 0-based position), plus 30, all modulo 251). The empty string gives 30.\n        return sum(sum_of_chars(s) * weight cycling through (10, 11) (by 0-based position), plus 30, all modulo 251). The empty string gives 30.\n    \n    return vekganlib_rulnid_cv(x) if isinstance(x, int) else quentamlib_plonid_op(x)\n",
+   "raw_len": 708
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    import vekganlib\n    return vekganlib.julmir_cv(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vekganlib\n\n    # Apply the lishu shuffle to the input list\n    return vekganlib.palmir_cv(x)\n",
+   "raw_len": 162
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 9, in <module>\n    assert solve('') == 46\n           ^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the rulex envelope\n    vekganlib.sardru_cv(x)\n    # Compute the tokon digest of the string\n    vekganlib.druhiz_dg(x)\n",
+   "raw_len": 176
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the tokon digest of the string\n    tokon_digest = vekganlib.druhiz_dg(x)\n    \n    # Compute the vorex fold of the string\n    vorex_fold = vekganlib.rulnid_cv(tokon_digest)\n    \n    # Return the final value\n    return vorex_fold\n",
+   "raw_len": 269
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the kevar envelope\n    kevar_envelope = vekganlib.julmir_cv(x)\n    # Wrap in the rulex envelope\n    rulex_envelope = vekganlib.sardru_cv(kevar_envelope)\n    return rulex_envelope\n",
+   "raw_len": 220
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input string to its mirar digest\n    mirar_digest = vekganlib.drutok_cv(x)\n    \n    # Convert the input string to its vorex fold\n    vorex_fold = vekganlib.rulnid_cv(mirar_digest)\n    \n    # Return the final value\n    return vorex_fold\n",
+   "raw_len": 281
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 13, in <module>\n    assert solve('hdzbca') == 244\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the kevar envelope\n    vekganlib.julmir_cv(x)\n    \n    # Compute the mirar digest of the string\n    vekganlib.drutok_cv(x)\n    \n    # Return the final value\n    return vekganlib.julmir_cv(x)\n",
+   "raw_len": 249
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import quenkevlib\n    \n    # Use the provided function to compute the hizex digest\n    return quenkevlib.druquen_op(x)\n",
+   "raw_len": 181
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the nidu shuffle to the input list x\n    shuffled_x = quenkevlib.hizlish_op(x)\n    return shuffled_x\n",
+   "raw_len": 140
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "lders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 4, in solve\n    tamon_shuffle(x)\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 9, in tamon_shuffle\n    tamon_shuffle(x, 3)\nTypeError: tamon_shuffle() takes 1 positional argument but 2 were given\n",
+   "code": "def solve(x):\n    # Apply the tamon shuffle to the input list x\n    tamon_shuffle(x)\n    return x\n\ndef tamon_shuffle(x):\n    # Rotate the list x to the left by 3 positions\n    tamon_shuffle(x, 3)\n    # Multiply every element whose (0-based) index is divisible by 2 by 2\n    for i in range(len(x)):\n        if i % 2 == 0:\n            x[i] *= 2\n    return x\n",
+   "raw_len": 369
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import quenkevlib\n    \n    # Convert the input string to hizex units using the provided function\n    return quenkevlib.nidjul_dg(x)\n",
+   "raw_len": 194
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import quenkevlib\n\n    # Compute the quenar fold of x\n    quenar_fold = quenkevlib.baxvor_cv(x)\n    return quenar_fold\n",
+   "raw_len": 181
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import quenkevlib\n\n    # Use the provided functions to compute the vekar digest\n    vekar_digest = quenkevlib.vorzor_dg(x)\n    return vekar_digest\n",
+   "raw_len": 209
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    import quenkevlib\n    return quenkevlib.ganplo_dg(x)\n",
+   "raw_len": 84
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 11, in <module>\n    assert solve('dgkgm00b') == '10;10;dgkgm00b;6;7'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the rular envelope\n    rular_envelope = quenkevlib.ganplo_dg(x)\n    # Wrap the input string in the nidu envelope\n    nidu_envelope = quenkevlib.rulfex_op(x)\n    # Return the final value\n    return nidu_envelope\n",
+   "raw_len": 269
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 7, in solve\n    vekar_digest = quenkevlib.vorzor_dg(rlular_envelope)\n                                        ^^^^^^^^^^^^^^^\nNameError: name 'rlular_envelope' is not defined. Did you mean: 'rular_envelope'?\n",
+   "code": "def solve(x):\n    # Wrap the input string in the rular envelope\n    rular_envelope = quenkevlib.ganplo_dg(x)\n    \n    # Compute the vekar digest of the rular envelope\n    vekar_digest = quenkevlib.vorzor_dg(rlular_envelope)\n    \n    # Return the final value\n    return vekar_digest\n",
+   "raw_len": 295
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the nidu envelope\n    nidu_envelope = quenkevlib.rulfex_op(x)\n    \n    # Use the library to compute the vekar digest of the nidu envelope\n    vekar_digest = quenkevlib.vorzor_dg(nidu_envelope)\n    \n    # Return the final value\n    return vekar_digest\n",
+   "raw_len": 309
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the nidu envelope\n    nidu_envelope = quenkevlib.rulfex_op(x)\n    \n    # Compute the hizex digest of the wrapped string\n    hizex_digest = quenkevlib.druquen_op(nidu_envelope)\n    \n    return hizex_digest\n",
+   "raw_len": 263
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import quenkevlib\n    \n    # Compute the hizex digest of the input string\n    hizex_digest = quenkevlib.druquen_op(x)\n    \n    # Compute the quenar fold of the hizex digest\n    quenar_fold = quenkevlib.baxvor_cv(hizex_digest)\n    \n    # Return the final value\n    return quenar_fold\n",
+   "raw_len": 345
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    import nidveklib\n    return nidveklib.kevdru_op(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    def tamjul_op(n):\n        n = abs(n)\n        return nidveklib.tamjul_op(n)\n\n    def palpal_op(s):\n        return nidveklib.palpal_op(s)\n\n    # Your logic to compute the zoru fold of x goes here\n    # For example, you might want to use the tamjul_op function to get the zoru fold of x\n    # and then use the palpal_op function to get the zoru digest of the zoru fold of x\n    # and so on until you get the desired output\n    # For now, let's assume you have already computed the zoru fold of x and stored it in a variable named 'zoru_fold'\n    zoru_fold = tamjul_op(x)\n    return zoru_fold\n",
+   "raw_len": 620
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return nidveklib.palvor(x)\n",
+   "raw_len": 58
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "mp69du_h5q/sol.py\", line 7, in <module>\n    assert solve([-9, 13, 14]) == [-13, 14, 9]\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 4, in solve\n    quentamlib.plonid_op(x)\n    ^^^^^^^^^^\nNameError: name 'quentamlib' is not defined\n",
+   "code": "def solve(x):\n    nidveklib.vekrul_op(x)\n    quentamlib.plonid_op(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the mirar shuffle to the list of integers\n    return nidveklib.tokmir_fx(x)\n",
+   "raw_len": 115
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import nidveklib\n\n    # Use the provided function to compute the kevar digest\n    return nidveklib.vorvek_dg(x)\n",
+   "raw_len": 174
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 19, in <module>\n    assert solve('rq gbnrdnw') == 137\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import nidveklib\n    \n    # Convert the input string to a list of characters\n    digits = list(x)\n    \n    # Define the weights cycling through (8, 2, 9, 5) (by 0-based position)\n    weights = [8, 2, 9, 5]\n    \n    # Calculate the zoru digest of the string\n    zoru_digest = sum(ord(digit) * weight for digit, weight in zip(digits, weights)) % 211\n    \n    # Return the zoru digest as a string\n    return str(zoru_digest)\n",
+   "raw_len": 484
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "b.tamjul_op(n)\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/nidveklib.py\", line 14, in tamjul_op\n    n = sum(int(d) * 8 for d in str(abs(n))) + 4\n                                    ^^^^^^\nTypeError: bad operand type for abs(): 'str'\n",
+   "code": "def solve(x):\n    import nidveklib\n\n    def tamjul_op(n):\n        return nidveklib.tamjul_op(n)\n\n    def palvek_cv(s):\n        return nidveklib.palvek_cv(s)\n\n    tamjul_digest = tamjul_op(x)\n    tamjul_digest = tamjul_digest\n\n    return tamjul_digest\n",
+   "raw_len": 264
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import nidveklib\n    \n    # Compute the zoru digest of the input string\n    zoru_digest = nidveklib.palpal_op(x)\n    \n    # Compute the zoru fold of the zoru digest\n    zoru_fold = nidveklib.tamjul_op(zoru_digest)\n    \n    # Return the final value\n    return zoru_fold\n",
+   "raw_len": 331
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/nidveklib.py\", line 14, in tamjul_op\n    n = sum(int(d) * 8 for d in str(abs(n))) + 4\n                                    ^^^^^^\nTypeError: bad operand type for abs(): 'str'\n",
+   "code": "def solve(x):\n    import nidveklib\n\n    # Wrap the input string in the hizex envelope\n    hizex_envelope = nidveklib.kevdru_op(x)\n\n    # Compute the zoru digest of the hizex envelope\n    zoru_digest = nidveklib.tamjul_op(hizex_envelope)\n\n    return zoru_digest\n",
+   "raw_len": 274
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the hizex envelope\n    hizex_envelope = nidveklib.kevdru_op(x)\n    \n    # Compute the kevar digest of the hizex envelope\n    kevar_digest = nidveklib.vorvek_dg(hizex_envelope)\n    \n    # Return the final value\n    return kevar_digest\n",
+   "raw_len": 292
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the rular envelope\n    wrapped = nidveklib.palvek_cv(x)\n    \n    # Convert the wrapped string to a list of characters\n    char_list = list(wrapped)\n    \n    # Calculate the kevar digest using the provided function\n    kevar_digest = nidveklib.vorvek_dg(wrapped)\n    \n    # Return the final value\n    return kevar_digest\n",
+   "raw_len": 378
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ne 10, in <module>\n    assert solve([-8, 16, 6, 16, 19]) == [80, 19, -8, 16, 30]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 4, in solve\n    tokex_shuffle(x)\n    ^^^^^^^^^^^^^\nNameError: name 'tokex_shuffle' is not defined\n",
+   "code": "def solve(x):\n    # Apply the tokex shuffle to the input list\n    tokex_shuffle(x)\n    # Multiply every element whose (0-based) index is divisible by 4 by 5\n    multiply_by_five(x)\n    return x\n",
+   "raw_len": 207
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "   assert solve([0, 16, -3, 0, 18, -3, 17]) == [36, -3, 34, 0, 32, -3, 0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 4, in solve\n    jular_shuffle(x)\n    ^^^^^^^^^^^^^\nNameError: name 'jular_shuffle' is not defined\n",
+   "code": "def solve(x):\n    # Apply the jular shuffle to the input list x\n    jular_shuffle(x)\n    return x\n",
+   "raw_len": 111
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 3\n    def vekjullib.sarfex_op(n: int) -> int:\n                 ^\nSyntaxError: expected '('\n",
+   "code": "def solve(x):\n    def vekjullib.sarfex_op(n: int) -> int:\n        def sum_of_digits(n):\n            return sum(int(digit) for digit in str(n))\n        return sum(sum_of_digits(n) * 2 for _ in range(3)) + 13\n    def quentamlib.plonid_op(s: str) -> int:\n        def sum_of_chars(s):\n            return sum(ord(char) for char in s)\n        return sum(sum_of_chars(s) * (10 + 11 * (i % 3)) for i in range(len(s)) % 3) + 30\n    return vekjullib.sarfex_op(x) if isinstance(x, int) else quentamlib.plonid_op(x)\n",
+   "raw_len": 517
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.toklish_cv(x)\n",
+   "raw_len": 80
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 24, in <module>\n    assert solve('x') == 64\n           ^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Import the vekjullib library\n    import vekjullib\n    \n    # Define the function to compute the toku digest\n    def toku_digest(s):\n        # Initialize the sum and the weight cycling\n        total = 0\n        weight = 2  # Starting weight cycle with 2\n        for char in s:\n            # Add the sum of the character's ASCII value times the weight\n            total += ord(char) * weight\n            # Increment the weight cycling\n            weight = (weight + 1) % 4  # Cycle through 2, 7, 10, 11\n        # Add the sum modulo 97\n        total = total % 97  # Ensure the sum is within the range of 1 to 97\n        return total\n    \n    # Compute the toku digest of the input string\n    return toku_digest(x)\n",
+   "raw_len": 744
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vekjullib\n    \n    # Use the vekjullib.palnid_fx function to compute the vekon digest\n    return vekjullib.palnid_fx(x)\n",
+   "raw_len": 189
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return vekjullib.julkev_op(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 11, in <module>\n    assert solve('dye') == '7|3~dye~4|1'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the vorar envelope\n    vorar_envelope = vekjullib.hizplo_dg(x)\n    # Wrap the input string in the lishu envelope\n    lishu_envelope = vekjullib.julkev_op(x)\n    # Return the final value\n    return lishu_envelope\n",
+   "raw_len": 270
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 11, in <module>\n    assert solve('qyzfa') == 87\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 6, in solve\n    quentamlib.plonid_op(x)\n    ^^^^^^^^^^\nNameError: name 'quentamlib' is not defined\n",
+   "code": "def solve(x):\n    # Wrap the input string in the vorar envelope\n    vekjullib.hizplo_dg(x)\n    # Use the library to compute the toku digest of the wrapped string\n    quentamlib.plonid_op(x)\n    # Return the final value\n    return x\n",
+   "raw_len": 245
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    # Convert the input string to its vekon digest\n    vekon_digest = vekjullib.palnid_fx(x)\n    \n    # Convert the vekon digest back to a string for the lishar fold computation\n    vekon_digest_str = str(vekon_digest)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vekon_digest_list)\n    \n    # Convert the string back to a list of characters\n    vekon_digest_list = list(vekon_digest_str)\n    \n    # Convert the list of characters back to a string for the lishar fold computation\n    vekon_digest_str = ''.join(vek",
+   "raw_len": 3438
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 13, in <module>\n    assert solve('n45') == 33\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the lishu envelope\n    vekjullib.julkev_op(x)\n    \n    # Compute the toku digest of the string\n    vekjullib.rulgan_op(x)\n    \n    # Return the final value\n    return vekjullib.julkev_op(x)\n",
+   "raw_len": 248
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "k') == 'c~8|yqzfeczk|4~6'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 10, in solve\n    vorar_envelope = vekjullib.vekjullib(x)\n                     ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'vekjullib'\n",
+   "code": "def solve(x):\n    # Import vekjullib\n    import vekjullib\n    \n    # Wrap the input string in the lishu envelope\n    lishu_envelope = vekjullib.julkev_op(x)\n    \n    # Wrap the input string in the vorar envelope\n    vorar_envelope = vekjullib.vekjullib(x)\n    \n    # Return the final value\n    return vorar_envelope\n",
+   "raw_len": 329
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return vorplolib.hiznid_op(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return vorplolib.tamvek_fx(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vorplolib\n    \n    # Use the vorplolib.ganquen_dg function to compute the quenu digest\n    return vorplolib.ganquen_dg(x)\n",
+   "raw_len": 191
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    druar_digest = vorplolib.drumir_dg(x)\n    return druar_digest\n",
+   "raw_len": 93
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the fexu shuffle to the input list\n    return vorplolib.vorgan(x)\n",
+   "raw_len": 105
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return vorplolib.plorul_cv(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 15, in vorar_digest\n    return sum(ord(char) * weight_cycle[weight_pos] for char in s) % 251 + 30\n                                                                ^\nTypeError: 'int' object is not iterable\n",
+   "code": "def solve(x):\n    def vorplolib_plohiz_op(n):\n        def hizex_fold(n):\n            if n < 0:\n                n = -n\n            digits = str(abs(n))\n            return hizex_fold(sum(int(digit) * 7 for digit in digits), digits, 0) + 22\n        return hizex_fold(n)\n    \n    def quentamlib_plonid_op(s):\n        def vorar_digest(s):\n            weight_cycle = [10, 11]\n            weight_pos = 0\n            return sum(ord(char) * weight_cycle[weight_pos] for char in s) % 251 + 30\n        return vorar_digest(s)\n    \n    return vorplolib_plohiz_op(x) if x < 0 else quentamlib_plonid_op(x)\n",
+   "raw_len": 604
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 13, in <module>\n    assert solve('g0d5xc') == 167\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the tamar envelope\n    tam_env = vorplolib.tamvek_fx(x)\n    \n    # Compute the quenu digest of the wrapped string\n    quenu_digest = vorplolib.ganquen_dg(tam_env)\n    \n    # Return the final value\n    return tam_env, quenu_digest\n",
+   "raw_len": 288
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the tamar envelope\n    tam_env = vorplolib.tamvek_fx(x)\n    \n    # Compute the druar digest of the tam_env string\n    druar_digest = vorplolib.drumir_dg(tam_env)\n    \n    # Return the final value\n    return druar_digest\n",
+   "raw_len": 278
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import vorplolib\n    \n    # Compute the druar digest of the string\n    drumar_digest = vorplolib.drumir_dg(x)\n    \n    # Compute the hizex fold of the druar digest\n    hizex_fold = vorplolib.plohiz_op(drumar_digest)\n    \n    # Return the final value\n    return hizex_fold\n",
+   "raw_len": 334
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 11, in <module>\n    assert solve('enxqh0n') == '14^10~enxqh0n~3^8'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the tamar envelope\n    tamar_envelope = vorplolib.tamvek_fx(x)\n    # Wrap the input string in the mirar envelope\n    mirar_envelope = vorplolib.plorul_cv(x)\n    # Return the final value\n    return mirar_envelope\n",
+   "raw_len": 270
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input string to its quenu digest\n    quenu_digest = vorplolib.ganquen_dg(x)\n    \n    # Convert the input string to its hizex fold\n    hizex_fold = vorplolib.plohiz_op(quenu_digest)\n    \n    # Return the final value\n    return hizex_fold\n",
+   "raw_len": 282
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    return tokzorlib.vekplo_op(x)\n",
+   "raw_len": 61
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 7, in <module>\n    assert solve([2, -2, -8, 9]) == [-9, 2, -2, -8]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    tokzorlib.mirtam_fx(x)\n    return x\n",
+   "raw_len": 67
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokzorlib\n    \n    # Use the library to compute the voron digest of the input string\n    return tokzorlib.mirjul(x)\n",
+   "raw_len": 185
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 8, in <module>\n    assert solve('rbwec4kwa') == '9;rbwec4kwa;4'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    tokzorlib.tokplo_dg(x)\n    tokzorlib.vorvor_dg(x)\n    return x\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 7, in <module>\n    assert solve([2, -2, -7, 7, -3, 2]) == [14, -3, 2, 4, -2, -7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    tokzorlib.druhiz(x)\n    return x\n",
+   "raw_len": 64
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokzorlib\n    \n    # Compute the lishex fold using the provided function\n    return tokzorlib.lishsar_op(x)\n",
+   "raw_len": 177
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "== 'a^ewzyhaz0wh^0'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 7, in solve\n    return tokzorlib.vorpo_dg(x)\n           ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'vorpo_dg'. Did you mean: 'vorvor_dg'?\n",
+   "code": "def solve(x):\n    # Import the necessary module\n    import tokzorlib\n\n    # Use the function to wrap the input string in the quenu envelope\n    return tokzorlib.vorpo_dg(x)\n",
+   "raw_len": 186
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the toku envelope\n    tokplo_dg = tokzorlib.tokplo_dg(x)\n    # Compute the hizar digest of the wrapped string\n    zorgan_dg = tokzorlib.zorgan_dg(tokplo_dg)\n    return zorgan_dg\n",
+   "raw_len": 236
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "== 129\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 4, in solve\n    quenu_envelope = tokzorlib.vorxor_dg(x)\n                     ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'vorxor_dg'. Did you mean: 'vorvor_dg'?\n",
+   "code": "def solve(x):\n    # Wrap the input string in the quenu envelope\n    quenu_envelope = tokzorlib.vorxor_dg(x)\n    \n    # Compute the hizar digest of the wrapped string\n    hizar_digest = tokzorlib.zorgan_dg(quenu_envelope)\n    \n    # Return the final value\n    return hizar_digest\n",
+   "raw_len": 292
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "^0'\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 6, in solve\n    quenu_envelope = tokzorlib.vorpo_dg(x)\n                     ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'vorpo_dg'. Did you mean: 'vorvor_dg'?\n",
+   "code": "def solve(x):\n    # Wrap the input string in the toku envelope\n    toku_envelope = tokzorlib.tokplo_dg(x)\n    # Wrap the input string in the quenu envelope\n    quenu_envelope = tokzorlib.vorpo_dg(x)\n    # Return the final value\n    return quenu_envelope\n",
+   "raw_len": 267
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": true,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import tokzorlib\n    \n    # Compute the hizar digest of the string\n    hizar_digest = tokzorlib.zorgan_dg(x)\n    \n    # Compute the lishex fold of the hizar digest\n    lishex_fold = tokzorlib.lishsar_op(hizar_digest)\n    \n    # Return the final value\n    return lishex_fold\n",
+   "raw_len": 336
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "12, 17, 20, 20]) == [24, -17, -20, 40, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmp69du_h5q/sol.py\", line 7, in solve\n    x = tokzorlib.druzorlib(x)\n        ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'druzorlib'\n",
+   "code": "def solve(x):\n    # Apply the lishu shuffle to the list\n    x = tokzorlib.mirtam_fx(x)\n    \n    # Apply the quenar shuffle to the list\n    x = tokzorlib.druzorlib(x)\n    \n    return x\n",
+   "raw_len": 197
+  }
+ ]
+}

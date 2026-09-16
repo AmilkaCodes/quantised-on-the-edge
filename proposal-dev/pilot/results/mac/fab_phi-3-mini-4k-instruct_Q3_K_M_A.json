@@ -1,0 +1,1095 @@
+{
+ "summary": {
+  "model": "phi-3-mini-4k-instruct",
+  "rung": "Q3_K_M",
+  "condition": "A",
+  "n": 120,
+  "pass@1": 0.0,
+  "pass_single": 0.0,
+  "pass_chain": 0.0,
+  "fab_dir": "fab",
+  "tasks_sha256": "e656806088093f95"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "solve(72.14) == 245.3838\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return sardrulib.convert_from_ganex(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'convert_from_ganex'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.convert_from_ganex(x)\n",
+   "raw_len": 90
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "== [-45, 20, -5, -6, -5]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return sardrulib.kevex_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevex_shuffle'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.kevex_shuffle(x)\n",
+   "raw_len": 85
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ".py\", line 8, in <module>\n    assert solve(279) == 37\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return sardrulib.miru_fold(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'miru_fold'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.miru_fold(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "y\", line 8, in <module>\n    assert solve('cme0') == '4~cme0~8'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return sardrulib.tokon(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'tokon'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.tokon(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "gy5wh mk') == 29\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return sardrulib.compute_nidu_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'compute_nidu_digest'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.compute_nidu_digest(x)\n",
+   "raw_len": 202
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "le>\n    assert solve('gq0wheg') == 180\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return sardrulib.palon_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'palon_digest'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    return sardrulib.palon_digest(x)\n",
+   "raw_len": 84
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "sardrulib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "c5^5'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = sardrulib.wrap_in_plou_envelope(x)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'wrap_in_plou_envelope'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    wrapped_x = sardrulib.wrap_in_plou_envelope(x)\n    return wrapped_x\n",
+   "raw_len": 117
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "e>\n    assert solve('') == 37\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    palon_digest = sardrulib.palon_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'palon_digest'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    palon_digest = sardrulib.palon_digest(x)\n    miru_fold = sardrulib.miru_fold(palonoot_digest)\n    return miru_fold\n",
+   "raw_len": 165
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    nidu_digest = sardrulib.compute_nidu_digest(x)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'compute_nidu_digest'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    nidu_digest = sardrulib.compute_nidu_digest(x)\n    miru_fold = sardrulib.compute_miru_fold(niduoot)\n    return miru_fold\n",
+   "raw_len": 171
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "5, 18]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    kevex_shuffled = sardrulib.kevex_shuffle(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'kevex_shuffle'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    # Apply the kevex shuffle to x\n    kevex_shuffled = sardrulib.kevex_shuffle(x)\n    # Apply the quenu shuffle to the result of the kevex shuffle\n    quenu_shuffled = sardrulib.quenu_shuffle(kevexody_shuffled)\n    # Return the final value\n    return quenu_shuffled\n",
+   "raw_len": 312
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "'yc') == '6~2^yc^0~2'\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_in_plou = sardrulib.wrap_in_plou(x)\n                      ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'wrap_in_plou'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    wrapped_in_plou = sardrulib.wrap_in_plou(x)\n    wrapped_in_tokon = sardrulib.wrap_inov_in_tokon(wrapped_in_plou)\n    return wrapped_in_tokon\n",
+   "raw_len": 190
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "sardrulib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "6\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = sardrulib.wrap_in_plou_envelope(x)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'sardrulib' has no attribute 'wrap_in_plou_envelope'\n",
+   "code": "import sardrulib\n\ndef solve(x):\n    wrapped_x = sardrulib.wrap_in_plou_envelope(x)\n    digest = sardrulib.compute_nidu_digest(wrapped_x)\n    return digest\n",
+   "raw_len": 169
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "\", line 8, in <module>\n    assert solve(-54) == 56\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return veklishlib.hizu_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'hizu_fold'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.hizu_fold(x)\n",
+   "raw_len": 83
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "    assert solve('zgbx') == '4|zgbx|6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return veklishlib.wrap_in_voru(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'wrap_in_voru'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.wrap_in_voru(x)\n",
+   "raw_len": 85
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ".py\", line 8, in <module>\n    assert solve(' egdd') == 131\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return veklishlib.tokon(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'tokon'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.tokon(x)\n",
+   "raw_len": 79
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "2]) == [6, -1, 15, 0, 9]\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return veklishlib.palon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'palon_shuffle'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.palon_shuffle(x)\n",
+   "raw_len": 87
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "y\", line 8, in <module>\n    assert solve('adp') == '3|adp|5'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return veklishlib.nidon(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'nidon'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.nidon(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "= [-18, -1, -5, 8, 48]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return veklishlib.zoron_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'zoron_shuffle'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.zoron_shuffle(x)\n",
+   "raw_len": 87
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "veklishlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "tko02qvr/sol.py\", line 8, in <module>\n    assert solve('w') == 59\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return veklishlib.julu(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'julu'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    return veklishlib.julu(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "5qexhpz|2|5'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_in_voru = veklishlib.wrap_in_voru(x)\n                      ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'wrap_in_voru'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    wrapped_in_voru = veklishlib.wrap_in_voru(x)\n    wrapped_in_nidon = veklishliboot_in_nidon(wrapped_in_voru)\n    return wrapped_in_nidon\n",
+   "raw_len": 186
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "0, in <module>\n    assert solve('z a') == 84\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    tokon_digest = veklishlib.tokon(x)\n                   ^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'tokon'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    tokon_digest = veklishlib.tokon(x)\n    hizu_fold = veklishlib.hizu(tokon_digest)\n    return hizu_fold\n",
+   "raw_len": 153
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "      ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = veklishlib.wrap_in_nidon_envelope(x)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'wrap_in_nidon_envelope'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    wrapped_x = veklishlib.wrap_in_nidon_envelope(x)\n    tokon_digest = veklishlib.compute_tokon_digest(wrapped_x)\n    return tokonody(tokon_digest)\n",
+   "raw_len": 196
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "4\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    julu_digest = veklishlib.compute_julu_digest(x)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'compute_julu_digest'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    julu_digest = veklishlib.compute_julu_digest(x)\n    hizu_fold = veklishlib.compute_hizu_fold(julu_digest)\n    return hizuoot\n",
+   "raw_len": 176
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "veklishlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    palon_shuffled = veklishlib.palon_shuffle(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'veklishlib' has no attribute 'palon_shuffle'\n",
+   "code": "import veklishlib\n\ndef solve(x):\n    # Apply the palon shuffle\n    palon_shuffled = veklishlib.palon_shuffle(x)\n    # Apply the zoron shuffle to the result of the palon shuffle\n    zoron_shuffled = veklishliboot_shuffle(palon_shuffled)\n    return zoron_shuffled\n",
+   "raw_len": 275
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "in <module>\n    assert solve('b0wmdwkg') == '8|b0wmdwkg|4'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorjullib.fexon(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'fexon'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.fexon(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "solve(-9.74) == -20.4424\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorjullib.sarar_to_gregorian(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'sarar_to_gregorian'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.sarar_to_gregorian(x)\n",
+   "raw_len": 89
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "2qvr/sol.py\", line 8, in <module>\n    assert solve('z54') == 23\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorjullib.vekon(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'vekon'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.vekon(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " line 8, in <module>\n    assert solve(8528) == 66\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorjullib.mirar_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'mirar_fold'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.mirar_fold(x)\n",
+   "raw_len": 81
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "in <module>\n    assert solve('d') == '1;d;6'\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorjullib.wrap_in_zoru(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'wrap_in_zoru'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.wrap_in_zoru(x)\n",
+   "raw_len": 352
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ko02qvr/sol.py\", line 8, in <module>\n    assert solve('') == 30\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorjullib.digest(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'digest'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.digest(x)\n",
+   "raw_len": 78
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "vorjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " 3, -2, 15, 34, 3, 30]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorjullib.ganu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'ganu_shuffle'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    return vorjullib.ganu_shuffle(x)\n",
+   "raw_len": 323
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "l.py\", line 10, in <module>\n    assert solve('n') == 21\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = vorjullib.fexon(x)\n                ^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'fexon'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    wrapped_x = vorjullib.fexon(x)\n    miru_digest = vorjullib.miru(wrapped_x)\n    return miru_digest\n",
+   "raw_len": 148
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " == '14;8|rmzrqecr|4;2'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    fexon_envelope = vorjullib.wrap_fexon(x)\n                     ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'wrap_fexon'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    # Wrap x in the fexon envelope\n    fexon_envelope = vorjullib.wrap_fexon(x)\n    # Wrap the result in the zoru envelope\n    zoru_envelope = vorjullib.wrap_zoru(fexonoot_envelope)\n    # Return the final value\n    return zoru_envelope\n",
+   "raw_len": 281
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "[8, -1, 8, -9]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    ganu_shuffled = vorjullib.ganu_shuffle(x)\n                    ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'ganu_shuffle'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    # Apply the ganu shuffle to x\n    ganu_shuffled = vorjullib.ganu_shuffle(x)\n    # Apply the saru shuffle to the result of the ganu shuffle\n    final_result = vorjullib.saru_shuffle(ganuoot_shuffled)\n    return final_result\n",
+   "raw_len": 273
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    saru_shuffled = vorjullib.saru_shuffle(x)\n                    ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'saru_shuffle'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    # Apply the saru shuffle to x\n    saru_shuffled = vorjullib.saru_shuffle(x)\n    # Apply the ganu shuffle to the result of the saru shuffle\n    ganu_shuffled = vorjullib.ganu_shuffle(saru_shuffled)\n    # Return the final value\n    return ganuoot_shuffled\n",
+   "raw_len": 303
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "vorjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "line 10, in <module>\n    assert solve('aaa5ph') == 65\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = vorjullib.zoru(x)\n                ^^^^^^^^^^^^^^\nAttributeError: module 'vorjullib' has no attribute 'zoru'\n",
+   "code": "import vorjullib\n\ndef solve(x):\n    wrapped_x = vorjullib.zoru(x)\n    miru_digest = vorjullib.miru(wrapped_x)\n    return miruprec(miru_digest)\n",
+   "raw_len": 157
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ";4'\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quentamlib.wrap_in_rulex_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'wrap_in_rulex_envelope'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.wrap_in_rulex_envelope(x)\n",
+   "raw_len": 96
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "e>\n    assert solve('rr4be5') == 115\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quentamlib.ploon_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'ploon_digest'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.ploon_digest(x)\n",
+   "raw_len": 315
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "solve('z') == 246\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quentamlib.compute_vorar_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'compute_vorar_digest'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.compute_vorar_digest(x)\n",
+   "raw_len": 292
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quentamlib.convert_baxar_to_standard(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'convert_baxar_to_standard'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.convert_baxar_to_standard(x)\n",
+   "raw_len": 397
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", 9, 18]) == [18, 18, 20, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quentamlib.nidu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'nidu_shuffle'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.nidu_shuffle(x)\n",
+   "raw_len": 304
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "7, 14, 16, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quentamlib.quenon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'quenon_shuffle'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    return quentamlib.quenon_shuffle(x)\n",
+   "raw_len": 317
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "quentamlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "b5;2'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 7, in solve\n    return quentamlib.wrap_in_tamon_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'wrap_in_tamon_envelope'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    # Assuming 'wrap_in_tamon_envelope' is a function provided by 'quentamlib'\n    # that takes a value and wraps it in a Tamon envelope.\n    return quentamlib.wrap_in_tamon_envelope(x)\n",
+   "raw_len": 233
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    quenon_shuffled = quentamlib.quenon_shuffle(x)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'quenon_shuffle'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    # Apply the quenon shuffle to x\n    quenon_shuffled = quentamlib.quenon_shuffle(x)\n    # Apply the nidu shuffle to the result of the quenon shuffle\n    nidu_shuffled = quentamlib.nidu_shuffle(quenon_shuffled)\n    # Return the final value\n    return niduoot_shuffled\n",
+   "raw_len": 316
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    tamon_envelope = quentamlib.wrap_in_tamon_envelope(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'wrap_in_tamon_envelope'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    # Wrap the input in the tamon envelope\n    tamon_envelope = quentamlib.wrap_in_tamon_envelope(x)\n    \n    # Compute the vorar digest of the tamon envelope\n    vorar_digest = quentamlib.compute_vorar_digest(tamonody_envelope)\n    \n    return vorar_digest\n",
+   "raw_len": 304
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "7\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = quentamlib.wrap_in_rulex_envelope(x)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'wrap_in_rulex_envelope'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    wrapped_x = quentamlib.wrap_in_rulex_envelope(x)\n    vorar_digest = quentamlib.compute_vorar_digest(wrapped_x)\n    return voraroot_digest\n",
+   "raw_len": 188
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "<module>\n    assert solve('') == '4;0;;0;4'\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    tamon_envelope = quentamlib.tamon(x)\n                     ^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'tamon'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    # Wrap in the TAMON envelope\n    tamon_envelope = quentamlib.tamon(x)\n    # Wrap in the RuleX envelope\n    rulex_envelope = quentamlib.rulex(tamon_envelope)\n    return rulex_envelope\n",
+   "raw_len": 233
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "quentamlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "       ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    vorar_digest = quentamlib.compute_vorar_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quentamlib' has no attribute 'compute_vorar_digest'\n",
+   "code": "import quentamlib\n\ndef solve(x):\n    # Compute the vorar digest of x\n    vorar_digest = quentamlib.compute_vorar_digest(x)\n    \n    # Compute the kevar fold of the vorar digest\n    kevar_fold = quentamlib.compute_kevar_fold(voraroot_digest)\n    \n    return kevar_fold\n",
+   "raw_len": 282
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "    assert solve('zramwwgqg') == 122\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekganlib.mirar_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'mirar_digest'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.mirar_digest(x)\n",
+   "raw_len": 244
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " <module>\n    assert solve(4.98) == 35.0364\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekganlib.convert_veku(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'convert_veku'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.convert_veku(x)\n",
+   "raw_len": 84
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "44qc0;4'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekganlib.wrap_in_rulex_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'wrap_in_rulex_envelope'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.wrap_in_rulex_envelope(x)\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "02qvr/sol.py\", line 8, in <module>\n    assert solve(' 5') == 189\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekganlib.tokon(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'tokon'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.tokon(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "o02qvr/sol.py\", line 8, in <module>\n    assert solve(1023) == 56\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekganlib.vorex(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'vorex'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.vorex(x)\n",
+   "raw_len": 77
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "<module>\n    assert solve('crfpyrbhz4') == 'a~crfpyrbhz4~0'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekganlib.wrap(x)\n           ^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'wrap'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.wrap(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "vekganlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "[35, -5, 1, 40, 14, 19]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekganlib.lishu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'lishu_shuffle'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    return vekganlib.lishu_shuffle(x)\n",
+   "raw_len": 272
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "== 46\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = vekganlib.wrap_in_rulex_envelope(x)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'wrap_in_rulex_envelope'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    wrapped_x = vekganlib.wrap_in_rulex_envelope(x)\n    tokon_digest = vekganlib.compute_tokon_digest(wrapped_x)\n    return tokonoot_digest\n",
+   "raw_len": 185
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ert solve('zzfd5') == 66\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    tokon_digest = vekganlib.tokon_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'tokon_digest'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    tokon_digest = vekganlib.tokon_digest(x)\n    vorex_fold = vekganlib.vorex_fold(tokon_digest)\n    return vorexprecision_fold\n",
+   "raw_len": 174
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "e('kfdw') == '8;4~kfdw~4;6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    kevar_envelope = vekganlib.wrap_kevar(x)\n                     ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'wrap_kevar'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    # Wrap the input in a kevar envelope\n    kevar_envelope = vekganlib.wrap_kevar(x)\n    # Wrap the result in a rulex envelope\n    rulex_envelope = vekganlib.wrap_rulex(kevaroot_envelope)\n    return rulex_envelope\n",
+   "raw_len": 260
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ert solve('pqwxp') == 31\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    mirar_digest = vekganlib.mirar_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekganlib' has no attribute 'mirar_digest'\n",
+   "code": "import vekganlib\n\ndef solve(x):\n    mirar_digest = vekganlib.mirar_digest(x)\n    vorex_fold = vekganlib.vorex_fold(mirarstra_digest)\n    return vorex_fold\n",
+   "raw_len": 169
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "vekganlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\nimport vekganlib\n\ndef solve(x):\n    wrapped_x = vekganlib.wrap(x)\n    mirar_digest = vekganlib.compute_mirar_digest(wrapped_x)\n    return mirarprecise",
+   "raw_len": 160
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "8, in <module>\n    assert solve(' enqeyafqan') == 14\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quenkevlib.hizex(x)\n           ^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'hizex'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.hizex(x)\n",
+   "raw_len": 248
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", 12, 9, 5]) == [-3, 12, 9, 5]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quenkevlib.nidu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'nidu_shuffle'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.nidu_shuffle(x)\n",
+   "raw_len": 294
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "19, 15]) == [30, 3, 10, 19]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quenkevlib.tamon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'tamon_shuffle'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.tamon_shuffle(x)\n",
+   "raw_len": 376
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quenkevlib.convert_hizex_to_standard(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'convert_hizex_to_standard'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.convert_hizex_to_standard(x)\n",
+   "raw_len": 197
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "8, in <module>\n    assert solve(9172) == 68\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quenkevlib.quenar_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'quenar_fold'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.quenar_fold(x)\n",
+   "raw_len": 85
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ert solve('qrfpnkhkcf') == 30\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quenkevlib.vekare_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'vekare_digest'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.vekare_digest(x)\n",
+   "raw_len": 264
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "quenkevlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "emxc') == '7;y0demxc;9'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return quenkevlib.wrap_in_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'wrap_in_envelope'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    return quenkevlib.wrap_in_envelope(x)\n",
+   "raw_len": 362
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "gkgm00b;6;7'\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_in_rule = quenkevlib.wrap_in_rule(x)\n                      ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'wrap_in_rule'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    wrapped_in_rule = quenkevlib.wrap_in_rule(x)\n    wrapped_in_nidu = quenkevlib.wrap_inprec_in_nidu(wrapped_in_rule)\n    return wrapped_in_nidu\n",
+   "raw_len": 192
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "y\", line 10, in <module>\n    assert solve('pp') == 194\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = quenkevlib.wrap(x)\n                ^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'wrap'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    wrapped_x = quenkevlib.wrap(x)\n    vekar_digest = quenkevlib.compute_vekar_digest(wrapped_x)\n    return vekarprec\n",
+   "raw_len": 165
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " in <module>\n    assert solve('mrkkzk45') == 170\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = quenkevlib.wrap(x)\n                ^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'wrap'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    wrapped_x = quenkevlib.wrap(x)\n    vekar_digest = quenkevlib.compute_vekar_digest(wrapped_x)\n    return vekarprec\n",
+   "raw_len": 165
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ".py\", line 10, in <module>\n    assert solve('qc') == 8\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = quenkevlib.wrap(x)\n                ^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'wrap'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    wrapped_x = quenkevlib.wrap(x)\n    digest = quenkevlib.compute_hizex(wrapped_x)\n    return digest\n",
+   "raw_len": 149
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "quenkevlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " in <module>\n    assert solve('nm c') == 50\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    hizex_digest = quenkevlib.hizex(x)\n                   ^^^^^^^^^^^^^^^^\nAttributeError: module 'quenkevlib' has no attribute 'hizex'\n",
+   "code": "import quenkevlib\n\ndef solve(x):\n    # Compute the hizex digest of x\n    hizex_digest = quenkevlib.hizex(x)\n    \n    # Compute the quenar fold of the hizex digest\n    quenar_fold = quenkevlib.quenar(hizex_digest)\n    \n    # Return the final value\n    return quenar_fold\n",
+   "raw_len": 284
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "module>\n    assert solve('qaynbpkrn') == '11;qaynbpkrn;1'\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return nidveklib.hizex(x)\n           ^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'hizex'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.hizex(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "y\", line 8, in <module>\n    assert solve(2247) == 60\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return nidveklib.zoru_fold(x)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'zoru_fold'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.zoru_fold(x)\n",
+   "raw_len": 336
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "011\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return nidveklib.convert_vorex_to_standard(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'convert_vorex_to_standard'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.convert_vorex_to_standard(x)\n",
+   "raw_len": 194
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ve([-9, 13, 14]) == [-13, 14, 9]\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return nidveklib.ganon_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'ganon_shuffle'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.ganon_shuffle(x)\n",
+   "raw_len": 415
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "-4, 3, -14, 10]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return nidveklib.mirar_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'mirar_shuffle'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.mirar_shuffle(x)\n",
+   "raw_len": 248
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", in <module>\n    assert solve(' 05') == 8\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return nidveklib.kevar_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'kevar_digest'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.kevar_digest(x)\n",
+   "raw_len": 309
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "nidveklib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "nrdnw') == 137\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return nidveklib.compute_zoru_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'compute_zoru_digest'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    return nidveklib.compute_zoru_digest(x)\n",
+   "raw_len": 323
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ", line 10, in <module>\n    assert solve('ffkhe') == 54\n           ^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = nidveklib.wrap(x)\n                ^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'wrap'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    wrapped_x = nidveklib.wrap(x)\n    digest = nidveklib.compute_zoru_digest(wrapped_x)\n    return digest\n",
+   "raw_len": 152
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "solve('nk') == 100\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    digest = nidveklib.compute_zoru_digest(x)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'compute_zoru_digest'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    # Compute the zoru digest of x\n    digest = nidveklib.compute_zoru_digest(x)\n    # Compute the zoru fold of the digest\n    fold = nidveklib.compute_zoru_fold(digest)\n    # Return the final value\n    return fold\n",
+   "raw_len": 261
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "py\", line 10, in <module>\n    assert solve('afa') == 167\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = nidveklib.wrap(x)\n                ^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'wrap'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    wrapped_x = nidveklib.wrap(x)\n    zoru_digest = nidveklib.compute_zoru_digest(wrapped_x)\n    return zoruoot_digest\n",
+   "raw_len": 165
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "vr/sol.py\", line 10, in <module>\n    assert solve('') == 45\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = nidveklib.wrap(x)\n                ^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'wrap'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    wrapped_x = nidveklib.wrap(x)\n    kevar_digest = nidveklib.kevar(wrapped_x)\n    return kevarody(kevar_digest)\n",
+   "raw_len": 160
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "nidveklib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " in <module>\n    assert solve('5rdxggxhre') == 61\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = nidveklib.wrap(x)\n                ^^^^^^^^^^^^^^\nAttributeError: module 'nidveklib' has no attribute 'wrap'\n",
+   "code": "import nidveklib\n\ndef solve(x):\n    wrapped_x = nidveklib.wrap(x)\n    kevar_digest = nidveklib.compute_kevar_digest(wrapped_x)\n    return kevarody(kevar_digest)\n",
+   "raw_len": 175
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ") == [80, 19, -8, 16, 30]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekjullib.tokex_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'tokex_shuffle'\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.tokex_shuffle(x)\n",
+   "raw_len": 85
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " 34, 0, 32, -3, 0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekjullib.jular_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'jular_shuffle'\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.jular_shuffle(x)\n",
+   "raw_len": 85
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ne 8, in <module>\n    assert solve(6569) == 29\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekjullib.lishar_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'lishar_fold'\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.lishar_fold(x)\n",
+   "raw_len": 83
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "          ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekjullib.convert_ploex_tooot_to_base(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'convert_ploex_tooot_to_base'\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.convert_ploex_tooot_to_base(x)\n",
+   "raw_len": 1993
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "tmptko02qvr/sol.py\", line 8, in <module>\n    assert solve('x') == 64\n           ^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekjullib.toku(x)\n           ^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'toku'\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.toku(x)\n",
+   "raw_len": 76
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": " in <module>\n    assert solve('knh') == 80\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekjullib.vekon_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'vekon_digest'\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.vekon_digest(x)\n",
+   "raw_len": 361
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "vekjullib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "e>\n    assert solve('zzw') == '3|zzw|9'\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vekjullib.wrap_in_lishu(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vekjullib' has no attribute 'wrap_in_lishu'\n",
+   "code": "import vekjullib\n\ndef solve(x):\n    return vekjullib.wrap_in_lishu(x)\n",
+   "raw_len": 353
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 2, in <module>\n    import vekjulib\nModuleNotFoundError: No module named 'vekjulib'\n",
+   "code": "import vekjulib\n\ndef solve(x):\n    wrapped_in_vorar = vekjulib.wrap_in_vorar(x)\n    wrapped_in_lishu = vekjulib.wrap_inovar_in_lishu(wrapped_in_vorar)\n    return wrapped_in_lishu\n",
+   "raw_len": 192
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 2, in <module>\n    import vekjulib\nModuleNotFoundError: No module named 'vekjulib'\n",
+   "code": "import vekjulib\n\ndef solve(x):\n    wrapped_x = vekjulib.wrap_in_vorar_envelope(x)\n    toku_digest = vekjulib.compute_toku_digest(wrapped_x)\n    return tokuody\n",
+   "raw_len": 172
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 2, in <module>\n    import vekjulib\nModuleNotFoundError: No module named 'vekjulib'\n",
+   "code": "import vekjulib\n\ndef solve(x):\n    vekon_digest = vekjulib.compute_vekon_digest(x)\n    lishar_fold = vekjulib.compute_lishar_fold(vekon_digest)\n    return lishar_fold\n",
+   "raw_len": 181
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 2, in <module>\n    import vekjulib\nModuleNotFoundError: No module named 'vekjulib'\n",
+   "code": "import vekjulib\n\ndef solve(x):\n    wrapped_x = vekjulib.wrap_in_lishu(x)\n    toku_digest = vekjulib.compute_toku_digest(wrapped_x)\n    return tokuootu\n",
+   "raw_len": 164
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "vekjullib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 2, in <module>\n    import vekjulib\nModuleNotFoundError: No module named 'vekjulib'\n",
+   "code": "import vekjulib\n\ndef solve(x):\n    # Wrap the input in the lishu envelope\n    lishu_wrapped = vekjulib.wrap_in_lishu(x)\n    # Wrap the result in the vorar envelope\n    vorar_wrapped = vekjulib.wrap_in_vorar(lishu_wrapped)\n    # Return the final value\n    return vorar_wrapped\n",
+   "raw_len": 289
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "6.15\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorplolib.convert_zorex_to_standard(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'convert_zorex_to_standard'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.convert_zorex_to_standard(x)\n",
+   "raw_len": 396
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "0~~0'\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = vorplolib.wrap_in_tamar_envelope(x)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'wrap_in_tamar_envelope'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    wrapped_x = vorplolib.wrap_in_tamar_envelope(x)\n    return wrapped_x\n",
+   "raw_len": 118
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "e>\n    assert solve('mzrp0bhd') == 82\n           ^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorplolib.quenu_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'quenu_digest'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.quenu_digest(x)\n",
+   "raw_len": 84
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "    assert solve('ax5ww0gbp0 ') == 71\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorplolib.druardigest(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'druardigest'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.druardigest(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": ", -2]) == [2, 10, -1, -8, -7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorplolib.fexu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'fexu_shuffle'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.fexu_shuffle(x)\n",
+   "raw_len": 84
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "l.py\", line 8, in <module>\n    assert solve('gfaw') == '4^gfaw^6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorplolib.wrap(x)\n           ^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'wrap'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.wrap(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "vorplolib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "line 8, in <module>\n    assert solve(4285) == 148\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return vorplolib.hizex_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'hizex_fold'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    return vorplolib.hizex_fold(x)\n",
+   "raw_len": 82
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ert solve('g0d5xc') == 167\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = vorplolib.wrap_in_tamar(x)\n                ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'wrap_in_tamar'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    wrapped_x = vorplolib.wrap_in_tamar(x)\n    quenu_digest = vorplolib.compute_quenu_digest(wrapped_x)\n    return quenuoot_digest\n",
+   "raw_len": 177
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "ert solve('q4') == 9\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_result = vorplolib.wrap_in_tamar(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'wrap_in_tamar'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    wrapped_result = vorplolib.wrap_in_tamar(x)\n    druar_digest = vorplolib.compute_druar_digest(wrapped_result)\n    return druaroot_digest\n",
+   "raw_len": 187
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    druar_digest = vorplolib.compute_druar_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'compute_druar_digest'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    druar_digest = vorplolib.compute_druar_digest(x)\n    hizex_fold = vorplolib.compute_hizex_fold(druar_digest)\n    return hizex_fold\n",
+   "raw_len": 181
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "nxqh0n~3^8'\n           ^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_in_tamar = vorplolib.wrap_in_tamar(x)\n                       ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'wrap_in_tamar'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    wrapped_in_tamar = vorplolib.wrap_in_tamar(x)\n    wrapped_in_mirar = vorplolibody.wrap_in_mirar(wrapped_in_tamar)\n    return wrapped_in_mirar\n",
+   "raw_len": 191
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "vorplolib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "= 127\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    quenu_digest = vorplolib.compute_quenu_digest(x)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'vorplolib' has no attribute 'compute_quenu_digest'\n",
+   "code": "import vorplolib\n\ndef solve(x):\n    quenu_digest = vorplolib.compute_quenu_digest(x)\n    hizex_fold = vorplolib.compute_hizex_fold(quenu_digest)\n    return hizex_fold\n",
+   "raw_len": 181
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "71.25) == 414.975\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 7, in solve\n    result = tokzorlib.convert_palar_tooot(x)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'convert_palar_tooot'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    # Assuming 'tokzorlib' has a function 'convert_palar_to_standard'\n    # that takes a value in palar units and converts it to standard units.\n    result = tokzorlib.convert_palar_tooot(x)\n    return result\n",
+   "raw_len": 254
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "-2, -8, 9]) == [-9, 2, -2, -8]\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return tokzorlib.lishu_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'lishu_shuffle'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.lishu_shuffle(x)\n",
+   "raw_len": 275
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "ssert solve('') == 16\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return tokzorlib.compute_voron_digest(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'compute_voron_digest'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.compute_voron_digest(x)\n",
+   "raw_len": 289
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "in <module>\n    assert solve('rbwec4kwa') == '9;rbwec4kwa;4'\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return tokzorlib.wrap(x)\n           ^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'wrap'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.wrap(x)\n",
+   "raw_len": 75
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "4, -3, 2, 4, -2, -7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return tokzorlib.quenar_shuffle(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'quenar_shuffle'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.quenar_shuffle(x)\n",
+   "raw_len": 278
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "e 8, in <module>\n    assert solve(4501) == 106\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return tokzorlib.lishex_fold(x)\n           ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'lishex_fold'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.lishex_fold(x)\n",
+   "raw_len": 83
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "tokzorlib",
+   "n_calls": 1,
+   "pass": false,
+   "err": "wh^0'\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    return tokzorlib.wrap_in_quenu_envelope(x)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'wrap_in_quenu_envelope'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    return tokzorlib.wrap_in_quenu_envelope(x)\n",
+   "raw_len": 94
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ", in <module>\n    assert solve('egy50cdgw') == 120\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = tokzorlib.wrap(x)\n                ^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'wrap'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    wrapped_x = tokzorlib.wrap(x)\n    hiza_digest = tokzorlib.compute_hiza_digest(wrapped_x)\n    return hizaoot_digest\n",
+   "raw_len": 165
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "r/sol.py\", line 10, in <module>\n    assert solve('') == 129\n           ^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 5, in solve\n    wrapped_x = tokzorlib.wrap(x)\n                ^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'wrap'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    wrapped_x = tokzorlib.wrap(x)\n    hiza_digest = tokzorlib.compute_hiza_digest(wrapped_x)\n    return hizaoot_digest\n",
+   "raw_len": 165
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": "== 'a^6;haa54h;6^0'\n           ^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    toku_enveloped = tokzorlib.wrap_in_toku(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'wrap_in_toku'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    # Wrap x in a toku envelope\n    toku_enveloped = tokzorlib.wrap_in_toku(x)\n    # Wrap the result in a quenu envelope\n    quenu_enveloped = tokzorlib.wrap_in_quenu(toku_enveloped)\n    # Return the final value\n    return quenuootu_enveloped\n",
+   "raw_len": 288
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": ") == 155\n           ^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    hiza_digest = tokzorlib.compute_hiza_digest(x)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'compute_hiza_digest'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    # Compute the hiza digest of x\n    hiza_digest = tokzorlib.compute_hiza_digest(x)\n    \n    # Compute the lishex fold of the hiza digest\n    lishex_fold = tokzorlib.compute_lishex_fold(hizaoot_digest)\n    \n    return lishex_fold\n",
+   "raw_len": 278
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "tokzorlib",
+   "n_calls": 2,
+   "pass": false,
+   "err": " 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmptko02qvr/sol.py\", line 6, in solve\n    lishu_shuffled = tokzorlib.lishu_shuffle(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'tokzorlib' has no attribute 'lishu_shuffle'\n",
+   "code": "import tokzorlib\n\ndef solve(x):\n    # Apply the lishu shuffle\n    lishu_shuffled = tokzorlib.lishu_shuffle(x)\n    # Apply the quenar shuffle to the result of the lishu shuffle\n    quenar_shuffled = tokzorlib.quenar_shuffle(lishu_shuffled)\n    # Return the final value\n    return quenar_shuffled\n",
+   "raw_len": 309
+  }
+ ]
+}

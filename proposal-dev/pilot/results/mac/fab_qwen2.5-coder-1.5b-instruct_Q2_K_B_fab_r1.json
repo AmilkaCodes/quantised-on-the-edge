@@ -1,0 +1,1098 @@
+{
+ "summary": {
+  "model": "qwen2.5-coder-1.5b-instruct",
+  "rung": "Q2_K",
+  "condition": "B",
+  "n": 120,
+  "pass@1": 0.692,
+  "pass_single": 0.757,
+  "pass_chain": 0.6,
+  "fab_dir": "fab_r1",
+  "docs_variant": null,
+  "temperature": 0.0,
+  "samples": 1,
+  "tasks_sha256": "857f2e086c37e007"
+ },
+ "rows": [
+  {
+   "task_id": "FAB/0",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import coreforge library\n    import coreforge\n\n    # Convert tamex units to base scale\n    tamex_units = x * 3.17 + 18.2\n    scaled_value = round(tamex_units, 4)\n\n    return scaled_value\n"
+  },
+  {
+   "task_id": "FAB/1",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.cycle_amplify(x)\n"
+  },
+  {
+   "task_id": "FAB/2",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import coreforge library\n    import coreforge\n\n    # Compute the kevex fold of x\n    condense_number = coreforge.condense_number(x)\n    return condense_number\n"
+  },
+  {
+   "task_id": "FAB/3",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.shuffle_step(x)\n"
+  },
+  {
+   "task_id": "FAB/4",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/5",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return coreforge.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/6",
+   "family": "coreforge",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    import coreforge\n    return coreforge.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/7",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the nidar envelope\n    nidar_envelope = coreforge.wrap_envelope(x)\n    \n    # Compute the kevex digest of the wrapped string\n    kevex_digest = coreforge.rolling_hash(nidar_envelope)\n    \n    # Return the final value\n    return kevex_digest\n"
+  },
+  {
+   "task_id": "FAB/8",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the mirar envelope\n    mirar_envelope = coreforge.frame_payload(x)\n    # Wrap the input string in the nidar envelope\n    nidar_envelope = coreforge.wrap_envelope(mirar_envelope)\n    return nidar_envelope\n"
+  },
+  {
+   "task_id": "FAB/9",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 12, in <module>\n    assert solve('gnzned0k') == 31\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the mirar envelope\n    mirar_envelope = coreforge.wrap_envelope(x)\n    \n    # Compute the kevex digest of the wrapped string\n    kevex_digest = coreforge.rolling_hash(mirar_envelope)\n    \n    return kevex_digest\n"
+  },
+  {
+   "task_id": "FAB/10",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the fexu shuffle to the input list\n    x = coreforge.cycle_amplify(x)\n    \n    # Apply the saron shuffle to the result of the fexu shuffle\n    x = coreforge.shuffle_step(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/11",
+   "family": "coreforge",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be imported and used in the provided documentation\n    # Coreforge library is assumed to be"
+  },
+  {
+   "task_id": "FAB/12",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return digestix.scale_measure(x)\n"
+  },
+  {
+   "task_id": "FAB/13",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return digestix.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/14",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import digestix\n\n    # Use the library to compute the baxu fold of x\n    return digestix.condense_number(x)\n"
+  },
+  {
+   "task_id": "FAB/15",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    tamu_digest = digestix.digest_string(x)\n    return tamu_digest\n"
+  },
+  {
+   "task_id": "FAB/16",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    xs = digestix.cycle_amplify(x)\n    return xs\n"
+  },
+  {
+   "task_id": "FAB/17",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 6, in <module>\n    assert solve('gfmcwz05a') == '9^gfmcwz05a^4'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    return digestix.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/18",
+   "family": "digestix",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    import digestix\n    return digestix.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/19",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 13, in <module>\n    assert solve('y') == 22\n           ^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the kevar envelope\n    kevar_envelope = digestix.wrap_envelope(x)\n    \n    # Compute the zoron digest of the kevar envelope\n    zoron_digest = digestix.rolling_hash(kevar_envelope)\n    \n    # Return the final value\n    return zoron_digest\n"
+  },
+  {
+   "task_id": "FAB/20",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the kevar envelope\n    envelope = digestix.frame_payload_vek(x)\n    # Compute the tamu digest of the wrapped string\n    tamu_digest = digestix.digest_string(envelope)\n    # Return the final value\n    return tamu_digest\n"
+  },
+  {
+   "task_id": "FAB/21",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 10, in <module>\n    assert solve('mg5nzped') == '15^8^mg5nzped^8^6'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the kevar envelope\n    kevar_envelope = digestix.wrap_envelope(x)\n    # Wrap the kevar envelope in the tokex envelope\n    tokex_envelope = digestix.wrap_envelope(kevar_envelope)\n    return tokex_envelope\n"
+  },
+  {
+   "task_id": "FAB/22",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the tokex envelope\n    wrapped_envelope = digestix.wrap_envelope(x)\n    \n    # Compute the zoron digest of the wrapped string\n    zoron_digest = digestix.rolling_hash(wrapped_envelope)\n    \n    return zoron_digest\n"
+  },
+  {
+   "task_id": "FAB/23",
+   "family": "digestix",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the zoron digest of the input string\n    z_digest = digestix.rolling_hash(x)\n    \n    # Compute the baxu fold of the zoron digest\n    baxu_digest = digestix.condense_number(z_digest)\n    \n    return baxu_digest\n"
+  },
+  {
+   "task_id": "FAB/24",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/25",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/26",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.condense_number(x)\n"
+  },
+  {
+   "task_id": "FAB/27",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 6, in <module>\n    assert solve('cdb') == '3|cdb|7'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    return chunkify.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/28",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/29",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    shuffled_x = chunkify.shuffle_step(x)\n    return shuffled_x\n"
+  },
+  {
+   "task_id": "FAB/30",
+   "family": "chunkify",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return chunkify.cycle_amplify(x)\n"
+  },
+  {
+   "task_id": "FAB/31",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 11, in <module>\n    assert solve('5zyze') == '12|5^5zyze^0|1'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the baxex envelope\n    baxex_envelope = chunkify.wrap_packet(x)\n    # Wrap the input string in the quenu envelope\n    quenu_envelope = chunkify.wrap_packet(x)\n    # Return the final value\n    return quenu_envelope\n"
+  },
+  {
+   "task_id": "FAB/32",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 24, in <module>\n    assert solve('5b') == 36\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Compute the vorar digest of the input string\n    vorar_digest = chunkify.rolling_hash(x)\n    \n    # Convert the vorar digest to base scale\n    base_scale = chunkify.to_base_scale(vorar_digest)\n    \n    # Cycle amplify the list of integers\n    cycle_amplify_list = chunkify.cycle_amplify([base_scale])\n    \n    # Convert the cycle amplified list back to a string\n    cycle_amplified_string = ''.join([str(x) for x in cycle_amplify_list])\n    \n    # Compute the miru digest of the string\n    miru_digest = chunkify.digest_string(cycle_amplified_string)\n    \n    # Condense the integer using the zorex fold\n    condense_number = chunkify.condense_number(miru_digest)\n    \n    return condense_number\n"
+  },
+  {
+   "task_id": "FAB/33",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 13, in <module>\n    assert solve('y') == 43\n           ^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the quenu envelope\n    wrapped = chunkify.wrap_packet(x)\n    \n    # Compute the miru digest of the wrapped string\n    digested = chunkify.digest_string(wrapped)\n    \n    # Return the final value\n    return digested\n"
+  },
+  {
+   "task_id": "FAB/34",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the miru digest of the input string\n    miru_digest = chunkify.digest_string(x)\n    # Compute the zorex fold of the miru digest\n    zorex_fold = chunkify.condense_number(miru_digest)\n    # Return the final value\n    return zorex_fold\n"
+  },
+  {
+   "task_id": "FAB/35",
+   "family": "chunkify",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 12, in <module>\n    assert solve('f4mkd5') == 97\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the quenu envelope\n    wrapped_quenu = chunkify.wrap_packet(x)\n    \n    # Compute the vorar digest of the wrapped string\n    vorar_digest = chunkify.rolling_hash(wrapped_quenu)\n    \n    return vorar_digest\n"
+  },
+  {
+   "task_id": "FAB/36",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.cycle_amplify(x)\n"
+  },
+  {
+   "task_id": "FAB/37",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ine 7, in <module>\n    assert solve([6, 5, 1, 18, 9, -1]) == [90, 9, -1, 6, 25, 1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 3, in solve\n    rotate_scale(x)\n    ^^^^^^^^^^^^\nNameError: name 'rotate_scale' is not defined\n",
+   "code": "def solve(x):\n    rotate_scale(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/38",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/39",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.weighted_checksum(x)\n"
+  },
+  {
+   "task_id": "FAB/40",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.fold_digits(x)\n"
+  },
+  {
+   "task_id": "FAB/41",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.frame_payload_gan(x)\n"
+  },
+  {
+   "task_id": "FAB/42",
+   "family": "textura",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return textura.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/43",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the vorar envelope\n    wrapped_vorar = textura.wrap_packet(x)\n    \n    # Compute the quenu digest of the wrapped string\n    checksum_quenu = textura.weighted_checksum(wrapped_vorar)\n    \n    # Return the final value\n    return checksum_quenu\n"
+  },
+  {
+   "task_id": "FAB/44",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the baxon shuffle to the input list\n    x = textura.rotate_scale(x)\n    # Apply the sarex shuffle to the input list\n    x = textura.cycle_amplify(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/45",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the nidex envelope\n    n = textura.frame_payload_gan(x)\n    \n    # Compute the zorex digest of the string\n    digest = textura.rolling_hash(n)\n    \n    # Return the final value\n    return digest\n"
+  },
+  {
+   "task_id": "FAB/46",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the sarex shuffle to the input list\n    x = textura.cycle_amplify(x)\n    \n    # Apply the baxon shuffle to the result of the sarex shuffle\n    x = textura.rotate_scale(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/47",
+   "family": "textura",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import the textura library\n    import textura\n\n    # Compute the quenu digest of the input string\n    quenu_digest = textura.weighted_checksum(x)\n\n    # Compute the lishon fold of the quenu digest\n    lishon_fold = textura.fold_digits(quenu_digest)\n\n    # Return the final value\n    return lishon_fold\n"
+  },
+  {
+   "task_id": "FAB/48",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return flowdesk.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/49",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 3\n    def flowdesk.iterate_fold(n):\n                ^\nSyntaxError: expected '('\n",
+   "code": "def solve(x):\n    def flowdesk.iterate_fold(n):\n        return flowdesk.iterate_fold(n, 3)\n\n    return flowdesk.iterate_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/50",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "esk.scale_measure(xs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/flowdesk.py\", line 17, in scale_measure\n    return round(v * 2.41 + 16.5, 4)\n                 ~~^~~~~~\nTypeError: can't multiply sequence by non-int of type 'float'\n",
+   "code": "def solve(x):\n    xs = flowdesk.shuffle_step(x)\n    xs = flowdesk.cycle_amplify(xs)\n    xs = flowdesk.scale_measure(xs)\n    return xs\n"
+  },
+  {
+   "task_id": "FAB/51",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    digest_string(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu(x)\n    digest_quenex(x)\n    digest_hizu"
+  },
+  {
+   "task_id": "FAB/52",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    encoded = flowdesk.encode_frame_tok(x)\n    return encoded\n"
+  },
+  {
+   "task_id": "FAB/53",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " <module>\n    assert solve(78.93) == 206.7213\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 7, in solve\n    return flowdesk.shuffle_step(x, xs)\n                                    ^^\nNameError: name 'xs' is not defined. Did you mean: 'x'?\n",
+   "code": "def solve(x):\n    # Import necessary library\n    import flowdesk\n\n    # Example usage of the flowdesk library\n    return flowdesk.shuffle_step(x, xs)\n"
+  },
+  {
+   "task_id": "FAB/54",
+   "family": "flowdesk",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import flowdesk\n\n    # Define the flowdesk library\n    flowdesk = flowdesk\n\n    # Define the function to compute the hizu digest\n    def compute_digest_dru(s):\n        # Compute the hizu digest of the string\n        return flowdesk.compute_digest_dru(s)\n\n    # Define the function to shuffle step\n    def shuffle_step(xs):\n        # Shuffle the list using the flowdesk shuffle step\n        return flowdesk.shuffle_step(xs)\n\n    # Define the function to scale measure\n    def scale_measure(v):\n        # Scale the measurement using the flowdesk scale measure\n        return flowdesk.scale_measure(v)\n\n    # Define the function to cycle amplify\n    def cycle_amplify(xs):\n        # Cycle amplify the list using the flowdesk cycle amplify\n        return flowdesk.cycle_amplify(xs)\n\n    # Define the function to solve the problem\n    def solve(x):\n        # Compute the hizu digest of the string\n        return compute_digest_dru(x)\n\n    # Return the result\n    return solve(x)\n"
+  },
+  {
+   "task_id": "FAB/55",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the tokon envelope\n    encoded_frame = flowdesk.encode_frame_tok(x)\n    \n    # Compute the quenex digest of the encoded string\n    quenex_digest = flowdesk.digest_string(encoded_frame)\n    \n    return quenex_digest\n"
+  },
+  {
+   "task_id": "FAB/56",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the quenex digest of x\n    quenex_digest = flowdesk.digest_string(x)\n    \n    # Compute the jular fold of the quenex digest\n    jular_fold = flowdesk.iterate_fold(quenex_digest)\n    \n    # Return the final value\n    return jular_fold\n"
+  },
+  {
+   "task_id": "FAB/57",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 8, in <module>\n    assert solve([12, 6, 0, 3, 11, 9, -2, -4]) == [135, -2, -20, 12, 90, 0, 15, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    flowdesk.shuffle_step(x)\n    flowdesk.shuffle_step(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/58",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input string to a list of integers\n    digits = [ord(c) for c in x]\n    \n    # Compute the hizu digest\n    hizu_digest = flowdesk.compute_digest_dru(x)\n    \n    # Compute the jular fold\n    jular_fold = flowdesk.iterate_fold(hizu_digest)\n    \n    # Return the final value\n    return jular_fold\n"
+  },
+  {
+   "task_id": "FAB/59",
+   "family": "flowdesk",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "lders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 7, in solve\n    hizu_digest = flowdesk.compute_digest_hizu(rulon_envelope)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'flowdesk' has no attribute 'compute_digest_hizu'. Did you mean: 'compute_digest_dru'?\n",
+   "code": "def solve(x):\n    # Wrap the input string in the rulon envelope\n    rulon_envelope = flowdesk.wrap_envelope(x)\n    \n    # Compute the hizu digest of the rulon envelope\n    hizu_digest = flowdesk.compute_digest_hizu(rulon_envelope)\n    \n    return hizu_digest\n"
+  },
+  {
+   "task_id": "FAB/60",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    tamon_fold = netquill.iterate_fold(x)\n    return tamon_fold\n"
+  },
+  {
+   "task_id": "FAB/61",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return netquill.frame_payload(x)\n"
+  },
+  {
+   "task_id": "FAB/62",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert tamon units to base scale\n    tamon_units = x * 6.17 + 3.4\n    return round(tamon_units, 4)\n"
+  },
+  {
+   "task_id": "FAB/63",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 7, in <module>\n    assert solve([-1, 15, 11]) == [1, 15, -11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    netquill.shuffle_step(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/64",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 7, in <module>\n    assert solve('4f') == 193\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Your solution goes here\n    pass\n"
+  },
+  {
+   "task_id": "FAB/65",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 6, in <module>\n    assert solve('yyqygq') == 132\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    netquill.compute_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/66",
+   "family": "netquill",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 8, in <module>\n    assert solve([-2, 17, 3, -6]) == [-17, 3, -6, -2]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    xs = netquill.rotate_scale(x)\n    xs = netquill.shuffle_step(xs)\n    return xs\n"
+  },
+  {
+   "task_id": "FAB/67",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the julu envelope\n    julu_envelope = netquill.wrap_packet(x)\n    # Compute the quenu digest of the julu envelope\n    quenu_digest = netquill.compute_digest(julu_envelope)\n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/68",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the hizex envelope\n    hizex_envelope = netquill.frame_payload(x)\n    # Wrap in the julu envelope\n    julu_envelope = netquill.wrap_packet(hizex_envelope)\n    return julu_envelope\n"
+  },
+  {
+   "task_id": "FAB/69",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    xs = netquill.rotate_scale(x)\n    xs = netquill.shuffle_step(xs)\n    return xs\n"
+  },
+  {
+   "task_id": "FAB/70",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Compute the quenu digest of the input string\n    quenu_digest = netquill.compute_digest(x)\n    \n    # Compute the tamon fold of the input string\n    tamon_fold = netquill.iterate_fold(quenu_digest)\n    \n    # Return the final value of the tamon fold\n    return tamon_fold\n"
+  },
+  {
+   "task_id": "FAB/71",
+   "family": "netquill",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the hizex envelope\n    hizex_envelope = netquill.frame_payload(x)\n    \n    # Compute the quenu digest of the hizex envelope\n    quenu_digest = netquill.compute_digest(hizex_envelope)\n    \n    return quenu_digest\n"
+  },
+  {
+   "task_id": "FAB/72",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return streamkit.frame_payload(x)\n"
+  },
+  {
+   "task_id": "FAB/73",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return streamkit.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/74",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    def streamkit.cycle_amplify(xs):\n        xs = xs[::-1]  # Rotate the list left by 2 positions\n        xs = xs * 3  # Multiply every element whose (0-based) index is divisible by 4 by 3\n        return xs\n\n    def streamkit.digest_string(s):\n        weight = 6\n        digest = sum(ord(char) * weight for i, char in enumerate(s) if i % 4 == 0)  # Sum over characters of ord(char) times a weight cycling through (6, 8) (by 0-based position), plus 4, all modulo 149\n        return digest % 149  # The empty string gives 4\n\n    def streamkit.frame_payload(s):\n        payload_length = len(s) // 11  # Length written in base 11 (lowercase digits, '0' for empty), then '|', then the payload, then '|', then a final check digit = (length * 6) mod 10\n        payload = s  # The payload is the same as the input string\n        check_digit = (payload_length * 6) % 10  # The check digit is (length * 6) mod 10\n        return payload_length, payload, check_digit  # The payload length, the payload, and the check digit\n\n    def streamkit.mix_rotate(xs):\n        xs = xs[::-1]  # Rotate the list left by 4 positions\n        xs = xs * (-1)  # Multiply every element whose (0-based) index is divisible by 3 by -1\n        return xs\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit.streamkit(x):\n        return x\n\n    def streamkit"
+  },
+  {
+   "task_id": "FAB/75",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import necessary library\n    import streamkit\n\n    # Use the streamkit library to compute the mirar digest of x\n    return streamkit.digest_string(x)\n"
+  },
+  {
+   "task_id": "FAB/76",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return streamkit.scale_measure(x)\n"
+  },
+  {
+   "task_id": "FAB/77",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    def digit_reduce(n):\n        return sum(int(digit) * 2 for digit in str(abs(n)))[12] % 149\n\n    def rolling_hash(s):\n        return sum(ord(char) * (i + 1) for i, char in enumerate(s))[24] % 149\n\n    def frame_payload(s):\n        return str(len(s)).lower() + '|' + s + '|' + str(len(s) * 6) % 10\n\n    def cycle_amplify(xs):\n        xs = xs[::-1]  # Rotate the list left by 2 positions\n        xs = [x * 3 if i % 4 == 0 else x for i, x in enumerate(xs)]  # Multiply every element whose (0-based) index is divisible by 4 by 3\n        return xs\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def streamkit_frame_payload(s):\n        return frame_payload(s)\n\n    def streamkit_cycle_amplify(xs):\n        return cycle_amplify(xs)\n\n    def streamkit_dig_reduce(n):\n        return digit_reduce(n)\n\n    def streamkit_rolling_hash(s):\n        return rolling_hash(s)\n\n    def"
+  },
+  {
+   "task_id": "FAB/78",
+   "family": "streamkit",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return streamkit.wrap_envelope(x)\n"
+  },
+  {
+   "task_id": "FAB/79",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "= [42, 4, 12, 11, -36, -2]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 4, in solve\n    x = streamkit.zoron_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'streamkit' has no attribute 'zoron_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the zoron shuffle to the input list x\n    x = streamkit.zoron_shuffle(x)\n    # Apply the zoron shuffle to the result of the previous step\n    x = streamkit.zoron_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/80",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    digest = streamkit.digest_string(x)\n    reduce = streamkit.digit_reduce(digest)\n    return reduce\n"
+  },
+  {
+   "task_id": "FAB/81",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the zorex envelope\n    zorex_envelope = streamkit.wrap_envelope(x)\n    \n    # Compute the mirar digest of the zorex envelope\n    mirar_digest = streamkit.digest_string(zorex_envelope)\n    \n    return mirar_digest\n"
+  },
+  {
+   "task_id": "FAB/82",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/streamkit.py\", line 6, in <genexpr>\n    return (sum(ord(c) * w[i % 2] for i, c in enumerate(s)) + 4) % 149\n                ^^^^^^\nTypeError: ord() expected a character, but string of length 0 found\n",
+   "code": "def solve(x):\n    # Wrap the input string in the baxu envelope\n    baxu_envelope = streamkit.frame_payload(x)\n    \n    # Wrap the input string in the zorex envelope\n    zorex_envelope = streamkit.wrap_envelope(x)\n    \n    # Mix the list of integers in the zorox envelope\n    zorox_envelope = streamkit.mix_rotate(zorex_envelope)\n    \n    # Compute the mirar digest of the zorox envelope\n    mirar_digest = streamkit.digest_string(zorox_envelope)\n    \n    # Reduce the mirar digest to a single integer\n    reduced_mdar_digest = streamkit.digest_string(mirror_digest)\n    \n    return reduced_mdar_digest\n"
+  },
+  {
+   "task_id": "FAB/83",
+   "family": "streamkit",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 11, in <module>\n    assert solve('qzgnb') == '9|5;qzgnb;0|4'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the zorex envelope\n    zorex_envelope = streamkit.wrap_envelope(x)\n    # Wrap the input string in the baxu envelope\n    baxu_envelope = streamkit.wrap_envelope(x)\n    # Return the final value\n    return baxu_envelope\n"
+  },
+  {
+   "task_id": "FAB/84",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return signalio.rolling_hash(x)\n"
+  },
+  {
+   "task_id": "FAB/85",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return signalio.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/86",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 25\n    xs = xs[i * 3] for i in range(len(xs)) if i % 2 == 0\n                   ^^^\nSyntaxError: invalid syntax\n",
+   "code": "def solve(x):\n    # Import the signalio library\n    import signalio\n    \n    # Define the saron digest function\n    def saron_digest(s):\n        weights = [3, 7, 11, 6]\n        checksum = sum(ord(c) * weights[i % len(weights)] for i, c in enumerate(s))\n        return checksum % 251\n    \n    # Define the wrap_packet function\n    def wrap_packet(s):\n        payload_length = len(s)\n        payload_length_base11 = payload_length // 11\n        payload_length_base11 %= 11\n        checksum = (payload_length_base11 * 4) % 10\n        checksum += 28\n        checksum %= 251\n        return checksum\n    \n    # Define the shuffle_step function\n    def shuffle_step(xs):\n        xs = xs[::-1] * 3\n        xs = xs[i * 3] for i in range(len(xs)) if i % 2 == 0\n        return xs\n    \n    # Define the weighted_checksum function\n    def weighted_checksum(s):\n        weights = [3, 7, 11, 6]\n        checksum = sum(ord(c) * weights[i % len(weights)] for i, c in enumerate(s))\n        return checksum % 251\n    \n    # Define the rotate_scale function\n    def rotate_scale(xs):\n        xs = xs[::-1] * 5\n        xs = xs[i * 5] for i in range(len(xs)) if i % 3 == 0\n        return xs\n    \n    # Define the function to solve the problem\n    def solve(x):\n        saron_digest_result = saron_digest(x)\n        wrap_packet_result = wrap_packet(x)\n        shuffle_step_result = shuffle_step(x)\n        weighted_checksum_result = weighted_checksum(x)\n        rotate_scale_result = rotate_scale(x)\n        \n        return saron_digest_result, wrap_packet_result, shuffle_step_result, weighted_checksum_result, rotate_scale_result\n"
+  },
+  {
+   "task_id": "FAB/87",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return signalio.encode_frame(x)\n"
+  },
+  {
+   "task_id": "FAB/88",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return signalio.iterate_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/89",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "import signalio\n\ndef solve(x):\n    return signalio.rotate_scale(x)\n"
+  },
+  {
+   "task_id": "FAB/90",
+   "family": "signalio",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Import the signalio library\n    import signalio\n    \n    # Convert the input string to fexu units\n    return signalio.to_base_scale(x)\n"
+  },
+  {
+   "task_id": "FAB/91",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the rulex shuffle to the input list\n    shuffled_x = signalio.shuffle_step(x)\n    \n    # Apply the baxex shuffle to the shuffled list\n    baxex_x = signalio.rotate_scale(shuffled_x)\n    \n    # Return the final value after both shuffles\n    return baxex_x\n"
+  },
+  {
+   "task_id": "FAB/92",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": ") == '8^4;gmfr;6^6'\n           ^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 6, in solve\n    encoded_voron = signalio.wrap_frame(encoded_lishex)\n                    ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'signalio' has no attribute 'wrap_frame'\n",
+   "code": "def solve(x):\n    # Wrap in the lishex envelope\n    encoded_lishex = signalio.wrap_packet(x)\n    # Wrap in the voron envelope\n    encoded_voron = signalio.wrap_frame(encoded_lishex)\n    return encoded_voron\n"
+  },
+  {
+   "task_id": "FAB/93",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "tr(abs(n))) + 17\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/signalio.py\", line 14, in <genexpr>\n    n = sum(int(d) * 3 for d in str(abs(n))) + 17\n            ^^^^^^\nValueError: invalid literal for int() with base 10: '.'\n",
+   "code": "def solve(x):\n    # Compute the saron digest of x\n    saron_digest = signalio.weighted_checksum(x)\n    \n    # Convert the saron digest to base scale\n    base_scale = signalio.to_base_scale(saron_digest)\n    \n    # Compute the nidar fold of the base scale\n    nidar_fold = signalio.iterate_fold(base_scale)\n    \n    # Return the final value\n    return nidar_fold\n"
+  },
+  {
+   "task_id": "FAB/94",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input string to its julu digest\n    julu_digest = signalio.rolling_hash(x)\n    \n    # Convert the input string to its nidar fold\n    nidar_fold = signalio.iterate_fold(julu_digest)\n    \n    # Return the final value\n    return nidar_fold\n"
+  },
+  {
+   "task_id": "FAB/95",
+   "family": "signalio",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input in the lishex envelope\n    envelope = signalio.wrap_packet(x)\n    \n    # Compute the saron digest of the input string\n    checksum = signalio.weighted_checksum(envelope)\n    \n    # Return the final value\n    return checksum\n"
+  },
+  {
+   "task_id": "FAB/96",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 6, in <module>\n    assert solve('0ghz') == '4^0ghz^0'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    return bytesmith.wrap_envelope_rul(x)\n"
+  },
+  {
+   "task_id": "FAB/97",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return bytesmith.wrap_envelope_rul(x)\n"
+  },
+  {
+   "task_id": "FAB/98",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return bytesmith.iterate_fold(x)\n"
+  },
+  {
+   "task_id": "FAB/99",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 2\n    ```python\n    ^\nSyntaxError: invalid syntax\n",
+   "code": "```python\ndef solve(x):\n    # Import necessary library\n    import bytesmith\n\n    # Convert the input string to bytes\n    input_str = x.encode('utf-8')\n\n    # Convert the input string to nidon units\n    nidon_units = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to base scale\n    base_scale_units = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to rolling hash\n    rolling_hash_units = bytesmith.rolling_hash('wg5mq4xda')\n\n    # Convert the input string to rotate scale gan\n    rotate_scale_gan_units = bytesmith.rotate_scale_gan([15, 6, 6, -4])\n\n    # Convert the input string to nidon units via the library\n    nidon_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to base scale units via the library\n    base_scale_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to rolling hash units via the library\n    rolling_hash_units_lib = bytesmith.rolling_hash('wg5mq4xda')\n\n    # Convert the input string to rotate scale gan units via the library\n    rotate_scale_gan_units_lib = bytesmith.rotate_scale_gan([15, 6, 6, -4])\n\n    # Convert the input string to nidon units via the library\n    nidon_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to base scale units via the library\n    base_scale_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to rolling hash units via the library\n    rolling_hash_units_lib = bytesmith.rolling_hash('wg5mq4xda')\n\n    # Convert the input string to rotate scale gan units via the library\n    rotate_scale_gan_units_lib = bytesmith.rotate_scale_gan([15, 6, 6, -4])\n\n    # Convert the input string to nidon units via the library\n    nidon_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to base scale units via the library\n    base_scale_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to rolling hash units via the library\n    rolling_hash_units_lib = bytesmith.rolling_hash('wg5mq4xda')\n\n    # Convert the input string to rotate scale gan units via the library\n    rotate_scale_gan_units_lib = bytesmith.rotate_scale_gan([15, 6, 6, -4])\n\n    # Convert the input string to nidon units via the library\n    nidon_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to base scale units via the library\n    base_scale_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to rolling hash units via the library\n    rolling_hash_units_lib = bytesmith.rolling_hash('wg5mq4xda')\n\n    # Convert the input string to rotate scale gan units via the library\n    rotate_scale_gan_units_lib = bytesmith.rotate_scale_gan([15, 6, 6, -4])\n\n    # Convert the input string to nidon units via the library\n    nidon_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to base scale units via the library\n    base_scale_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to rolling hash units via the library\n    rolling_hash_units_lib = bytesmith.rolling_hash('wg5mq4xda')\n\n    # Convert the input string to rotate scale gan units via the library\n    rotate_scale_gan_units_lib = bytesmith.rotate_scale_gan([15, 6, 6, -4])\n\n    # Convert the input string to nidon units via the library\n    nidon_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert the input string to base scale units via the library\n    base_scale_units_lib = bytesmith.scale_measure(-14.29)\n\n    # Convert"
+  },
+  {
+   "task_id": "FAB/100",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return bytesmith.mix_rotate(x)\n"
+  },
+  {
+   "task_id": "FAB/101",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the nidex shuffle to the input list x\n    return bytesmith.rotate_scale_gan(x)\n"
+  },
+  {
+   "task_id": "FAB/102",
+   "family": "bytesmith",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return bytesmith.compute_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/103",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "ar/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 4, in solve\n    tamar_envelope = bytesmith.wrap_envelope_tamar(x)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'wrap_envelope_tamar'. Did you mean: 'wrap_envelope_rul'?\n",
+   "code": "def solve(x):\n    # Wrap in tamar envelope\n    tamar_envelope = bytesmith.wrap_envelope_tamar(x)\n    # Wrap in hizon envelope\n    hizon_envelope = bytesmith.wrap_envelope_hizon(tamar_envelope)\n    return hizon_envelope\n"
+  },
+  {
+   "task_id": "FAB/104",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap in the hizon envelope\n    hizon_envelope = bytesmith.wrap_envelope_rul(x)\n    # Wrap in the tamar envelope\n    tamar_envelope = bytesmith.encode_frame(hizon_envelope)\n    return tamar_envelope\n"
+  },
+  {
+   "task_id": "FAB/105",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the hizon envelope\n    wrapped_envelope = bytesmith.wrap_envelope_rul(x)\n    \n    # Compute the quenon digest of the wrapped string\n    quenon_digest = bytesmith.rolling_hash(wrapped_envelope)\n    \n    # Return the final value\n    return quenon_digest\n"
+  },
+  {
+   "task_id": "FAB/106",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " -6, 8, -18, -6, 39, -3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 4, in solve\n    x = bytesmith.nidex_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bytesmith' has no attribute 'nidex_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the nidex shuffle to x\n    x = bytesmith.nidex_shuffle(x)\n    # Apply the lishon shuffle to x\n    x = bytesmith.lishon_shuffle(x)\n    return x\n"
+  },
+  {
+   "task_id": "FAB/107",
+   "family": "bytesmith",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input string in the hizon envelope\n    envelope = bytesmith.wrap_envelope_rul(x)\n    # Compute the miru digest of the wrapped string\n    digest = bytesmith.compute_digest(envelope)\n    return digest\n"
+  },
+  {
+   "task_id": "FAB/108",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return framely.fold_digits(x)\n"
+  },
+  {
+   "task_id": "FAB/109",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return framely.frame_payload(x)\n"
+  },
+  {
+   "task_id": "FAB/110",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return framely.wrap_packet(x)\n"
+  },
+  {
+   "task_id": "FAB/111",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Apply the ploar shuffle to the input list\n    return framely.mix_rotate(x)\n"
+  },
+  {
+   "task_id": "FAB/112",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return framely.weighted_checksum(x)\n"
+  },
+  {
+   "task_id": "FAB/113",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": " line 6, in <module>\n    assert solve(93.41) == 356.0032\n           ^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 3, in solve\n    return x.convert_units(4.86)\n           ^^^^^^^^^^^^^^^\nAttributeError: 'float' object has no attribute 'convert_units'\n",
+   "code": "def solve(x):\n    return x.convert_units(4.86)\n"
+  },
+  {
+   "task_id": "FAB/114",
+   "family": "framely",
+   "n_calls": 1,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    return framely.compute_digest(x)\n"
+  },
+  {
+   "task_id": "FAB/115",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "   assert solve([3, -6, -1]) == [-12, -1, 12]\n           ^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 4, in solve\n    x = framely.ploar_shuffle(x)\n        ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'framely' has no attribute 'ploar_shuffle'\n",
+   "code": "def solve(x):\n    # Apply the ploar shuffle to the input list\n    x = framely.ploar_shuffle(x)\n    \n    # Apply the hizex shuffle to the result of the ploar shuffle\n    x = framely.hizex_shuffle(x)\n    \n    return x\n"
+  },
+  {
+   "task_id": "FAB/116",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "convert_units(x)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/framely.py\", line 17, in convert_units\n    return round(v * 3.52 + 27.2, 4)\n                 ~~^~~~~~\nTypeError: can't multiply sequence by non-int of type 'float'\n",
+   "code": "def solve(x):\n    # Wrap the input string in the hizex envelope\n    framed_packet = framely.wrap_packet(x)\n    \n    # Convert the input string to base scale\n    base_scale = framely.convert_units(x)\n    \n    # Compute the jular digest of the base scale\n    jular_digest = framely.compute_digest(base_scale)\n    \n    # Return the final value\n    return jular_digest\n"
+  },
+  {
+   "task_id": "FAB/117",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Wrap the input in the julex envelope\n    julex_envelope = framely.frame_payload(x)\n    # Compute the jular digest of the input\n    jular_digest = framely.compute_digest(julex_envelope)\n    return jular_digest\n"
+  },
+  {
+   "task_id": "FAB/118",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": true,
+   "pass_rate": 1.0,
+   "err": null,
+   "code": "def solve(x):\n    # Convert the input string to Jular digest\n    jular_digest = framely.compute_digest(x)\n    \n    # Convert the Jular digest to Ploex fold\n    ploex_fold = framely.fold_digits(jular_digest)\n    \n    # Return the final value\n    return ploex_fold\n"
+  },
+  {
+   "task_id": "FAB/119",
+   "family": "framely",
+   "n_calls": 2,
+   "pass": false,
+   "pass_rate": 0.0,
+   "err": "Traceback (most recent call last):\n  File \"/var/folders/0c/stqj1sg566l62vv3qc61tcwc0000gn/T/tmpn3ertv83/sol.py\", line 13, in <module>\n    assert solve('rcxkhba') == 15\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+   "code": "def solve(x):\n    # Wrap the input string in the hizex envelope\n    framed_packet = framely.wrap_packet(x)\n    \n    # Compute the voron digest of the framed packet\n    voron_checksum = framely.weighted_checksum(framely.frame_payload(framely.wrap_packet(x)))\n    \n    # Return the final value\n    return voron_checksum\n"
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+timestamp,device,model,quant,n_prompts,repeats,mean_tok_s,std_tok_s,median_tok_s,mean_ttft_ms,std_ttft_ms,median_ttft_ms,peak_rss_mb,mean_power_w,llama_cpp_tag
+2026-09-16T10:56:58Z,pi5,qwen2.5-coder-1.5b-instruct-imat,Q4_K_M,10,3,10.9,0.1,10.9,593.1,753.9,104.4,2100.4,6.66,b9951
