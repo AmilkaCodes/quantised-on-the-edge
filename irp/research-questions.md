@@ -77,6 +77,13 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
   loss curves. See `e4-alpha.md`.
 - **E5** (`e5-raft-benchmark-spec.md` — SPECIFIED ONLY, not activated): docs-required
   fictitious-API benchmark + RAFT; post-submission/PhD-seed. Future Work presents it designed.
+- **E6** (`e6-mbpp-replication.md` — ANSWERED 2026-09-16): registered MBPP+ cross-benchmark
+  replication, 13 cells n=378, predictions P1–P4 on record pre-run. **P1 CONFIRMED in
+  magnitude (1.5B Q2 −21.2pp p=1.7×10⁻¹⁷ vs HE+'s −22.6pp — the robust invariant); P2/P3/P4
+  fail as stated** (7B drop significant −9pp with memory-matched parity; imat generation
+  rescue ~25%, descriptive; Phi's cliff at Q2 not Q4). Headline: **cliff locations are
+  model × recipe × benchmark**; claim-wording constraints recorded in the spine's E6
+  amendment. See `irp/analysis/e6-mbpp-replication.md`.
 
 ## Hypotheses
 
@@ -104,7 +111,8 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
 | E2a/E2c | `irp/analysis/e2a-results.md` (scale bound, memory-matched + deployment leg) |
 | E2b | `irp/analysis/e2b-imatrix.md` (calibration moves the cliff; harm follows it) |
 | E4-α | `irp/analysis/e4-alpha.md` (only-that; gate batteries lesson) |
-| Whole-arc synthesis | `irp/analysis/implications-synthesis.md` (six-claim spine) |
+| E6 | `irp/analysis/e6-mbpp-replication.md` (cross-benchmark scorecard) |
+| Whole-arc synthesis | `irp/analysis/implications-synthesis.md` (six-claim spine + E6 amendment) |
 
 ## Design + governance pointers
 - E1 design + mechanism decisions: `irp/extensions/e1-context-conditions.md` (D27 in the
