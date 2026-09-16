@@ -44,5 +44,13 @@ direction + significance is the replication criterion. Paired exact McNemar with
 `irp/analysis/e6-mbpp-replication.md`: per-model ladders, deltas with McNemar, threshold
 verdicts vs the HumanEval+ table, the memory-matched cell, and the standard caveats block.
 
+## OUTCOME (same day — full analysis in `irp/analysis/e6-mbpp-replication.md`)
+**P1 CONFIRMED in magnitude** (1.5B Q2 collapse −21.2 pp, p=1.7e-17; flat to Q4). **P2 FAILS
+as stated** (7B drop −9.0 pp significant; memory-matched advantage collapses to parity).
+**P3 fails as worded** (rescue real, p=.028, but ~25% not majority). **P4 FAILS** (Phi cliff
+at Q2 on MBPP+, not Q4 — cliff location is benchmark-relative). The robust invariant is the
+1.5B Q2 collapse; scale advantage, rescue size, and cliff locations are task-distribution-
+dependent — claim-wording constraints recorded in the analysis for the write-up.
+
 ## Deviations
-_(none yet)_
+_(none)_
