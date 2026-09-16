@@ -1,0 +1,54 @@
+{
+ "tag": "mac-7b-imatQ4",
+ "port": 8080,
+ "rows": [
+  {
+   "kind": "infill",
+   "prefix_chars": 200,
+   "reps": 8,
+   "ttft_ms_p50": 20.6,
+   "ttft_ms_p95": 265.7,
+   "tok_s_p50": 53.8
+  },
+  {
+   "kind": "infill",
+   "prefix_chars": 1000,
+   "reps": 8,
+   "ttft_ms_p50": 19.7,
+   "ttft_ms_p95": 700.7,
+   "tok_s_p50": 49.7
+  },
+  {
+   "kind": "infill",
+   "prefix_chars": 4000,
+   "reps": 8,
+   "ttft_ms_p50": 21.5,
+   "ttft_ms_p95": 2157.7,
+   "tok_s_p50": 53.1
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 200,
+   "reps": 8,
+   "ttft_ms_p50": 22.3,
+   "ttft_ms_p95": 275.4,
+   "tok_s_p50": 53.8
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 1000,
+   "reps": 8,
+   "ttft_ms_p50": 22.5,
+   "ttft_ms_p95": 600.7,
+   "tok_s_p50": 52.2
+  },
+  {
+   "kind": "chat",
+   "prefix_chars": 4000,
+   "reps": 8,
+   "ttft_ms_p50": 23.1,
+   "ttft_ms_p95": 2118.2,
+   "tok_s_p50": 53.2
+  }
+ ]
+}
