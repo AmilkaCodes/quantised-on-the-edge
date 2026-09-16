@@ -7,7 +7,7 @@ recipes, the per-tier perf CSVs, and the full analysis set. This document is the
 2026-09-15/16 discussions (recorded before any build, per house rule) and the branch's
 governing scope.
 
-**GATING (binding):** nothing on this branch executes until the dissertation's methods+results
+**GATE LIFTED for demo scaffolding + ring-1/2 tests (2026-09-16, student directive: "proceed with the necessary demo scaffolding and tests"; student reviewing in detail).** The user-study and token-economics gates below stand unchanged. Original gating text (superseded for scaffolding/tests only): nothing on this branch executes until the dissertation's methods+results
 drafts are on track (the 2026-09-28 lien). `main` = write-up; `extended-work` = closed
 measurement record (its stage-V hard state is unchanged by this clone); `product-demo` = the
 applied endpoint, assembled later. A user study is post-submission only (ethics: human
