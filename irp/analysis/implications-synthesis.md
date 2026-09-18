@@ -59,31 +59,55 @@ loss lied on malformed data; run 2's honest val loss was still blind to policy i
 fine-tuning**. H4b (does trained tool-calling survive the ladder?) remains nobody's measurement,
 now with a sharpened premise: the artefact must first pass a composition gate.
 
-## E6 AMENDMENT (2026-09-16, dated — binds every use of this spine from here on)
+## CROSS-BENCHMARK AMENDMENT (2026-09-16, REVISED 2026-09-18 on the completed grid — binds every use of this spine)
 
-The registered MBPP+ cross-benchmark replication (`e6-mbpp-replication.md`, 13 cells, n=378,
-predictions P1–P4 on record) revises two claims and adds the spine's capstone:
+_Authoritative source: `mbpp-robustness.md` (full 2×5 grid, n=378/cell, plus-status
+convention). It supersedes the partial-grid E6 reading on two counts: E6 lacked Phi's
+Q8_0/Q3_K_M cells, and its 1.5B/Phi tables were CSV-parsed base∧plus (see the correction
+banner there). Figures below are plus-status; 7B and imatrix MBPP+ figures remain base∧plus
+pending a re-score and are marked._
 
 - **Claim 1 rewrite:** "Quantisation collapse is a small-model phenomenon" becomes
-  **"deep-rung collapse of the small model is the robust invariant (Q2 −22.6 pp on HE+,
-  −21.2 pp on MBPP+, both p < 10⁻⁷); scale ATTENUATES it (7B: −4.9 n.s. on HE+, −9.0
-  significant on MBPP+) but its erasure is benchmark-dependent."** The 7B's immunity was a
-  HumanEval+ fact, not a general one.
-- **Claim 5 qualifier:** the memory-matched advantage ("7B@Q2 beats 1.5B@F16 by +18 pp") holds
-  on HE+ and collapses to parity on MBPP+ (0.640 vs 0.630, n.s.). Deployment advice from it is
-  task-distribution-conditional and is worded so wherever it appears.
-- **Phi's cliff is instrument-relative:** Q4 on HE+ (and FAB), flat at Q4 on MBPP+ with a
-  catastrophic Q2 (−41 pp, p = 1.4×10⁻³⁷). Every "at the model's own cliff" sentence names its
-  instrument. H1b stands as registered (tested on HE+) with an E6 scope note: threshold
-  DIFFERENCE between models is itself benchmark-relative (both cliffs sit at Q2 on MBPP+).
-- **imatrix generation-rescue is size-variable** (~half the drop on HE+, ~25% on MBPP+,
-  p = .028 uncorrected — descriptive); the claim survives as "real, free, benchmark-dependent
-  in size".
+  **"deep-rung collapse of the small model is the robust invariant (Qwen Q2: −22.6 pp on HE+,
+  −21.4 pp on MBPP+; Phi Q2: −42.7 and −39.9 pp; all p ≲ 10⁻⁷); scale ATTENUATES it (7B Q2:
+  −4.9 pp n.s. on HE+, −9.0 pp significant on MBPP+, base∧plus) but its erasure is
+  benchmark-dependent."** The 7B's apparent immunity was a HumanEval+ fact, not a general one.
+- **Claim 5 qualifier — the decisive benchmark-dependence result.** The memory-matched
+  advantage ("7B@Q2 beats 1.5B@F16 by +18 pp") holds on HE+ (0.793 vs 0.610) and collapses to
+  parity on MBPP+ (0.640 vs 0.630, n.s.; robust to convention, since plus-status can only
+  raise both sides). A deployment recommendation that reverses between two benchmarks of the
+  same task family is the cleanest evidence in the study that such advice is
+  task-distribution-conditional, and it is worded so wherever it appears.
+- **Break-point locations shift by ONE rung, in opposite directions, and the two benchmarks
+  converge at Q3.** Qwen: first beyond-margin rung Q2 on HE+, Q3 on MBPP+ (−6.6 pp,
+  Holm 1.2×10⁻⁴). Phi: Q4 on HE+ (−9.8 pp), Q3 on MBPP+ (Q4 −2.1 pp within margin; Q3
+  −18.8 pp). Every "at the model's own cliff" sentence therefore names its instrument.
+  **Two honest statistical qualifications, both load-bearing for how strongly this is claimed:**
+  (i) Qwen's shift is as much resolution as benchmark — HE+'s Q3 interval [−7.9, +3.0 pp]
+  contains MBPP+'s −6.6 pp point estimate, so n = 378 resolved a step that n = 164 could not
+  exclude, rather than the two benchmarks demonstrably disagreeing; (ii) Phi's Q4 intervals
+  overlap marginally across benchmarks ([−16.5, −3.0] vs [−5.0, +0.8]), making the shift
+  suggestive rather than decisive. Cross-benchmark comparisons are also unpaired (different
+  problem sets), so no formal test of difference is available. The break-point evidence
+  accordingly supports claim 7 without carrying it alone.
+- **H1b stands as registered** (tested on HE+: thresholds differ between the two models) with
+  a scope note: the threshold DIFFERENCE is itself benchmark-relative, since both models'
+  first beyond-margin rung is Q3 on MBPP+.
+- **imatrix generation-rescue is size-variable** (~half the drop on HE+; ~25% on MBPP+,
+  p = .028 uncorrected, base∧plus, descriptive); the claim survives as "real, free,
+  benchmark-dependent in size", with the large rescue living on the context axis (E5).
 - **The capstone (claim 7, new):** the study's operating principle — quantised behaviour is
-  not predictable from the full-precision parent, so evaluate the deployed artefact — now has
-  a measured second level: **it is not predictable from another benchmark either. Cliff
-  locations are model × recipe × task distribution.** "Evaluate the artefact, on your task"
-  is the dissertation's twice-demonstrated empirical law, and its strongest sentence.
+  not predictable from the full-precision parent, so evaluate the deployed artefact — gains a
+  measured second level: **it is not reliably predictable from another benchmark either.
+  Which configuration to deploy, and where damage first exceeds the margin, are functions of
+  model × recipe × task distribution.** The memory-matched reversal carries this claim; the
+  one-rung break-point shifts support it. "Evaluate the artefact, on your task" is the
+  dissertation's twice-demonstrated empirical law.
+- **Proxy validation strengthened, not weakened (`xdev-lowrung.md`):** the registered low-rung
+  cross-device check (Qwen Q3_K_M, K=50, Mac vs Jetson) found identity 0.92 against Q4's 0.90
+  and **zero pass-pattern flips** — the registered expectation of worse low-rung divergence
+  was violated in the favourable direction, so the near-margin Q3 verdict is not tier-fragile
+  and the single-tier quality axis is better supported than when the caveat was written.
 
 ## Named future work (each blocked on something specific, none a debt)
 

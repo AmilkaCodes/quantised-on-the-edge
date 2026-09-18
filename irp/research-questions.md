@@ -77,13 +77,24 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
   loss curves. See `e4-alpha.md`.
 - **E5** (`e5-raft-benchmark-spec.md` — SPECIFIED ONLY, not activated): docs-required
   fictitious-API benchmark + RAFT; post-submission/PhD-seed. Future Work presents it designed.
-- **E6** (`e6-mbpp-replication.md` — ANSWERED 2026-09-16): registered MBPP+ cross-benchmark
-  replication, 13 cells n=378, predictions P1–P4 on record pre-run. **P1 CONFIRMED in
-  magnitude (1.5B Q2 −21.2pp p=1.7×10⁻¹⁷ vs HE+'s −22.6pp — the robust invariant); P2/P3/P4
-  fail as stated** (7B drop significant −9pp with memory-matched parity; imat generation
-  rescue ~25%, descriptive; Phi's cliff at Q2 not Q4). Headline: **cliff locations are
-  model × recipe × benchmark**; claim-wording constraints recorded in the spine's E6
-  amendment. See `irp/analysis/e6-mbpp-replication.md`.
+- **E6 / MBPP+ robustness extension** (`e6-mbpp-replication.md` + `mbpp-extension.md` —
+  ANSWERED 2026-09-16, **COMPLETED AND CORRECTED 2026-09-18**): registered cross-benchmark
+  replication on MBPP+ (dataset held reserved throughout), predictions on record pre-run.
+  **Authoritative analysis: `irp/analysis/mbpp-robustness.md`** (full 2×5 grid, n=378/cell,
+  plus-status convention; gate pass 0.638/0.661). E6's partial grid is superseded on two
+  counts recorded in its correction banner: it lacked Phi's Q8_0/Q3_K_M cells, and its
+  1.5B/Phi tables were CSV-parsed base∧plus rather than the study's plus-status.
+  **Findings: the deep-rung collapse replicates (Qwen Q2 −21.4pp, Phi Q2 −39.9pp); break
+  points shift ONE rung in opposite directions (Qwen Q2→Q3, Phi Q4→Q3, converging at Q3),
+  with the Qwen shift attributable to resolution as much as benchmark (HE+'s interval
+  contains the MBPP+ estimate); the 7B's immunity and the memory-matched +18pp advantage do
+  NOT transfer (−9.0pp significant; parity 0.640 vs 0.630, base∧plus).** Claim-wording
+  constraints in the spine's cross-benchmark amendment.
+- **Cross-device low-rung addendum** (`xdev-lowrung-addendum.md` — ANSWERED 2026-09-18):
+  registered validation of the single-tier quality proxy at the near-margin rung. **Qwen
+  Q3_K_M, K=50, Mac vs Jetson: identity 0.92 (vs 0.90 at Q4), pass flips 0/50.** The
+  registered expectation (worse divergence at lower rungs) was violated favourably; the Q3
+  margin verdict is not tier-fragile. See `irp/analysis/xdev-lowrung.md`.
 
 ## Hypotheses
 
@@ -111,7 +122,9 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
 | E2a/E2c | `irp/analysis/e2a-results.md` (scale bound, memory-matched + deployment leg) |
 | E2b | `irp/analysis/e2b-imatrix.md` (calibration moves the cliff; harm follows it) |
 | E4-α | `irp/analysis/e4-alpha.md` (only-that; gate batteries lesson) |
-| E6 | `irp/analysis/e6-mbpp-replication.md` (cross-benchmark scorecard) |
+| E6 / MBPP+ | `irp/analysis/mbpp-robustness.md` (authoritative full grid); `e6-mbpp-replication.md` (superseded partial grid, corrections noted) |
+| xdev addendum | `irp/analysis/xdev-lowrung.md` (low-rung proxy validation) |
+| Data pack | `irp/analysis/data-pack-computations.md` (bpw, truncation, Holm/CIs, J/token forms, idle, prompt lengths, floors) |
 | Whole-arc synthesis | `irp/analysis/implications-synthesis.md` (six-claim spine + E6 amendment) |
 
 ## Design + governance pointers

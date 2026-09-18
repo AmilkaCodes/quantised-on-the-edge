@@ -1,6 +1,20 @@
 # E6 — MBPP+ cross-benchmark replication: results (2026-09-16)
 
-> **Correction (2026-09-18):** E6's grid lacked Phi Q8_0/Q3_K_M. With the fill-in cells run
+> **METRIC-CONVENTION CORRECTION (2026-09-18, verified by recomputation from the committed
+> per-problem snapshots):** the 1.5B and Phi tables below are **CSV-parsed values, which for
+> MBPP+ record base∧plus**, not the study's `plus_status` convention. Recomputation gives, for
+> Qwen: plus 0.638/0.627/0.630/0.571/0.423 against the base∧plus 0.630/0.616/0.619/0.563/0.418
+> printed here (a 2–3 problem gap per cell, systematic); Phi plus reads 0.661/0.664/0.640/
+> 0.474/0.262 against 0.659/0.661/0.638/0.468/0.249. **`mbpp-robustness.md` is the authoritative
+> MBPP+ analysis** (plus-status throughout, matching every other analysis in this study and the
+> convention fixed in the R1 re-score appendix); the results chapter draws from it, not from the
+> tables below. The 7B and imatrix MBPP+ cells here are likewise CSV-parsed base∧plus and have
+> no committed per-problem snapshot, so their plus-status values await a re-score (samples
+> Mac-side; scoring only, no generation). Deltas and directions are unaffected by the
+> convention: every conclusion below stands, and the parity reading of the memory-matched
+> comparison is robust either way (plus_status can only raise both sides).
+>
+> **Grid-completeness correction (2026-09-18):** E6's grid lacked Phi Q8_0/Q3_K_M. With the fill-in cells run
 > under the twin `mbpp-extension.md` registration, Phi's MBPP+ break point is **Q3_K_M**
 > (−18.8 pp; Q4 −2.1 pp within margin) — ONE rung below its HumanEval+ Q4 cliff, not two as
 > the P4 discussion below inferred from the partial grid. The completed analysis
