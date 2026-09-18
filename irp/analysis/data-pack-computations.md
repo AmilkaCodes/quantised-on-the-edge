@@ -1,8 +1,10 @@
 # Results-chapter data pack — computations (2026-09-18)
 
 _Items from `formative-plan.md` §"Results-chapter data pack", computed from committed data
-(sources named per item). Bench items 6 (MBPP+ fill-in) and 8 (xdev low-rung) report in their
-own files (`mbpp-robustness.md`, `xdev-lowrung.md`); this file carries the rest._
+(sources named per item). Bench items 6 and 8 are DONE 2026-09-18 and report in their own
+files: `mbpp-robustness.md` (full 2×5 grid, gate pass, one-rung break-point shifts both ways)
+and `xdev-lowrung.md` (Q3 zero pass-flips; proxy strengthened); this file carries the rest.
+**Every data-pack item is now closed except optional item 11 (no meter to hand).**_
 
 ## Item 12 — J/token exact-form recompute ✅
 
@@ -94,13 +96,17 @@ RAM without swap." Grounding: Nielsen (1993) response-time limits (1 s = uninter
 flow; the candidate-topic note keeps the fuller rationale). Ch3 restates this verbatim-with-
 citation when the verdicts are given.
 
-## Item 7 — idle draws (in progress)
+## Item 7 — idle draws ✅ (all three tiers, 2026-09-18, same sensors/boundaries as the study's load figures)
 
-- **Pi 5: measured 2026-09-18, 1.76 W** (PMIC rail-sum, n=20 @ 0.5 s, idle). Note: the plan's
-  "≈2.4 W known" figure was a different boundary/source; the PMIC-boundary measurement is the
-  one comparable to the study's load figures (same sensor, same boundary).
-- Jetson (VDD_IN) and Mac (powermetrics SoC): pending — both machines are currently running
-  bench cells; measured after they idle.
+| device | idle draw | sensor/boundary |
+|---|---:|---|
+| Mac | **0.34 W** | powermetrics SoC Combined (n=15 @ 1 s) |
+| Pi 5 | **1.76 W** | PMIC rail-sum (n=20 @ 0.5 s) |
+| Jetson | **4.43 W** | tegrastats VDD_IN (n=20 @ 1 s) |
+
+Note: the plan's "Pi ≈2.4 W known" figure was a different boundary/source; these
+same-boundary values are the ones comparable to (and subtractable from) the study's load
+figures, with the standing cross-tier scope caveat applying to idle exactly as to load.
 
 ## Item 11 — optional USB-C meter check
 No inline meter to hand; the named §3.8 limitation stands (unchanged).

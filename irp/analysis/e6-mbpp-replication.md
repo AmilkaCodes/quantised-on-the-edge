@@ -1,5 +1,12 @@
 # E6 — MBPP+ cross-benchmark replication: results (2026-09-16)
 
+> **Correction (2026-09-18):** E6's grid lacked Phi Q8_0/Q3_K_M. With the fill-in cells run
+> under the twin `mbpp-extension.md` registration, Phi's MBPP+ break point is **Q3_K_M**
+> (−18.8 pp; Q4 −2.1 pp within margin) — ONE rung below its HumanEval+ Q4 cliff, not two as
+> the P4 discussion below inferred from the partial grid. The completed analysis
+> (`mbpp-robustness.md`) also resolves a significant Qwen Q3 step (−6.6 pp) that HumanEval+'s
+> n=164 left within margin. The benchmark-relativity conclusion stands, at one-rung scale.
+
 **Registration:** `e6-mbpp-replication.md` (extensions), predictions P1–P4 on record pre-run.
 13 cells, closed-book, n=378, MBPP+ (held clean since first registrations; provenance chain in
 the registration). HumanEval+ (HE+) comparators from the committed study tables. Paired exact

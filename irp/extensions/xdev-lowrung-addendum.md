@@ -32,3 +32,8 @@ Registered on `main` (the reporting branch; the write-up consumes the result dir
 Runtime ~30–60 min total (Jetson generation is the long pole). Report:
 `irp/analysis/xdev-lowrung.md` + a sentence into Ch3 §3.8. Deviations dated before the
 affected step where foreseeable.
+
+## OUTCOME (2026-09-18, same day): run complete — expectation's divergence clause violated
+FAVOURABLY (Q3 identity 0.92 vs Q4 pairwise 0.90 — no low-rung worsening at this K); pass
+flips 0/50 (0.0 pp vs the 5 pp margin). Proxy strengthened; Q3 margin verdict not
+tier-fragile. Report: `irp/analysis/xdev-lowrung.md`.
