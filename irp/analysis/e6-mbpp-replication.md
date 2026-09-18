@@ -8,11 +8,16 @@
 > 0.474/0.262 against 0.659/0.661/0.638/0.468/0.249. **`mbpp-robustness.md` is the authoritative
 > MBPP+ analysis** (plus-status throughout, matching every other analysis in this study and the
 > convention fixed in the R1 re-score appendix); the results chapter draws from it, not from the
-> tables below. The 7B and imatrix MBPP+ cells here are likewise CSV-parsed base∧plus and have
-> no committed per-problem snapshot, so their plus-status values await a re-score (samples
-> Mac-side; scoring only, no generation). Deltas and directions are unaffected by the
-> convention: every conclusion below stands, and the parity reading of the memory-matched
-> comparison is robust either way (plus_status can only raise both sides).
+> tables below. **RE-SCORE DONE (2026-09-18)** — the 7B and imatrix cells were re-scored from
+> their committed sanitized samples (stale caches deleted, `EVALPLUS_MAX_MEMORY_BYTES=-1`);
+> the base∧plus values reproduced exactly (0.730/0.640/0.624/0.585/0.471) with **zero
+> per-problem flips**, and their plus-status values are **7B F16 0.735, 7B Q2_K 0.646,
+> imat Q4_K_M 0.630, imat Q3_K_M 0.595, imat Q2_K 0.479**; per-problem snapshots for all five
+> are now committed to `pilot/eval-results/mac/`. Deltas and directions are unaffected by the
+> convention: **every conclusion below stands** — P2 re-reads Δ = −9.0 pp (49/15,
+> p = 2.4×10⁻⁵) with memory-matched parity at +0.8 pp (38/35, p = .82), and P3 re-reads
+> +5.6 pp (52/31, p = .028) recovering 26% of the 21.4 pp drop. The gap between conventions is
+> 2–4 borderline problems per cell (Mbpp/734 in all five), never a verdict.
 >
 > **Grid-completeness correction (2026-09-18):** E6's grid lacked Phi Q8_0/Q3_K_M. With the fill-in cells run
 > under the twin `mbpp-extension.md` registration, Phi's MBPP+ break point is **Q3_K_M**

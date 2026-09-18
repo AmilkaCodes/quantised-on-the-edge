@@ -110,3 +110,33 @@ figures, with the standing cross-tier scope caveat applying to idle exactly as t
 
 ## Item 11 — optional USB-C meter check
 No inline meter to hand; the named §3.8 limitation stands (unchanged).
+
+## Addendum — 7B + imatrix MBPP+ re-score (2026-09-18, student-requested)
+
+Closes the open item named in `e6-mbpp-replication.md`'s metric-convention banner ("their
+plus-status values await a re-score"). Five cells re-scored from committed sanitized samples
+(scoring only, no generation; stale `*_eval_results.json` deleted first;
+`EVALPLUS_MAX_MEMORY_BYTES=-1`; evalplus 0.3.1, MbppPlus-v0.2.0 sha b54e762755248ca4…):
+
+| cell | base∧plus (CLI, as E6 recorded) | plus_status (study convention) | flips vs prior |
+|---|---:|---:|---:|
+| 7B F16 | 0.730 ✓ reproduced | **0.735** | 0 |
+| 7B Q2_K | 0.640 ✓ | **0.646** | 0 |
+| 1.5B imat Q4_K_M | 0.624 ✓ | **0.630** | 0 |
+| 1.5B imat Q3_K_M | 0.585 ✓ | **0.595** | 0 |
+| 1.5B imat Q2_K | 0.471 ✓ | **0.479** | 0 |
+
+**Verification: clean.** Every CLI value reproduced to three decimals and no problem changed
+status, so the E6 cells carry no scoring pathology and no stale-cache artefact. Per-problem
+snapshots for all five are now committed (`pilot/eval-results/mac/`, 15 MBPP+ files total).
+
+**Convention reconciliation (whole 13-cell E6 grid).** The gap between the two conventions is
+0.3–1.3 pp per cell — 2–4 problems that pass the plus suite while failing the separately-timed
+base suite (`Mbpp/734` in all five re-scored cells). The study counts `plus_status` everywhere
+(verified across `e1_analysis.py`, `collapse_stats.py`, `e1_relevance_harm.py`,
+`make_figs2.py`, `score_xdev.py` in the R1 appendix), so **`mbpp-robustness.md` remains the
+authoritative MBPP+ analysis and the results chapter draws from it.**
+
+**No verdict moves under harmonisation** (plus_status): P2's 7B drop −9.0 pp (49/15,
+p = 2.4×10⁻⁵) and memory-matched parity +0.8 pp (38/35, p = .82; scale gap at F16 +9.8 pp);
+P3's rescue +5.6 pp (52/31, p = .028), recovering 26% of the 21.4 pp naive-Q2 drop.
