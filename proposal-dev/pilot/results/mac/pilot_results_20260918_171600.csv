@@ -1,0 +1,3 @@
+timestamp,device,model,quant,condition,n,parse_rate,pass@1_base,pass@1_plus,mean_ttft_ms,mean_tok_s,peak_rss_mb,llama_cpp_tag,smoke
+2026-09-18T16:25:01Z,mac,phi-3-mini-4k-instruct,Q8_0,closed,378,1.0,0.775,0.661,89.0,62.1,14377.5,b9951,False
+2026-09-18T16:39:30Z,mac,phi-3-mini-4k-instruct,Q3_K_M,closed,378,0.995,0.534,0.468,94.5,83.0,15216.8,b9951,False
