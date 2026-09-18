@@ -8,8 +8,12 @@ solutions necessarily get identical scores). Companion to cross-device-check.md 
 import json, signal, copy
 from evalplus.data import get_human_eval_plus
 
-MODEL, RUNG = "qwen2.5-coder-1.5b-instruct", "Q4_K_M"
-DEVICES = ["mac", "jetson", "pi5"]
+# xdev-lowrung addendum (2026-09-18): parameterised (mechanical; defaults unchanged) —
+#   score_xdev_direct.py [MODEL] [RUNG] [DEV1,DEV2,...]
+import sys as _sys
+MODEL = _sys.argv[1] if len(_sys.argv) > 1 else "qwen2.5-coder-1.5b-instruct"
+RUNG = _sys.argv[2] if len(_sys.argv) > 2 else "Q4_K_M"
+DEVICES = _sys.argv[3].split(",") if len(_sys.argv) > 3 else ["mac", "jetson", "pi5"]
 P = get_human_eval_plus()
 sols = {d: json.load(open(f"results/{d}/xdev_{MODEL}_{RUNG}.json")) for d in DEVICES}
 shared = sorted(set.intersection(*[set(sols[d]) for d in DEVICES]), key=lambda t: int(t.split("/")[1]))
