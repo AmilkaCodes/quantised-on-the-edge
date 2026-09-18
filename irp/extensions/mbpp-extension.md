@@ -60,3 +60,21 @@ the extension stops there.
 **Two bench days** from first cell to committed analysis; whatever is unfinished then is
 dropped and recorded. Deviations dated before the affected run where foreseeable. The
 write-up lien continues to govern: if the drafts need the student's attention, this waits.
+
+## Completion note (2026-09-18, dated before the fill-in cells run)
+
+**Cell-provenance disclosure:** on 2026-09-16 this registration (14:52 BST, pushed) was
+followed the same afternoon by a twin registration on branch `extended-work` ("E6", 15:01 BST)
+whose 13-cell sweep ran under IDENTICAL constants (b9951, greedy, seed 0, study caps, same
+ggufs, same INSTRUCTION wrap, Mac). Eight of this extension's ten cells (Qwen × all five
+rungs; Phi × F16/Q4_K_M/Q2_K) were therefore executed post-registration under the twin and
+are REUSED here rather than re-run — same measurement, same instrument, registration-clean
+(all cells postdate both registrations). E6's additional cells (7B, imatrix arm) are OUTSIDE
+this extension's scope and carry none of its claims. **The two missing cells (Phi-3 × Q8_0,
+Q3_K_M) run now on the Mac under this registration**, followed by the registered analysis
+(bootstrap CIs, paired-difference intervals vs F16, Holm within model, 5 pp descriptive
+yardstick), the run manifest (evalplus version + dataset hash, pinned at scoring time), and
+per-problem eval_results snapshots to `pilot/eval-results/mac/`.
+
+**Instrument gate status:** already satisfied on the existing cells — F16 plus-scores
+Qwen 0.630, Phi 0.659, both ≥ 0.40; the ladder may proceed.
