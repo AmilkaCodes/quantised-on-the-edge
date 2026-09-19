@@ -64,18 +64,18 @@ now with a sharpened premise: the artefact must first pass a composition gate.
 _Authoritative source: `mbpp-robustness.md` (full 2×5 grid, n=378/cell, plus-status
 convention). It supersedes the partial-grid E6 reading on two counts: E6 lacked Phi's
 Q8_0/Q3_K_M cells, and its 1.5B/Phi tables were CSV-parsed base∧plus (see the correction
-banner there). Figures below are plus-status; 7B and imatrix MBPP+ figures remain base∧plus
-pending a re-score and are marked._
+banner there). All figures below are plus-status: the 7B and imatrix MBPP+ cells were
+re-scored on 2026-09-18 with zero per-problem flips and their snapshots committed, so the
+whole grid is now in one convention._
 
 - **Claim 1 rewrite:** "Quantisation collapse is a small-model phenomenon" becomes
   **"deep-rung collapse of the small model is the robust invariant (Qwen Q2: −22.6 pp on HE+,
   −21.4 pp on MBPP+; Phi Q2: −42.7 and −39.9 pp; all p ≲ 10⁻⁷); scale ATTENUATES it (7B Q2:
-  −4.9 pp n.s. on HE+, −9.0 pp significant on MBPP+, base∧plus) but its erasure is
+  −4.9 pp n.s. on HE+, −8.9 pp significant on MBPP+, 0.735→0.646) but its erasure is
   benchmark-dependent."** The 7B's apparent immunity was a HumanEval+ fact, not a general one.
 - **Claim 5 qualifier — the decisive benchmark-dependence result.** The memory-matched
   advantage ("7B@Q2 beats 1.5B@F16 by +18 pp") holds on HE+ (0.793 vs 0.610) and collapses to
-  parity on MBPP+ (0.640 vs 0.630, n.s.; robust to convention, since plus-status can only
-  raise both sides). A deployment recommendation that reverses between two benchmarks of the
+  parity on MBPP+ (0.646 vs 0.638, +0.8 pp, n.s.). A deployment recommendation that reverses between two benchmarks of the
   same task family is the cleanest evidence in the study that such advice is
   task-distribution-conditional, and it is worded so wherever it appears.
 - **Break-point locations shift by ONE rung, in opposite directions, and the two benchmarks
@@ -93,9 +93,10 @@ pending a re-score and are marked._
 - **H1b stands as registered** (tested on HE+: thresholds differ between the two models) with
   a scope note: the threshold DIFFERENCE is itself benchmark-relative, since both models'
   first beyond-margin rung is Q3 on MBPP+.
-- **imatrix generation-rescue is size-variable** (~half the drop on HE+; ~25% on MBPP+,
-  p = .028 uncorrected, base∧plus, descriptive); the claim survives as "real, free,
-  benchmark-dependent in size", with the large rescue living on the context axis (E5).
+- **imatrix generation-rescue is size-variable** (~half the drop on HE+; 26% on MBPP+,
+  +5.6 pp at Q2, 0.423→0.479, p = .028 uncorrected, descriptive); the claim survives as
+  "real, free, benchmark-dependent in size", with the large rescue living on the context
+  axis (E5).
 - **The capstone (claim 7, new):** the study's operating principle — quantised behaviour is
   not predictable from the full-precision parent, so evaluate the deployed artefact — gains a
   measured second level: **it is not reliably predictable from another benchmark either.

@@ -48,13 +48,13 @@ built after the coherence audit `results-audit-20260914.md`)._
 | # | Claim | Analysis home | Display | Primary data |
 |---|---|---|---|---|
 | C16 | MBPP+ replication: deep-rung collapse transfers (Qwen Q2 −21.4pp, Phi Q2 −39.9pp); break points shift one rung in opposite directions, converging at Q3; gate pass 0.638/0.661 | `mbpp-robustness.md` (authoritative; `e6-mbpp-replication.md` superseded + corrected) | **TO-BUILD: two-benchmark ladder overlay (fig13)** | `results/mac/pilot_results_20260916_150119.csv` + `…20260918_171600.csv`; 10 snapshots in `eval-results/mac/*_mbpp-*`; evalplus 0.3.1, MbppPlus-v0.2.0 sha b54e7627 |
-| C17 | Scale immunity and the memory-matched advantage do NOT transfer (7B Q2 −9.0pp significant; parity 0.640 vs 0.630) — the decisive benchmark-dependence result | `e6-mbpp-replication.md` (base∧plus; plus-status re-score outstanding) | folds into fig13 | same CSVs (no 7B/imat MBPP+ snapshots committed) |
+| C17 | Scale immunity and the memory-matched advantage do NOT transfer (7B Q2 −8.9pp significant, 0.735→0.646; parity 0.646 vs 0.638) — the decisive benchmark-dependence result | `e6-mbpp-replication.md` (correction banner carries the plus-status re-score; every conclusion unchanged) | folds into fig13 | same CSVs; 7B + imat MBPP+ snapshots committed 8a86f16 |
 | C18 | Low-rung proxy validation: Q3_K_M identity 0.92, **0/50 pass flips** — registered expectation violated favourably; near-margin verdict not tier-fragile | `xdev-lowrung.md` | small table | `results/{mac,jetson}/xdev_*Q3_K_M*` (cae9688) |
 | C19 | Instrument/measurement detail pack: effective bits/weight per rung; truncation concentrated at Q2 (Phi 20/164 at cap); Holm-adjusted verdicts all survive; paired-difference CIs; J/token forms agree ≤0.7%; idle draws; prompt lengths; RQ3 floors' derivation (Nielsen) | `data-pack-computations.md` | in-text tables | committed CSVs + `eval-results/mac/` snapshots |
 
 **Metric-convention rule for the results chapter:** plus-status throughout (study convention,
-fixed in the R1 re-score appendix). Where a figure is base∧plus (E6's 7B and imatrix MBPP+
-cells), it is labelled as such until re-scored.
+fixed in the R1 re-score appendix). Every MBPP+ cell now has a committed plus-status snapshot;
+E6's original tables are base∧plus and are not to be quoted.
 
 ## Cross-cutting display assets (the two thesis-level figures)
 
