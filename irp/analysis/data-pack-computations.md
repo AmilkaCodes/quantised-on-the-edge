@@ -141,7 +141,7 @@ authoritative MBPP+ analysis and the results chapter draws from it.**
 p = 2.4×10⁻⁵) and memory-matched parity +0.8 pp (38/35, p = .82; scale gap at F16 +9.8 pp);
 P3's rescue +5.6 pp (52/31, p = .028), recovering 26% of the 21.4 pp naive-Q2 drop.
 
-## Item 12 — exact conditional (and score-type) paired intervals beside the bootstrap ✅ (2026-09-21)
+## Item 13 — exact conditional (and score-type) paired intervals beside the bootstrap ✅ (2026-09-21)
 
 Third external review asked for a non-resampling interval on the paired drop, since the
 bootstrap distribution is discrete on few discordant problems. Computed from the committed
@@ -191,3 +191,31 @@ threshold Q4). MBPP+: Qwen within at Q8/Q4, **inconclusive at Q3** (point +6.6 b
 collapsed at Q2 (descriptive threshold Q3); Phi within at Q8/Q4 (boundary case above),
 collapsed at Q3/Q2 (descriptive threshold Q3). RQ3 quality gate: pass / fail / marginal
 maps one-to-one; `synthesis.md` §4 carries the marginal qualifier on Qwen Q3 and Phi Q4.
+
+## Item 14 — H1b decision rule applied ✅ (2026-09-21; rule committed in 2d91ac1 BEFORE this computation)
+
+Rule (Ch3 §3.5): per problem, difference of the two models' drop indicators (F16 pass − rung
+pass, each −1/0/+1), Phi minus Qwen; mean over the shared problems = between-model
+difference in drop; paired percentile bootstrap (B = 10,000, seed 0) interval and two-sided
+p; tested ONLY at rungs where the two models' descriptive (point) margin verdicts differ;
+Holm over the rungs so tested. Script `h1b_rule.py` (session scratchpad).
+
+| bench | rung | Qwen drop (verdict) | Phi drop (verdict) | Phi − Qwen diff | 95% CI | p | tested? | Holm |
+|---|---|---:|---:|---:|---|---:|---|---:|
+| HE+ | Q8_0 | −0.6 (within) | +1.8 (within) | +2.4 | [−0.6, +6.1] | .20 | no | — |
+| HE+ | Q4_K_M | −0.6 (within) | +9.8 (beyond) | **+10.4** | [+1.8, +18.3] | .020 | **yes** | **.020** |
+| HE+ | Q3_K_M | +2.4 (within) | +22.0 (beyond) | **+19.5** | [+9.8, +29.3] | <.0001 | **yes** | **<.0001** |
+| HE+ | Q2_K | +22.6 (beyond) | +42.7 (beyond) | +20.1 | [+9.1, +31.1] | <.0001 | no | — |
+| MBPP+ | Q8_0 | +1.1 (within) | −0.3 (within) | −1.3 | [−2.6, +0.0] | .07 | no | — |
+| MBPP+ | Q4_K_M | +0.8 (within) | +2.1 (within) | +1.3 | [−2.4, +5.0] | .51 | no | — |
+| MBPP+ | Q3_K_M | +6.6 (beyond) | +18.8 (beyond) | +12.2 | [+7.1, +17.2] | <.0001 | no | — |
+| MBPP+ | Q2_K | +21.4 (beyond) | +39.9 (beyond) | +18.5 | [+11.9, +24.9] | <.0001 | no | — |
+
+**Result.** HE+: **H0b rejected** at both tested rungs (Q4_K_M Holm p = .020; Q3_K_M
+p < .0001), direction Phi collapses earlier — H1b stands, now by a stated rule rather than
+by comparing threshold labels. MBPP+: **not distinguishable at this resolution** — both
+models' descriptive verdicts agree at every rung (both within through Q4, both beyond from
+Q3), so no rung is eligible under the rule, whatever the (large, significant) difference in
+drop magnitude at Q3/Q2 says about degradation *size*. This is the honest form of the
+spine's "both models' first beyond-margin rung is Q3 on MBPP+" scope note; the RQ ledger's
+H1b entry is updated to carry both.

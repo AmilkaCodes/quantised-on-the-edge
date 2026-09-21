@@ -107,8 +107,15 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
 
 - **H1a** (tested — REJECTED H0a): pass@1 at ≤Q2_K is significantly below the model's F16
   baseline (H0a: no difference). Result: Qwen Q2 p=1.2×10⁻⁷; Phi breaks earlier (Q4, p=0.007).
-- **H1b** (tested — REJECTED H0b): the collapse level differs between the two models
-  (H0b: identical). Result: Qwen safe through Q3; Phi breaks at Q4.
+- **H1b** (tested — REJECTED H0b on HE+): the collapse level differs between the two models
+  (H0b: identical). The proposal registered no decision rule beyond the threshold
+  locations; one was fixed in Ch3 §3.5 on 2026-09-21 (commit 2d91ac1) BEFORE the statistic
+  was computed (data pack item 14): between-model difference of per-problem drops on the
+  shared problems, tested only at rungs where the descriptive verdicts differ, Holm over
+  those rungs. Result: HE+ rejected at Q4_K_M (+10.4 pp, Holm p = .020) and Q3_K_M
+  (+19.5 pp, p < .0001), Phi collapses earlier; descriptive thresholds Qwen Q2, Phi Q4.
+  MBPP+: not distinguishable at this resolution (no eligible rung: both descriptive
+  thresholds are Q3), which is the scope note the spine carries.
 - **H1c** (registered with the E1 protocol 2026-09-12, not in the proposal — exploratory-
   registered class; TESTED 2026-09-12): the open-book benefit (Δ pass@1, open − closed)
   changes with quantisation level (H0c: constant). **Result: the effect is not constant — it spikes at each
