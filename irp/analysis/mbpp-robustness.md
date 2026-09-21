@@ -36,6 +36,13 @@ F16 plus pass@1: **Qwen 0.638, Phi-3 0.661 — both ≥ 0.40. GATE PASS**; ladde
 | Q3_K_M | 0.474 | **−0.188** | [−0.230, −0.146] | 2.5×10⁻¹⁶ | **beyond** |
 | Q2_K | 0.262 | **−0.399** | [−0.452, −0.347] | 5.7×10⁻³⁷ | **beyond** |
 
+_Note 2026-09-21 (Ch3 §3.5 interval-only verdict classes): the "5 pp yardstick" column above
+is the registered POINT criterion (descriptive threshold location). Under the interval
+classes, Qwen Q3_K_M is **inconclusive** (CI straddles 5 pp) and Phi Q4_K_M is
+**inconclusive** (bootstrap upper limit sits on the margin at 5.0 pp; the exact conditional
+check gives 4.9 and the primary-interval rule resolves the disagreement to inconclusive);
+all other cells keep their class. Data pack item 13._
+
 ## Verdict against the registered expectation
 
 **The directional pattern replicates, with one one-rung shift each — and in opposite

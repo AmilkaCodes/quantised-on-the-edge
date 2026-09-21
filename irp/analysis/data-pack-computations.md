@@ -188,30 +188,42 @@ HE+: Qwen within at Q8/Q4, **inconclusive at Q3**, collapsed at Q2 (descriptive 
 Q2); Phi within at Q8, **inconclusive at Q4** (point +9.8 beyond; McNemar Holm p = .014
 shows a drop exists, the margin verdict does not), collapsed at Q3/Q2 (descriptive
 threshold Q4). MBPP+: Qwen within at Q8/Q4, **inconclusive at Q3** (point +6.6 beyond),
-collapsed at Q2 (descriptive threshold Q3); Phi within at Q8/Q4 (boundary case above),
-collapsed at Q3/Q2 (descriptive threshold Q3). RQ3 quality gate: pass / fail / marginal
-maps one-to-one; `synthesis.md` §4 carries the marginal qualifier on Qwen Q3 and Phi Q4.
+collapsed at Q2 (descriptive threshold Q3); Phi within at Q8, **inconclusive at Q4** (see
+re-run below), collapsed at Q3/Q2 (descriptive threshold Q3). RQ3 quality gate: pass / fail
+/ marginal maps one-to-one; `synthesis.md` §4 carries the marginal qualifier on Qwen Q3 and
+Phi Q4.
+
+**Agreement RE-RUN under the interval-only rule (EIGHTH PASS, 2026-09-21; `agree_check.py`,
+bootstrap recomputed B=10,000 seed 0 in-script, classes within / collapsed / inconclusive):
+15/16 cells agree in class.** The one disagreement is MBPP+ Phi Q4_K_M — primary bootstrap
+upper limit sits on the margin (+5.0 pp → inconclusive), exact check +4.9 (within). Ch3 §3.5
+names the bootstrap primary and makes any class disagreement inconclusive, so **MBPP+ Phi
+Q4_K_M = inconclusive**, both intervals shown. Descriptive thresholds unchanged (Phi MBPP+
+= Q3 on point).
 
 ## Item 14 — H1b decision rule applied ✅ (2026-09-21; rule committed in 2d91ac1 BEFORE this computation)
 
 Rule (Ch3 §3.5): per problem, difference of the two models' drop indicators (F16 pass − rung
 pass, each −1/0/+1), Phi minus Qwen; mean over the shared problems = between-model
 difference in drop; paired percentile bootstrap (B = 10,000, seed 0) interval and two-sided
-p; tested ONLY at rungs where the two models' descriptive (point) margin verdicts differ;
-Holm over the rungs so tested. Script `h1b_rule.py` (session scratchpad).
+p; Holm over ALL FOUR rungs (m = 4 — eighth-pass correction: the eligible subset is
+data-selected, so adjusting only over it does not control the error rate), interpreted ONLY
+at rungs where the two models' descriptive (point) margin verdicts differ. The rule was
+written after the per-rung ladder results were known and before the between-model statistic
+was computed (Ch3 §3.5 says so). Script `h1b_rule.py` (session scratchpad).
 
-| bench | rung | Qwen drop (verdict) | Phi drop (verdict) | Phi − Qwen diff | 95% CI | p | tested? | Holm |
-|---|---|---:|---:|---:|---|---:|---|---:|
-| HE+ | Q8_0 | −0.6 (within) | +1.8 (within) | +2.4 | [−0.6, +6.1] | .20 | no | — |
-| HE+ | Q4_K_M | −0.6 (within) | +9.8 (beyond) | **+10.4** | [+1.8, +18.3] | .020 | **yes** | **.020** |
-| HE+ | Q3_K_M | +2.4 (within) | +22.0 (beyond) | **+19.5** | [+9.8, +29.3] | <.0001 | **yes** | **<.0001** |
-| HE+ | Q2_K | +22.6 (beyond) | +42.7 (beyond) | +20.1 | [+9.1, +31.1] | <.0001 | no | — |
-| MBPP+ | Q8_0 | +1.1 (within) | −0.3 (within) | −1.3 | [−2.6, +0.0] | .07 | no | — |
-| MBPP+ | Q4_K_M | +0.8 (within) | +2.1 (within) | +1.3 | [−2.4, +5.0] | .51 | no | — |
-| MBPP+ | Q3_K_M | +6.6 (beyond) | +18.8 (beyond) | +12.2 | [+7.1, +17.2] | <.0001 | no | — |
-| MBPP+ | Q2_K | +21.4 (beyond) | +39.9 (beyond) | +18.5 | [+11.9, +24.9] | <.0001 | no | — |
+| bench | rung | Qwen drop (verdict) | Phi drop (verdict) | Phi − Qwen diff | 95% CI | p | Holm (m=4) | eligible? |
+|---|---|---:|---:|---:|---|---:|---:|---|
+| HE+ | Q8_0 | −0.6 (within) | +1.8 (within) | +2.4 | [−0.6, +6.1] | .20 | .20 | no |
+| HE+ | Q4_K_M | −0.6 (within) | +9.8 (beyond) | **+10.4** | [+1.8, +18.3] | .020 | **.040** | **yes** |
+| HE+ | Q3_K_M | +2.4 (within) | +22.0 (beyond) | **+19.5** | [+9.8, +29.3] | <.0001 | **<.0001** | **yes** |
+| HE+ | Q2_K | +22.6 (beyond) | +42.7 (beyond) | +20.1 | [+9.1, +31.1] | <.0001 | <.0001 | no |
+| MBPP+ | Q8_0 | +1.1 (within) | −0.3 (within) | −1.3 | [−2.6, +0.0] | .07 | .14 | no |
+| MBPP+ | Q4_K_M | +0.8 (within) | +2.1 (within) | +1.3 | [−2.4, +5.0] | .51 | .51 | no |
+| MBPP+ | Q3_K_M | +6.6 (beyond) | +18.8 (beyond) | +12.2 | [+7.1, +17.2] | <.0001 | <.0001 | no |
+| MBPP+ | Q2_K | +21.4 (beyond) | +39.9 (beyond) | +18.5 | [+11.9, +24.9] | <.0001 | <.0001 | no |
 
-**Result.** HE+: **H0b rejected** at both tested rungs (Q4_K_M Holm p = .020; Q3_K_M
+**Result.** HE+: **H0b rejected** at both eligible rungs (Q4_K_M Holm p = .040 over m = 4; Q3_K_M
 p < .0001), direction Phi collapses earlier — H1b stands, now by a stated rule rather than
 by comparing threshold labels. MBPP+: **not distinguishable at this resolution** — both
 models' descriptive verdicts agree at every rung (both within through Q4, both beyond from

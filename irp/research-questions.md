@@ -111,8 +111,10 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
   (H0b: identical). The proposal registered no decision rule beyond the threshold
   locations; one was fixed in Ch3 §3.5 on 2026-09-21 (commit 2d91ac1) BEFORE the statistic
   was computed (data pack item 14): between-model difference of per-problem drops on the
-  shared problems, tested only at rungs where the descriptive verdicts differ, Holm over
-  those rungs. Result: HE+ rejected at Q4_K_M (+10.4 pp, Holm p = .020) and Q3_K_M
+  shared problems, Holm over all four rungs (m = 4), interpreted only at rungs where the
+  descriptive verdicts differ; the rule was written after the per-rung ladder results were
+  known and before the between-model statistic was computed, and is reported as
+  post-registration. Result: HE+ rejected at Q4_K_M (+10.4 pp, Holm p = .040) and Q3_K_M
   (+19.5 pp, p < .0001), Phi collapses earlier; descriptive thresholds Qwen Q2, Phi Q4.
   MBPP+: not distinguishable at this resolution (no eligible rung: both descriptive
   thresholds are Q3), which is the scope note the spine carries.
