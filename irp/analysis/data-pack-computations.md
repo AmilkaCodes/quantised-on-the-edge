@@ -172,13 +172,22 @@ Ch3 §3.5 names).
 | MBPP+ | Phi | Q3_K_M | 77 | 6 | +18.8pp | [+14.6, +23.0] | [+15.3, +20.8] | beyond | [+14.6, +23.3] |
 | MBPP+ | Phi | Q2_K | 159 | 8 | +39.9pp | | [+36.0, +42.3] | beyond | [+34.6, +45.3] |
 
-**Finding:** the exact conditional interval agrees with the bootstrap on every margin
-verdict in all 16 cells (within / straddles / beyond identical; the two boundary rungs on
-HE+ remain the inconclusive ones). The score-type interval is a little wider on the small
-discordant counts and would move two near-zero cells (HE+ Phi Q8_0 upper +5.6; MBPP+ Phi
-Q4_K_M upper +5.3) from "within" to "straddles" by under one point — recorded here, not
-claimed, pending the reference cross-check. Under Ch3 §3.5's three-valued quality gate
-(pass = interval within margin; fail = point beyond; marginal = point within, interval not):
-Qwen Q3_K_M on HE+ is **marginal** (results-chapter rows and `synthesis.md` §4 carry the
-qualifier); Phi Q4_K_M on HE+ and Qwen Q3_K_M on MBPP+ are **fail** by the registered point
-criterion with their intervals reported.
+**Finding:** the exact conditional interval agrees with the bootstrap on the margin class
+(within / straddles / beyond) in all 16 cells, with one boundary case: MBPP+ Phi Q4_K_M,
+where the bootstrap upper limit sits at the margin exactly (+5.0 pp; `mbpp-robustness.md`
+[−0.050, +0.008]) and the exact conditional upper is +4.9 — reported as within on both, with
+the boundary noted. The score-type interval is a little wider on the small discordant
+counts and would move two near-zero cells (HE+ Phi Q8_0 upper +5.6; MBPP+ Phi Q4_K_M upper
++5.3) from "within" to "straddles" by under one point — recorded here, not claimed, pending
+the reference cross-check.
+
+**Verdict classes under Ch3 §3.5 (SEVENTH PASS, 2026-09-21 — interval-only rule; the
+registered point threshold is the descriptive location):** within margin = interval wholly
+inside 5 pp; collapsed = interval wholly beyond; inconclusive = straddles, either direction.
+HE+: Qwen within at Q8/Q4, **inconclusive at Q3**, collapsed at Q2 (descriptive threshold
+Q2); Phi within at Q8, **inconclusive at Q4** (point +9.8 beyond; McNemar Holm p = .014
+shows a drop exists, the margin verdict does not), collapsed at Q3/Q2 (descriptive
+threshold Q4). MBPP+: Qwen within at Q8/Q4, **inconclusive at Q3** (point +6.6 beyond),
+collapsed at Q2 (descriptive threshold Q3); Phi within at Q8/Q4 (boundary case above),
+collapsed at Q3/Q2 (descriptive threshold Q3). RQ3 quality gate: pass / fail / marginal
+maps one-to-one; `synthesis.md` §4 carries the marginal qualifier on Qwen Q3 and Phi Q4.

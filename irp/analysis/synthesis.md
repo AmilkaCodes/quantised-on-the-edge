@@ -73,6 +73,15 @@ not a knob. Reading the gates across tiers (median tok/s · median TTFT · peak 
 | **Phi @ Q8_0** (✓ safe) | 58 · 6.1 GB | 14.6 · 6.5 GB | **2.6 tok/s** · 6.1 GB | **Pi FAILS the floor** (2.6 ≪ 8) → hand off; Jetson/Mac pass |
 | **Phi @ F16** (✓ safe) | 36 · 9.8 GB | **won't fit (>8 GB)** | **won't fit** | **forced off the edge** → cloud/Mac only |
 
+_Note added 2026-09-21 (Ch3 §3.5 seventh pass, interval-only margin rule): quality-gate
+values are pass = paired interval wholly within 5pp, fail = wholly beyond, marginal =
+straddles; the registered point threshold stays the descriptive location. Affected cells:
+**Qwen Q3_K_M = marginal** (interval [−3.0, +7.9]); **Phi Q4_K_M = marginal, not fail**
+(interval [+3.0, +16.5] straddles; point +9.8 beyond; McNemar Holm p = .014 shows a drop
+exists) — so "Phi @ Q8_0 is the only safe rung" reads "the only rung within margin; Q4 is
+inconclusive on the margin and significantly degraded on the paired test". The results
+chapter rows carry these values; the deployment recommendations are unchanged in direction._
+
 Two distinct handoff triggers emerge, different in kind — and both now bite against the *registered* floor:
 
 1. **Memory-forced handoff (hard).** Phi-3 F16 (~9.8 GB) exceeds the 8 GB edge budget outright (fig4).
