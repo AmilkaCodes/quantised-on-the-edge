@@ -69,7 +69,7 @@ not a knob. Reading the gates across tiers (median tok/s · median TTFT · peak 
 | case (rung is quality-safe?) | Mac (Metal) | Jetson (CUDA) | Pi 5 (CPU) | verdict vs the registered floor |
 |---|---|---|---|---|
 | **Qwen @ Q4_K_M** (✓ safe) | 165 tok/s · 60 ms · 1.2 GB | 40 · 64 ms · 1.8 GB | **10.9** · 106 ms · 2.1 GB | **all three PASS** — Pi *just* clears the 8–10 band; the happy path |
-| **Qwen @ Q3_K_M** (✓ safe) | 143 · — | **18.6** (GPU trap, §5) | 12.7 · 90 ms | all pass the floor; Pi > Jetson here — but Q4 dominates Q3 on GPU |
+| **Qwen @ Q3_K_M** (✓ safe on the registered point criterion; **quality-MARGINAL** under Ch3 §3.5's three-valued gate, added 2026-09-21: the paired interval [−3.0, +7.9] straddles the 5pp margin) | 143 · — | **18.6** (GPU trap, §5) | 12.7 · 90 ms | all pass the performance floor, so the deployability verdict is **marginal**, not pass; Pi > Jetson here — but Q4 dominates Q3 on GPU |
 | **Phi @ Q8_0** (✓ safe) | 58 · 6.1 GB | 14.6 · 6.5 GB | **2.6 tok/s** · 6.1 GB | **Pi FAILS the floor** (2.6 ≪ 8) → hand off; Jetson/Mac pass |
 | **Phi @ F16** (✓ safe) | 36 · 9.8 GB | **won't fit (>8 GB)** | **won't fit** | **forced off the edge** → cloud/Mac only |
 

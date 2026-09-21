@@ -140,3 +140,45 @@ authoritative MBPP+ analysis and the results chapter draws from it.**
 **No verdict moves under harmonisation** (plus_status): P2's 7B drop −9.0 pp (49/15,
 p = 2.4×10⁻⁵) and memory-matched parity +0.8 pp (38/35, p = .82; scale gap at F16 +9.8 pp);
 P3's rescue +5.6 pp (52/31, p = .028), recovering 26% of the 21.4 pp naive-Q2 drop.
+
+## Item 12 — exact conditional (and score-type) paired intervals beside the bootstrap ✅ (2026-09-21)
+
+Third external review asked for a non-resampling interval on the paired drop, since the
+bootstrap distribution is discrete on few discordant problems. Computed from the committed
+snapshots (plus-status) for all 16 confirmatory F16-vs-rung cells; script
+`paired_ci.py` (session scratchpad; b = F16 pass & rung fail, c = rung pass & F16 fail).
+**Exact conditional** = Clopper–Pearson on c | (b+c), mapped to drop = (b+c)(1−2π)/n (dual to
+exact McNemar). **Score-type** = inversion of the paired-difference score statistic with the
+discordant probability at its restricted MLE (Tango-style; to be cross-checked against a
+reference implementation before it is quoted in prose — the exact conditional is the one
+Ch3 §3.5 names).
+
+| bench | model | rung | b | c | drop | bootstrap 95% (items 2/3) | exact-cond 95% | verdict (exact) | score-type 95% |
+|---|---|---|---:|---:|---:|---|---|---|---|
+| HE+ | Qwen | Q8_0 | 1 | 2 | −0.6pp | [−3.0, +1.2] | [−1.8, +1.5] | within | [−3.8, +2.3] |
+| HE+ | Qwen | Q4_K_M | 7 | 8 | −0.6pp | [−5.5, +3.7] | [−5.3, +4.3] | within | [−5.7, +4.4] |
+| HE+ | Qwen | Q3_K_M | 13 | 9 | +2.4pp | [−3.0, +7.9] | [−3.7, +7.9] | straddles | [−3.4, +8.5] |
+| HE+ | Qwen | Q2_K | 44 | 7 | +22.6pp | [+14.6, +30.5] | [+14.8, +27.6] | beyond | [+14.8, +30.6] |
+| HE+ | Phi | Q8_0 | 4 | 1 | +1.8pp | [−0.6, +4.9] | [−1.3, +3.0] | within | [−1.2, +5.6] |
+| HE+ | Phi | Q4_K_M | 24 | 8 | +9.8pp | [+3.0, +16.5] | [+2.6, +15.0] | straddles (point beyond) | [+3.2, +16.8] |
+| HE+ | Phi | Q3_K_M | 42 | 6 | +22.0pp | [+14.6, +29.9] | [+14.5, +26.5] | beyond | [+14.5, +29.8] |
+| HE+ | Phi | Q2_K | 74 | 4 | +42.7pp | [+34.1, +51.2] | [+35.6, +46.2] | beyond | [+34.3, +50.8] |
+| MBPP+ | Qwen | Q8_0 | 4 | 0 | +1.1pp | (mbpp-robustness.md) | [−0.2, +1.1] | within | [+0.0, +2.7] |
+| MBPP+ | Qwen | Q4_K_M | 10 | 7 | +0.8pp | | [−1.5, +2.8] | within | [−1.5, +3.2] |
+| MBPP+ | Qwen | Q3_K_M | 31 | 6 | +6.6pp | [+3.7, +9.8] | [+3.5, +8.6] | straddles (point beyond) | [+3.7, +10.0] |
+| MBPP+ | Qwen | Q2_K | 91 | 10 | +21.4pp | | [+17.4, +24.1] | beyond | [+16.8, +26.3] |
+| MBPP+ | Phi | Q8_0 | 1 | 2 | −0.3pp | | [−0.8, +0.6] | within | [−1.7, +1.0] |
+| MBPP+ | Phi | Q4_K_M | 20 | 12 | +2.1pp | | [−1.1, +4.9] | within | [−0.9, +5.3] |
+| MBPP+ | Phi | Q3_K_M | 77 | 6 | +18.8pp | [+14.6, +23.0] | [+15.3, +20.8] | beyond | [+14.6, +23.3] |
+| MBPP+ | Phi | Q2_K | 159 | 8 | +39.9pp | | [+36.0, +42.3] | beyond | [+34.6, +45.3] |
+
+**Finding:** the exact conditional interval agrees with the bootstrap on every margin
+verdict in all 16 cells (within / straddles / beyond identical; the two boundary rungs on
+HE+ remain the inconclusive ones). The score-type interval is a little wider on the small
+discordant counts and would move two near-zero cells (HE+ Phi Q8_0 upper +5.6; MBPP+ Phi
+Q4_K_M upper +5.3) from "within" to "straddles" by under one point — recorded here, not
+claimed, pending the reference cross-check. Under Ch3 §3.5's three-valued quality gate
+(pass = interval within margin; fail = point beyond; marginal = point within, interval not):
+Qwen Q3_K_M on HE+ is **marginal** (results-chapter rows and `synthesis.md` §4 carry the
+qualifier); Phi Q4_K_M on HE+ and Qwen Q3_K_M on MBPP+ are **fail** by the registered point
+criterion with their intervals reported.
