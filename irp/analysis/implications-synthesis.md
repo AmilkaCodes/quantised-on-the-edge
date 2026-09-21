@@ -95,8 +95,8 @@ whole grid is now in one convention._
   first beyond-margin rung is Q3 on MBPP+.
 - **imatrix generation-rescue is size-variable** (~half the drop on HE+; 26% on MBPP+,
   +5.6 pp at Q2, 0.423→0.479, p = .028 uncorrected, descriptive); the claim survives as
-  "real, free, benchmark-dependent in size", with the large rescue living on the context
-  axis (E5).
+  "real, free, benchmark-dependent in size". _[BRANCH-ONLY, not for dissertation prose: the
+  large rescue lives on the context axis, E5 stage 3.]_
 - **The capstone (claim 7, new):** the study's operating principle — quantised behaviour is
   not predictable from the full-precision parent, so evaluate the deployed artefact — gains a
   measured second level: **it is not reliably predictable from another benchmark either.

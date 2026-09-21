@@ -12,8 +12,12 @@ RQ1b/RQ1c wording to be reviewed once the E1 protocol is drafted and supervisor 
   below a defined threshold?
 - **RQ1a** (confirmatory — ANSWERED): does the threshold differ between a code-specialised and
   a general-purpose model?
-- **RQ1b** (confirmatory — **ANSWERED 2026-09-12**; cross-device spot-check DONE same day —
-  4/25 diverge, inherits D25 aggregate-proxy status, see `e1-openbook.md` caveats): does
+- **RQ1b** (**registered extension, NOT confirmatory** — corrected 2026-09-21: the submitted
+  proposal names context-following only as "a natural extension" in its limitations; RQ1b and
+  H1c were added with the E1 protocol on 2026-09-12, registered before measurement but after
+  the proposal, so they sit in the exploratory-registered class per Ch3 §3.1's firewall.
+  **ANSWERED 2026-09-12**; cross-device spot-check DONE same day — 4/25 diverge, inherits D25
+  aggregate-proxy status, see `e1-openbook.md` caveats): does
   reference-documentation context ("open-book" retrieval over the official Python
   documentation) mitigate quantisation-induced degradation relative to closed-book generation?
   **Answer: NO — Δ(B−A) ≤ 0 at every rung for both models; the distraction cost peaks at each
@@ -75,8 +79,11 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
   tool; no-tools control codes perfectly) → completes the can't/won't/only-that triad; β (H4b
   ladder) not run; iteration 3 formative-feedback-gated. Method lesson: gate batteries, not
   loss curves. See `e4-alpha.md`.
-- **E5** (`e5-raft-benchmark-spec.md` — SPECIFIED ONLY, not activated): docs-required
-  fictitious-API benchmark + RAFT; post-submission/PhD-seed. Future Work presents it designed.
+- **E5** (`e5-raft-benchmark-spec.md`, superseded banner — RUN ON BRANCH `extended-work`
+  ONLY, HOLD decision 2026-09-19): docs-necessary fictitious-API programme. Not part of the
+  dissertation's evidence; the dissertation carries one qualitative boundary paragraph
+  (`drafts/boundary-paragraph.md`, HARD RULE: no branch number, direction or finding) and
+  presents the programme as designed future work (`irp/future-work.md`).
 - **E6 / MBPP+ robustness extension** (`e6-mbpp-replication.md` + `mbpp-extension.md` —
   ANSWERED 2026-09-16, **COMPLETED AND CORRECTED 2026-09-18**): registered cross-benchmark
   replication on MBPP+ (dataset held reserved throughout), predictions on record pre-run.
@@ -102,8 +109,9 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
   baseline (H0a: no difference). Result: Qwen Q2 p=1.2×10⁻⁷; Phi breaks earlier (Q4, p=0.007).
 - **H1b** (tested — REJECTED H0b): the collapse level differs between the two models
   (H0b: identical). Result: Qwen safe through Q3; Phi breaks at Q4.
-- **H1c** (TESTED 2026-09-12): the open-book benefit (Δ pass@1, open − closed) changes with
-  quantisation level (H0c: constant). **Result: the effect is not constant — it spikes at each
+- **H1c** (registered with the E1 protocol 2026-09-12, not in the proposal — exploratory-
+  registered class; TESTED 2026-09-12): the open-book benefit (Δ pass@1, open − closed)
+  changes with quantisation level (H0c: constant). **Result: the effect is not constant — it spikes at each
   model's collapse rung (Phi Δ ranges −0.018 (F16) → −0.152 (Q4, p=.0008)) — but the shape is a
   collapse-rung spike, not a monotone slope; claim kept descriptive (per-rung Δ + CIs), no
   difference-of-differences test was registered.**
