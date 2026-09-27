@@ -231,3 +231,14 @@ Q3), so no rung is eligible under the rule, whatever the (large, significant) di
 drop magnitude at Q3/Q2 says about degradation *size*. This is the honest form of the
 spine's "both models' first beyond-margin rung is Q3 on MBPP+" scope note; the RQ ledger's
 H1b entry is updated to carry both.
+
+## Item 15 — RQ3 tier-uncertain flag (rule added at drafting, Ch3 §3.2 sixth review, 2026-09-27)
+
+Rule: a rung is flagged tier-uncertain beside its RQ3 verdict when its Mac paired 95%
+interval (items 2/3 bootstrap, primary) crosses the 5 pp boundary or has an endpoint within
+2 pp of it (i.e. upper limit ≥ 3 pp or lower limit ≤ 7 pp while on the other side). Applied to
+the committed intervals: **HE+** Qwen Q4_K_M (upper +3.7) FLAG; Qwen Q3_K_M (crosses) FLAG;
+Phi Q8_0 (upper +4.9) FLAG; Phi Q4_K_M (crosses) FLAG; Qwen Q8_0, Qwen Q2_K, Phi Q3_K_M,
+Phi Q2_K not flagged. **MBPP+** Qwen Q3_K_M (crosses) FLAG; Phi Q4_K_M (upper +5.0) FLAG;
+others not flagged. The flag is reported beside the verdict and changes no verdict; it marks
+where the proxy's unchecked coverage (Q2_K, Phi-3, Pi at low rungs) could matter.
