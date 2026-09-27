@@ -147,6 +147,5 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
 ## Design + governance pointers
 - E1 design + mechanism decisions: `irp/extensions/e1-context-conditions.md` (D27 in the
   register; frozen BM25 retrieval, contamination sweep, Condition D guardrails)
-- Ethics: Self-Assessment form amended 2026-09-12 (all Section-5 answers remain No);
-  supervisor acknowledgment pending
+- Ethics: Self-Assessment form amended 2026-09-12 (all Section-5 answers remain No); APPROVED as submitted (student confirmed 2026-09-27)
 - HARD GATE: no RQ1b/RQ1c measurement until the E1 protocol document is committed
