@@ -87,3 +87,18 @@ E6's original tables are base∧plus and are not to be quoted.
    (`make_figs2.py`, figs 6–12) after a full coherence audit (`results-audit-20260914.md` —
    52/53 cells reproduce; the R1 ≤2-problem summary-vs-snapshot discrepancy is the one open
    thread, resolution owed on the Mac, conclusions unaffected).
+
+
+## MUST LAND IN THE RESULTS CHAPTER (moved out of Ch3 at the 2026-09-29 revision)
+
+The submitted methodology now states the cross-device checks and the energy baseline as
+protocol only. These numbers therefore have no home unless Ch4 reports them:
+- Q4_K_M cross-device (K=50, three tiers): 24% of outputs differ somewhere; output identity
+  38/50 = 0.76 [0.64, 0.88]; pass flips 1/50 (2 pp) — `cross-device-check.md`, data pack item 1.
+- Q3_K_M addendum (Mac vs Jetson, K=50): identity 46/50 = 0.92; pass flips 0/50; registered
+  expectation (worse at lower bits) violated favourably — `xdev-lowrung.md`.
+- Idle draws, same sensor and boundary as load: Mac 0.34 W, Pi 5 1.76 W, Jetson 4.43 W —
+  data pack item 7 (net-of-idle J/token derivable from these).
+- Repeat variance 0.000 (within-device determinism) — RESULTS §2.
+- Tier-uncertain flags (data pack item 15) and the H1b add-on statistic (item 14, reported
+  exploratory-grade; the descriptive threshold comparison is primary).

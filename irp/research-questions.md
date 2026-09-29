@@ -107,10 +107,14 @@ the confirmatory RQ1–3 claims; multiple comparisons uncorrected and stated as 
 
 - **H1a** (tested — REJECTED H0a): pass@1 at ≤Q2_K is significantly below the model's F16
   baseline (H0a: no difference). Result: Qwen Q2 p=1.2×10⁻⁷; Phi breaks earlier (Q4, p=0.007).
-- **H1b** (tested — REJECTED H0b on HE+): the collapse level differs between the two models
-  (H0b: identical). The proposal registered no decision rule beyond the threshold
-  locations; one was fixed in Ch3 §3.5 on 2026-09-21 (commit 2d91ac1) BEFORE the statistic
-  was computed (data pack item 14): between-model difference of per-problem drops on the
+- **H1b** (tested — REJECTED H0b on HE+; ORDERING REVISED 2026-09-29 in the submitted Ch3 §3.5:
+  the PRIMARY answer is the registered descriptive comparison of the two threshold locations
+  (HE+: Qwen Q2 vs Phi Q4 → differ; MBPP+: both Q3 → not distinguishable), and the paired
+  between-model statistic below is the exploratory-grade ADD-ON that attaches uncertainty):
+  the collapse level differs between the two models (H0b: identical). The proposal registered
+  no decision rule beyond the threshold locations; the add-on rule was fixed in Ch3 §3.5 on
+  2026-09-21 (commit 2d91ac1) BEFORE the statistic was computed (data pack item 14):
+  between-model difference of per-problem drops on the
   shared problems, Holm over all four rungs (m = 4), interpreted only at rungs where the
   descriptive verdicts differ; the rule was written after the per-rung ladder results were
   known and before the between-model statistic was computed, and is reported as
