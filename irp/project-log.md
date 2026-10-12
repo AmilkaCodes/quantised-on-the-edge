@@ -733,3 +733,68 @@ in parallel — no bench conflict.
       MAXN_SUPER, CUDA 13.2, llama.cpp b9951, smoke GREEN with GPU offload confirmed
       (`irp/setup/jetson/jetson.md` Ph2–5).**
 
+
+## 2026-10-09 — Ethics approval status VERIFIED from the signed form (not from memory)
+
+The signed Self-Assessment (`IRP/Amilka-Moses-Self-Assessment-Ethics-form-signed.docx`, untracked, to move to
+the admin folder) is the amended version: its data-sources section names the Python documentation corpus
+and RQ1c (tool-use probe). Student date 11/09/2026; supervisor declaration Dr Seema Jehan, dated 15 Sep 26;
+file last modified 2026-09-15 by the supervisor. So: **approved by the supervisor on 15 September 2026,
+covering the core study, E1 open-book and the RQ1c probe.** The form does NOT name the fine-tuning probe
+(E4-α) or the MBPP+ replication (E6); E4 activation (14 Sep) was communicated "via the standing thread".
+Both stay within the same screening answers. **Action:** raise on 16 Oct whether a one-line amendment should
+be recorded; the report's §3.7 must describe the approval exactly (draft wording in
+`irp/assessment/Formative_Assignment/rubric-checklist-review-2026-10-09.md`, Edit 7). Also verified today
+for the licence table: MBPP CC-BY-4.0; Qwen2.5-Coder-7B-Instruct Apache-2.0; llama.cpp MIT.
+
+## 2026-10-11 — Safe-execution facts confirmed by the student (for §3.7) + one deviation to disclose
+
+Student-confirmed: devices managed over key-based SSH on a private LAN, **no external network access** during
+scoring; the EvalPlus virtual environment was **dedicated** to this study; **scoring ran as root (sudo)** (tier
+coverage to confirm: Mac only, where `powermetrics` needs root, or all tiers). Harness fact: the memory limit
+env var `EVALPLUS_MAX_MEMORY_BYTES=-1` is set unconditionally in `score_with_evalplus`, so EvalPlus's
+per-process memory limit (default min(4 GB, system max)) was **disabled on every tier**. EvalPlus defaults
+(config.py, read 2026-10-11): per-problem time limit = max(DEFAULT_MIN_TIME_LIMIT 4.0 s, DEFAULT_GT_TIME_LIMIT_FACTOR
+4.0 × ground-truth runtime); student to confirm the installed version (`pip show evalplus` in the venv).
+**Deviation from the signed form** ("no elevated privileges"): root execution + no memory cap. Report it in
+§3.7 as a deviation with mitigations (draft wording in the rubric-checklist review, Edit 7); tell the
+supervisor on 16 Oct. Recommended replication configuration: EvalPlus's Docker evaluator.
+
+## 2026-10-11 (later) — CORRECTION: scoring did NOT run as root
+
+The student's recollection ("it ran as sudo") conflated the sudoers rule with running as root. Repository
+evidence: the harness runs `sudo -n powermetrics` only when `os.geteuid() != 0` (run_pilot.py L161), and the
+2026-08-31 log entry and the power decision in decisions.md both record the Mac sweep as "enabled by a scoped
+NOPASSWD sudoers rule for /usr/bin/powermetrics". So the harness and the EvalPlus scorer ran as the normal
+user on every tier; only the power sampler binary was elevated. The only deviation from the form's sandbox
+wording is the disabled EvalPlus memory limit (unconditional `EVALPLUS_MAX_MEMORY_BYTES=-1`). §3.7 wording
+in the rubric-checklist review updated accordingly. Venv location on the Mac: `~/pilot-work/.venv`
+(SETUP-NOTES), reached via the gitignored `proposal-dev/pilot/local/.venv` symlink.
+
+## 2026-10-11 (later) — EvalPlus version and time-limit defaults CONFIRMED on the Mac venv
+
+`pip show evalplus` → **0.3.1**. `evaluate --help`: `--min_time_limit` default **1.0** s, `--gt_time_limit_factor`
+default **4.0**. So the per-problem limit that actually applied = max(1 s, 4 × ground-truth runtime). Note the
+current upstream master sets the minimum to 4.0 s; the installed version's 1.0 s is what ran, and §3.7 now
+says 1 s. Venv confirmed at `~/pilot-work/.venv`.
+
+## 2026-10-11 (later) — Data-management decisions RECORDED (student)
+
+- **Retention and location:** results, harness, protocols, analysis scripts and figures stay in the public
+  repository `github.com/AmilkaCodes/RP` **indefinitely**, with a tagged release at submission. Signed or
+  named documents (ethics form, invoices) are never in the repository; they travel only in the artefact ZIP
+  and the student's private OneDrive copy. [Student: department's own retention period, if any, from the
+  16 Oct meeting.]
+- **Licences:** `LICENSE` (root) scopes the repository: code MIT, data/protocols/figures CC BY 4.0, prose all
+  rights reserved; `LICENSE-DATA.md` carries the CC BY 4.0 links and attribution; README has a Licence section.
+  Not yet committed or pushed (user-run). The dissertation's data-management paragraph can now state both
+  licences as facts.
+
+## 2026-10-11 (later) — [33] RESOLVED: Dmitrienko & D'Agostino 2013 read and extracted
+
+Student obtained the *Statistics in Medicine* tutorial (vol. 32, pp. 5172–5218) via York library; PDF in
+`references/`. Read §4–4.2 and §6.1–6.2; extract with verbatim quotes and printed-page locators in
+`irp/reading-extracts/dmitrienko-2013_multiplicity-adjustment-tutorial.md`. It grounds the fixed-sequence
+building block (§4.1, p. 5181: full level at each step, stop at first non-rejection) and its monotone-power
+caveat (p. 5182, p. 5193); the two-direction construction in §3.5 remains the dissertation's own derivation.
+Maurer, Hothorn & Lehmacher 1995 is dropped (never opened; not obtainable online).
