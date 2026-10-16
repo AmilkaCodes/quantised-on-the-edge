@@ -798,3 +798,37 @@ Student obtained the *Statistics in Medicine* tutorial (vol. 32, pp. 5172–5218
 building block (§4.1, p. 5181: full level at each step, stop at first non-rejection) and its monotone-power
 caveat (p. 5182, p. 5193); the two-direction construction in §3.5 remains the dissertation's own derivation.
 Maurer, Hothorn & Lehmacher 1995 is dropped (never opened; not obtainable online).
+
+## 2026-10-16 — Supervisor meeting (Dr Jehan): notes recorded, actions mapped
+
+**Student's notes (tidied, content unchanged):**
+- IRP marking differs from the RP: no project-management criterion. The introduction criterion covers project
+  identification and the literature review together; the methodology criterion covers research methodology
+  and ethical implications. Read the distinction wording closely; some markers are strict and rigid with the
+  rubric and the section names, so the structure must be tight.
+- Computational approach: what was used and why, or why not, with references; inside the methodology or as a
+  separate section after it. Research methodology = approach, data collection, methodological structure,
+  validity and limitations, with references justifying each choice and recording the alternatives. Compare
+  several references to justify, or to show the limitations of, the computational approach.
+- Computational-approach content: algorithms used, environment and tooling, implementation, data sources and
+  ingestion. Give a lay overview at the start of each section (the marker may not know the topic), then the
+  detail; diagrams for implementation and tooling; a research-methods-and-pipeline diagram at the start or
+  in the overview; some description before data cleaning/pre-processing detail.
+- Research gaps: a heading for each gap, discussed in detail; the same for the research questions.
+- Results chapter: revisit the RQs first, then the results; how each RQ is answered, how well, limitations,
+  and whether and how the results complement existing research, with references.
+- Introduction: keep RQ1 general; do not write "HumanEval+ pass@1" inside the RQ.
+- Literature review: start with the challenges, identify the gaps, then the methodology; connect the method
+  to the research questions.
+- Preprints: avoid wherever possible; arXiv citations heavily discouraged; find peer-reviewed versions or
+  replacements.
+- Ethics: coverage is good; additional sources that fit the form are fine; an additional form is submitted
+  if needed. [Student to confirm which applies to MBPP+ and the fine-tuning probe.]
+- Her suggested methodology layout: 3.1 The Philosophical Approach · 3.2 The Computational Approach ·
+  3.3 Research Methods and Applied Pipeline (3.3.x subsections; her list was a generic example from another
+  project) · 3.4 Methodological Limitations · 3.5 Ethical and Professional Considerations.
+- First line of the notes, "Ask for clarification on marking": referent to confirm.
+
+**Actions:** `irp/assessment/Formative_Assignment/meeting-2026-10-16-actions.md` (Ch3 restructure map, RQ
+wording, per-gap and per-RQ headings, overview-first rule, preprint replacement list, summative results rule,
+open questions for the student).
