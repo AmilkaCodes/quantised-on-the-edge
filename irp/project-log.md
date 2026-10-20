@@ -878,3 +878,11 @@ paragraph drafted from the log for the student's approval; Stack Overflow 2025 s
 2023 "The future of AI is hybrid" Part I (PDF read, §3.2.1 and §3.2.4) cited as practitioner and grey sources; 48 references
 renumbered 1–48; body 8,960 by the build counter; executive summary 500; validated. Student items unchanged plus approval of
 the reflective paragraph and a read of the two new sources.
+
+## 2026-10-20 (night) — External reviewer's items applied; rebuilt at 8,932 declared words (incl. figure text)
+
+Each item checked against the records before changing text (MBPP+ Qwen Q8_0 discordants recomputed from the snapshots: b = 4,
+c = 0; 589 ms explained from `e1-openbook.md`; memory anomalies confirmed reproducible in the Pi 5 perf CSVs; interval-class
+adoption dated from the 2026-09-21 note in `mbpp-robustness.md`). Two build defects found and fixed: appendix citations were not
+renumbered (Appendix B cited [41] for Clopper–Pearson), and the glossary had been inserted inside the ToC field. Disposition table in
+`review-note-2026-10-20.md`, addendum 2.
