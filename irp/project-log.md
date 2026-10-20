@@ -841,3 +841,13 @@ reproducibility belong in the methodology with specifics ("exact llama.cpp commi
 hardware specifications (CPU, RAM speed, OS build)"); Figure 1 needed its numbers in a table; moderation is by
 regulation. No procedural ground; no appeal. IRP plan unchanged. New concrete action for the formative:
 a devices-and-software table in Chapter 3 with commit hash, Python/EvalPlus versions and per-device CPU, RAM, OS build.
+
+## 2026-10-20 — Table 3.1 Jetson row VERIFIED on the device (student-run commands)
+
+Outputs captured over SSH: `/etc/nv_tegra_release` → `R39 (release), REVISION: 2.1, GCID: 46758480, BOARD: generic,
+EABI: aarch64, DATE: Fri Aug 7 05:54:22 AM UTC 2026`, `KERNEL_VARIANT: oot`; `nvidia-jetpack` Version `7.2.1-b49`;
+`uname -r` → `6.8.12-1021-tegra`; `nvcc --version` → `Build cuda_13.2.r13.2/compiler.37953736_0`; `nvpmodel -q` →
+`NV Power Mode: MAXN_SUPER` (mode 2); `jetson_clocks --show` → SoC tegra234, "NVIDIA Jetson Orin Nano Engineering
+Reference Developer Kit Super", CPUs 0–5 online, governor `schedutil`, MaxFreq 1,728,000 kHz, current frequencies
+below max → clocks not pinned, consistent with D26 (`jetson_clocks` recorded OFF for all runs). Every value in
+Table 3.1's Jetson row matches; the row now also states "jetson_clocks off".
