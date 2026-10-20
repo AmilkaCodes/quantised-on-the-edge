@@ -886,3 +886,12 @@ c = 0; 589 ms explained from `e1-openbook.md`; memory anomalies confirmed reprod
 adoption dated from the 2026-09-21 note in `mbpp-robustness.md`). Two build defects found and fixed: appendix citations were not
 renumbered (Appendix B cited [41] for Clopper–Pearson), and the glossary had been inserted inside the ToC field. Disposition table in
 `review-note-2026-10-20.md`, addendum 2.
+
+## 2026-10-21 — Reviewer's third pass fixed; the improvement plan applied; rebuilt at 8,959 declared words
+
+Breakages from the earlier edits repaired (antecedent, fractured sentence, Table D.10, Q3_K_M addendum clause). The latency gate
+is now applied to cold-inclusive first-token means from the run CSVs (Table 4.3), with the re-application reported in §4.4 (no
+verdict changes). New analysis from the snapshots: Table 4.2 (what is lost at the cliff) and Table 4.6 (first beyond-margin rung
+by model, recipe and benchmark; nine cells). Specialisation inference written out in §5.2. Methodology thresholds justified and
+registered-versus-added statistics stated. Executive summary rewritten for a lay reader. Figure 4.1 rebuilt with intervals and
+margins; deployment map reduced to symbols.
