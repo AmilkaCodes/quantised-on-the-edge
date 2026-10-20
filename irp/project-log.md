@@ -858,3 +858,14 @@ Pi 5 (`viper-pi5`): `/etc/os-release` → `PRETTY_NAME="Debian GNU/Linux 13 (tri
 `6.18.39+rpt-rpi-2712`; `vcgencmd get_throttled` → `throttled=0x0`. MacBook Pro (`viper-mbp`): `sw_vers` → macOS
 26.6.2, BuildVersion 25G83; `machdep.cpu.brand_string` → `Apple M3 Max`; `hw.memsize` → 38654705664 (36 GB). All match
 Table 3.1; the table now states the Debian 13 base and the macOS build number. All three rows are device-verified.
+
+## 2026-10-20 — Summative-length full draft built (8,936 words) and rubric-checked
+
+The 19,300-word full draft was trimmed to the 9,000-word cap without changing any reported number: six passes
+(two whole-file rewrites, then four exact-string deletion scripts, `trim_pass3.py` to `trim_pass6.py`). Per-cell
+tables moved to a new Appendix D (18 tables); Figure 4.5 and body Table 4.2 dropped; figures and tables renumbered
+without gaps. Built by `build_summative_draft.py` + `renumber_ieee.py` from a fresh unpack of the 2026-10-18 master;
+XSD-validated; 46 references in first-appearance order (1–46, no gaps); executive summary 495 words. Master:
+`final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-20.docx`; text copy beside it. Strict rubric-checklist review
+(`review-note-2026-10-20.md`): improvement items listed (the §5.3 reflective slot is the
+student's; §4.6 RQ sentences; a lay-reader sentence under Figure 4.4; appendix page count to check in Word).
