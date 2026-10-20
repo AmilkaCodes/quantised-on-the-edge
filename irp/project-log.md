@@ -851,3 +851,10 @@ EABI: aarch64, DATE: Fri Aug 7 05:54:22 AM UTC 2026`, `KERNEL_VARIANT: oot`; `nv
 Reference Developer Kit Super", CPUs 0–5 online, governor `schedutil`, MaxFreq 1,728,000 kHz, current frequencies
 below max → clocks not pinned, consistent with D26 (`jetson_clocks` recorded OFF for all runs). Every value in
 Table 3.1's Jetson row matches; the row now also states "jetson_clocks off".
+
+## 2026-10-20 — Table 3.1 Pi and Mac rows VERIFIED on the devices (student-run commands)
+
+Pi 5 (`viper-pi5`): `/etc/os-release` → `PRETTY_NAME="Debian GNU/Linux 13 (trixie)"`, `VERSION_ID="13"`; `uname -r` →
+`6.18.39+rpt-rpi-2712`; `vcgencmd get_throttled` → `throttled=0x0`. MacBook Pro (`viper-mbp`): `sw_vers` → macOS
+26.6.2, BuildVersion 25G83; `machdep.cpu.brand_string` → `Apple M3 Max`; `hw.memsize` → 38654705664 (36 GB). All match
+Table 3.1; the table now states the Debian 13 base and the macOS build number. All three rows are device-verified.
