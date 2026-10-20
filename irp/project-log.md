@@ -832,3 +832,12 @@ Maurer, Hothorn & Lehmacher 1995 is dropped (never opened; not obtainable online
 **Actions:** `irp/assessment/Formative_Assignment/meeting-2026-10-16-actions.md` (Ch3 restructure map, RQ
 wording, per-gap and per-RQ headings, overview-first rule, preprint replacement list, summative results rule,
 open questions for the student).
+
+## 2026-10-20 — RP mark clarification answered; item closed
+
+Marking team's reply (verbatim substance in `assignments/summative/SUMMATIVE-FEEDBACK.md`, bottom section): band
+intended; ethics-in-methodology was a typo (no mark effect, Canvas to be corrected); data management and
+reproducibility belong in the methodology with specifics ("exact llama.cpp commit hash, Python version and full
+hardware specifications (CPU, RAM speed, OS build)"); Figure 1 needed its numbers in a table; moderation is by
+regulation. No procedural ground; no appeal. IRP plan unchanged. New concrete action for the formative:
+a devices-and-software table in Chapter 3 with commit hash, Python/EvalPlus versions and per-device CPU, RAM, OS build.
