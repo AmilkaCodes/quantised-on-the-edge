@@ -869,3 +869,12 @@ XSD-validated; 46 references in first-appearance order (1–46, no gaps); execut
 `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-20.docx`; text copy beside it. Strict rubric-checklist review
 (`review-note-2026-10-20.md`): improvement items listed (the §5.3 reflective slot is the
 student's; §4.6 RQ sentences; a lay-reader sentence under Figure 4.4; appendix page count to check in Word).
+
+## 2026-10-20 (evening) — Review items applied
+
+Figures 3.2 (configuration file + manifest, drawn from the real files) and 3.3 (verdict classes on three real cells) added;
+§4.6 now answers each RQ in a sentence; lay sentence under the deployment map; §4.5 leads name their findings; §5.3 reflective
+paragraph drafted from the log for the student's approval; Stack Overflow 2025 survey (press release, read 20 Oct) and Qualcomm
+2023 "The future of AI is hybrid" Part I (PDF read, §3.2.1 and §3.2.4) cited as practitioner and grey sources; 48 references
+renumbered 1–48; body 8,960 by the build counter; executive summary 500; validated. Student items unchanged plus approval of
+the reflective paragraph and a read of the two new sources.
