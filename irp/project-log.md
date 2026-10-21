@@ -910,3 +910,10 @@ direction its reason and design. Declared count 8971 (8677 body + 294 in figures
 Creswell citation number corrected (a "Ch." qualifier the renumbering regex did not recognise; regex fixed), executive-summary
 antecedent, pipeline figure clipping, acknowledgements corrections carried into the source, Figure 4.5 legend, Wei et al.;
 §4.3/§4.4 trimmed to fund a §5.4 paragraph tying each recommendation to its cell and condition. Declared 8968.
+
+## 2026-10-21 — Reference [15] (Giagnorio et al.) re-checked: published at ICPC 2026
+
+The paper appears in the ICPC 2026 Research Track programme (Session 6, Mon 13 Apr 2026, Rio de Janeiro) and has an ACM Digital
+Library entry (DOI 10.1145/3794763.3794810, seen in the search listing only; the DL page returned 403 here). "To appear" removed;
+the entry now reads Proc. 34th IEEE/ACM ICPC, Rio de Janeiro, Brazil, Apr. 2026. Student to confirm page numbers through the
+library. Rebuilt as `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-21b.docx` (the 21 Oct file was open in Word).
