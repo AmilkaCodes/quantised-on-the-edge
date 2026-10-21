@@ -895,3 +895,12 @@ verdict changes). New analysis from the snapshots: Table 4.2 (what is lost at th
 by model, recipe and benchmark; nine cells). Specialisation inference written out in §5.2. Methodology thresholds justified and
 registered-versus-added statistics stated. Executive summary rewritten for a lay reader. Figure 4.1 rebuilt with intervals and
 margins; deployment map reduced to symbols.
+
+## 2026-10-21 (later) — Fourth reviewer pass implemented; master now the 21 Oct file
+
+Reviewer's items recorded first (`reviewer-feedback-2026-10-21-pass4.md`) then implemented: page geometry (A4, 2.5 cm), 12 pt
+captions, split lists, numbered H3s, ToC bookmark collision fixed; Figures 4.2, 4.3 and 4.5 redrawn at the printed size and the
+pipeline figure restored as Figure 3.1; Qwen2.5-Coder and Phi-3 technical reports and the ACM Code cited (51 references, et al. and
+DOI usage made consistent); quantisation background paragraph; E2b, E6 and E4-α design in the body; social, commercial and
+professional issues stated; Table 4.5 numeric; MBPP+ reversal decomposed per problem; §5.1 walks the objectives; §6.3 gives each
+direction its reason and design. Declared count 8971 (8677 body + 294 in figures).
