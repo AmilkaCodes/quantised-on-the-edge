@@ -74,9 +74,9 @@ for ax, (m, lab, cliff) in zip(axes, ((QW, "Qwen2.5-Coder-1.5B", 4), (PH, "Phi-3
     ax.plot(X, ladder(m, "oracle"), "-^", color=GREEN, lw=1.6, ms=5.5, label="oracle-selected documentation (O)")
     if m == QW: ax.plot(X, ladder(m, "r1"), "-D", color=PURPLE, lw=1.6, ms=5, label="model-chosen documentation, grammar (R1)")
     ax.set_ylim(0.1, 0.75); ax.set_ylabel("HumanEval+ pass@1"); ax.grid(axis="y", alpha=0.3)
-    ax.text(0.02, 0.06, lab, transform=ax.transAxes, fontsize=9, weight="bold")
+    ax.text(0.02, 0.93, lab, transform=ax.transAxes, fontsize=9, weight="bold")
     ax.text(cliff, 0.72, "collapse rung", ha="center", fontsize=8, color="#d43d51")
-axes[0].legend(loc="upper right", ncol=2); axes[1].set_xticks(X); axes[1].set_xticklabels(Q)
+axes[0].legend(loc="lower left", ncol=1); axes[1].set_xticks(X); axes[1].set_xticklabels(Q)
 plt.tight_layout(); fig.savefig(os.path.join(OUT, "fig4-5_conditions.png"), dpi=300); plt.close(fig)
 
 # ---- Figure 4.6: scale

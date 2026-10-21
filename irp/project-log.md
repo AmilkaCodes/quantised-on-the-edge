@@ -904,3 +904,9 @@ pipeline figure restored as Figure 3.1; Qwen2.5-Coder and Phi-3 technical report
 DOI usage made consistent); quantisation background paragraph; E2b, E6 and E4-α design in the body; social, commercial and
 professional issues stated; Table 4.5 numeric; MBPP+ reversal decomposed per problem; §5.1 walks the objectives; §6.3 gives each
 direction its reason and design. Declared count 8971 (8677 body + 294 in figures).
+
+## 2026-10-21 (night) — Fifth reviewer pass: five faults fixed, §5.4 evidence paragraph added
+
+Creswell citation number corrected (a "Ch." qualifier the renumbering regex did not recognise; regex fixed), executive-summary
+antecedent, pipeline figure clipping, acknowledgements corrections carried into the source, Figure 4.5 legend, Wei et al.;
+§4.3/§4.4 trimmed to fund a §5.4 paragraph tying each recommendation to its cell and condition. Declared 8968.
