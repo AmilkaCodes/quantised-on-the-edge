@@ -922,3 +922,8 @@ library. Rebuilt as `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026
 
 Crossref record for DOI 10.1145/3794763.3794810: Proceedings of the 2026 34th IEEE/ACM International Conference on Program
 Comprehension (ICPC '26, Rio de Janeiro), ACM, pages 195–206, published online 29 Jul 2026. Entry updated with the pages; rebuilt as `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-21b.docx`.
+
+## 2026-10-22 — Sixth reviewer pass implemented (Chapter 5 by criterion, numeric contrasts, contributions preview)
+
+Recorded first in `reviewer-feedback-2026-10-22-pass6.md`, then implemented; funded by cuts in §4.3, §4.4, §2 and elsewhere. Build
+`final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-21b.docx`: 8761 body + 284 figure words = 9045 declared.
