@@ -938,4 +938,4 @@ the lists per the brief's order. Remaining work is verification (three §5.2 pin
 Kurtic Table 3 confirmed (and the 70B's −4.6 on HumanEval+ added); Giagnorio §1 confirmed (recipe caveat and the size
 corroboration added, pinpoint Sec. 1); Husom §4.2.1 confirmed verbatim, but the figures are five-task averages and the same section
 reports a general Qwen2.5-1.5B dropping at q3_K_M, so the sentence now carries both and notes the instability of their HumanEval
-column (fp16 0.62 against q8_0 0.85). Verification notes appended to the three extracts. Rebuilt `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-21b.docx`, declared 8996.
+column (fp16 0.62 against q8_0 0.85). Verification notes appended to the three extracts. Rebuilt `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-21b.docx`, declared 8972.
