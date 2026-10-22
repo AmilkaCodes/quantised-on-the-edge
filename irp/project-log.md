@@ -927,3 +927,8 @@ Comprehension (ICPC '26, Rio de Janeiro), ACM, pages 195–206, published online
 
 Recorded first in `reviewer-feedback-2026-10-22-pass6.md`, then implemented; funded by cuts in §4.3, §4.4, §2 and elsewhere. Build
 `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-21b.docx`: 8692 body + 284 figure words = 8976 declared.
+
+## 2026-10-22 — Reviewer's closing items; content editing closed at 8978 declared
+
+§1.3 renamed to match its contents, §5.4 antecedent restored with the ecosystem sentence as the closing line, glossary moved after
+the lists per the brief's order. Remaining work is verification (three §5.2 pinpoints against the PDFs) and the artefact directory.
