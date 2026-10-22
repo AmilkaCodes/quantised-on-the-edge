@@ -917,3 +917,8 @@ The paper appears in the ICPC 2026 Research Track programme (Session 6, Mon 13 A
 Library entry (DOI 10.1145/3794763.3794810, seen in the search listing only; the DL page returned 403 here). "To appear" removed;
 the entry now reads Proc. 34th IEEE/ACM ICPC, Rio de Janeiro, Brazil, Apr. 2026. Student to confirm page numbers through the
 library. Rebuilt as `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-21b.docx` (the 21 Oct file was open in Word).
+
+## 2026-10-22 — Reference [15] page numbers confirmed from Crossref
+
+Crossref record for DOI 10.1145/3794763.3794810: Proceedings of the 2026 34th IEEE/ACM International Conference on Program
+Comprehension (ICPC '26, Rio de Janeiro), ACM, pages 195–206, published online 29 Jul 2026. Entry updated with the pages; rebuilt as `final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-21b.docx`.
