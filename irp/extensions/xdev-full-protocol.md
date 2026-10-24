@@ -41,4 +41,36 @@ Device time only; no code change to the harness beyond the output tag. Abort a c
 file or a run exceeds four hours on the Pi 5; an aborted cell is reported as not measured.
 
 ## Deviations
-_Dated here as they occur._
+
+**2026-10-24, Jetson Phi-3 cells — server memory exhaustion, cells void, re-run with a
+device-scoped launch fix (recorded before the re-run).**
+The four Jetson Phi-3 cells completed with 142 to 155 of 164 solutions EMPTY and 594
+"Connection error" warnings in the log: the server stopped answering a few problems into each
+cell. The cells are void as measurements and are NOT reported as results; the scored rows they
+produced (pass@1 0.043 to 0.110 against the Mac's 0.220 to 0.628, b up to 95, c = 0) are an
+instrument artefact, not a tier effect. Evidence that it is an artefact: every solution that
+DID complete before each failure is byte-identical to the Mac's, and all five Jetson Qwen
+cells completed 164/164.
+
+Diagnosis (measured, not inferred). A memory probe on the Jetson with Phi-3 Q8_0 shows the
+model loading to 6,439 MB of 7,485 MB, leaving 1,045 MB; available memory then falls
+monotonically with each generation (1,024 → 757 → 420 → 161 MB) and requests begin failing at
+91 MB. The server log gives the cause: `n_slots = 4, n_ctx_slot = 4096` — llama-server's
+default is four slots, each allocating the full context, so the harness reserves about 16k
+tokens of KV cache for a workload that issues one request at a time. Phi-3 therefore does fit
+this tier; the registered launch configuration over-allocates against it. (The main study's
+Jetson Phi-3 perf cells survived because they are short and reuse ten repeated prompts, which
+the server's prefix cache serves from one slot.)
+
+Fix, scope, and why it cannot change a score: `--parallel 1` is added to the server launch
+**on the Jetson only**, leaving the Mac repository's harness and the in-flight Pi 5 run
+untouched. Slot count governs memory allocation, not decoding: with greedy decoding, seed 0
+and sequential requests, the generated tokens are identical. This is an instrument fix under
+the standing rule (fix the harness, never the score), of the same class as the FAB import
+fix. **Built-in control:** the problems that completed before each crash are retained as
+`*_oomvoid.json`; after the re-run, those same problems must still be byte-identical, which
+tests output-neutrality directly. If any differ, the fix is not output-neutral and the cells
+revert to not-measured.
+
+If the re-run fails again, the cells are reported as **not measured — capacity**, per the
+abort clause.
