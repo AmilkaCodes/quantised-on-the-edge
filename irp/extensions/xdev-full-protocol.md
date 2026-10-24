@@ -72,5 +72,34 @@ fix. **Built-in control:** the problems that completed before each crash are ret
 tests output-neutrality directly. If any differ, the fix is not output-neutral and the cells
 revert to not-measured.
 
-If the re-run fails again, the cells are reported as **not measured — capacity**, per the
-abort clause.
+**Outcome of the re-run, and a correction to the diagnosis above (2026-10-24, same day).**
+The `--parallel 1` re-run **failed identically** — the same four cells completed the same
+9, 22, 19 and 12 problems before the server stopped answering. The slot hypothesis is
+therefore **tested and falsified**, and the paragraph above is wrong about the mechanism; it
+is retained rather than deleted so the reasoning trail stays honest.
+
+What an A/B probe (`--parallel` auto against 1) actually shows:
+
+| | slots | available after load | available after each generation |
+|---|---:|---:|---|
+| auto | 4 | 862 MB | 464 → 70 MB, then requests fail |
+| `--parallel 1` | 1 | 894 MB | 820 → 497 → 176 MB, then requests fail |
+
+The flag does what it claims (4 slots → 1) and buys a little headroom, but **post-load
+availability is essentially unchanged (862 against 894 MB)**, so slot count was never holding
+the memory: KV allocation here is unified. The real mechanism is **per-generation allocation
+of roughly 300 MB that is not released**, against a post-load headroom of under 1 GB; the
+Linux OOM killer then terminates the server (`Killed` in both probe arms). Phi-3-mini at
+Q8_0 (4.06 GB of weights plus CUDA runtime) simply does not leave enough room on a 7.5 GB
+tier to sustain a 164-problem run at the registered 4,096 context.
+
+**Resolution: the four Jetson Phi-3 cells are reported as NOT MEASURED — CAPACITY**, per the
+abort clause. No further harness bending: two attempts is enough, and the limit is a property
+of the tier rather than of the instrument. The Jetson harness has been reverted to the
+registered launch command (the `--parallel 1` edit was device-local and is gone); both void
+runs are retained as `*_oomvoid.json` and `*_oomvoid2.json`. The Jetson's five Qwen cells are
+unaffected and complete at 164/164.
+
+This is itself reportable alongside the capacity verdicts already in the deployment map: the
+8 GB tier can serve Phi-3-mini for short interactive use (the main study's perf cells did
+exactly that) but cannot sustain a long batch at full context.
