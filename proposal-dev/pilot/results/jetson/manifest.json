@@ -1,12 +1,18 @@
 {
   "device": "jetson",
-  "timestamp": "2026-08-30T22:11:28Z",
+  "timestamp": "2026-09-16T10:49:55Z",
   "os": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
   "processor": "aarch64",
   "cpu_count": 6,
   "ram_gb": 7.3,
   "python": "3.12.3",
   "llama_cpp_tag": "b9951",
-  "config_file": "configs/jetson.yaml",
-  "smoke": false
+  "config_file": "configs/jetson-demo-7b.yaml",
+  "smoke": false,
+  "condition": "closed",
+  "openbook_artefact_sha256": null,
+  "accelerator": {
+    "l4t_release": "# R39 (release), REVISION: 2.1, GCID: 46758480, BOARD: generic, EABI: aarch64, DATE: Fri Aug  7 05:54:22 AM UTC 2026",
+    "nvpmodel": "NV Power Mode: MAXN_SUPER | 2"
+  }
 }

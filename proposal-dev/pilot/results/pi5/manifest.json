@@ -1,18 +1,18 @@
 {
   "device": "pi5",
-  "timestamp": "2026-09-14T08:26:59Z",
+  "timestamp": "2026-09-16T10:49:53Z",
   "os": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
   "processor": "aarch64",
   "cpu_count": 4,
   "ram_gb": 15.8,
   "python": "3.13.5",
   "llama_cpp_tag": "b9951",
-  "config_file": "configs/pi5-7b.yaml",
+  "config_file": "configs/pi5-demo-15b.yaml",
   "smoke": false,
   "condition": "closed",
   "openbook_artefact_sha256": null,
   "accelerator": {
     "pi_throttled": "throttled=0x0",
-    "pi_temp": "temp=52.1'C"
+    "pi_temp": "temp=45.5'C"
   }
 }
