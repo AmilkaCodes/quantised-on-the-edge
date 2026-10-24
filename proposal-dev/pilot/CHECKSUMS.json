@@ -1,0 +1,368 @@
+{
+  "files": {
+    "Phi-3-mini-4k-instruct-Q2_K.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q2_K.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "effa79e1bf7edad39dbe80533baabc395235ba1543976ba3674dde2eb19b8cb3",
+          "size_bytes": 1508216256
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "Q2_K",
+      "model": "phi-3-mini-4k-instruct"
+    },
+    "Phi-3-mini-4k-instruct-Q3_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q3_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "a08b16d6ea8d47fe3b13f6f1ab572590434433441d09d30d494ebcd8bc17002b",
+          "size_bytes": 1962554304
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "Q3_K_M",
+      "model": "phi-3-mini-4k-instruct"
+    },
+    "Phi-3-mini-4k-instruct-Q4_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q4_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "fcc2c8d0536acea1b8751eb406453a589ba4d98ec549bf520732bee27523bf1d",
+          "size_bytes": 2396770752
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "Q4_K_M",
+      "model": "phi-3-mini-4k-instruct"
+    },
+    "Phi-3-mini-4k-instruct-Q8_0.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q8_0.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "49a323d0b284896256bcb741c5ca60fee85ac8268f9d878cf97bc6cc150340f4",
+          "size_bytes": 4061221824
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "Q8_0",
+      "model": "phi-3-mini-4k-instruct"
+    },
+    "Phi-3-mini-4k-instruct-f16.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-f16.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "f53d06d3c9c7e8a5638d08ec21381f2a39076bb817c8110688a306da3c5fc5a2",
+          "size_bytes": 7643296704
+        }
+      },
+      "first_config": "mac-mbpp-e6.yaml",
+      "label": "F16",
+      "model": "phi-3-mini-4k-instruct"
+    },
+    "Qwen2.5-Coder-1.5B-Instruct-f16.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/Qwen2.5-Coder-1.5B-Instruct-f16.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "b10310f9b1ab63bd14b9710e84516e7b18b522079fd0c96812f948f9f817e68d",
+          "size_bytes": 3093669376
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "F16",
+      "model": "qwen2.5-coder-1.5b-instruct"
+    },
+    "Qwen2.5-Coder-7B-Instruct-f16.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/Qwen2.5-Coder-7B-Instruct-f16.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "d8e374f171cbf20a79619dc6e0926124c7690497609bc94bdad18ef6a86cdee0",
+          "size_bytes": 15237853696
+        }
+      },
+      "first_config": "mac-e2a.yaml",
+      "label": "F16",
+      "model": "qwen2.5-coder-7b-instruct"
+    },
+    "Qwen_Qwen3-4B-bf16.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen3-4b/Qwen_Qwen3-4B-bf16.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "52486602bdca589fd1507962537b4fc7fa2f1fc57222fa36a960cf691d4960c8",
+          "size_bytes": 8051285184
+        }
+      },
+      "first_config": "mac-e2a-arm4.yaml",
+      "label": "F16",
+      "model": "qwen3-4b"
+    },
+    "phi-3-mini-4k-instruct-imat-Q2_K.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/phi-3-mini-4k-instruct-imat-Q2_K.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "4ca7eab2f9009f448a3cad39a8b55b2eedc827e1039004718501fa100c15529b",
+          "size_bytes": 1508216576
+        }
+      },
+      "first_config": "mac-e2b.yaml",
+      "label": "Q2_K",
+      "model": "phi-3-mini-4k-instruct"
+    },
+    "phi-3-mini-4k-instruct-imat-Q3_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/phi-3-mini-4k-instruct-imat-Q3_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "b2411783a1d31a3cd6cfaea248759289fb010c4786c7f3ec59ee9613c3f8bfd9",
+          "size_bytes": 1962554624
+        }
+      },
+      "first_config": "mac-e2b.yaml",
+      "label": "Q3_K_M",
+      "model": "phi-3-mini-4k-instruct"
+    },
+    "phi-3-mini-4k-instruct-imat-Q4_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/phi-3-mini-4k-instruct-imat-Q4_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "7264532897d48e6a7324f43278622896cc0c8a2e6cebc538f184e2b49c561eab",
+          "size_bytes": 2396771072
+        }
+      },
+      "first_config": "mac-e2b.yaml",
+      "label": "Q4_K_M",
+      "model": "phi-3-mini-4k-instruct"
+    },
+    "qwen2.5-coder-1.5b-e4r2-f16.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-e4/qwen2.5-coder-1.5b-e4r2-f16.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "b10217c20779c4c026a176668b2381cc41cbf32cab9bc317ec54b38eef1ae189",
+          "size_bytes": 3093669440
+        }
+      },
+      "first_config": "mac-e4-gate.yaml",
+      "label": "F16",
+      "model": "qwen2.5-coder-1.5b-e4"
+    },
+    "qwen2.5-coder-1.5b-e5-raft-f16.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-e5/qwen2.5-coder-1.5b-e5-raft-f16.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "d858bca82836a67a0f0a5d890cb8c683058aabaa068b450516dbb74310241f24",
+          "size_bytes": 3093669440
+        }
+      },
+      "first_config": "mac-e5-gate.yaml",
+      "label": "F16",
+      "model": "qwen2.5-coder-1.5b-e5"
+    },
+    "qwen2.5-coder-1.5b-instruct-Q2_K.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q2_K.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "93645bf7197606c78a38fd19cf06963f03fdfdfb1c14341905f8a98b4415e322",
+          "size_bytes": 676304896
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "Q2_K",
+      "model": "qwen2.5-coder-1.5b-instruct"
+    },
+    "qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "ef9e1312b85b35c376ac5de546529f89f4e3b1fd21f6691d809f3331a4e614dd",
+          "size_bytes": 824178688
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "Q3_K_M",
+      "model": "qwen2.5-coder-1.5b-instruct"
+    },
+    "qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "15846378962c6bfad84110d0f8c250f2511e150ba730c03edde69c4f8fc3faab",
+          "size_bytes": 986048512
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "Q4_K_M",
+      "model": "qwen2.5-coder-1.5b-instruct"
+    },
+    "qwen2.5-coder-1.5b-instruct-Q8_0.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q8_0.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "4a34fa30c9d4dfc244eb4e78ff18c1a751352f6d06e01d21e346dae5fff568ff",
+          "size_bytes": 1646573056
+        }
+      },
+      "first_config": "jetson.yaml",
+      "label": "Q8_0",
+      "model": "qwen2.5-coder-1.5b-instruct"
+    },
+    "qwen2.5-coder-1.5b-instruct-imat-Q2_K.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-imat-Q2_K.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "e67f0501f079461066906bdb85e5e4ee3262776f88816b616f02a36e7f05e0a3",
+          "size_bytes": 676305216
+        }
+      },
+      "first_config": "mac-e2b.yaml",
+      "label": "Q2_K",
+      "model": "qwen2.5-coder-1.5b-instruct"
+    },
+    "qwen2.5-coder-1.5b-instruct-imat-Q3_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-imat-Q3_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "91563087e83259ac591b4dc64ec4eb8efd681e31738f58897ed78ac3b70024ae",
+          "size_bytes": 824179008
+        }
+      },
+      "first_config": "mac-e2b.yaml",
+      "label": "Q3_K_M",
+      "model": "qwen2.5-coder-1.5b-instruct"
+    },
+    "qwen2.5-coder-1.5b-instruct-imat-Q4_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-imat-Q4_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "ed756b2fca29def19fe58a4d81af86b03d1f1956016d15f3b109ea5a013b6d20",
+          "size_bytes": 986048832
+        }
+      },
+      "first_config": "mac-e2b.yaml",
+      "label": "Q4_K_M",
+      "model": "qwen2.5-coder-1.5b-instruct"
+    },
+    "qwen2.5-coder-7b-instruct-Q2_K.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q2_K.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "0ab9fbec57b2a68ab436d002c7cfdff441aa208d96f39444e975f76fe3664fae",
+          "size_bytes": 3015940608
+        }
+      },
+      "first_config": "jetson-7b.yaml",
+      "label": "Q2_K",
+      "model": "qwen2.5-coder-7b-instruct"
+    },
+    "qwen2.5-coder-7b-instruct-Q3_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q3_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "404880589e9802953657ff718995ed58c8722a8737ba54aaa9f7ede70005f1cf",
+          "size_bytes": 3808391680
+        }
+      },
+      "first_config": "jetson-7b.yaml",
+      "label": "Q3_K_M",
+      "model": "qwen2.5-coder-7b-instruct"
+    },
+    "qwen2.5-coder-7b-instruct-Q4_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q4_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "0e8c54b55a10b64eff7be7f3aa9596dd39b471e399fbbc1469bf36c4e66c7b86",
+          "size_bytes": 4683074048
+        }
+      },
+      "first_config": "jetson-7b.yaml",
+      "label": "Q4_K_M",
+      "model": "qwen2.5-coder-7b-instruct"
+    },
+    "qwen2.5-coder-7b-instruct-Q8_0.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q8_0.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "f728664193246875d99c7797d2d56a71f5a680963ae6052f1e1fa4d40724c652",
+          "size_bytes": 8098525696
+        }
+      },
+      "first_config": "jetson-7b.yaml",
+      "label": "Q8_0",
+      "model": "qwen2.5-coder-7b-instruct"
+    },
+    "qwen2.5-coder-7b-instruct-imat-Q2_K.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-imat-Q2_K.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "5405a8a2acb7082c149e5d15835825865e33ec746991ce36251ad0948e5d80c7",
+          "size_bytes": 3015940896
+        }
+      },
+      "first_config": "jetson-demo-7b.yaml",
+      "label": "Q2_K",
+      "model": "qwen2.5-coder-7b-instruct"
+    },
+    "qwen2.5-coder-7b-instruct-imat-Q4_K_M.gguf": {
+      "devices": {
+        "viper-mbp.local": {
+          "hashed_at": "2026-10-24T10:49:16Z",
+          "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-imat-Q4_K_M.gguf",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "6a289cd6c8554b784e0b6cf1c2cb78d1a78b7a6c6efd7087776c7d0dcb18ef9e",
+          "size_bytes": 4683074336
+        }
+      },
+      "first_config": "mac-demo-7b.yaml",
+      "label": "Q4_K_M",
+      "model": "qwen2.5-coder-7b-instruct"
+    }
+  }
+}
