@@ -2,10 +2,24 @@
   "files": {
     "Phi-3-mini-4k-instruct-Q2_K.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q2_K.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "effa79e1bf7edad39dbe80533baabc395235ba1543976ba3674dde2eb19b8cb3",
+          "size_bytes": 1508216256
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q2_K.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "effa79e1bf7edad39dbe80533baabc395235ba1543976ba3674dde2eb19b8cb3",
+          "size_bytes": 1508216256
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q2_K.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "effa79e1bf7edad39dbe80533baabc395235ba1543976ba3674dde2eb19b8cb3",
           "size_bytes": 1508216256
         }
@@ -16,10 +30,24 @@
     },
     "Phi-3-mini-4k-instruct-Q3_K_M.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q3_K_M.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "a08b16d6ea8d47fe3b13f6f1ab572590434433441d09d30d494ebcd8bc17002b",
+          "size_bytes": 1962554304
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q3_K_M.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "a08b16d6ea8d47fe3b13f6f1ab572590434433441d09d30d494ebcd8bc17002b",
+          "size_bytes": 1962554304
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q3_K_M.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "a08b16d6ea8d47fe3b13f6f1ab572590434433441d09d30d494ebcd8bc17002b",
           "size_bytes": 1962554304
         }
@@ -30,10 +58,24 @@
     },
     "Phi-3-mini-4k-instruct-Q4_K_M.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q4_K_M.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "fcc2c8d0536acea1b8751eb406453a589ba4d98ec549bf520732bee27523bf1d",
+          "size_bytes": 2396770752
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q4_K_M.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "fcc2c8d0536acea1b8751eb406453a589ba4d98ec549bf520732bee27523bf1d",
+          "size_bytes": 2396770752
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q4_K_M.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "fcc2c8d0536acea1b8751eb406453a589ba4d98ec549bf520732bee27523bf1d",
           "size_bytes": 2396770752
         }
@@ -44,10 +86,24 @@
     },
     "Phi-3-mini-4k-instruct-Q8_0.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q8_0.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "49a323d0b284896256bcb741c5ca60fee85ac8268f9d878cf97bc6cc150340f4",
+          "size_bytes": 4061221824
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q8_0.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "49a323d0b284896256bcb741c5ca60fee85ac8268f9d878cf97bc6cc150340f4",
+          "size_bytes": 4061221824
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/phi-3-mini-4k-instruct/Phi-3-mini-4k-instruct-Q8_0.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "49a323d0b284896256bcb741c5ca60fee85ac8268f9d878cf97bc6cc150340f4",
           "size_bytes": 4061221824
         }
@@ -72,10 +128,24 @@
     },
     "Qwen2.5-Coder-1.5B-Instruct-f16.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/Qwen2.5-Coder-1.5B-Instruct-f16.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "b10310f9b1ab63bd14b9710e84516e7b18b522079fd0c96812f948f9f817e68d",
+          "size_bytes": 3093669376
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/Qwen2.5-Coder-1.5B-Instruct-f16.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "b10310f9b1ab63bd14b9710e84516e7b18b522079fd0c96812f948f9f817e68d",
+          "size_bytes": 3093669376
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/Qwen2.5-Coder-1.5B-Instruct-f16.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "b10310f9b1ab63bd14b9710e84516e7b18b522079fd0c96812f948f9f817e68d",
           "size_bytes": 3093669376
         }
@@ -90,6 +160,13 @@
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/Qwen2.5-Coder-7B-Instruct-f16.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "d8e374f171cbf20a79619dc6e0926124c7690497609bc94bdad18ef6a86cdee0",
+          "size_bytes": 15237853696
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/Qwen2.5-Coder-7B-Instruct-f16.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "d8e374f171cbf20a79619dc6e0926124c7690497609bc94bdad18ef6a86cdee0",
           "size_bytes": 15237853696
         }
@@ -184,10 +261,24 @@
     },
     "qwen2.5-coder-1.5b-instruct-Q2_K.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q2_K.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "93645bf7197606c78a38fd19cf06963f03fdfdfb1c14341905f8a98b4415e322",
+          "size_bytes": 676304896
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q2_K.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "93645bf7197606c78a38fd19cf06963f03fdfdfb1c14341905f8a98b4415e322",
+          "size_bytes": 676304896
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q2_K.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "93645bf7197606c78a38fd19cf06963f03fdfdfb1c14341905f8a98b4415e322",
           "size_bytes": 676304896
         }
@@ -198,10 +289,24 @@
     },
     "qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "ef9e1312b85b35c376ac5de546529f89f4e3b1fd21f6691d809f3331a4e614dd",
+          "size_bytes": 824178688
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "ef9e1312b85b35c376ac5de546529f89f4e3b1fd21f6691d809f3331a4e614dd",
+          "size_bytes": 824178688
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q3_K_M.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "ef9e1312b85b35c376ac5de546529f89f4e3b1fd21f6691d809f3331a4e614dd",
           "size_bytes": 824178688
         }
@@ -212,10 +317,24 @@
     },
     "qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "15846378962c6bfad84110d0f8c250f2511e150ba730c03edde69c4f8fc3faab",
+          "size_bytes": 986048512
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "15846378962c6bfad84110d0f8c250f2511e150ba730c03edde69c4f8fc3faab",
+          "size_bytes": 986048512
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q4_K_M.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "15846378962c6bfad84110d0f8c250f2511e150ba730c03edde69c4f8fc3faab",
           "size_bytes": 986048512
         }
@@ -226,10 +345,24 @@
     },
     "qwen2.5-coder-1.5b-instruct-Q8_0.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q8_0.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "4a34fa30c9d4dfc244eb4e78ff18c1a751352f6d06e01d21e346dae5fff568ff",
+          "size_bytes": 1646573056
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q8_0.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "4a34fa30c9d4dfc244eb4e78ff18c1a751352f6d06e01d21e346dae5fff568ff",
+          "size_bytes": 1646573056
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-Q8_0.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "4a34fa30c9d4dfc244eb4e78ff18c1a751352f6d06e01d21e346dae5fff568ff",
           "size_bytes": 1646573056
         }
@@ -240,10 +373,24 @@
     },
     "qwen2.5-coder-1.5b-instruct-imat-Q2_K.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-imat-Q2_K.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "e67f0501f079461066906bdb85e5e4ee3262776f88816b616f02a36e7f05e0a3",
+          "size_bytes": 676305216
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-imat-Q2_K.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "e67f0501f079461066906bdb85e5e4ee3262776f88816b616f02a36e7f05e0a3",
+          "size_bytes": 676305216
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-imat-Q2_K.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "e67f0501f079461066906bdb85e5e4ee3262776f88816b616f02a36e7f05e0a3",
           "size_bytes": 676305216
         }
@@ -274,6 +421,13 @@
           "platform": "macOS-26.6.2-arm64-arm-64bit",
           "sha256": "ed756b2fca29def19fe58a4d81af86b03d1f1956016d15f3b109ea5a013b6d20",
           "size_bytes": 986048832
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-1.5b-instruct/qwen2.5-coder-1.5b-instruct-imat-Q4_K_M.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
+          "sha256": "ed756b2fca29def19fe58a4d81af86b03d1f1956016d15f3b109ea5a013b6d20",
+          "size_bytes": 986048832
         }
       },
       "first_config": "mac-e2b.yaml",
@@ -282,10 +436,24 @@
     },
     "qwen2.5-coder-7b-instruct-Q2_K.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q2_K.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "0ab9fbec57b2a68ab436d002c7cfdff441aa208d96f39444e975f76fe3664fae",
+          "size_bytes": 3015940608
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q2_K.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "0ab9fbec57b2a68ab436d002c7cfdff441aa208d96f39444e975f76fe3664fae",
+          "size_bytes": 3015940608
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q2_K.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "0ab9fbec57b2a68ab436d002c7cfdff441aa208d96f39444e975f76fe3664fae",
           "size_bytes": 3015940608
         }
@@ -296,10 +464,24 @@
     },
     "qwen2.5-coder-7b-instruct-Q3_K_M.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q3_K_M.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "404880589e9802953657ff718995ed58c8722a8737ba54aaa9f7ede70005f1cf",
+          "size_bytes": 3808391680
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q3_K_M.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "404880589e9802953657ff718995ed58c8722a8737ba54aaa9f7ede70005f1cf",
+          "size_bytes": 3808391680
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q3_K_M.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "404880589e9802953657ff718995ed58c8722a8737ba54aaa9f7ede70005f1cf",
           "size_bytes": 3808391680
         }
@@ -310,10 +492,24 @@
     },
     "qwen2.5-coder-7b-instruct-Q4_K_M.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q4_K_M.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "0e8c54b55a10b64eff7be7f3aa9596dd39b471e399fbbc1469bf36c4e66c7b86",
+          "size_bytes": 4683074048
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q4_K_M.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "0e8c54b55a10b64eff7be7f3aa9596dd39b471e399fbbc1469bf36c4e66c7b86",
+          "size_bytes": 4683074048
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q4_K_M.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "0e8c54b55a10b64eff7be7f3aa9596dd39b471e399fbbc1469bf36c4e66c7b86",
           "size_bytes": 4683074048
         }
@@ -324,10 +520,24 @@
     },
     "qwen2.5-coder-7b-instruct-Q8_0.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q8_0.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "f728664193246875d99c7797d2d56a71f5a680963ae6052f1e1fa4d40724c652",
+          "size_bytes": 8098525696
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q8_0.gguf",
           "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "sha256": "f728664193246875d99c7797d2d56a71f5a680963ae6052f1e1fa4d40724c652",
+          "size_bytes": 8098525696
+        },
+        "viper-pi5": {
+          "hashed_at": "2026-10-24T10:58:03Z",
+          "path": "/home/vipermini/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-Q8_0.gguf",
+          "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
           "sha256": "f728664193246875d99c7797d2d56a71f5a680963ae6052f1e1fa4d40724c652",
           "size_bytes": 8098525696
         }
@@ -338,6 +548,13 @@
     },
     "qwen2.5-coder-7b-instruct-imat-Q2_K.gguf": {
       "devices": {
+        "viper-jetson": {
+          "hashed_at": "2026-10-24T10:56:36Z",
+          "path": "/home/viperjet/RP/proposal-dev/pilot/local/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-imat-Q2_K.gguf",
+          "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+          "sha256": "5405a8a2acb7082c149e5d15835825865e33ec746991ce36251ad0948e5d80c7",
+          "size_bytes": 3015940896
+        },
         "viper-mbp.local": {
           "hashed_at": "2026-10-24T10:49:16Z",
           "path": "/Users/amilkamoses/pilot-work/models/qwen2.5-coder-7b-instruct/qwen2.5-coder-7b-instruct-imat-Q2_K.gguf",
