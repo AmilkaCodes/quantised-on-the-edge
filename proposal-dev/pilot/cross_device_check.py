@@ -7,8 +7,9 @@ IDENTICAL to the quality run. Any divergence would mean backend floating-point d
 CUDA vs CPU) change greedy decoding.
 
 Usage (from proposal-dev/pilot, server-managing config):
-    python cross_device_check.py [config] [model_key] [rung] [K]
-    defaults: configs/mac.yaml  qwen2.5-coder-1.5b-instruct  Q4_K_M  8
+    python cross_device_check.py [config] [model_key] [rung] [K] [condition] [tag]
+    defaults: configs/mac.yaml  qwen2.5-coder-1.5b-instruct  Q4_K_M  8  closed  (no tag)
+    A tag (e.g. full164) is appended to the output name so a full-ladder run never overwrites the K=50 registered files.
 Run once per device; then diff the per-device results/<device>/xdev_*.json files.
 """
 import json, sys
@@ -22,6 +23,7 @@ model_key = sys.argv[2] if len(sys.argv) > 2 else "qwen2.5-coder-1.5b-instruct"
 rung      = sys.argv[3] if len(sys.argv) > 3 else "Q4_K_M"
 K         = int(sys.argv[4]) if len(sys.argv) > 4 else 8
 condition = sys.argv[5] if len(sys.argv) > 5 else "closed"   # E1: 'open' for the open-book spot-check
+tag       = sys.argv[6] if len(sys.argv) > 6 else ""         # optional suffix so a full-ladder run never overwrites the registered K=50 files
 
 cfg = yaml.safe_load(Path(cfg_path).read_text())
 device = str(cfg.get("device", "unknown"))
@@ -47,7 +49,8 @@ finally:
 
 out = {s["task_id"]: s["solution"] for s in samples}
 csfx = "" if condition == "closed" else f"_{condition}"
-dest = H.RESULTS_ROOT / device / f"xdev_{model_key}_{rung}{csfx}.json"
+tsfx = f"_{tag}" if tag else ""
+dest = H.RESULTS_ROOT / device / f"xdev_{model_key}_{rung}{csfx}{tsfx}.json"
 dest.parent.mkdir(parents=True, exist_ok=True)
 dest.write_text(json.dumps(out, indent=2, sort_keys=True))
 print(f"[{device}] wrote {dest} ({len(out)} solutions)")
