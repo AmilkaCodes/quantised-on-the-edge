@@ -1,0 +1,12 @@
+{
+  "device": "jetson",
+  "timestamp": "2026-08-30T22:11:28Z",
+  "os": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+  "processor": "aarch64",
+  "cpu_count": 6,
+  "ram_gb": 7.3,
+  "python": "3.12.3",
+  "llama_cpp_tag": "b9951",
+  "config_file": "configs/jetson.yaml",
+  "smoke": false
+}
