@@ -101,3 +101,7 @@ the registered criteria and are applied mechanically, including where a failure 
 outside the band; no multiplicity adjustment across the 14 device-vs-Mac comparisons, which
 would only make failures harder to declare; the Jetson Phi-3 row is absent, not null, so
 Phi-3's tier transfer is evidenced on one edge tier only.
+
+
+## Status (2026-10-28)
+Complete and scored; NOT yet in the report (document h submitted for the formative on 2026-10-26 without it). To be written in as part of the single post-feedback rewrite (document i); the section-by-section plan is in `irp/HANDOFF.md`.
