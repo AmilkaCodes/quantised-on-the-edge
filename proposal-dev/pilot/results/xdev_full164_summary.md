@@ -4,9 +4,13 @@
 |---|---|---|---|---|---|---|---|
 | phi-3-mini-4k-instruct | F16 | mac | 0.646 | +0.0 | reference |  |  |
 | phi-3-mini-4k-instruct | Q8_0 | mac | 0.628 | +1.8 | reference |  |  |
+| phi-3-mini-4k-instruct | Q8_0 | pi5 | 0.634 |  | 0.896 | b = 1, c = 2 | 1.000 |
 | phi-3-mini-4k-instruct | Q4_K_M | mac | 0.549 | +9.8 | reference |  |  |
+| phi-3-mini-4k-instruct | Q4_K_M | pi5 | 0.524 |  | 0.634 | b = 6, c = 2 | 0.289 |
 | phi-3-mini-4k-instruct | Q3_K_M | mac | 0.427 | +22.0 | reference |  |  |
+| phi-3-mini-4k-instruct | Q3_K_M | pi5 | 0.445 |  | 0.524 | b = 3, c = 6 | 0.508 |
 | phi-3-mini-4k-instruct | Q2_K | mac | 0.220 | +42.7 | reference |  |  |
+| phi-3-mini-4k-instruct | Q2_K | pi5 | 0.244 |  | 0.201 | b = 5, c = 9 | 0.424 |
 | qwen2.5-coder-1.5b-instruct | F16 | mac | 0.610 | +0.0 | reference |  |  |
 | qwen2.5-coder-1.5b-instruct | F16 | jetson | 0.610 | +0.0 | 1.000 | b = 0, c = 0 | 1.000 |
 | qwen2.5-coder-1.5b-instruct | F16 | pi5 | 0.616 | +0.0 | 0.976 | b = 0, c = 1 | 1.000 |

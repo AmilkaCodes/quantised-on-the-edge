@@ -1,49 +1,103 @@
-# xdev-full: full-ladder cross-device replication of the quality axis — analysis record
+# Full-ladder cross-device replication (xdev-full) — results
 
-**Protocol:** `irp/extensions/xdev-full-protocol.md` (registered 2026-10-24, commit 267ecb8). **Data:** `proposal-dev/pilot/results/<tier>/xdev_*_full164.json`;
-scored on the Mac by `score_xdev_full.py` → `results/xdev_full164_summary.{json,md}` (commit a58185d, 2026-10-25). **Status:** Qwen complete on three tiers (15 cells);
-Phi-3 Mac reference complete (5 cells); Phi-3 Jetson NOT MEASURED — CAPACITY (deviation recorded in the protocol); Phi-3 Pi 5 optional, pending.
-**Not yet in the report** (document c, 2026-10-24, submitted for the formative as is); to be written into §3.3.1, §4.2, §4.4, §5.3, Table D.5 and Appendix A afterwards.
+**Protocol:** `irp/extensions/xdev-full-protocol.md`, registered 2026-10-24 before any
+measurement. **Class:** registered validation addendum, not confirmatory; no registered verdict
+or threshold changes as a result. **Instrument:** HumanEval+, all 164 problems, closed-book,
+greedy, seed 0, 768-token cap, llama.cpp b9951 per tier, identical GGUF bytes (SHA-256
+agreement in `proposal-dev/pilot/CHECKSUMS.md`). Generation by `cross_device_check.py`
+(tag `full164`, so the registered K = 50 files are untouched); scoring on the Mac only by
+`score_xdev_full.py` (EvalPlus 0.3.1, plus status). 24 valid cells.
 
-## 1. Determinism check: the Mac reproduces September exactly
-All ten Mac reference cells reproduce Table 4.1 to the third decimal (Qwen 0.610, 0.616, 0.616, 0.585, 0.384; Phi-3 0.646, 0.628, 0.549, 0.427, 0.220).
-Within-device greedy decoding is deterministic over a five-week gap and a re-run through a different driver script.
+## 1. Mac determinism (the reference's own check)
 
-## 2. Reading against the registered interpretation map (Qwen2.5-Coder-1.5B, n = 164)
+Every Mac cell was regenerated through the same script and compared with the September
+snapshots: **all 1,640 solutions across all ten cells are byte-identical**, including both
+collapse rungs where outputs degenerate and run to the cap. Within-device greedy decoding at
+seed 0 therefore reproduces exactly across a six-week gap, which is both the premise of the
+two-axes split (§3.3.1) and the condition that makes the Mac a sound reference here. Because
+the text is identical, Table 4.1's pass@1 values are reproduced exactly without re-scoring.
 
-| Rung | Mac | Jetson (identity; flips b/c; p) | Pi 5 (identity; flips b/c; p) | Map verdict |
-|---|---|---|---|---|
-| F16 | 0.610 | 0.610 (1.000; 0/0; 1.00) | 0.616 (0.976; 0/1; 1.00) | holds |
-| Q8_0 | 0.616 | 0.598 (0.927; 3/0; 0.25) | 0.616 (0.945; 0/0; 1.00) | holds (Jetson −1.8 points, within two) |
-| Q4_K_M | 0.616 | 0.616 (0.841; 3/3; 1.00) | 0.628 (0.720; 2/4; 0.69) | holds; the † flag at this rung is resolved by measurement |
-| Q3_K_M | 0.585 | 0.585 (0.884; 1/1; 1.00) | 0.591 (0.817; 2/3; 1.00) | holds; the † flag at this rung is resolved by measurement |
-| Q2_K | 0.384 | 0.360 (0.689; 5/1; 0.22) | 0.348 (0.585; 10/4; 0.18) | **weak form fails on the pass@1 criterion** (−2.4 and −3.6 points; flips not significant) |
+## 2. Qwen2.5-Coder-1.5B — all five rungs, both edge tiers
 
-Per the map, Q2_K is re-stated per tier: drop from own F16 is 22.6 (Mac), 25.0 (Jetson), 26.8 (Pi 5). Every tier's interval lies wholly beyond the
-five-point margin, so the registered verdict (collapsed) is unchanged on every tier; the collapse is deeper on the edge tiers, not shallower. No cell
-of the deployment map changes for Qwen.
+Mac reference in the first column; Δ is device minus Mac.
 
-**The pattern that is new:** output identity against the Mac falls monotonically with precision (Jetson 1.000 → 0.927 → 0.841 → 0.884 → 0.689;
-Pi 5 0.976 → 0.945 → 0.720 → 0.817 → 0.585), and the net flip direction at Q2_K is Mac-pass/device-fail (b > c on both tiers). The backends' low-bit
-kernels diverge more the fewer bits they share, and the divergence costs correctness rather than adding it. This extends Yuan et al.'s cross-configuration
-non-determinism to the precision axis and is reportable as a finding, with the caveat that the flips are not individually significant.
+| rung | Mac | Jetson | Δ | p | Pi 5 | Δ | p |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| F16 | 0.610 | 0.610 | 0.0 | 1.000 | 0.616 | +0.6 | 1.000 |
+| Q8_0 | 0.616 | 0.598 | −1.8 | .250 | 0.616 | 0.0 | 1.000 |
+| Q4_K_M | 0.616 | 0.616 | 0.0 | 1.000 | 0.628 | +1.2 | .688 |
+| Q3_K_M | 0.585 | 0.585 | 0.0 | 1.000 | 0.591 | +0.6 | 1.000 |
+| Q2_K | 0.384 | **0.360** | **−2.4** | .219 | **0.348** | **−3.6** | .180 |
 
-## 3. Phi-3 on the Jetson: not measured, and why that is itself a result
-Two attempts (default slots; `--parallel 1`) failed identically: the server was OOM-killed a few problems into every cell. The slot hypothesis was tested
-and falsified (post-load headroom 862 against 894 MB); the mechanism is per-generation allocation of roughly 300 MB that is not released, against under
-1 GB of headroom after loading Phi-3 Q8_0 (4.06 GB) with the CUDA runtime on a 7.5 GB usable tier, at the registered 4,096 context. Details and the
-A/B probe are in the protocol's Deviations section. The solutions completed before each kill are byte-identical to the Mac's.
+**Weak form holds at F16, Q8_0, Q4_K_M and Q3_K_M on both tiers** — every |Δ| ≤ 1.8 pp, every
+p ≥ 0.25. The † tier-uncertain flags at those rungs are resolved by measurement: the
+Mac-measured verdicts stand for the edge tiers.
 
-Consequence for the report: Figure 4.4 marks Phi-3 Q8_0 on the Jetson as deployable on the strength of the ten-prompt performance cells, which the
-server's prefix cache serves from one slot. That verdict stands for short interactive use and must carry a stated condition: the 8 GB tier could not
-sustain a 164-problem batch at full context. This is a capacity qualification, not a quality result, and belongs in §4.4 and §5.4 beside the Phi-3 Q8_0
-recommendation.
+**Weak form fails at Q2_K on both tiers**, on the pass@1 clause alone (flips not significant).
+Per the interpretation map, the Q2_K verdict is re-stated per tier rather than inherited.
+Both tiers fall *below* the Mac and both show b > c, so the direction agrees across two
+unrelated backends; no pooled test was registered, so this is reported as an observation, not
+a verdict.
 
-## 4. What changes in the report when this is written in (estimated +80 words, funded)
-- §3.3.1: the two registered checks plus the full-ladder replication (dated) for Qwen on both edge tiers.
-- §4.2: rewritten around the table above; the identity gradient; Q2_K re-stated per tier; Qwen's two † flags resolved; Phi-3's flags remain (not cross-checked).
-- §4.4 and §5.4: the Phi-3 Q8_0 Jetson condition (short interactive use, not sustained batch).
-- §5.3 Reliability: "checked for one model at two rungs" becomes "checked for the specialised model at every rung on both edge tiers; the general model's
-  edge verdicts rest on the Mac measurement and on a tier that could not hold it for a full run".
-- Table D.5: a companion table with the 15 Qwen cells; Appendix A: the xdev-full entry with its deviation.
-- Glossary: nothing new.
+**At F16 the Jetson is byte-identical to the Mac** (identity 1.000, zero flips) — the *strong*
+form, which neither K = 50 check reached.
+
+## 3. Phi-3-mini — Pi 5 only
+
+| rung | Mac | Pi 5 | Δ | identity | flips (b/c) | p | verdict |
+|---|---:|---:|---:|---:|---|---:|---|
+| Q8_0 | 0.628 | 0.634 | +0.6 | 0.896 | 1 / 2 | 1.000 | holds |
+| Q4_K_M | 0.549 | 0.524 | **−2.5** | 0.634 | 6 / 2 | .289 | **fails** (pass@1 clause) |
+| Q3_K_M | 0.427 | 0.445 | +1.8 | 0.524 | 3 / 6 | .508 | holds |
+| Q2_K | 0.220 | 0.244 | **+2.4** | 0.201 | 5 / 9 | .424 | **fails** (pass@1 clause) |
+
+The two failures are in *opposite* directions (Pi lower at Q4, higher at Q2), both with
+balanced, non-significant flips — consistent with sampling noise around a stable underlying
+score rather than a systematic tier effect, though the registered rule records them as
+failures either way.
+
+**Jetson Phi-3: NOT MEASURED — CAPACITY.** Both attempts ended in server OOM kills a few
+problems into each cell (deviation recorded in the protocol, with the falsified first
+diagnosis retained). Phi-3-mini Q8_0 leaves under 1 GB of headroom on the 7.5 GB tier and
+each generation allocates ~300 MB that is not released. The tier can serve Phi-3 for short
+interactive use — the main study's perf cells did exactly that — but cannot sustain a
+164-problem batch at 4,096 context. This is reportable beside the existing capacity verdicts.
+
+## 4. The mechanism: identity and equivalence are largely decoupled
+
+Output-identity against the Mac decays monotonically with quantisation on every tier, while
+aggregate pass@1 does not:
+
+| | F16 | Q8_0 | Q4_K_M | Q3_K_M | Q2_K |
+|---|---:|---:|---:|---:|---:|
+| Qwen, Jetson | 1.000 | 0.927 | 0.841 | 0.884 | 0.689 |
+| Qwen, Pi 5 | 0.976 | 0.945 | 0.720 | 0.817 | 0.585 |
+| Phi-3, Pi 5 | — | 0.896 | 0.634 | 0.524 | 0.201 |
+
+The sharpest case is Phi-3 at Q2_K on the Pi: **only 20% of solutions are textually identical
+to the Mac's, yet pass@1 differs by 2.4 pp with balanced flips.** Backend arithmetic changes
+*which* solutions are produced far more than it changes *how many* are correct, because the
+flips run both ways and largely cancel. The Pi diverges further than the Jetson at every
+quantised rung, consistent with CPU arithmetic departing from Metal more than CUDA does.
+
+This is why the strong form fails while the weak form mostly holds, and it is the substantive
+justification for measuring the quality axis once: aggregate pass@1 is portable across tiers
+in a way that individual generations are not — until the collapse rung, where the cancellation
+stops being reliable.
+
+## 5. What changes in the dissertation
+
+- §4.2: the † tier-uncertain flags at F16, Q8_0, Q4_K_M and Q3_K_M are removed for Qwen on
+  both edge tiers and replaced by measured agreement; Q2_K carries a per-tier re-statement.
+- Table D.5: extended from the two K = 50 checks to the full 24-cell matrix.
+- The Jetson Phi-3 capacity result joins the deployment map's existing capacity findings.
+- No registered verdict in Table 4.1 is rewritten (the addendum is validation, not
+  confirmation).
+
+## 6. Caveats
+
+One run per cell (greedy, so the run is the cell); the two-point band and p ≥ 0.05 rule are
+the registered criteria and are applied mechanically, including where a failure is 0.4 pp
+outside the band; no multiplicity adjustment across the 14 device-vs-Mac comparisons, which
+would only make failures harder to declare; the Jetson Phi-3 row is absent, not null, so
+Phi-3's tier transfer is evidenced on one edge tier only.
