@@ -105,3 +105,6 @@ Phi-3's tier transfer is evidenced on one edge tier only.
 
 ## Status (2026-10-28)
 Complete and scored; NOT yet in the report (document h submitted for the formative on 2026-10-26 without it). To be written in as part of the single post-feedback rewrite (document i); the section-by-section plan is in `irp/HANDOFF.md`.
+
+## Status (2026-11-09)
+WRITTEN IN to document i (`assessment/Formative_Assignment/final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-11-09i.docx`): Section 3.3.1 (the third registered check and its rule), Section 4.2 (full results, identity decay, Jetson Phi-3 unmeasured), Section 4.4 (Phi-3 Q8_0 Jetson verdict conditioned to short interactive use), Section 5.3 (reliability), Table 4.1 (Qwen † flags removed; Phi-3 † now means 'replicated on the Pi 5 only'), Table D.5 (nine replication rows) and Appendix A (registered design and the OOM deviation). Glossary row for the † flag updated.
