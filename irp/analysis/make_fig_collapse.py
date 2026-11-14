@@ -1,5 +1,6 @@
 """Figure 4.1: HumanEval+ pass@1 across the naive ladder for both models, with per-estimate 95% intervals (Table D.1),
-each model's five-point margin below its F16 drawn as a dashed line, effective bits per weight beneath each rung
+each model's five-point margin below its F16 drawn as a dotted line (the Phi-3 SERIES is dashed, so the margin
+must not be), effective bits per weight beneath each rung
 (Table D.2), and the verdict class of Table 4.1 as the marker style. Text kept minimal: it counts toward the limit."""
 import os
 import matplotlib; matplotlib.use("Agg")
@@ -19,7 +20,7 @@ x = list(range(5))
 for name, d in data.items():
     ax.plot(x, d["y"], color=d["c"], lw=2, ls="--" if name.startswith("Phi") else "-", zorder=2, label=name)   # line style as well as colour
     ax.errorbar(x, d["y"], yerr=[[a - b for a, b in zip(d["y"], d["lo"])], [b - a for a, b in zip(d["y"], d["hi"])]], fmt="none", ecolor=d["c"], elinewidth=1.1, capsize=3, zorder=2)
-    ax.axhline(d["y"][0] - 0.05, color=d["c"], lw=1, ls="--", alpha=0.7, zorder=1)
+    ax.axhline(d["y"][0] - 0.05, color=d["c"], lw=1.2, ls=":", alpha=0.8, zorder=1)
     for xi, yi, cl in zip(x, d["y"], d["cls"]):
         if cl in ("base", "within"): ax.plot(xi, yi, "o", color=d["c"], ms=8, zorder=3)
         elif cl == "inconclusive": ax.plot(xi, yi, "o", mfc="white", mec=d["c"], mew=2, ms=8, zorder=3)
