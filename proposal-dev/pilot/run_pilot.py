@@ -477,9 +477,9 @@ def main():
                     help="performance axis: latency/memory/power on a small prompt set, N repeats, NO scoring")
     ap.add_argument("--perf-n", type=int, default=10, help="perf: number of prompts (default 10)")
     ap.add_argument("--perf-repeats", type=int, default=3, help="perf: repeats per cell (default 3)")
-    ap.add_argument("--condition", choices=["closed", "open", "oracle"], default="closed",
+    ap.add_argument("--condition", choices=["closed", "open", "oracle", "neutral"], default="closed",
                     help="E1: 'open' = frozen BM25 artefact (Condition B); 'oracle' = E1-R upper-bound "
-                         "selection artefact (Probe R2)")
+                         "selection artefact (Probe R2); 'neutral' = E1-N irrelevant-context control")
     ap.add_argument("--openbook-artefact", default=None,
                     help="artefact path override; defaults per condition (e1/openbook_prompts.jsonl / "
                          "e1/oracle_prompts.jsonl)")
@@ -512,7 +512,8 @@ def main():
     openbook, openbook_sha = None, None
     if condition != "closed":
         art = Path(args.openbook_artefact or
-                   {"open": "e1/openbook_prompts.jsonl", "oracle": "e1/oracle_prompts.jsonl"}[condition])
+                   {"open": "e1/openbook_prompts.jsonl", "oracle": "e1/oracle_prompts.jsonl",
+                    "neutral": "e1/neutral_prompts.jsonl"}[condition])
         allc = {json.loads(l)["task_id"]: json.loads(l)["content"] for l in art.read_text().splitlines()}
         missing = [t for t in problems if t not in allc]
         if missing:

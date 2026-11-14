@@ -1,0 +1,22 @@
+{
+  "protocol": "irp/extensions/e1n-neutral-context-control.md",
+  "condition_b_artefact_sha256": "95069f4b461426a48e348065ca110d0a95fb2f2294c637db123d8a472bb5007c",
+  "n_chunks": 8239,
+  "seed": 0,
+  "exclude_top_bm25": 50,
+  "length_tolerance": 0.2,
+  "length_measure": "est_tokens = ceil(chars/4), as e1_build.py",
+  "contamination_rule": "13-gram vs union of HumanEval+ prompt+canonical solutions (as e1_build.py)",
+  "n_problems": 164,
+  "neutral_prompts_sha256": "bc7c2d3b03d0248ccb5a1d2980e76cdd19ad966c9353208c591021442d82c2e7",
+  "pair_len_ratio_N_over_B_min_median_max": [
+    0.801,
+    0.986,
+    1.195
+  ],
+  "draws_per_problem_min_median_max": [
+    1,
+    3,
+    17
+  ]
+}

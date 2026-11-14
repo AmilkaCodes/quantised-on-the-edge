@@ -1,6 +1,18 @@
-# E1-N — neutral-context control (DRAFT FOR REGISTRATION; not yet committed as registered, not yet run)
+# E1-N — neutral-context control (REGISTERED 2026-11-14; run follows this commit)
 
-**Status: DRAFT 2026-11-14, written in response to the external reviewer's g-draft feedback
+**Registration, 2026-11-14:** the student decided to run the control. This file, the selection
+script `proposal-dev/pilot/e1/e1n_build_neutral.py`, the frozen artefact
+`proposal-dev/pilot/e1/neutral_prompts.jsonl` (sha256 `bc7c2d3b03d0248c…`) and its manifest
+`e1n-build-manifest.json` are committed together **before any model output exists**; that commit is
+the registration. Two details fixed at registration (not changes to the rule above them): (i) pair
+length is measured with the Condition-B builder's own proxy (est_tokens = ceil(chars/4)), so N and B
+are length-matched on the same scale; (ii) Condition B's 13-gram contamination rule is applied to the
+neutral chunks too, so neither condition can carry reference-solution text. Build check: 164/164
+pairs within ±20 % of B (N/B ratio min 0.80, median 0.99, max 1.20); rebuild is byte-identical.
+The harness gains `--condition neutral` (outputs suffixed `_neutral`, so Condition B's files are not
+touched).
+
+**Status (original draft note): DRAFT 2026-11-14, written in response to the external reviewer's g-draft feedback
 ("Isolate the Qwen context harm. One control at F16 with neutral text of equal length is 164
 problems on the MacBook. It turns 'an effect this study did not isolate' into a finding, and
 it rescues the closed-book recommendation. Register it before running."). The student decides
