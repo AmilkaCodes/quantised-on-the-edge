@@ -18,7 +18,7 @@ for i, (label, est, lo, hi) in enumerate(cells):
     ax.plot([lo, lo], [y - 0.12, y + 0.12], color="black", lw=1.5); ax.plot([hi, hi], [y - 0.12, y + 0.12], color="black", lw=1.5)
     ax.plot(est, y, marker="o", color="black", ms=7, zorder=4)
     ax.text(-7.0, y, label, ha="right", va="center", fontsize=9.5)
-    ax.text(hi + 0.6, y, "%+.1f [%+.1f, %+.1f]" % (est, lo, hi), va="center", fontsize=8.8, family="DejaVu Sans Mono")
+    ax.text(max(hi, 5) + 0.6, y, "%+.1f [%+.1f, %+.1f]" % (est, lo, hi), va="center", fontsize=8.8, family="DejaVu Sans Mono")   # never across the margin line
 ax.set_xlim(-12.5, 36); ax.set_ylim(-0.6, 3.1); ax.set_yticks([])
 ax.set_xlabel("drop in pass@1 relative to F16 (percentage points; paired bootstrap 95% interval, point estimate as a dot)")
 for s in ("top", "right", "left"): ax.spines[s].set_visible(False)

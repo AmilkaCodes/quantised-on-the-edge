@@ -35,7 +35,7 @@ def perf(dev):
         d[(r["model"], r["quant"])] = r
     return d
 PERF = {dev: perf(dev) for dev in ("mac", "jetson", "pi5")}
-TIERS = [("mac", "MacBook (Metal)", BLUE), ("jetson", "Jetson (CUDA)", ORANGE), ("pi5", "Pi 5 (CPU)", GREEN)]
+TIERS = [("mac", "MacBook (Metal)", BLUE, "-", "o"), ("jetson", "Jetson (CUDA)", ORANGE, "--", "s"), ("pi5", "Pi 5 (CPU)", GREEN, "-.", "^")]   # series differ by line style and marker as well as colour
 def series(dev, model, field):
     out = []
     for q in Q:
@@ -47,9 +47,9 @@ def series(dev, model, field):
 # ---- Figure 4.2: throughput
 fig, axes = plt.subplots(1, 2, figsize=(6.4, 3.3), sharey=True)
 for ax, (m, lab) in zip(axes, ((QW, "Qwen2.5-Coder-1.5B"), (PH, "Phi-3-mini-3.8B"))):
-    for dev, dl, c in TIERS: ax.plot(X, series(dev, m, "median_tok_s"), "-o", color=c, lw=1.8, ms=5, label=dl)
+    for dev, dl, c, ls, mk in TIERS: ax.plot(X, series(dev, m, "median_tok_s"), ls=ls, marker=mk, color=c, lw=1.8, ms=5, label=dl)
     ax.set_yscale("log"); ax.set_xticks(X); ax.set_xticklabels(Q, fontsize=8); ax.grid(True, which="both", axis="y", alpha=0.3)
-    ax.text(0.02, 0.97, lab, transform=ax.transAxes, va="top", fontsize=9, weight="bold")
+    ax.set_title(lab, loc="left", fontsize=9, weight="bold", pad=4)   # above the axes, clear of the data
     ax.axhspan(8, 10, color="0.85", alpha=0.6, lw=0)
 axes[0].set_ylabel("median decode tokens/s"); fig.legend(*axes[0].get_legend_handles_labels(), loc="lower center", ncol=3, bbox_to_anchor=(0.5, -0.01))
 plt.tight_layout(rect=(0, 0.07, 1, 1)); fig.savefig(os.path.join(OUT, "fig4-2_throughput.png"), dpi=300); plt.close(fig)
@@ -57,11 +57,11 @@ plt.tight_layout(rect=(0, 0.07, 1, 1)); fig.savefig(os.path.join(OUT, "fig4-2_th
 # ---- Figure 4.3: energy per token
 fig, axes = plt.subplots(1, 2, figsize=(6.4, 3.3), sharey=True)
 for ax, (m, lab) in zip(axes, ((QW, "Qwen2.5-Coder-1.5B"), (PH, "Phi-3-mini-3.8B"))):
-    for dev, dl, c in TIERS:
+    for dev, dl, c, ls, mk in TIERS:
         pw, tk = series(dev, m, "mean_power_w"), series(dev, m, "median_tok_s")
-        ax.plot(X, [p / t if (not np.isnan(p) and not np.isnan(t) and t > 0) else np.nan for p, t in zip(pw, tk)], "-o", color=c, lw=1.8, ms=5, label=dl)
+        ax.plot(X, [p / t if (not np.isnan(p) and not np.isnan(t) and t > 0) else np.nan for p, t in zip(pw, tk)], ls=ls, marker=mk, color=c, lw=1.8, ms=5, label=dl)
     ax.set_yscale("log"); ax.set_xticks(X); ax.set_xticklabels(Q, fontsize=8); ax.grid(True, which="both", axis="y", alpha=0.3)
-    ax.text(0.02, 0.97, lab, transform=ax.transAxes, va="top", fontsize=9, weight="bold")
+    ax.set_title(lab, loc="left", fontsize=9, weight="bold", pad=4)   # above the axes, clear of the data
 axes[0].set_ylabel("energy per token (J, log)"); fig.legend(*axes[0].get_legend_handles_labels(), loc="lower center", ncol=3, bbox_to_anchor=(0.5, -0.01))
 plt.tight_layout(rect=(0, 0.07, 1, 1)); fig.savefig(os.path.join(OUT, "fig4-3_energy.png"), dpi=300); plt.close(fig)
 

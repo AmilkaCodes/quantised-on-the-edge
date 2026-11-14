@@ -17,7 +17,7 @@ data = {
 fig, ax = plt.subplots(figsize=(8.2, 4.6))
 x = list(range(5))
 for name, d in data.items():
-    ax.plot(x, d["y"], color=d["c"], lw=2, zorder=2, label=name)
+    ax.plot(x, d["y"], color=d["c"], lw=2, ls="--" if name.startswith("Phi") else "-", zorder=2, label=name)   # line style as well as colour
     ax.errorbar(x, d["y"], yerr=[[a - b for a, b in zip(d["y"], d["lo"])], [b - a for a, b in zip(d["y"], d["hi"])]], fmt="none", ecolor=d["c"], elinewidth=1.1, capsize=3, zorder=2)
     ax.axhline(d["y"][0] - 0.05, color=d["c"], lw=1, ls="--", alpha=0.7, zorder=1)
     for xi, yi, cl in zip(x, d["y"], d["cls"]):
