@@ -1,4 +1,4 @@
-# E1-N — neutral-context control (REGISTERED 2026-11-14; run follows this commit)
+# E1-N — neutral-context control (REGISTERED 2026-11-14, commit ea4c51e; RUN 2026-11-14)
 
 **Registration, 2026-11-14:** the student decided to run the control. This file, the selection
 script `proposal-dev/pilot/e1/e1n_build_neutral.py`, the frozen artefact
@@ -70,3 +70,39 @@ exploratory grade, uncorrected, as for every E1 cell.
 
 164 problems, one model, one rung, MacBook only: under an hour of device time at F16's
 78 tok/s; no edge hardware needed.
+
+## Result (run 2026-11-14, 22:25 UTC, after registration commit ea4c51e at 22:24:55 UTC)
+
+Run manifest `proposal-dev/pilot/results/mac/manifests/manifest_e1n_neutral_20261114_222503.json`
+(artefact sha256 `bc7c2d3b…` as registered; llama.cpp b9951; parse rate 1.0; 78.6 tok/s). One run,
+no re-run, no deviation. Scoring snapshot
+`proposal-dev/pilot/eval-results/mac/samples_qwen2.5-coder-1.5b-instruct_F16_neutral-sanitized_eval_results.json`;
+analysis `irp/analysis/e1n_analysis.py` (its B − A line reproduces Table D.8's F16 row exactly).
+
+| Condition | HumanEval+ pass@1 |
+|---|---|
+| A closed-book | 0.610 (100/164) |
+| B frozen documentation | 0.537 (88/164) |
+| N neutral documentation | 0.567 (93/164) |
+
+| Contrast | Difference (pp) [95% CI] | Exact McNemar p | Discordant pairs |
+|---|---|---|---|
+| B − A | −7.3 [−14.0, −0.6] | 0.050 | 22 / 10 |
+| N − A | −4.3 [−10.4, +1.8] | 0.25 | 17 / 10 |
+| N − B | +3.0 [−4.3, +9.8] | 0.49 | 14 / 19 |
+
+Anchor correction: the prediction text above gives B ≈ 0.543 at F16; Table D.8's F16 value is
+0.537 (0.543 is Q8_0). The rule is applied to the measured cells, so nothing turns on it.
+
+**Reading against the registered predictions: outcome 3 (intermediate).** N lies between A and B
+and its interval overlaps both anchors. Read mechanically, the intervals meet the letter of
+outcome 2: N − A spans zero and B − A excludes it, though only just (p = 0.050). Outcome 2 also
+assumes N is distinguishable from B, and it is not (N − B spans zero). The rule does not cover
+"≈ both" explicitly, so the defensible reading is the registered intermediate one: by point
+estimate about 4.3 of the 7.3 points (≈ 60 %) follow from the presence and length of prepended
+context and about 3.0 (≈ 40 %) from the documentation's content; n = 164 cannot separate the two.
+Consequences for the report (student's decision): Section 4.5's "prompt-format or harness effect
+this study did not isolate" can become "a neutral-context control of equal length recovered under
+half of the loss (N 0.567 vs A 0.610 and B 0.537; neither contrast significant), so the harm is
+partly presence and partly content and n = 164 does not apportion it". Section 5.4's closed-book
+advice stands as written, because no prepended context, relevant or not, ever helped.
