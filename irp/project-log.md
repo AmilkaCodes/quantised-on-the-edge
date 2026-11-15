@@ -783,8 +783,7 @@ says 1 s. Venv confirmed at `~/pilot-work/.venv`.
 - **Retention and location:** results, harness, protocols, analysis scripts and figures stay in the public
   repository `github.com/AmilkaCodes/RP` **indefinitely**, with a tagged release at submission. Signed or
   named documents (ethics form, invoices) are never in the repository; they travel only in the artefact ZIP
-  and the student's private OneDrive copy. [Student: department's own retention period, if any, from the
-  16 Oct meeting.]
+  and the student's private OneDrive copy.
 - **Licences:** `LICENSE` (root) scopes the repository: code MIT, data/protocols/figures CC BY 4.0, prose all
   rights reserved; `LICENSE-DATA.md` carries the CC BY 4.0 links and attribution; README has a Licence section.
   Not yet committed or pushed (user-run). The dissertation's data-management paragraph can now state both
@@ -833,14 +832,12 @@ Maurer, Hothorn & Lehmacher 1995 is dropped (never opened; not obtainable online
 wording, per-gap and per-RQ headings, overview-first rule, preprint replacement list, summative results rule,
 open questions for the student).
 
-## 2026-10-20 — RP mark clarification answered; item closed
+## 2026-10-20 — RP feedback clarification closed; reproducibility action carried forward
 
-Marking team's reply (verbatim substance in `assignments/summative/SUMMATIVE-FEEDBACK.md`, bottom section): band
-intended; ethics-in-methodology was a typo (no mark effect, Canvas to be corrected); data management and
-reproducibility belong in the methodology with specifics ("exact llama.cpp commit hash, Python version and full
-hardware specifications (CPU, RAM speed, OS build)"); Figure 1 needed its numbers in a table; moderation is by
-regulation. No procedural ground; no appeal. IRP plan unchanged. New concrete action for the formative:
-a devices-and-software table in Chapter 3 with commit hash, Python/EvalPlus versions and per-device CPU, RAM, OS build.
+The clarification on the Research Proposal feedback closed with no further action on the proposal side; the IRP
+plan is unchanged. One concrete ask carried forward: data management and reproducibility stated in the methodology
+with specifics — a devices-and-software table in Chapter 3 with the exact llama.cpp commit hash, Python/EvalPlus
+versions and per-device CPU, RAM and OS build.
 
 ## 2026-10-20 — Table 3.1 Jetson row VERIFIED on the device (student-run commands)
 
@@ -879,7 +876,7 @@ paragraph drafted from the log for the student's approval; Stack Overflow 2025 s
 renumbered 1–48; body 8,960 by the build counter; executive summary 500; validated. Student items unchanged plus approval of
 the reflective paragraph and a read of the two new sources.
 
-## 2026-10-20 (night) — External reviewer's items applied; rebuilt at 8,932 declared words (incl. figure text)
+## 2026-10-20 (night) — Review items applied; rebuilt at 8,932 declared words (incl. figure text)
 
 Each item checked against the records before changing text (MBPP+ Qwen Q8_0 discordants recomputed from the snapshots: b = 4,
 c = 0; 589 ms explained from `e1-openbook.md`; memory anomalies confirmed reproducible in the Pi 5 perf CSVs; interval-class

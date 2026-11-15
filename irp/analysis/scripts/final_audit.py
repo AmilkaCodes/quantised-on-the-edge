@@ -1,7 +1,7 @@
 """Final pre-formative audit: recompute every quality-axis number the chapters, spine and
 data-pack rely on, from the committed per-problem snapshots; flag any mismatch > 0.004."""
 import json, os
-ROOT = r"C:\Users\Amilka\OneDrive\University_of_York\Modules\10. Research Proposal in Computer Science"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
 ER = os.path.join(ROOT, "proposal-dev", "pilot", "eval-results", "mac")
 Q = ["F16", "Q8_0", "Q4_K_M", "Q3_K_M", "Q2_K"]
 

@@ -14,7 +14,7 @@ credit, link to the licence and indicate if changes were made.
 
 > A. Moses, "Quantised on the edge: quality, latency and memory trade-offs of small local code-generation
 > LLMs across CPU, consumer-GPU and edge-GPU hardware," MSc Independent Research Project, University of
-> York, 2026. Data: https://github.com/AmilkaCodes/RP (CC BY 4.0).
+> York, 2026. Data: https://github.com/AmilkaCodes/quantised-on-the-edge (CC BY 4.0).
 
 **Scope note.** Benchmark problems and model weights are third-party artefacts under their own licences
 (HumanEval MIT, EvalPlus Apache-2.0, MBPP CC BY 4.0, Qwen2.5-Coder Apache-2.0, Phi-3-mini MIT) and are not

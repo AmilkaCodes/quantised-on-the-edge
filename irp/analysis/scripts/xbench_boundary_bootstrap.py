@@ -4,7 +4,7 @@ per-problem paired outcomes independently (10,000 resamples, fixed seed) and giv
 CI on (MBPP+ drop - HumanEval+ drop). POST-HOC: no benchmark-by-rung test was registered.
 Also prints base-HumanEval (not plus) F16 pass@1 for the technical-report comparison."""
 import json, os, random
-ROOT = r"C:\Users\Amilka\OneDrive\University_of_York\Modules\10. Research Proposal in Computer Science"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
 ER = os.path.join(ROOT, "proposal-dev", "pilot", "eval-results", "mac")
 QW, PH = "qwen2.5-coder-1.5b-instruct", "phi-3-mini-4k-instruct"
 

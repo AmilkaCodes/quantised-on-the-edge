@@ -3,7 +3,7 @@
 bootstrap already reported. drop = (b - c)/n with b = F16 pass & rung fail, c = rung pass &
 F16 fail."""
 import json, os, math
-ROOT = r"C:\Users\Amilka\OneDrive\University_of_York\Modules\10. Research Proposal in Computer Science"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
 ER = os.path.join(ROOT, "proposal-dev", "pilot", "eval-results", "mac")
 Q = ["Q8_0", "Q4_K_M", "Q3_K_M", "Q2_K"]
 QW, PH = "qwen2.5-coder-1.5b-instruct", "phi-3-mini-4k-instruct"

@@ -6,4 +6,4 @@
 - `h1b_rule.py` — the H1b between-model difference-of-drops with Holm over all four rungs (data pack item 14).
 - `render_pages.ps1` — rasterise PDF pages to PNG via WinRT (no poppler needed): `render_pages.ps1 -Pdf x.pdf -Pages 1,3 -OutDir .`
 
-Run with `py -3`; the Python scripts hold the repo root as an absolute path constant and read the Mac eval snapshots.
+Run with any Python 3.10+ (`py -3` on Windows, `python3` elsewhere); the scripts locate the repository root relative to their own location, so they run unchanged from a clone, and read the Mac eval snapshots under `proposal-dev/pilot/eval-results/mac/`. They use only the standard library.
