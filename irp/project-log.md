@@ -952,3 +952,12 @@ column (fp16 0.62 against q8_0 0.85). Verification notes appended to the three e
 
 ## 2026-11-14 (late night) — Reviewer's word-budget advice implemented; master f
 - Literature review deepened from duplication, not from Chapter 4: 2.2 explains why the three positions disagree; 2.6 engages Giagnorio, Husom and Afrin from the extracts (Afrin row in Table 2.1, cited in Gap 3). Funded by passes 56–58 (chapter openers shortened, 3.3.x method detail, 4.5 exploratory paragraphs, captions). **Master f:** 8,967 declared (8,664 + 303), Word body 8,669, 65 pp, appendices 13; buffer 33 words. Record in `reviewer-feedback-2026-11-14-pass12.md`.
+
+## 2026-11-15 — Public release repository created; data-management location superseded
+
+The public repository named in the 2026-10-11 data-management entry (`github.com/AmilkaCodes/RP`) is
+superseded: `AmilkaCodes/RP` stays private (working repository), and the public release lives at
+https://github.com/AmilkaCodes/quantised-on-the-edge — a history-filtered clone holding exactly the
+Table C.1 paths with their commit timestamps, built by `build_public_repo.py` and tagged
+`v1.0-submission` at submission. Retention and licensing terms unchanged (indefinite; code MIT,
+data/protocols/figures CC BY 4.0). Appendix C now carries the URL.
