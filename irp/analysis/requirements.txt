@@ -1,0 +1,10 @@
+# Dependencies of the analysis and figure scripts in this folder. The five
+# audit scripts in scripts/ (final_audit.py, paired_ci.py, agree_check.py,
+# h1b_rule.py, xbench_boundary_bootstrap.py) are standard-library only and
+# need none of these. Pinned versions are those of the environment that
+# produced the final figures and checks.
+numpy==2.4.1
+scipy==1.17.0
+matplotlib==3.10.8
+statsmodels>=0.14     # exact McNemar / Cochran's Q (e1_analysis.py)
+evalplus==0.3.1       # dataset access in the E1 analysis
