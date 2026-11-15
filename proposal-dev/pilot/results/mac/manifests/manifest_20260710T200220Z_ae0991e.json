@@ -7,6 +7,6 @@
   "ram_gb": 36.0,
   "python": "3.12.13",
   "llama_cpp_tag": "b9951",
-  "config_file": "[local path redacted]/phi_only.yaml",
+  "config_file": "phi_only.yaml (pilot-stage temporary config; local path redacted)",
   "smoke": false
 }

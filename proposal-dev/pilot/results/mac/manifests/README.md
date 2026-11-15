@@ -17,4 +17,4 @@ Each file is the manifest.json as committed after a campaign on this tier; the c
 | 2026-08-31T22:44:08Z | 267ce49 | 2026-09-01 | None | configs/mac.yaml | b9951 |
 | 2026-08-30T22:20:12Z | dcc5c08 | 2026-08-31 | None | configs/mac.yaml | b9951 |
 | 2026-08-30T19:15:59Z | ed81b29 | 2026-08-30 | None | configs/mac.yaml | b9951 |
-| 2026-07-10T20:02:20Z | ae0991e | 2026-07-10 | None | [local path redacted]/phi_only.yaml | b9951 |
+| 2026-07-10T20:02:20Z | ae0991e | 2026-07-10 | None | phi_only.yaml (pilot-stage temporary config; local path redacted) | b9951 |
