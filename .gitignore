@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+# regenerable EvalPlus scoring caches (regenerate with score_xdev.py)
+proposal-dev/pilot/results/**/xdev_*_samples*.jsonl
+proposal-dev/pilot/results/**/xdev_*_eval_results.json
