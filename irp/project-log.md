@@ -866,8 +866,8 @@ The 19,300-word full draft was trimmed to the 9,000-word cap without changing an
 tables moved to a new Appendix D (18 tables); Figure 4.5 and body Table 4.2 dropped; figures and tables renumbered
 without gaps. Built by `build_summative_draft.py` + `renumber_ieee.py` from a fresh unpack of the 2026-10-18 master;
 XSD-validated; 46 references in first-appearance order (1–46, no gaps); executive summary 495 words. Master:
-`final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-20.docx`; text copy beside it. Strict rubric-checklist review
-(`review-note-2026-10-20.md`): improvement items listed (the §5.3 reflective slot is the
+`final/COM00151M_Formative_SummativeLength_Amilka-Moses_2026-10-20.docx`; text copy beside it. Strict rubric-checklist
+review (recorded 2026-10-20): improvement items listed (the §5.3 reflective slot is the
 student's; §4.6 RQ sentences; a lay-reader sentence under Figure 4.4; appendix page count to check in Word).
 
 ## 2026-10-20 (evening) — Review items applied
@@ -885,9 +885,9 @@ Each item checked against the records before changing text (MBPP+ Qwen Q8_0 disc
 c = 0; 589 ms explained from `e1-openbook.md`; memory anomalies confirmed reproducible in the Pi 5 perf CSVs; interval-class
 adoption dated from the 2026-09-21 note in `mbpp-robustness.md`). Two build defects found and fixed: appendix citations were not
 renumbered (Appendix B cited [41] for Clopper–Pearson), and the glossary had been inserted inside the ToC field. Disposition table in
-`review-note-2026-10-20.md`, addendum 2.
+the 2026-10-20 review note, addendum 2.
 
-## 2026-10-21 — Reviewer's third pass fixed; the improvement plan applied; rebuilt at 8,959 declared words
+## 2026-10-21 — Reviewer's third pass fixed; improvement plan applied; rebuilt at 8,959 declared words
 
 Breakages from the earlier edits repaired (antecedent, fractured sentence, Table D.10, Q3_K_M addendum clause). The latency gate
 is now applied to cold-inclusive first-token means from the run CSVs (Table 4.3), with the re-application reported in §4.4 (no
